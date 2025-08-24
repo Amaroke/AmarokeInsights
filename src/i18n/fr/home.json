@@ -1,7 +1,7 @@
 {
   "welcome": {
     "title": "Bienvenue !",
-    "content": "AmarokeInsights est un site personnel où je partage mes apprentissages en finance sous une forme claire et progressive.\n\nL’objectif est double : **consolider mes connaissances** et les rendre accessibles à toute personne souhaitant découvrir la finance étape par étape.\n\nPas de **jargon inutile** ni de complexité superflue : j’essaie d’expliquer avec mes propres mots, en illustrant au maximum mes propos afin qu’ils soient compréhensibles par le plus grand nombre.\n\nUn système de **« niveaux de connaissances »** est également en place sur le site pour adapter le contenu à ce que vous savez déjà."
+    "content": "AmarokeInsights est un site personnel où je partage mes apprentissages et expériences en finance sous la forme la plus claire possible.\n\nL’objectif est double : **consolider mes connaissances** et les rendre accessibles à toute personne souhaitant découvrir la finance étape par étape.\n\nPas de **jargon inutile** ni de complexité superflue : j’essaie d’expliquer avec mes propres mots, en illustrant au maximum mes propos afin qu’ils soient compréhensibles par le plus grand nombre.\n\nUn système de **« niveaux de connaissances »** est également en place sur le site pour adapter le contenu à ce que vous savez déjà."
   },
   "info": {
     "title": "À savoir",
@@ -9,11 +9,11 @@
   },
   "contact": {
     "title": "Contact & retours",
-    "content": "Je suis toujours preneur de **retours, suggestions et contributions** !\n\nSi vous souhaitez discuter, proposer une amélioration ou me signaler une erreur, **n’hésitez pas à me contacter**.\n\nChaque retour est précieux et m’aide à améliorer ce projet.\n\nVous pouvez m’écrire par email, ou proposer directement des idées afin d’enrichir les contenus et les rendre encore plus utiles à tous.",
+    "content": "Je suis toujours preneur de **retours, suggestions et contributions** !\n\nSi vous souhaitez discuter, proposer une amélioration ou me signaler une erreur, **n’hésitez pas à me contacter**.\n\nChaque retour est précieux et m’aide à améliorer ce projet.\n\nVous pouvez m’écrire par email ou via Discord (pseudo : amaroke).",
     "email": "hugo.amaroke@gmail.com"
   },
   "precautions": {
     "title": "Disclaimer",
-    "content": "**Ce site n’est pas un conseil financier**. **Je ne suis pas un expert**, et les informations peuvent être biaisées, simplifiées ou incomplètes.\n\nInvestir comporte toujours des **risques (perte en capital, volatilité)**. Considérez ces contenus comme un point de départ, et non comme des recommandations.\n\nLes contenus peuvent comporter des **biais cognitifs ou des simplifications**. L’économie et la finance sont des domaines **complexes**, influencés par de nombreux facteurs (politiques, psychologiques, technologiques…). Ce qui est vrai aujourd’hui peut ne plus l’être demain.\n\nVous restez seul **responsable de vos choix financiers**. Il est essentiel de toujours vérifier les informations, garder un esprit critique et croiser vos sources avant de prendre des décisions concrètes."
+    "content": "**Ce site n’est pas un conseil financier**. **Je ne suis pas un expert**, je suis un développeur de 25 ans qui s'intéresse au monde de la finance seulement depuis quelques années, ce qui influence grandement ce que je pense et ce que je fais de mon argent, gardez le en tête.\n\nInvestir comporte toujours des **risques (perte en capital, volatilité)**. Considérez ces contenus comme un point de départ, et non comme des recommandations.\n\nLes contenus peuvent comporter des **biais cognitifs ou des simplifications**. L’économie et la finance sont des domaines **complexes**, influencés par de nombreux facteurs (politiques, psychologiques, technologiques…). Ce qui est vrai aujourd’hui peut ne plus l’être demain.\n\nVous restez seul **responsable de vos choix financiers**. Il est essentiel de toujours vérifier les informations, garder un esprit critique et croiser vos sources avant de prendre des décisions concrètes."
   }
 }
