@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import {
   FaBook,
@@ -10,6 +10,8 @@ import {
   FaUser,
   FaFolderOpen,
 } from "react-icons/fa";
+import { useEffect } from "react";
+import { useSidebar } from "../context/SidebarContext";
 
 const sections = [
   {
@@ -18,7 +20,6 @@ const sections = [
     icon: <FaBook />,
     items: [
       { title: "Concepts fondamentaux", path: "concepts-fundamentals" },
-      { title: "Glossaire", path: "glossary" },
       { title: "Risques", path: "risks" },
     ],
   },
@@ -100,21 +101,41 @@ const sections = [
     title: "Ressources & lectures",
     path: "resources",
     icon: <FaBook />,
-    items: [],
+    items: [
+      { title: "Ressources utiles", path: "resources" },
+      { title: "Glossaire", path: "glossary" },
+      { title: "Lectures recommandées", path: "readings" },
+    ],
   },
 ];
-interface SidebarProps {
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
+const Sidebar: React.FC = () => {
   const location = useLocation();
-  const currentPath = location.pathname.split("/").slice(1);
+  const navigate = useNavigate();
+  const { isOpen, setIsOpen, expandedSection, setExpandedSection } =
+    useSidebar();
+
+  const currentPath = location.pathname.split("/")[1];
+
+  useEffect(() => {
+    if (currentPath) {
+      setExpandedSection(currentPath);
+    }
+  }, [currentPath]);
+
+  const handleScrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    if (window.innerWidth < 768) {
+      setIsOpen(false);
+    }
+  };
 
   return (
     <>
-      <Navbar onHamburgerClick={() => setIsOpen(!isOpen)} />
+      <Navbar />
 
       {isOpen && (
         <div
@@ -130,39 +151,46 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
       >
         <ul className="space-y-3">
           {sections.map((section) => {
-            const isActive = currentPath[0] === section.path;
+            const isActive = currentPath === section.path;
+
             return (
               <li key={section.path}>
                 <NavLink
                   to={`/${section.path}`}
-                  className={`
-                    flex items-center gap-3 px-3 py-2 rounded-lg
-                    transition-colors duration-200
-                    ${
-                      isActive
-                        ? "bg-blue-600 text-white"
-                        : "hover:bg-gray-700 hover:text-white"
+                  onClick={(e) => {
+                    if (window.innerWidth < 768) {
+                      e.preventDefault();
+                      setExpandedSection(
+                        expandedSection === section.path ? null : section.path
+                      );
+                      navigate(`/${section.path}`);
                     }
-                  `}
+                  }}
+                  className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors duration-200 ${
+                    isActive
+                      ? "bg-blue-600 text-white"
+                      : "hover:bg-gray-700 hover:text-white"
+                  }`}
                 >
                   <span className="text-lg">{section.icon}</span>
                   <span className="font-medium">{section.title}</span>
                 </NavLink>
 
-                {isActive && section.items.length > 0 && (
-                  <ul className="mt-2 ml-6 space-y-1">
-                    {section.items.map((item) => (
-                      <li key={item.path}>
-                        <NavLink
-                          to={`/${section.path}#${item.path}`}
-                          className="block px-2 py-1 rounded-lg text-sm hover:bg-gray-600 hover:text-white transition-colors duration-200"
-                        >
-                          {item.title}
-                        </NavLink>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                {expandedSection === section.path &&
+                  section.items.length > 0 && (
+                    <ul className="mt-2 ml-6 space-y-1">
+                      {section.items.map((item) => (
+                        <li key={item.path}>
+                          <button
+                            onClick={() => handleScrollTo(item.path)}
+                            className="w-full text-left block px-2 py-1 rounded-lg text-sm hover:bg-gray-600 hover:text-white transition-colors duration-200"
+                          >
+                            {item.title}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
               </li>
             );
           })}

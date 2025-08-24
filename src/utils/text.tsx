@@ -8,7 +8,11 @@ export const renderParagraphs = (text: string) =>
     });
 
     return (
-      <p key={idx} className="leading-relaxed">
+      <p
+        key={idx}
+        className="leading-relaxed"
+        style={{ whiteSpace: "pre-wrap" }}
+      >
         {formatted}
       </p>
     );

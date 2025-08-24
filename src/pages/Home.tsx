@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FaEnvelope,
   FaBookOpen,
@@ -6,21 +6,19 @@ import {
   FaExclamationTriangle,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import Sidebar from "../components/Sidebar";
 import InfoBubble from "../components/InfoBubble";
-import { renderParagraphs } from "../utils/text"; // <-- import ici
+import { renderParagraphs } from "../utils/text";
+import { useSidebar } from "../context/SidebarContext";
 
 const Home: React.FC = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
+  const { isOpen } = useSidebar();
   const { t } = useTranslation("home");
 
   return (
     <div className="flex h-screen text-gray-300 bg-[#12121b]">
-      <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
-
       <main
         className={`flex-1 overflow-auto pt-16 pb-8 transition-all duration-300 ${
-          sidebarOpen ? "md:ml-64" : "md:ml-0"
+          isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
         <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4">

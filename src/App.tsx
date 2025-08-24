@@ -9,22 +9,27 @@ import Taxes from "./pages/Taxes";
 import Psychology from "./pages/Psychology";
 import Resources from "./pages/Resources";
 import Cryptos from "./pages/Cryptos";
+import Sidebar from "./components/Sidebar";
+import { SidebarProvider } from "./context/SidebarContext";
 
 function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/basics/*" element={<Basics />} />
-        <Route path="/banking/*" element={<Banking />} />
-        <Route path="/personal-finance/*" element={<PersonalFinance />} />
-        <Route path="/investments/*" element={<Investments />} />
-        <Route path="/trading/*" element={<Trading />} />
-        <Route path="/cryptos/*" element={<Cryptos />} />
-        <Route path="/taxes/*" element={<Taxes />} />
-        <Route path="/psychology/*" element={<Psychology />} />
-        <Route path="/resources/*" element={<Resources />} />
-      </Routes>
+      <SidebarProvider>
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/basics/*" element={<Basics />} />
+          <Route path="/banking/*" element={<Banking />} />
+          <Route path="/personal-finance/*" element={<PersonalFinance />} />
+          <Route path="/investments/*" element={<Investments />} />
+          <Route path="/trading/*" element={<Trading />} />
+          <Route path="/cryptos/*" element={<Cryptos />} />
+          <Route path="/taxes/*" element={<Taxes />} />
+          <Route path="/psychology/*" element={<Psychology />} />
+          <Route path="/resources/*" element={<Resources />} />
+        </Routes>
+      </SidebarProvider>
     </BrowserRouter>
   );
 }
