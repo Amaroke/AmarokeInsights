@@ -5,6 +5,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import frHome from "./fr/home.json";
 import frConcepts from "./fr/basics.concepts.json";
 import frRisks from "./fr/basics.risks.json";
+import frAccounts from "./fr/banking.accounts.json";
 
 i18n
   .use(LanguageDetector)
@@ -15,6 +16,7 @@ i18n
         home: frHome,
         concepts: frConcepts,
         risks: frRisks,
+        accounts: frAccounts,
       },
     },
     fallbackLng: "fr",

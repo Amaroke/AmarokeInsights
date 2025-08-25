@@ -1,0 +1,52 @@
+{
+  "types_of_accounts": {
+    "checking": {
+      "title": "Compte courant",
+      "content": "Permet de gérer votre argent au quotidien (salaire, factures, retraits). Avantages : grande flexibilité, accès immédiat aux fonds. Inconvénients : aucun rendement. Type : épargne court terme."
+    },
+    "livret_a": {
+      "title": "Livret A",
+      "content": "Épargne sécurisée et disponible immédiatement. Avantages : défiscalisé, rendement stable (~3%). Inconvénients : plafond limité (23 k€). Type : épargne court terme."
+    },
+    "ldd": {
+      "title": "LDD (Livret de Développement Durable)",
+      "content": "Similaire au Livret A, utilisé après plafond du Livret A. Avantages : défiscalisé, sécurisé. Inconvénients : plafond limité (12 k€). Type : épargne court terme."
+    },
+    "livret_jeune": {
+      "title": "Livret jeune",
+      "content": "Réservé aux moins de 25 ans. Avantages : taux attractif (~4%), défiscalisé, sécurité. Inconvénients : plafond très bas (1,6 k€). Type : épargne court terme."
+    },
+    "lep": {
+      "title": "LEP (Livret d’Épargne Populaire)",
+      "content": "Réservé aux revenus modestes. Avantages : taux attractif (~4%), défiscalisé. Inconvénients : plafond limité (10 k€), conditions de ressources. Type : épargne court terme."
+    },
+    "term_savings": {
+      "title": "Compte à terme",
+      "content": "Argent placé pour une durée fixe avec taux garanti. Avantages : rendement stable, sécurisé. Inconvénients : argent bloqué jusqu’à échéance, peu flexible. Type : épargne court/moyen terme."
+    },
+    "pel": {
+      "title": "PEL (Plan Épargne Logement)",
+      "content": "Épargne pour un projet immobilier. Avantages : taux garanti, prime d’État possible. Inconvénients : argent bloqué 4 ans minimum, rendement inférieur aux livrets. Type : épargne moyen terme."
+    },
+    "cel": {
+      "title": "CEL (Compte Épargne Logement)",
+      "content": "Épargne pour un projet immobilier. Avantages : flexibilité, possibilité de prêt immobilier. Inconvénients : faible rendement (2%), plafond bas (15 k€). Type : épargne court terme."
+    },
+    "investment_account": {
+      "title": "Compte d’investissement (CTO)",
+      "content": "Permet d’investir en actions, obligations ou fonds. Avantages : rendement potentiellement supérieur, diversification possible. Inconvénients : risque de perte du capital, performance variable. Type : investissement moyen/long terme."
+    },
+    "pea": {
+      "title": "PEA (Plan d’Épargne en Actions)",
+      "content": "Investissement en actions européennes avec avantage fiscal. Avantages : gains défiscalisés après 5 ans, possibilité de diversifier. Inconvénients : limité aux actions UE, risque de perte en capital. Type : investissement moyen/long terme."
+    },
+    "assurance_vie": {
+      "title": "Assurance vie",
+      "content": "Permet de placer sur fonds euros ou unités de compte. Avantages : fiscalité avantageuse après 8 ans, transmission facilitée. Inconvénients : frais parfois élevés, performance variable selon supports. Type : investissement moyen/long terme."
+    },
+    "per": {
+      "title": "PER (Plan Épargne Retraite)",
+      "content": "Épargne bloquée pour la retraite avec avantages fiscaux. Avantages : déduction des versements, capital disponible à la retraite. Inconvénients : argent bloqué, rendement dépend du marché. Type : investissement long terme."
+    }
+  }
+}
