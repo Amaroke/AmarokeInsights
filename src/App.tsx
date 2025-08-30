@@ -20,11 +20,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/basics/*" element={<Basics />} />
-          <Route path="/banking/*" element={<Banking />} />
           <Route path="/personal-finance/*" element={<PersonalFinance />} />
+          <Route path="/banking/*" element={<Banking />} />
           <Route path="/investments/*" element={<Investments />} />
-          <Route path="/trading/*" element={<Trading />} />
           <Route path="/cryptos/*" element={<Cryptos />} />
+          <Route path="/trading/*" element={<Trading />} />
           <Route path="/taxes/*" element={<Taxes />} />
           <Route path="/psychology/*" element={<Psychology />} />
           <Route path="/resources/*" element={<Resources />} />

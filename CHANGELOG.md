@@ -1,5 +1,9 @@
 # Changelog
 
+- 30/08/2025
+  - **Ajout de la page sur la gestion financière.**
+  - Revue du plan du site.
+
 - 25/08/2025
   - **Ajout de la page sur les bases de la finance.**
 

@@ -24,24 +24,26 @@ const sections = [
     ],
   },
   {
+    title: "Gestion financière",
+    path: "personal-finance",
+    icon: <FaWallet />,
+    items: [
+      { title: "Budget", path: "budget" },
+      {
+        title: "Épargne & FIRE",
+        path: "savings-emergency-fund",
+      },
+      { title: "Dettes & emprunts", path: "debt" },
+    ],
+  },
+  {
     title: "Banque",
     path: "banking",
     icon: <FaPiggyBank />,
     items: [
       { title: "Types de comptes", path: "types-of-accounts" },
       { title: "Taux et frais", path: "rates-fees" },
-      { title: "Crédits & emprunts", path: "credit-debit-cards" },
       { title: "Sécurité & fraude", path: "security-fraud" },
-    ],
-  },
-  {
-    title: "Gestion financière",
-    path: "personal-finance",
-    icon: <FaWallet />,
-    items: [
-      { title: "Budget", path: "budget" },
-      { title: "Épargne & fonds de secours", path: "savings-emergency-fund" },
-      { title: "Dettes & emprunts", path: "debt" },
     ],
   },
   {
@@ -57,16 +59,6 @@ const sections = [
     ],
   },
   {
-    title: "Trading",
-    path: "trading",
-    icon: <FaMoneyCheckAlt />,
-    items: [
-      { title: "Analyse technique", path: "technical-analysis" },
-      { title: "Analyse fondamentale", path: "fundamental-analysis" },
-      { title: "Dérivés financiers", path: "derivatives" },
-    ],
-  },
-  {
     title: "Cryptomonnaies",
     path: "cryptos",
     icon: <FaBitcoin />,
@@ -75,6 +67,16 @@ const sections = [
       { title: "Choisir un broker", path: "choose-broker" },
       { title: "Investir en cryptos", path: "invest-cryptos" },
       { title: "Trader des cryptos", path: "trade-cryptos" },
+    ],
+  },
+  {
+    title: "Trading",
+    path: "trading",
+    icon: <FaMoneyCheckAlt />,
+    items: [
+      { title: "Analyse technique", path: "technical-analysis" },
+      { title: "Analyse fondamentale", path: "fundamental-analysis" },
+      { title: "Dérivés financiers", path: "derivatives" },
     ],
   },
   {
