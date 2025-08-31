@@ -19,7 +19,6 @@ const InfoBubble: React.FC<InfoBubbleProps> = ({
         <div className={`text-2xl ${color || "text-white"}`}>{icon}</div>
         <h2 className="text-lg md:text-xl font-semibold text-white">{title}</h2>
       </div>
-
       <div className="text-gray-400 space-y-2">{children}</div>
     </section>
   );

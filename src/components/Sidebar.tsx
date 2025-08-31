@@ -141,7 +141,7 @@ const Sidebar: React.FC = () => {
 
       {isOpen && (
         <div
-          className="fixed inset-0 backdrop-blur-sm backdrop-brightness-75 md:hidden z-10"
+          className="fixed inset-0 backdrop-blur-sm backdrop-brightness-75 md:hidden z-100"
           onClick={() => setIsOpen(false)}
         />
       )}

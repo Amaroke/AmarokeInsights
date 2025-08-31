@@ -1,5 +1,8 @@
 # Changelog
 
+- 31/08/2025
+  - **Ajout de la page sur les banques et types de compte.**
+
 - 30/08/2025
   - **Ajout de la page sur la gestion financière.**
   - Revue du plan du site.
