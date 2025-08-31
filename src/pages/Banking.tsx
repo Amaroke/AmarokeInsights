@@ -619,7 +619,7 @@ const BankingAccounts: React.FC = () => {
                   </ul>
 
                   <p className="leading-relaxed mt-3">
-                    ⚠️ Objectif : choisir une banque et un compte qui minimisent
+                    Choisir une banque et un compte qui minimisent
                     vos frais fixes, et un courtier ou une plateforme
                     d’investissement compétitive si vous placez de l’argent.
                     Optimiser les frais, c’est directement augmenter le
