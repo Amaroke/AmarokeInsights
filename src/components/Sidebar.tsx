@@ -147,7 +147,7 @@ const Sidebar: React.FC = () => {
       )}
 
       <nav
-        className={`fixed top-16 left-0 h-full bg-[#1b1b27]/95 text-gray-300 p-4 overflow-y-auto transform transition-transform duration-300 ease-in-out w-64 z-30 select-none ${
+        className={`fixed top-16 left-0 h-full bg-[#1b1b27]/95 text-gray-300 p-4 overflow-y-auto transform transition-transform duration-300 ease-in-out w-64 z-300 select-none ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
