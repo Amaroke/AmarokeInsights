@@ -104,8 +104,8 @@ const BankingAccounts: React.FC = () => {
                   <strong>Fiscalité :</strong> Exonéré d'impôt et prélèvements
                   sociaux.
                   <br />
-                  <strong>Avantages :</strong> Sécurisé, accessible
-                  immédiatement.
+                  <strong>Avantages :</strong> Sécurisé, fonds disponibles à
+                  tout moment.
                   <br />
                   <strong>Inconvénients :</strong> Rendement limité.
                   <br />
@@ -176,8 +176,10 @@ const BankingAccounts: React.FC = () => {
                   <strong>Taux :</strong> Très variable, fortement lié à votre
                   stratégie / Plafond 150 000 €
                   <br />
-                  <strong>Fiscalité :</strong> PFU avant 5ans, uniquement les
-                  prélèvements sociaux 17,2% après 5 ans
+                  <strong>Fiscalité :</strong> PFU, 12,8 % d'impôt sur le revenu
+                  et 17,2 % de prélèvements sociaux, 30% au total si retiré
+                  avant 5 ans, uniquement les prélèvements sociaux 17,2% après 5
+                  ans
                   <br />
                   <strong>Avantages :</strong> Rendement potentiel élevé,
                   fiscalité attractive.
@@ -286,8 +288,9 @@ const BankingAccounts: React.FC = () => {
                   <strong>Taux :</strong> Variable selon performance des titres
                   choisis
                   <br />
-                  <strong>Fiscalité :</strong> Gains et dividendes soumis au PFU
-                  (30%)
+                  <strong>Fiscalité :</strong> Gains et dividendes soumis au
+                  PFU, 12,8 % d'impôt sur le revenu et 17,2 % de prélèvements
+                  sociaux, 30% au total.
                   <br />
                   <strong>Avantages :</strong> Liberté totale d’investissement,
                   aucun plafond, possibilité de diversifier internationalement.
@@ -364,7 +367,8 @@ const BankingAccounts: React.FC = () => {
                   <br />
                   <strong>Taux :</strong> 2%, variable selon durée et banque
                   <br />
-                  <strong>Fiscalité :</strong> PFU 30%
+                  <strong>Fiscalité :</strong> PFU, 12,8 % d'impôt sur le revenu
+                  et 17,2 % de prélèvements sociaux, 30% au total.
                   <br />
                   <strong>Avantages :</strong> Rendement stable, sécurisé.
                   <br />
@@ -387,7 +391,8 @@ const BankingAccounts: React.FC = () => {
                   <br />
                   <strong>Taux :</strong> 1% à 2% en moyenne et selon la banque
                   <br />
-                  <strong>Fiscalité :</strong> PFU 30%
+                  <strong>Fiscalité :</strong> PFU, 12,8 % d'impôt sur le revenu
+                  et 17,2 % de prélèvements sociaux, 30% au total.
                   <br />
                   <strong>Avantages :</strong> Flexibilité, fonds disponibles
                   immédiatement.
@@ -460,9 +465,8 @@ const BankingAccounts: React.FC = () => {
                     - <strong>PEL / CEL</strong> ➜ taux déterminés à l’ouverture
                     et figés dans le temps. Un ancien PEL (avant 2016) peut
                     rapporter jusqu’à <strong>2,5 % net garanti</strong>, ce qui
-                    est très intéressant aujourd’hui. Mais les nouveaux PEL
-                    plafonnés à <strong>1 % brut</strong> ne sont plus
-                    compétitifs.
+                    est intéressant aujourd’hui. Mais les nouveaux PEL plafonnés
+                    à <strong>1 % brut</strong> ne sont plus compétitifs.
                   </p>
 
                   <p className="leading-relaxed mt-3">
@@ -492,15 +496,9 @@ const BankingAccounts: React.FC = () => {
                     ⚠️ Ces taux <strong>ne sont pas garantis</strong> : ils
                     dépendent des taux directeurs de la <strong>BCE</strong> et
                     des frais de dépôt appliqués par la plateforme. Une baisse
-                    de la BCE = une baisse immédiate du rendement.
-                  </p>
-
-                  <p className="leading-relaxed mt-4">
-                    ✅ En résumé : ne vous arrêtez jamais au taux affiché. Ce
-                    qui compte, c’est le{" "}
-                    <strong>rendement net après impôts et frais</strong>. Un
-                    produit séduisant peut rapporter moins qu’un livret garanti
-                    et défiscalisé.
+                    de la BCE = une baisse immédiate du rendement. Un produit
+                    séduisant peut rapporter moins qu’un livret garanti et
+                    défiscalisé.
                   </p>
                 </InfoBubble>
 
@@ -561,8 +559,8 @@ const BankingAccounts: React.FC = () => {
                   </p>
 
                   <p className="leading-relaxed mt-4">
-                    👉 <strong>Astuce :</strong> comparez toujours les frais.
-                    Les banques en ligne proposent souvent des cartes gratuites
+                    <strong>Astuce :</strong> comparez toujours les frais. Les
+                    banques en ligne proposent souvent des cartes gratuites
                     (débit immédiat ou différé), alors que les banques
                     traditionnelles facturent 30 à 60 €/an pour une carte
                     classique.
@@ -585,7 +583,7 @@ const BankingAccounts: React.FC = () => {
                   </p>
 
                   <p className="leading-relaxed mt-3">
-                    👉 Pour optimiser vos frais, regardez surtout :
+                    Pour optimiser vos frais, regardez surtout :
                   </p>
 
                   <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
@@ -738,9 +736,10 @@ const BankingAccounts: React.FC = () => {
                     </li>
                   </ul>
                   <p className="leading-relaxed mt-2">
-                    ✅ Bonnes pratiques : activer 2FA, utiliser des mots de
+                    Pour vous en prémunir, activer 2FA, utiliser des mots de
                     passe forts et uniques, vérifier les sources, et bloquer
-                    immédiatement tout accès suspect.
+                    immédiatement tout accès suspect. Pour faire court,
+                    appliquer les recommandations générale de sécurité en ligne.
                   </p>
                 </InfoBubble>
               </div>
