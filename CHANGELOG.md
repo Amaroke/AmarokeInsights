@@ -2,6 +2,9 @@
 
 ## Accéder au site : [https://amaroke.github.io/AmarokeInsights/](https://amaroke.github.io/AmarokeInsights/)
 
+- 25/10/2025
+  - Ajout des affichages de "NEW" dans la barre latérale pour les sections récemment mises à jour.
+
 - 31/08/2025
   - **Ajout de la page sur les banques et types de compte.**
 

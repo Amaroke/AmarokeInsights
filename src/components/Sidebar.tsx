@@ -12,12 +12,14 @@ import {
 } from "react-icons/fa";
 import { useEffect } from "react";
 import { useSidebar } from "../context/SidebarContext";
+import { setVisit, isNew } from "../utils/visitTracker";
 
 const sections = [
   {
     title: "Bases",
     path: "basics",
     icon: <FaBook />,
+    lastUpdated: "2025-08-25",
     items: [
       { title: "Concepts fondamentaux", path: "concepts-fundamentals" },
       { title: "Risques", path: "risks" },
@@ -27,6 +29,7 @@ const sections = [
     title: "Gestion financière",
     path: "personal-finance",
     icon: <FaWallet />,
+    lastUpdated: "2025-08-30",
     items: [
       { title: "Budget", path: "budget" },
       {
@@ -40,6 +43,7 @@ const sections = [
     title: "Banque",
     path: "banking",
     icon: <FaPiggyBank />,
+    lastUpdated: "2025-08-31",
     items: [
       { title: "Types de comptes", path: "types-of-accounts" },
       { title: "Taux et frais", path: "rates-fees" },
@@ -50,10 +54,12 @@ const sections = [
     title: "Placements",
     path: "investments",
     icon: <FaChartLine />,
+    lastUpdated: "",
     items: [
       { title: "Actions", path: "stocks" },
+      { title: "ETF", path: "index-etfs" },
       { title: "Obligations", path: "bonds" },
-      { title: "Fonds & ETF", path: "index-funds-etfs" },
+      { title: "Fonds de placement", path: "index-funds" },
       { title: "Immobilier", path: "real-estate" },
       { title: "Produits structurés", path: "structured-products" },
     ],
@@ -62,6 +68,7 @@ const sections = [
     title: "Cryptomonnaies",
     path: "cryptos",
     icon: <FaBitcoin />,
+    lastUpdated: "",
     items: [
       { title: "C'est quoi les crypto", path: "what-are-cryptos" },
       { title: "Choisir un broker", path: "choose-broker" },
@@ -73,6 +80,7 @@ const sections = [
     title: "Trading",
     path: "trading",
     icon: <FaMoneyCheckAlt />,
+    lastUpdated: "",
     items: [
       { title: "Analyse technique", path: "technical-analysis" },
       { title: "Analyse fondamentale", path: "fundamental-analysis" },
@@ -83,6 +91,7 @@ const sections = [
     title: "Impôts",
     path: "taxes",
     icon: <FaFolderOpen />,
+    lastUpdated: "",
     items: [
       { title: "Impôt sur le revenu", path: "income-tax" },
       { title: "Impôt sur les investissements", path: "investment-tax" },
@@ -93,6 +102,7 @@ const sections = [
     title: "Psychologie",
     path: "psychology",
     icon: <FaUser />,
+    lastUpdated: "",
     items: [
       { title: "Biais cognitifs & émotions", path: "cognitive-biases" },
       { title: "FOMO & discipline", path: "fomo-discipline" },
@@ -103,6 +113,7 @@ const sections = [
     title: "Ressources & lectures",
     path: "resources",
     icon: <FaBook />,
+    lastUpdated: "",
     items: [
       { title: "Ressources utiles", path: "resources" },
       { title: "Glossaire", path: "glossary" },
@@ -154,12 +165,14 @@ const Sidebar: React.FC = () => {
         <ul className="space-y-3">
           {sections.map((section) => {
             const isActive = currentPath === section.path;
+            const showNew = isNew(section.path, section.lastUpdated);
 
             return (
               <li key={section.path}>
                 <NavLink
                   to={`/${section.path}`}
                   onClick={(e) => {
+                    setVisit(section.path);
                     if (window.innerWidth < 768) {
                       e.preventDefault();
                       setExpandedSection(
@@ -176,8 +189,12 @@ const Sidebar: React.FC = () => {
                 >
                   <span className="text-lg">{section.icon}</span>
                   <span className="font-medium">{section.title}</span>
+                  {showNew && (
+                    <span className="text-xs bg-red-500 text-white px-1.5 py-0.5 rounded-full">
+                      NEW
+                    </span>
+                  )}
                 </NavLink>
-
                 {expandedSection === section.path &&
                   section.items.length > 0 && (
                     <ul className="mt-2 ml-6 space-y-1">
