@@ -18,7 +18,7 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 - 25/10/2025
   - Ajout des affichages de "NEW" dans la barre latérale pour les sections récemment mises à jour.
-  - **Ajout de la page sur les investissements, publication de l'introduction.**
+  - **Ajout de la page sur les investissements, publication de l'introduction et des parties sur les actions et les ETFs.**
 
 - 31/08/2025
   - **Ajout de la page sur les banques et types de compte.**

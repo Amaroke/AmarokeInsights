@@ -57,7 +57,7 @@ const sections = [
     lastUpdated: "2025-10-25",
     items: [
       { title: "Qu'est-ce qu'investir ?", path: "what-is-invest" },
-      { title: "Marchés financiers", path: "stocks" },
+      { title: "Marchés financiers", path: "financial-markets" },
       { title: "Produits complexes et dérivés", path: "complex-products" },
       { title: "Immobilier", path: "real-estate" },
       { title: "Placements alternatifs", path: "alternatives" },
