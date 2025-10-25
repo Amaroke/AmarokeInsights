@@ -146,15 +146,15 @@ const Investments: React.FC = () => {
               </div>
             </section>
 
-            <section id="financial-markets" className="scroll-mt-22 mb-12">
+            <section id="stocks" className="scroll-mt-22 mb-12">
               <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-                Marchés financiers
+                Actions, ETF, OPCVM, Obligations
               </h2>
 
               <div className="space-y-4">
                 <InfoBubble
                   icon={<FaChartLine />}
-                  title="Actions et assimilés"
+                  title="Les actions"
                   color="text-blue-400"
                 >
                   <p>
@@ -254,7 +254,7 @@ const Investments: React.FC = () => {
 
                 <InfoBubble
                   icon={<FaChartLine />}
-                  title="ETF (Trackers)"
+                  title="Les ETF (Trackers)"
                   color="text-blue-400"
                 >
                   <p>
@@ -360,7 +360,7 @@ const Investments: React.FC = () => {
 
                 <InfoBubble
                   icon={<FaChartLine />}
-                  title="Fonds d’investissement (OPCVM, SICAV, FCP)"
+                  title="Les Fonds d’investissement (OPCVM, SICAV, FCP)"
                   color="text-blue-400"
                 >
                   <p>Description à venir</p>
@@ -368,7 +368,7 @@ const Investments: React.FC = () => {
 
                 <InfoBubble
                   icon={<FaLandmark />}
-                  title="Obligations"
+                  title="Les Obligations"
                   color="text-blue-400"
                 >
                   <p>Description à venir</p>
