@@ -26,6 +26,7 @@ export function isNew(
   const recentThreshold = new Date(lastUpdatedDate);
   recentThreshold.setMonth(recentThreshold.getMonth() + months);
   if (recentThreshold < now) return false;
+  if (!visitedAt) return true;
 
   return visitedDate < lastUpdatedDate;
 }
