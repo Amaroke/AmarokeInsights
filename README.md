@@ -10,8 +10,6 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 📧 **<hugo.amaroke@gmail.com>**
 
----
-
 ## 🚀 Accéder au site
 
 👉 [Voir le site en ligne](https://amaroke.github.io/AmarokeInsights)
@@ -36,6 +34,8 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
   - Mise en place du site.
   - Mise en place du déploiement.
   - **Ajout de la page d'accueil**.
+
+---
 
 ## ⚠️ Disclaimer
 
