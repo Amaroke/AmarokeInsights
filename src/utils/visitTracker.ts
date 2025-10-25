@@ -19,8 +19,6 @@ export function isNew(
   if (!lastUpdated) return false;
 
   const visitedAt = getVisits()[sectionPath];
-  if (!visitedAt) return true;
-
   const visitedDate = new Date(visitedAt);
   const lastUpdatedDate = new Date(lastUpdated);
 

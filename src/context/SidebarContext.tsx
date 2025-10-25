@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 interface SidebarContextType {
   isOpen: boolean;
@@ -14,8 +14,15 @@ const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(() => {
+    const stored = localStorage.getItem("sidebarIsOpen");
+    return stored ? JSON.parse(stored) : false;
+  });
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
+  useEffect(() => {
+    localStorage.setItem("sidebarIsOpen", JSON.stringify(isOpen));
+  }, [isOpen]);
 
   const toggleSidebar = () => setIsOpen((prev) => !prev);
 
