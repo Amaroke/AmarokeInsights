@@ -19,7 +19,7 @@ const BankingAccounts: React.FC = () => {
     <>
       <div className="flex h-screen text-gray-300 bg-[#12121b]">
         <main
-          className={`flex-1 overflow-auto pt-16 pb-8 transition-all duration-300 ${
+          className={`flex-1 overflow-auto pt-16 md:mt-16 md:pt-0 pb-8 transition-all duration-300 ${
             isOpen ? "md:ml-64" : "md:ml-0"
           }`}
         >
@@ -619,11 +619,11 @@ const BankingAccounts: React.FC = () => {
                   </ul>
 
                   <p className="leading-relaxed mt-3">
-                    Choisir une banque et un compte qui minimisent
-                    vos frais fixes, et un courtier ou une plateforme
-                    d’investissement compétitive si vous placez de l’argent.
-                    Optimiser les frais, c’est directement augmenter le
-                    rendement net de vos placements.
+                    Choisir une banque et un compte qui minimisent vos frais
+                    fixes, et un courtier ou une plateforme d’investissement
+                    compétitive si vous placez de l’argent. Optimiser les frais,
+                    c’est directement augmenter le rendement net de vos
+                    placements.
                   </p>
                 </InfoBubble>
               </div>
