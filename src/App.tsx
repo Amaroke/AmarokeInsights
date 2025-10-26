@@ -11,6 +11,7 @@ import Resources from "./pages/Resources";
 import Cryptos from "./pages/Cryptos";
 import Sidebar from "./components/Sidebar";
 import { SidebarProvider } from "./context/SidebarContext";
+import BuyVsRent from "./pages/BuyVsRent";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/taxes/*" element={<Taxes />} />
           <Route path="/psychology/*" element={<Psychology />} />
           <Route path="/resources/*" element={<Resources />} />
+          <Route path="/buyvsrent/*" element={<BuyVsRent />} />
         </Routes>
       </SidebarProvider>
     </BrowserRouter>
