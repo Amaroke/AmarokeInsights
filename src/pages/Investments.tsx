@@ -59,8 +59,8 @@ const Investments: React.FC = () => {
                     <strong>Exemples :</strong>
                     <ul className="list-disc list-inside mt-2 space-y-1">
                       <li>
-                        <strong>Livret A :</strong> très sûr et liquide (on peux
-                        retirer son argent quand le souhaite, il n'est pas
+                        <strong>Livret A :</strong> très sûr et liquide (on peut
+                        retirer son argent quand on le souhaite, il n'est pas
                         bloqué), mais rendement faible.
                       </li>
                       <li>
@@ -135,7 +135,7 @@ const Investments: React.FC = () => {
 
                   <p>
                     Les sections suivantes, à l'image de celles de la page
-                    précédentes sur les types de compte, détaillent les
+                    précédente sur les types de compte, détaillent les
                     différents types de placements, afin de permettre des
                     décisions éclairées et adaptées à votre situation.
                     Attention, chaque investissement n'est pas disponible dans
@@ -176,7 +176,7 @@ const Investments: React.FC = () => {
                   <p>
                     Les actions dites de préférences peuvent octroyer
                     d'avantages de droits. De plus posséder des actions permet
-                    de s'exposer a de potentiels plus-values si le cours de
+                    de s'exposer à de potentielles plus-values si le cours de
                     l'action augmente.
                   </p>
                   <p>
@@ -221,11 +221,15 @@ const Investments: React.FC = () => {
                   <p>
                     Les ordres sont centralisés sur le système de la bourse. Les
                     actions les plus liquides sont cotées en continu de 9h à
-                    17h40. Les autres valeurs sont échangées via des{" "}
+                    17h40 (pour la bourse de Paris). Les autres valeurs sont
+                    échangées via des
                     <strong>fixing</strong> à horaires fixes : 11h30 et 16h30
                     (ou 15h00 pour le marché libre, non réglementé,
-                    principalement utilisé par des PME).
+                    principalement utilisé par des PME). Chaque marché financier
+                    dans le monde possède ses propres horaires d’ouverture et de
+                    fermeture selon son fuseau horaire.
                   </p>
+
                   <h3 className="font-semibold mt-4">
                     Comment acheter ou vendre ?
                   </h3>
@@ -358,146 +362,6 @@ const Investments: React.FC = () => {
                     performance peut légèrement s’écarter de l’indice (tracking
                     error), et l’effet de levier, pour les ETF complexes, peut
                     amplifier les pertes.
-                  </p>
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaChartLine />}
-                  title="Les Fonds d’investissement (OPCVM, SICAV, FCP)"
-                  color="text-blue-400"
-                >
-                  <p>
-                    Les fonds d’investissement, également appelés{" "}
-                    <strong>OPC</strong> (Organismes de Placement Collectif),
-                    regroupent différents actifs financiers tels que des
-                    actions, des obligations, etc. Plutôt que d’acquérir
-                    directement ces titres un à un, un investisseur peut
-                    souscrire à un fonds et ainsi détenir une part d’un
-                    portefeuille géré par des professionnels. Pour souscrire une
-                    part d’un FCP ou acquérir une action d’une SICAV,
-                    l’investisseur transmet un ordre via son intermédiaire (sa
-                    banque, son courtier), qui le fait exécuter par la société
-                    de gestion du fonds. Les ordres peuvent nécessiter un délai
-                    avant d’être effectivement traités, en raison de la
-                    centralisation et de la fréquence de calcul (parfois
-                    hebdomadaire) du fond.
-                  </p>
-
-                  <p className="mt-3">
-                    Le principe repose sur la mise en commun de capitaux par
-                    plusieurs investisseurs. La société de gestion investit
-                    ensuite ces capitaux selon une stratégie d’investissement
-                    définie. En contrepartie, chaque investisseur détient des{" "}
-                    <strong>parts</strong> du fonds, dont la valeur évolue en
-                    fonction des performances du portefeuille. Chaque OPC doit
-                    établir un Document d’Informations Clés pour l’Investisseur
-                    (DIC), qui est contrôlé par l’Autorité des Marchés
-                    Financiers. Ce DIC est indispensable pour s’informer sur le
-                    produit et le comparer aux autres OPC.
-                  </p>
-
-                  <p className="mt-3">
-                    Les OPC présentent trois caractéristiques principales.
-                  </p>
-
-                  <ul className="list-disc list-inside ml-4">
-                    <li>
-                      Ils offrent une diversification immédiate du portefeuille
-                    </li>
-                    <li>Ils sont gérés par des professionnels agréés</li>
-                    <li>
-                      Leurs parts peuvent être achetées ou revendues à leur
-                      valeur liquidative
-                    </li>
-                  </ul>
-
-                  <p className="mt-3">
-                    Il existe deux grandes catégories d’OPC.
-                  </p>
-
-                  <ul className="list-disc list-inside ml-4">
-                    <li>
-                      <strong>Les OPCVM</strong> sont des fonds d’investissement
-                      dits “classiques”, encadrés par la réglementation
-                      européenne. Ils visent à offrir une diversification
-                      importante et une liquidité élevée tout en respectant des
-                      règles strictes de transparence et de gestion des risques.
-                    </li>
-                    <li>
-                      <strong>Les FIA</strong> (Fonds d’Investissement
-                      Alternatifs) regroupent des placements plus spécialisés
-                      tels que les fonds immobiliers, de capital-investissement
-                      ou de stratégie alternative. Ils disposent d’une plus
-                      grande flexibilité de gestion, mais présentent
-                      généralement un niveau de risque plus élevé et une
-                      liquidité plus limitée.
-                    </li>
-                  </ul>
-
-                  <p className="mt-3">
-                    Les deux principales formes juridiques de ces fonds sont la{" "}
-                    <strong>SICAV</strong> (Société d’Investissement à Capital
-                    Variable) et le <strong>FCP</strong> (Fonds Commun de
-                    Placement). La SICAV est une société anonyme à capital
-                    variable dont les souscripteurs deviennent actionnaires, et
-                    peuvent ainsi bénéficier de droits de vote. Le FCP, quant à
-                    lui, est une copropriété de valeurs mobilières où les
-                    investisseurs détiennent des parts, sans pour autant
-                    disposer de droits liés à la qualité d’actionnaire.
-                  </p>
-
-                  <p className="mt-4">
-                    Les fonds se distinguent aussi par leur classe d’actifs :
-                  </p>
-
-                  <ul className="list-disc list-inside ml-4">
-                    <li>
-                      <strong>Fonds monétaires</strong> : investis dans des
-                      produits à court terme, ils présentent un risque très
-                      faible mais un rendement limité.
-                    </li>
-                    <li>
-                      <strong>Fonds obligataires</strong> : investis dans des
-                      obligations d’États ou d’entreprises, ils offrent un
-                      rendement modéré pour un risque mesuré.
-                    </li>
-                    <li>
-                      <strong>Fonds actions</strong> : investis majoritairement
-                      sur les marchés actions, plus risqués mais à potentiel de
-                      rendement supérieur.
-                    </li>
-                    <li>
-                      <strong>Fonds diversifiés</strong> : combinent actions,
-                      obligations et produits monétaires, avec un niveau de
-                      risque dépendant de la répartition entre ces actifs.
-                    </li>
-                    <li>
-                      <strong>Fonds alternatifs</strong> : mettent en œuvre des
-                      stratégies spécifiques via d’autres OPC, offrant une
-                      diversification accrue.
-                    </li>
-                    <li>
-                      <strong>Fonds à formule</strong> : visent un rendement
-                      défini par une formule, souvent assorti d’une garantie de
-                      capital à échéance.
-                    </li>
-                    <li>
-                      <strong>Fonds complexes</strong> : utilisent des
-                      stratégies avancées comme l’effet de levier ou les
-                      produits dérivés pour amplifier la performance. Ils sont
-                      destinés à des investisseurs avertis en raison du risque
-                      accru.
-                    </li>
-                  </ul>
-
-                  <p className="mt-3">
-                    Il convient de noter que l’investissement dans des fonds
-                    entraîne des <strong>frais de gestion</strong> et autres
-                    coûts associés à l’exploitation et à l’administration du
-                    fonds. Ces frais réduisent le rendement effectif pour
-                    l’investisseur. Par ailleurs, bien que l’objectif des fonds
-                    soit souvent de surperformer le marché ou un indice de
-                    référence, aucune garantie de performance n’est fournie.
                   </p>
                 </InfoBubble>
 
@@ -681,6 +545,146 @@ const Investments: React.FC = () => {
                     </li>
                   </ul>
                 </InfoBubble>
+
+                <InfoBubble
+                  icon={<FaChartLine />}
+                  title="Les Fonds d’investissement (OPCVM, SICAV, FCP)"
+                  color="text-blue-400"
+                >
+                  <p>
+                    Les fonds d’investissement, également appelés{" "}
+                    <strong>OPC</strong> (Organismes de Placement Collectif),
+                    regroupent différents actifs financiers tels que des
+                    actions, de l'immobilier, des obligations, etc. Plutôt que
+                    d’acquérir directement ces titres un à un, un investisseur
+                    peut souscrire à un fonds et ainsi détenir une part d’un
+                    portefeuille géré par des professionnels. Pour souscrire une
+                    part d’un FCP ou acquérir une action d’une SICAV,
+                    l’investisseur transmet un ordre via son intermédiaire (sa
+                    banque, son courtier), qui le fait exécuter par la société
+                    de gestion du fonds. Les ordres peuvent nécessiter un délai
+                    avant d’être effectivement traités, en raison de la
+                    centralisation et de la fréquence de calcul (parfois
+                    hebdomadaire) du fond.
+                  </p>
+
+                  <p className="mt-3">
+                    Le principe repose sur la mise en commun de capitaux par
+                    plusieurs investisseurs. La société de gestion investit
+                    ensuite ces capitaux selon une stratégie d’investissement
+                    définie. En contrepartie, chaque investisseur détient des{" "}
+                    <strong>parts</strong> du fonds, dont la valeur évolue en
+                    fonction des performances du portefeuille. Chaque OPC doit
+                    établir un Document d’Informations Clés pour l’Investisseur
+                    (DIC), qui est contrôlé par l’Autorité des Marchés
+                    Financiers. Ce DIC est indispensable pour s’informer sur le
+                    produit et le comparer aux autres OPC.
+                  </p>
+
+                  <p className="mt-3">
+                    Les OPC présentent trois caractéristiques principales.
+                  </p>
+
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      Ils offrent une diversification immédiate du portefeuille
+                    </li>
+                    <li>Ils sont gérés par des professionnels agréés</li>
+                    <li>
+                      Leurs parts peuvent être achetées ou revendues à leur
+                      valeur liquidative
+                    </li>
+                  </ul>
+
+                  <p className="mt-3">
+                    Il existe deux grandes catégories d’OPC.
+                  </p>
+
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      <strong>Les OPCVM</strong> sont des fonds d’investissement
+                      dits “classiques”, encadrés par la réglementation
+                      européenne. Ils visent à offrir une diversification
+                      importante et une liquidité élevée tout en respectant des
+                      règles strictes de transparence et de gestion des risques.
+                    </li>
+                    <li>
+                      <strong>Les FIA</strong> (Fonds d’Investissement
+                      Alternatifs) regroupent des placements plus spécialisés
+                      tels que les fonds immobiliers, de capital-investissement
+                      ou de stratégie alternative. Ils disposent d’une plus
+                      grande flexibilité de gestion, mais présentent
+                      généralement un niveau de risque plus élevé et une
+                      liquidité plus limitée.
+                    </li>
+                  </ul>
+
+                  <p className="mt-3">
+                    Les deux principales formes juridiques de ces fonds sont la{" "}
+                    <strong>SICAV</strong> (Société d’Investissement à Capital
+                    Variable) et le <strong>FCP</strong> (Fonds Commun de
+                    Placement). La SICAV est une société anonyme à capital
+                    variable dont les souscripteurs deviennent actionnaires, et
+                    peuvent ainsi bénéficier de droits de vote. Le FCP, quant à
+                    lui, est une copropriété de différents biens financiers où
+                    les investisseurs détiennent des parts, sans pour autant
+                    disposer de droits liés à la qualité d’actionnaire.
+                  </p>
+
+                  <p className="mt-4">
+                    Les fonds se distinguent aussi par leur classe d’actifs :
+                  </p>
+
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      <strong>Fonds monétaires</strong> : investis dans des
+                      produits à court terme, ils présentent un risque très
+                      faible mais un rendement limité.
+                    </li>
+                    <li>
+                      <strong>Fonds obligataires</strong> : investis dans des
+                      obligations d’États ou d’entreprises, ils offrent un
+                      rendement modéré pour un risque mesuré.
+                    </li>
+                    <li>
+                      <strong>Fonds actions</strong> : investis majoritairement
+                      sur les marchés actions, plus risqués mais à potentiel de
+                      rendement supérieur.
+                    </li>
+                    <li>
+                      <strong>Fonds diversifiés</strong> : combinent actions,
+                      obligations et produits monétaires, avec un niveau de
+                      risque dépendant de la répartition entre ces actifs.
+                    </li>
+                    <li>
+                      <strong>Fonds alternatifs</strong> : mettent en œuvre des
+                      stratégies spécifiques via d’autres OPC, offrant une
+                      diversification accrue.
+                    </li>
+                    <li>
+                      <strong>Fonds à formule</strong> : visent un rendement
+                      défini par une formule, souvent assorti d’une garantie de
+                      capital à échéance.
+                    </li>
+                    <li>
+                      <strong>Fonds complexes</strong> : utilisent des
+                      stratégies avancées comme l’effet de levier ou les
+                      produits dérivés pour amplifier la performance. Ils sont
+                      destinés à des investisseurs avertis en raison du risque
+                      accru.
+                    </li>
+                  </ul>
+
+                  <p className="mt-3">
+                    Il convient de noter que l’investissement dans des fonds
+                    entraîne des <strong>frais de gestion</strong> et autres
+                    coûts associés à l’exploitation et à l’administration du
+                    fonds. Ces frais réduisent le rendement effectif pour
+                    l’investisseur. Par ailleurs, bien que l’objectif des fonds
+                    soit souvent de surperformer le marché ou un indice de
+                    référence, aucune garantie de performance n’est fournie.
+                  </p>
+                </InfoBubble>
               </div>
             </section>
 
@@ -692,7 +696,7 @@ const Investments: React.FC = () => {
               <div className="space-y-4">
                 <InfoBubble
                   icon={<FaCubes />}
-                  title="Produits dérivés, structurés et ETN/Certificats"
+                  title="Produits dérivés et structurés"
                   color="text-purple-400"
                 >
                   <p>
@@ -736,12 +740,15 @@ const Investments: React.FC = () => {
                       conditionnels.
                     </li>
                     <li>
-                      <strong>Certificats et ETN :</strong> produits structurés
-                      cotés en bourse répliquant indices, paniers d’actions,
-                      matières premières ou stratégies complexes. Les ETN sont
-                      des titres de créance émis par une banque suivant un
-                      indice sans que l’investisseur possède directement les
-                      composants.
+                      <strong>Certificats :</strong> produits structurés cotés
+                      en bourse répliquant des indices, des paniers d’actions,
+                      des matières premières ou des stratégies complexes.
+                    </li>
+                    <li>
+                      <strong>ETN (Exchange Traded Notes) :</strong> titres de
+                      créance émis par une banque suivant un indice, sans que
+                      l’investisseur possède directement les composants
+                      sous-jacents.
                     </li>
                   </ul>
 

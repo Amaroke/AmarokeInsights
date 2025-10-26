@@ -57,7 +57,10 @@ const sections = [
     lastUpdated: "2025-10-26",
     items: [
       { title: "Qu'est-ce qu'investir ?", path: "what-is-invest" },
-      { title: "Actions, ETF, OPCVM, Obligations", path: "stocks" },
+      {
+        title: "Actions, ETF, Obligations et fonds d'investissement",
+        path: "stocks",
+      },
       { title: "Produits complexes et dérivés", path: "complex-products" },
       { title: "Immobilier", path: "real-estate" },
       { title: "Placements alternatifs", path: "alternatives" },
