@@ -287,7 +287,7 @@ const Investments: React.FC = () => {
                     exactement ce que vous achetez.
                   </p>
                   <p>
-                    Exemple :{" "}
+                    Exemple :{" "}
                     <strong>Amundi MSCI World Swap (Acc) UCITS ETF</strong>
                   </p>
 
@@ -299,7 +299,7 @@ const Investments: React.FC = () => {
                       suivi.
                     </li>
                     <li>
-                      <strong>MSCI World</strong> : indique l’indice que l’ETF
+                      <strong>MSCI World</strong> : indique l’indice que l’ETF
                       réplique. Ici, il suit l’indice mondial MSCI World,
                       composé d’actions de pays développés.
                     </li>
@@ -311,12 +311,12 @@ const Investments: React.FC = () => {
                       américains tout en restant éligible au PEA.
                     </li>
                     <li>
-                      <strong>UCITS</strong> : montre que l’ETF respecte la
+                      <strong>UCITS</strong> : montre que l’ETF respecte la
                       réglementation européenne sur les fonds d’investissement,
                       garantissant un cadre de sécurité et de transparence.
                     </li>
                     <li>
-                      <strong>Acc (Accumulation)</strong> : signifie que les
+                      <strong>Acc (Accumulation)</strong> : signifie que les
                       dividendes générés par les actions du panier sont
                       réinvestis automatiquement dans l’ETF, au lieu d’être
                       versés aux investisseurs.
@@ -515,13 +515,13 @@ const Investments: React.FC = () => {
                     date d’échéance. Son prix peut varier sur les marchés et est
                     exprimé en pourcentage de sa valeur initiale.
                   </p>
-                  <p>Les types principaux d'obligations sont :</p>
+                  <p>Les types principaux d'obligations sont :</p>
                   <ul className="list-disc list-inside ml-4">
                     <li>
                       <strong>Obligations à taux fixe :</strong> elles
                       rapportent le même intérêt pendant toute la durée et
                       remboursent le capital à l’échéance. Leur prix peut varier
-                      selon les taux des nouvelles obligations : si les nouveaux
+                      selon les taux des nouvelles obligations : si les nouveaux
                       taux montent, le prix des anciennes baisse, et
                       inversement.
                     </li>
@@ -574,7 +574,7 @@ const Investments: React.FC = () => {
                     Si vous payez plus cher que la valeur normale (le nominal),
                     votre gain sera plus faible. Si vous payez moins, votre gain
                     sera plus élevé. Les prix peuvent aussi changer à cause des
-                    taux d'intérêt et de la demande sur le marché : si les taux
+                    taux d'intérêt et de la demande sur le marché : si les taux
                     augmentent ou que peu de gens veulent acheter l'obligation,
                     son prix baisse, si les taux baissent ou que beaucoup de
                     gens veulent l'obligation, son prix monte.
@@ -622,32 +622,32 @@ const Investments: React.FC = () => {
                   </p>
                   <p>
                     Les notes vont de <strong>AAA</strong> (meilleure qualité,
-                    très sûr) à <strong>D</strong> (défaut). Voici un résumé :
+                    très sûr) à <strong>D</strong> (défaut). Voici un résumé :
                   </p>
                   <ul className="list-disc list-inside ml-4">
                     <li>
-                      <strong>AAA :</strong> très fiable, risque de défaut quasi
+                      <strong>AAA :</strong> très fiable, risque de défaut quasi
                       nul.
                     </li>
                     <li>
-                      <strong>AA / A :</strong> fiable, mais un peu plus
+                      <strong>AA / A :</strong> fiable, mais un peu plus
                       sensible aux changements économiques.
                     </li>
                     <li>
-                      <strong>BBB :</strong> solide, mais peut être affecté par
+                      <strong>BBB :</strong> solide, mais peut être affecté par
                       des conditions économiques défavorables.
                     </li>
                     <li>
-                      <strong>BB / B :</strong> plus risqué, susceptible de
+                      <strong>BB / B :</strong> plus risqué, susceptible de
                       rencontrer des difficultés en cas de problèmes
                       économiques.
                     </li>
                     <li>
-                      <strong>CCC / CC / C :</strong> très risqué, dépend
+                      <strong>CCC / CC / C :</strong> très risqué, dépend
                       fortement de conditions favorables pour être remboursé.
                     </li>
                     <li>
-                      <strong>D :</strong> défaut, l'émetteur ne rembourse pas.
+                      <strong>D :</strong> défaut, l'émetteur ne rembourse pas.
                     </li>
                   </ul>
                   <h3 className="font-semibold mt-4">Obligations complexes</h3>
@@ -688,28 +688,68 @@ const Investments: React.FC = () => {
               <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
                 Produits complexes et dérivés
               </h2>
-              {/* ETN Certificats _ FOREX*/}
+
               <div className="space-y-4">
                 <InfoBubble
                   icon={<FaCubes />}
-                  title="Produits dérivés et à effet de levier"
+                  title="Produits dérivés, structurés et ETN/Certificats"
                   color="text-purple-400"
                 >
-                  {/* Liste d'exemples de produits dérivés à effet de levier :
-                    - Turbos
-                    - Warrants
-                    - CFD (Contracts for Difference)
-                    - Options et futures
-                  */}
-                  <p>Description à venir</p>
-                </InfoBubble>
+                  <p>
+                    Ces produits sont principalement utilisés pour le trading ou
+                    la couverture de positions, et non pour un investissement
+                    long terme. Ils permettent de parier sur la hausse ou la
+                    baisse d’un actif, d’amplifier gains et pertes, ou de créer
+                    des solutions sur mesure combinant plusieurs instruments
+                    financiers.
+                  </p>
 
-                <InfoBubble
-                  icon={<FaCubes />}
-                  title="Produits structurés"
-                  color="text-purple-400"
-                >
-                  <p>Description à venir</p>
+                  <ul className="list-disc list-inside ml-4 mt-2 space-y-2">
+                    <li>
+                      <strong>Turbos :</strong> contrats à effet de levier
+                      suivant un actif, amplifiant gains et pertes.
+                    </li>
+                    <li>
+                      <strong>Warrants :</strong> options à long terme
+                      permettant de spéculer sans posséder l’actif, avec effet
+                      de levier.
+                    </li>
+                    <li>
+                      <strong>CFD :</strong> contrats sur différence pour
+                      spéculer sur un actif sans le posséder.
+                    </li>
+                    <li>
+                      <strong>Options et futures :</strong> contrats
+                      standardisés pour acheter ou vendre un actif à une date et
+                      un prix déterminés, utilisés pour spéculation ou
+                      couverture.
+                    </li>
+                    <li>
+                      <strong>Forex :</strong> marché des devises accessible via
+                      CFD ou dérivés, permettant de spéculer sur les taux de
+                      change avec effet de levier.
+                    </li>
+                    <li>
+                      <strong>Produits structurés :</strong> combinent plusieurs
+                      instruments pour créer un produit sur mesure, avec capital
+                      garanti ou partiellement garanti et rendements
+                      conditionnels.
+                    </li>
+                    <li>
+                      <strong>Certificats et ETN :</strong> produits structurés
+                      cotés en bourse répliquant indices, paniers d’actions,
+                      matières premières ou stratégies complexes. Les ETN sont
+                      des titres de créance émis par une banque suivant un
+                      indice sans que l’investisseur possède directement les
+                      composants.
+                    </li>
+                  </ul>
+
+                  <p className="mt-2">
+                    Je n’en détaille pas plus ici, car leur usage est complexe,
+                    dépend de la plateforme et je n'ai aucune expérience avec
+                    ces produits.
+                  </p>
                 </InfoBubble>
               </div>
             </section>
@@ -750,6 +790,7 @@ const Investments: React.FC = () => {
               <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
                 Placements alternatifs
               </h2>
+              {/* ETC */}
 
               <div className="space-y-4">
                 <InfoBubble
@@ -757,7 +798,6 @@ const Investments: React.FC = () => {
                   title="Matières premières et métaux précieux"
                   color="text-yellow-400"
                 >
-                  {/* ETC */}
                   <p>Description à venir</p>
                 </InfoBubble>
 
@@ -766,8 +806,6 @@ const Investments: React.FC = () => {
                   title="Cryptoactifs et Web3"
                   color="text-yellow-400"
                 >
-                  {/*ETN*/}
-
                   <p>Description à venir</p>
                 </InfoBubble>
 
