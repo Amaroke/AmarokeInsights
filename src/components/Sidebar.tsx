@@ -54,13 +54,24 @@ const sections = [
     title: "Placements",
     path: "investments",
     icon: <FaChartLine />,
-    lastUpdated: "2025-10-25",
+    lastUpdated: "2025-10-26",
     items: [
       { title: "Qu'est-ce qu'investir ?", path: "what-is-invest" },
       { title: "Actions, ETF, OPCVM, Obligations", path: "stocks" },
       { title: "Produits complexes et dérivés", path: "complex-products" },
       { title: "Immobilier", path: "real-estate" },
       { title: "Placements alternatifs", path: "alternatives" },
+    ],
+  },
+  {
+    title: "Trading",
+    path: "trading",
+    icon: <FaMoneyCheckAlt />,
+    lastUpdated: "",
+    items: [
+      { title: "Analyse technique", path: "technical-analysis" },
+      { title: "Analyse fondamentale", path: "fundamental-analysis" },
+      { title: "Dérivés financiers", path: "derivatives" },
     ],
   },
   {
@@ -73,17 +84,6 @@ const sections = [
       { title: "Choisir un broker", path: "choose-broker" },
       { title: "Investir en cryptos", path: "invest-cryptos" },
       { title: "Trader des cryptos", path: "trade-cryptos" },
-    ],
-  },
-  {
-    title: "Trading",
-    path: "trading",
-    icon: <FaMoneyCheckAlt />,
-    lastUpdated: "",
-    items: [
-      { title: "Analyse technique", path: "technical-analysis" },
-      { title: "Analyse fondamentale", path: "fundamental-analysis" },
-      { title: "Dérivés financiers", path: "derivatives" },
     ],
   },
   {

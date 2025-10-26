@@ -19,7 +19,7 @@ const BankingAccounts: React.FC = () => {
     <>
       <div className="flex h-screen text-gray-300 bg-[#12121b]">
         <main
-          className={`flex-1 overflow-auto pt-16 md:mt-16 md:pt-0 pb-8 transition-all duration-300 ${
+          className={`flex-1 overflow-auto pt-16 md:mt-16 md:pt-0 transition-all duration-300 ${
             isOpen ? "md:ml-64" : "md:ml-0"
           }`}
         >

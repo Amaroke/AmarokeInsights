@@ -293,9 +293,10 @@ const Investments: React.FC = () => {
 
                   <ul className="list-disc list-inside ml-4">
                     <li>
-                      <strong>Amundi</strong> : gestionnaire de fonds européen
-                      reconnu, spécialisé dans les ETF et autres produits
-                      d’investissement, garantissant fiabilité et expertise.
+                      <strong>Amundi</strong> : émetteur du fonds, responsable
+                      de sa création et de sa gestion opérationnelle. C’est
+                      l’entité qui met le produit sur le marché et en assure le
+                      suivi.
                     </li>
                     <li>
                       <strong>MSCI World</strong> : indique l’indice que l’ETF
@@ -303,9 +304,11 @@ const Investments: React.FC = () => {
                       composé d’actions de pays développés.
                     </li>
                     <li>
-                      <strong>Swap</strong> : signifie que l’ETF utilise un
-                      mécanisme de réplication synthétique via des swaps pour
-                      reproduire la performance de l’indice.
+                      <strong>Swap</strong> : veut dire que l’ETF ne détient pas
+                      directement les actions de l’indice. Grâce à un accord
+                      (swap) avec une banque, il reproduit la même performance.
+                      C’est ce mécanisme qui permet d’accéder à des indices
+                      américains tout en restant éligible au PEA.
                     </li>
                     <li>
                       <strong>UCITS</strong> : montre que l’ETF respecte la
@@ -363,7 +366,139 @@ const Investments: React.FC = () => {
                   title="Les Fonds d’investissement (OPCVM, SICAV, FCP)"
                   color="text-blue-400"
                 >
-                  <p>Description à venir</p>
+                  <p>
+                    Les fonds d’investissement, également appelés{" "}
+                    <strong>OPC</strong> (Organismes de Placement Collectif),
+                    regroupent différents actifs financiers tels que des
+                    actions, des obligations, etc. Plutôt que d’acquérir
+                    directement ces titres un à un, un investisseur peut
+                    souscrire à un fonds et ainsi détenir une part d’un
+                    portefeuille géré par des professionnels. Pour souscrire une
+                    part d’un FCP ou acquérir une action d’une SICAV,
+                    l’investisseur transmet un ordre via son intermédiaire (sa
+                    banque, son courtier), qui le fait exécuter par la société
+                    de gestion du fonds. Les ordres peuvent nécessiter un délai
+                    avant d’être effectivement traités, en raison de la
+                    centralisation et de la fréquence de calcul (parfois
+                    hebdomadaire) du fond.
+                  </p>
+
+                  <p className="mt-3">
+                    Le principe repose sur la mise en commun de capitaux par
+                    plusieurs investisseurs. La société de gestion investit
+                    ensuite ces capitaux selon une stratégie d’investissement
+                    définie. En contrepartie, chaque investisseur détient des{" "}
+                    <strong>parts</strong> du fonds, dont la valeur évolue en
+                    fonction des performances du portefeuille. Chaque OPC doit
+                    établir un Document d’Informations Clés pour l’Investisseur
+                    (DIC), qui est contrôlé par l’Autorité des Marchés
+                    Financiers. Ce DIC est indispensable pour s’informer sur le
+                    produit et le comparer aux autres OPC.
+                  </p>
+
+                  <p className="mt-3">
+                    Les OPC présentent trois caractéristiques principales.
+                  </p>
+
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      Ils offrent une diversification immédiate du portefeuille
+                    </li>
+                    <li>Ils sont gérés par des professionnels agréés</li>
+                    <li>
+                      Leurs parts peuvent être achetées ou revendues à leur
+                      valeur liquidative
+                    </li>
+                  </ul>
+
+                  <p className="mt-3">
+                    Il existe deux grandes catégories d’OPC.
+                  </p>
+
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      <strong>Les OPCVM</strong> sont des fonds d’investissement
+                      dits “classiques”, encadrés par la réglementation
+                      européenne. Ils visent à offrir une diversification
+                      importante et une liquidité élevée tout en respectant des
+                      règles strictes de transparence et de gestion des risques.
+                    </li>
+                    <li>
+                      <strong>Les FIA</strong> (Fonds d’Investissement
+                      Alternatifs) regroupent des placements plus spécialisés
+                      tels que les fonds immobiliers, de capital-investissement
+                      ou de stratégie alternative. Ils disposent d’une plus
+                      grande flexibilité de gestion, mais présentent
+                      généralement un niveau de risque plus élevé et une
+                      liquidité plus limitée.
+                    </li>
+                  </ul>
+
+                  <p className="mt-3">
+                    Les deux principales formes juridiques de ces fonds sont la{" "}
+                    <strong>SICAV</strong> (Société d’Investissement à Capital
+                    Variable) et le <strong>FCP</strong> (Fonds Commun de
+                    Placement). La SICAV est une société anonyme à capital
+                    variable dont les souscripteurs deviennent actionnaires, et
+                    peuvent ainsi bénéficier de droits de vote. Le FCP, quant à
+                    lui, est une copropriété de valeurs mobilières où les
+                    investisseurs détiennent des parts, sans pour autant
+                    disposer de droits liés à la qualité d’actionnaire.
+                  </p>
+
+                  <p className="mt-4">
+                    Les fonds se distinguent aussi par leur classe d’actifs :
+                  </p>
+
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      <strong>Fonds monétaires</strong> : investis dans des
+                      produits à court terme, ils présentent un risque très
+                      faible mais un rendement limité.
+                    </li>
+                    <li>
+                      <strong>Fonds obligataires</strong> : investis dans des
+                      obligations d’États ou d’entreprises, ils offrent un
+                      rendement modéré pour un risque mesuré.
+                    </li>
+                    <li>
+                      <strong>Fonds actions</strong> : investis majoritairement
+                      sur les marchés actions, plus risqués mais à potentiel de
+                      rendement supérieur.
+                    </li>
+                    <li>
+                      <strong>Fonds diversifiés</strong> : combinent actions,
+                      obligations et produits monétaires, avec un niveau de
+                      risque dépendant de la répartition entre ces actifs.
+                    </li>
+                    <li>
+                      <strong>Fonds alternatifs</strong> : mettent en œuvre des
+                      stratégies spécifiques via d’autres OPC, offrant une
+                      diversification accrue.
+                    </li>
+                    <li>
+                      <strong>Fonds à formule</strong> : visent un rendement
+                      défini par une formule, souvent assorti d’une garantie de
+                      capital à échéance.
+                    </li>
+                    <li>
+                      <strong>Fonds complexes</strong> : utilisent des
+                      stratégies avancées comme l’effet de levier ou les
+                      produits dérivés pour amplifier la performance. Ils sont
+                      destinés à des investisseurs avertis en raison du risque
+                      accru.
+                    </li>
+                  </ul>
+
+                  <p className="mt-3">
+                    Il convient de noter que l’investissement dans des fonds
+                    entraîne des <strong>frais de gestion</strong> et autres
+                    coûts associés à l’exploitation et à l’administration du
+                    fonds. Ces frais réduisent le rendement effectif pour
+                    l’investisseur. Par ailleurs, bien que l’objectif des fonds
+                    soit souvent de surperformer le marché ou un indice de
+                    référence, aucune garantie de performance n’est fournie.
+                  </p>
                 </InfoBubble>
 
                 <InfoBubble
@@ -371,7 +506,180 @@ const Investments: React.FC = () => {
                   title="Les Obligations"
                   color="text-blue-400"
                 >
-                  <p>Description à venir</p>
+                  <p>
+                    Une obligation est un prêt que vous faites à quelqu’un
+                    (État, entreprise ou collectivité). En échange, l’emprunteur
+                    promet de vous rendre votre argent à une date précise et de
+                    vous verser parfois des intérêts. Chaque obligation a son
+                    propre code (ISIN), un taux d’intérêt appelé coupon, et une
+                    date d’échéance. Son prix peut varier sur les marchés et est
+                    exprimé en pourcentage de sa valeur initiale.
+                  </p>
+                  <p>Les types principaux d'obligations sont :</p>
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      <strong>Obligations à taux fixe :</strong> elles
+                      rapportent le même intérêt pendant toute la durée et
+                      remboursent le capital à l’échéance. Leur prix peut varier
+                      selon les taux des nouvelles obligations : si les nouveaux
+                      taux montent, le prix des anciennes baisse, et
+                      inversement.
+                    </li>
+                    <li>
+                      <strong>Obligations à taux variable :</strong> le capital
+                      reste identique, mais le taux d’intérêt change selon les
+                      taux du marché, ce qui fait varier les intérêts que vous
+                      recevez.
+                    </li>
+                    <li>
+                      <strong>Obligations à taux révisable :</strong> similaires
+                      aux obligations à taux variable, mais le taux est ajusté
+                      seulement à certaines périodes selon l’évolution des taux
+                      du marché. Elles protègent le capital, mais le revenu peut
+                      varier dans le temps.
+                    </li>
+                    <li>
+                      <strong>Obligations échangeables :</strong> elles peuvent
+                      être échangées contre d’autres obligations (taux fixe ou
+                      variable) selon les conditions et dates prévues dans le
+                      contrat.
+                    </li>
+                    <li>
+                      <strong>Obligations à coupon zéro :</strong> elles ne
+                      versent pas d’intérêts pendant la vie de l’obligation. Le
+                      rendement provient de la différence entre le prix d’achat
+                      et le remboursement à l’échéance.
+                    </li>
+                  </ul>
+                  <p>
+                    Les obligations peuvent générer un revenu via des coupons
+                    annuels ou par une plus-value/moins-value à l’échéance. Le
+                    taux de rendement effectif combine ces deux sources et
+                    diffère souvent du taux de coupon.
+                  </p>
+
+                  <h3 className="font-semibold">Comment ça fonctionne ?</h3>
+                  <p>
+                    Pour acheter ou vendre une obligation, vous passez
+                    généralement par une banque ou une plateforme de courtage.
+                    Vous pouvez acheter une obligation neuve directement lors
+                    d'une émission ou une obligation déjà existante sur le
+                    marché secondaire. Le prix que vous payez peut varier selon
+                    l'offre et la demande, et des intérêts accumulés depuis le
+                    dernier paiement peuvent s'ajouter au prix. Pour vendre,
+                    vous la revendez également via votre banque ou plateforme,
+                    au prix du marché au moment de la vente.
+                  </p>
+                  <p>
+                    Si vous payez plus cher que la valeur normale (le nominal),
+                    votre gain sera plus faible. Si vous payez moins, votre gain
+                    sera plus élevé. Les prix peuvent aussi changer à cause des
+                    taux d'intérêt et de la demande sur le marché : si les taux
+                    augmentent ou que peu de gens veulent acheter l'obligation,
+                    son prix baisse, si les taux baissent ou que beaucoup de
+                    gens veulent l'obligation, son prix monte.
+                  </p>
+
+                  <h3 className="font-semibold mt-4">Exemples concrets</h3>
+                  <p>
+                    <strong>Exemple 1 – Variation des taux :</strong> vous
+                    possédez une obligation qui verse 50 € d'intérêt par an. Si
+                    les taux d'intérêt du marché augmentent, les nouvelles
+                    obligations sont plus intéressantes. La vôtre devient moins
+                    attrayante et son prix baisse.
+                  </p>
+                  <p>
+                    <strong>Exemple 2 – Obligation avec coupon :</strong> vous
+                    achetez une obligation de 1 000 € qui verse 50 € par an
+                    pendant 5 ans. Si vous payez 1 050 € pour l'acheter, vous
+                    recevrez toujours 50 € par an, mais votre rendement réel
+                    sera un peu plus faible car vous avez payé plus cher que le
+                    nominal.
+                  </p>
+                  <p>
+                    <strong>Exemple 3 – Zéro-coupon :</strong> vous achetez une
+                    obligation qui ne verse pas d'intérêt mais remboursera 1 000
+                    € dans 3 ans. Si vous l'achetez pour 900 €, vous gagnez 100
+                    € à l'échéance, même sans recevoir d'intérêt annuel.
+                  </p>
+                  <p>
+                    Ces exemples supposent que vous gardez l'obligation jusqu'à
+                    son remboursement et que l'emprunteur ne fait pas défaut.
+                  </p>
+                  <h3 className="font-semibold mt-4">
+                    Notation de risque d'une obligation
+                  </h3>
+                  <p>
+                    La notation d'une obligation indique la solidité financière
+                    de l'émetteur (État ou entreprise) et sa capacité à
+                    rembourser. Elle est fournie par des agences comme Standard
+                    & Poor's (S&P). Une bonne note signifie que l'émetteur est
+                    fiable et a peu de risques de défaut, tandis qu'une note
+                    faible indique un risque plus élevé. Elles permettent aux
+                    investisseurs de comprendre rapidement le niveau de risque
+                    d’une obligation et de prendre des décisions en connaissance
+                    de cause.
+                  </p>
+                  <p>
+                    Les notes vont de <strong>AAA</strong> (meilleure qualité,
+                    très sûr) à <strong>D</strong> (défaut). Voici un résumé :
+                  </p>
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      <strong>AAA :</strong> très fiable, risque de défaut quasi
+                      nul.
+                    </li>
+                    <li>
+                      <strong>AA / A :</strong> fiable, mais un peu plus
+                      sensible aux changements économiques.
+                    </li>
+                    <li>
+                      <strong>BBB :</strong> solide, mais peut être affecté par
+                      des conditions économiques défavorables.
+                    </li>
+                    <li>
+                      <strong>BB / B :</strong> plus risqué, susceptible de
+                      rencontrer des difficultés en cas de problèmes
+                      économiques.
+                    </li>
+                    <li>
+                      <strong>CCC / CC / C :</strong> très risqué, dépend
+                      fortement de conditions favorables pour être remboursé.
+                    </li>
+                    <li>
+                      <strong>D :</strong> défaut, l'émetteur ne rembourse pas.
+                    </li>
+                  </ul>
+                  <h3 className="font-semibold mt-4">Obligations complexes</h3>
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      <strong>Obligations indexées sur l'inflation :</strong> le
+                      capital et les intérêts suivent l'inflation pour protéger
+                      le pouvoir d'achat.
+                    </li>
+                    <li>
+                      <strong>Obligations perpétuelles :</strong> elles n'ont
+                      pas de date de remboursement fixe, mais l'émetteur peut
+                      parfois les rembourser à certaines dates.
+                    </li>
+                    <li>
+                      <strong>Obligations convertibles :</strong> peuvent être
+                      transformées en actions de l'émetteur selon des conditions
+                      prévues dans le contrat.
+                    </li>
+                    <li>
+                      <strong>Obligations structurées :</strong> combinent une
+                      obligation avec un ou plusieurs instruments financiers
+                      pour ajuster le risque et le rendement.
+                    </li>
+                    <li>
+                      <strong>
+                        Obligations remboursables par anticipation :
+                      </strong>{" "}
+                      l'émetteur peut décider de rembourser l'obligation avant
+                      son échéance selon certaines conditions.
+                    </li>
+                  </ul>
                 </InfoBubble>
               </div>
             </section>
