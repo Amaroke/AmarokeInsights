@@ -16,6 +16,9 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
+- 27/10/2025
+  - **Ajout de la page Ressources & Outils, ajout des outils de calculs d'intérêts composés et de prêts**
+
 - 26/10/2025
   - **Publications des parties sur les fonds de placements, les obligations et les produits complexes et dérivés.**
 
@@ -37,6 +40,17 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
   - Mise en place du site.
   - Mise en place du déploiement.
   - **Ajout de la page d'accueil**.
+
+## Prochaines étapes
+
+- Finir la page sur les placements
+- Finir l'outil sur le comparatif achat vs location
+- S'occuper du glossaire + infobulles de définition partout dans le site
+- Page sur le trading
+- Page sur les cryptomonnaies
+- Page sur la fiscalité
+- Page sur la psychologie
+- Parler de mes stratégies personnelles
 
 ---
 

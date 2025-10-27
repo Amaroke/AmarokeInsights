@@ -90,7 +90,7 @@ const sections = [
     ],
   },
   {
-    title: "Impôts",
+    title: "Fiscalité",
     path: "taxes",
     icon: <FaFolderOpen />,
     lastUpdated: "",
@@ -112,14 +112,14 @@ const sections = [
     ],
   },
   {
-    title: "Ressources & lectures",
+    title: "Ressources & outils",
     path: "resources",
     icon: <FaBook />,
-    lastUpdated: "",
+    lastUpdated: "2025-10-27",
     items: [
-      { title: "Ressources utiles", path: "resources" },
+      { title: "Outils", path: "tools" },
+      { title: "Documentation", path: "documentation" },
       { title: "Glossaire", path: "glossary" },
-      { title: "Lectures recommandées", path: "readings" },
     ],
   },
 ];
