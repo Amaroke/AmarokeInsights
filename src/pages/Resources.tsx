@@ -132,6 +132,46 @@ const Resources: React.FC = () => {
                     </div>
                     <span className="text-sm text-gray-400">→</span>
                   </a>
+                  <a
+                    href="https://www.youtube.com/@Finary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors duration-200 rounded-xl px-4 py-3"
+                  >
+                    <div className="flex items-center gap-3">
+                      <FaExternalLinkAlt className="text-yellow-400" />
+                      <div>
+                        <p className="font-medium text-yellow-300">
+                          Chaîne YouTube Finary
+                        </p>
+                        <p className="text-sm text-gray-400">
+                          Chaîne YouTube francophone axée sur les finances
+                          personnelles et l’investissement.
+                        </p>
+                      </div>
+                    </div>
+                    <span className="text-sm text-gray-400">→</span>
+                  </a>
+                  <a
+                    href="https://www.service-public.gouv.fr/particuliers/vosdroits/N19803"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors duration-200 rounded-xl px-4 py-3"
+                  >
+                    <div className="flex items-center gap-3">
+                      <FaExternalLinkAlt className="text-yellow-400" />
+                      <div>
+                        <p className="font-medium text-yellow-300">
+                          Service Public Français
+                        </p>
+                        <p className="text-sm text-gray-400">
+                          Le site du gouvernement français pour les droits
+                          concernant l'argent et les finances personnelles.
+                        </p>
+                      </div>
+                    </div>
+                    <span className="text-sm text-gray-400">→</span>
+                  </a>
                 </div>
               </InfoBubble>
 

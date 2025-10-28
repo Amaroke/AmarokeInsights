@@ -14,6 +14,8 @@ import { SidebarProvider } from "./context/SidebarContext";
 import BuyVsRent from "./pages/BuyVsRent";
 import CompoundInterest from "./pages/CompoundInterest";
 import LoanCalculator from "./pages/LoanCalculator";
+import Contact from "./pages/Contact";
+import Strategy from "./pages/Strategy";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Route path="/taxes/*" element={<Taxes />} />
           <Route path="/psychology/*" element={<Psychology />} />
           <Route path="/resources/*" element={<Resources />} />
+          <Route path="/strategy/*" element={<Strategy />} />
+          <Route path="/contact/*" element={<Contact />} />
           <Route path="/compound-interest/*" element={<CompoundInterest />} />
           <Route path="/loan/*" element={<LoanCalculator />} />
           <Route path="/buy-vs-rent/*" element={<BuyVsRent />} />

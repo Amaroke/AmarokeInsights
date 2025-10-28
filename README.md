@@ -16,6 +16,9 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
+- 28/10/2025
+  - **Ajout de la page Stratégie personelle.**
+
 - 27/10/2025
   - **Ajout de la page Ressources & Outils, ajout des outils de calculs d'intérêts composés et de prêts**
 
@@ -43,6 +46,7 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Prochaines étapes
 
+- Page de Contact avec Formspree
 - Finir la page sur les placements
 - Finir l'outil sur le comparatif achat vs location
 - S'occuper du glossaire + infobulles de définition partout dans le site
@@ -50,7 +54,6 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 - Page sur les cryptomonnaies
 - Page sur la fiscalité
 - Page sur la psychologie
-- Parler de mes stratégies personnelles
 
 ---
 

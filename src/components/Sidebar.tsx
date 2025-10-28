@@ -9,10 +9,12 @@ import {
   FaBitcoin,
   FaUser,
   FaFolderOpen,
+  FaEnvelope,
 } from "react-icons/fa";
 import { useEffect } from "react";
 import { useSidebar } from "../context/SidebarContext";
 import { setVisit, isNew } from "../utils/visitTracker";
+import { GiBullseye } from "react-icons/gi";
 
 const sections = [
   {
@@ -67,17 +69,6 @@ const sections = [
     ],
   },
   {
-    title: "Trading",
-    path: "trading",
-    icon: <FaMoneyCheckAlt />,
-    lastUpdated: "",
-    items: [
-      { title: "Analyse technique", path: "technical-analysis" },
-      { title: "Analyse fondamentale", path: "fundamental-analysis" },
-      { title: "Dérivés financiers", path: "derivatives" },
-    ],
-  },
-  {
     title: "Cryptomonnaies",
     path: "cryptos",
     icon: <FaBitcoin />,
@@ -87,6 +78,17 @@ const sections = [
       { title: "Choisir un broker", path: "choose-broker" },
       { title: "Investir en cryptos", path: "invest-cryptos" },
       { title: "Trader des cryptos", path: "trade-cryptos" },
+    ],
+  },
+  {
+    title: "Trading",
+    path: "trading",
+    icon: <FaMoneyCheckAlt />,
+    lastUpdated: "",
+    items: [
+      { title: "Analyse technique", path: "technical-analysis" },
+      { title: "Analyse fondamentale", path: "fundamental-analysis" },
+      { title: "Dérivés financiers", path: "derivatives" },
     ],
   },
   {
@@ -112,6 +114,13 @@ const sections = [
     ],
   },
   {
+    title: "Stratégie personelle",
+    path: "strategy",
+    icon: <GiBullseye />,
+    lastUpdated: "2025-10-28",
+    items: [],
+  },
+  {
     title: "Ressources & outils",
     path: "resources",
     icon: <FaBook />,
@@ -121,6 +130,13 @@ const sections = [
       { title: "Documentation", path: "documentation" },
       { title: "Glossaire", path: "glossary" },
     ],
+  },
+  {
+    title: "Me contacter",
+    path: "contact",
+    icon: <FaEnvelope />,
+    lastUpdated: "",
+    items: [],
   },
 ];
 
@@ -160,7 +176,7 @@ const Sidebar: React.FC = () => {
       )}
 
       <nav
-        className={`fixed top-16 left-0 h-full bg-[#1b1b27]/95 text-gray-300 p-4 overflow-y-auto transform transition-transform duration-300 ease-in-out w-64 z-300 select-none ${
+        className={`fixed top-16 left-0 h-full bg-[#1b1b27]/95 text-gray-300 p-4 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] transform transition-transform duration-300 ease-in-out w-64 z-300 select-none ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
