@@ -12,7 +12,7 @@ import {
 import InfoBubble from "../components/InfoBubble";
 import { useSidebar } from "../context/SidebarContext";
 
-const BankingAccounts: React.FC = () => {
+const Banking: React.FC = () => {
   const { isOpen } = useSidebar();
 
   return (
@@ -751,4 +751,4 @@ const BankingAccounts: React.FC = () => {
   );
 };
 
-export default BankingAccounts;
+export default Banking;

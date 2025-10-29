@@ -87,8 +87,8 @@ const Investments: React.FC = () => {
                     Tout placement offre un rendement potentiel mais implique
                     également un risque de perte. Plus le rendement attendu est
                     élevé, plus le risque l’est aussi. L’objectif est de trouver
-                    un équilibre adapté au profil de l’investisseur et à
-                    l’horizon de placement.
+                    un équilibre adapté à son profil et à l’horizon de
+                    placement.
                   </p>
 
                   <p>
@@ -208,9 +208,8 @@ const Investments: React.FC = () => {
                       de la société émettrice, et son <strong>ticker</strong>,
                       un code unique utilisé sur les marchés financiers pour
                       identifier l’action. Le ticker facilite la recherche et le
-                      suivi de l’action dans les plateformes de trading ou les
-                      journaux financiers. Par exemple les actions Christian
-                      Dior, LVMH et Total Energies ont pour tickers respectifs :{" "}
+                      suivi de l’action. Par exemple les actions Christian Dior,
+                      LVMH et Total Energies ont pour tickers respectifs :{" "}
                       <strong>CDI</strong>, <strong>MC</strong> et{" "}
                       <strong>TTE</strong>.
                     </p>
@@ -222,12 +221,11 @@ const Investments: React.FC = () => {
                     Les ordres sont centralisés sur le système de la bourse. Les
                     actions les plus liquides sont cotées en continu de 9h à
                     17h40 (pour la bourse de Paris). Les autres valeurs sont
-                    échangées via des
-                    <strong>fixing</strong> à horaires fixes : 11h30 et 16h30
-                    (ou 15h00 pour le marché libre, non réglementé,
-                    principalement utilisé par des PME). Chaque marché financier
-                    dans le monde possède ses propres horaires d’ouverture et de
-                    fermeture selon son fuseau horaire.
+                    échangées via des <strong>fixing</strong> à horaires fixes :
+                    11h30 et 16h30 (ou 15h00 pour le marché libre, non
+                    réglementé, principalement utilisé par des PME). Chaque
+                    marché financier dans le monde possède ses propres horaires
+                    d’ouverture et de fermeture selon son fuseau horaire.
                   </p>
 
                   <h3 className="font-semibold mt-4">
@@ -772,15 +770,94 @@ const Investments: React.FC = () => {
                   title="Immobilier direct"
                   color="text-green-400"
                 >
-                  <p>Description à venir</p>
+                  <p>
+                    L’immobilier direct consiste à acheter un bien physique
+                    (appartement, maison, immeuble) pour le louer ou le
+                    revendre. C’est un investissement tangible avec des revenus
+                    réguliers si le bien est loué et une plus-value potentielle
+                    à la revente.
+                  </p>
+                  <p>Les principaux critères à considérer sont :</p>
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      <strong>Localisation :</strong> la valeur et la demande
+                      locative dépendent fortement de la ville, du quartier et
+                      des commodités.
+                    </li>
+                    <li>
+                      <strong>Type de bien :</strong> appartement, maison,
+                      immeuble, neuf ou ancien.
+                    </li>
+                    <li>
+                      <strong>Rendement locatif :</strong> rapport entre le
+                      loyer annuel et le prix d’achat.
+                    </li>
+                    <li>
+                      <strong>Fiscalité :</strong> impôts locaux, revenus
+                      fonciers, etc.
+                    </li>
+                    <li>
+                      <strong>Financement :</strong> crédit immobilier, apport
+                      personnel, taux d’intérêt.
+                    </li>
+                  </ul>
+                  <p>
+                    L’immobilier direct implique une gestion active, entretien,
+                    recherche de locataires, gestion administrative. Il est peu
+                    liquide, car la revente peut prendre du temps. C'est cet
+                    aspect qui me déplait le plus, et c'est pour cela que je
+                    n'en parle pas plus en détail ici.
+                  </p>
                 </InfoBubble>
 
                 <InfoBubble
                   icon={<FaHome />}
-                  title="Immobilier collectif (SCPI, OPCI, REIT)"
+                  title="SCPI (Société Civile de Placement Immobilier)"
                   color="text-green-400"
                 >
-                  <p>Description à venir</p>
+                  <p>
+                    Une SCPI permet d’investir dans l’immobilier locatif
+                    collectif sans acheter directement un bien. La société de
+                    gestion collecte des fonds auprès d’investisseurs pour
+                    acheter et gérer un parc immobilier, et redistribue les
+                    revenus locatifs proportionnellement aux parts détenues.
+                  </p>
+                  <p>Avantages :</p>
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      Accès à l’immobilier avec un ticket d’entrée faible
+                      comparé à l’achat direct.
+                    </li>
+                    <li>
+                      Gestion professionnelle, entretien, location et
+                      administration prises en charge par la société de gestion.
+                    </li>
+                    <li>
+                      Diversification géographique et sectorielle, réduisant le
+                      risque lié à un seul bien.
+                    </li>
+                    <li>Revenus potentiels réguliers sous forme de loyers.</li>
+                  </ul>
+                  <p>Inconvénients :</p>
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      Liquidité limitée, il peut être long et complexe de
+                      revendre ses parts.
+                    </li>
+                    <li>
+                      Frais d’entrée et de gestion qui réduisent le rendement
+                      net pour l’investisseur.
+                    </li>
+                    <li>
+                      Risque de perte en capital, si la valeur du parc
+                      immobilier baisse ou si certains locataires ne paient pas
+                      leurs loyers.
+                    </li>
+                    <li>
+                      Fiscalité des revenus fonciers applicable selon le type de
+                      SCPI et le statut de l’investisseur.
+                    </li>
+                  </ul>
                 </InfoBubble>
 
                 <InfoBubble
@@ -788,7 +865,35 @@ const Investments: React.FC = () => {
                   title="Crowdfunding immobilier"
                   color="text-green-400"
                 >
-                  <p>Description à venir</p>
+                  <p>
+                    Le crowdfunding immobilier permet de financer un projet
+                    immobilier en investissant via une plateforme en ligne,
+                    souvent sous forme de prêt ou de participation au capital.
+                    Il offre des rendements potentiels attractifs sur des
+                    projets ciblés, mais comporte un risque plus élevé et une
+                    liquidité limitée.
+                  </p>
+                  <ul className="list-disc list-inside ml-4">
+                    <li>
+                      <strong>Prêt participatif :</strong> vous prêtez de
+                      l’argent au promoteur et recevez des intérêts selon le
+                      projet.
+                    </li>
+                    <li>
+                      <strong>Equity :</strong> vous devenez copropriétaire du
+                      projet, avec un potentiel de plus-value à la revente.
+                    </li>
+                    <li>
+                      <strong>Durée :</strong> généralement 12 à 36 mois selon
+                      le projet.
+                    </li>
+                    <li>
+                      <strong>Risques :</strong> retard ou défaut de livraison,
+                      défaut du promoteur, perte partielle ou totale du capital
+                      et liquidité limitée, car les fonds restent bloqués
+                      jusqu’à la fin du projet.
+                    </li>
+                  </ul>
                 </InfoBubble>
               </div>
             </section>
@@ -797,7 +902,6 @@ const Investments: React.FC = () => {
               <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
                 Placements alternatifs
               </h2>
-              {/* ETC */}
 
               <div className="space-y-4">
                 <InfoBubble
@@ -805,7 +909,67 @@ const Investments: React.FC = () => {
                   title="Matières premières et métaux précieux"
                   color="text-yellow-400"
                 >
-                  <p>Description à venir</p>
+                  <p>
+                    Les matières premières comme l'or, l'argent ou le pétrole
+                    sont souvent utilisées pour diversifier un portefeuille et
+                    se protéger contre l'inflation ou les crises économiques.
+                    Plutôt que d'acheter physiquement ces actifs, la plupart des
+                    investisseurs passent par des ETC (Exchange Traded
+                    Commodities), des produits cotés en bourse qui suivent le
+                    prix de la matière première sous-jacente. Les ETC permettent
+                    d'investir facilement, de profiter de la liquidité du marché
+                    et de sécuriser le stockage, tout en reproduisant
+                    l'évolution du prix du métal ou de la matière première
+                    choisie.
+                  </p>
+                  <p>
+                    Avantages :
+                    <ul className="list-disc list-inside">
+                      <li>
+                        Propriété tangible, vous pouvez possédez réellement le
+                        métal ou la matière première.
+                      </li>
+                      <li>
+                        Couverture contre l’inflation et les crises financières.
+                      </li>
+                      <li>
+                        Indépendance vis-à-vis des instruments financiers et des
+                        marchés boursiers.
+                      </li>
+                      <li>
+                        Valeur reconnue mondialement, notamment pour l’or et
+                        l’argent.
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Inconvénients :
+                    <ul className="list-disc list-inside">
+                      <li>
+                        Stockage et sécurité, les métaux précieux nécessitent un
+                        coffre ou un stockage sécurisé.
+                      </li>
+                      <li>
+                        Liquidité parfois limitée, surtout pour des volumes
+                        importants ou certaines matières premières rares.
+                      </li>
+                      <li>
+                        Pas de revenus réguliers, les matières premières ne
+                        génèrent ni dividendes ni intérêts.
+                      </li>
+                      <li>
+                        Volatilité, le prix peut fluctuer fortement sur le court
+                        terme selon l’offre et la demande ou les événements
+                        géopolitiques.
+                      </li>
+                      <li>
+                        Fiscalité, la vente peut être soumise à l’impôt sur les
+                        plus-values et, dans certains pays, à des règles
+                        spécifiques pour les métaux précieux, ce qui peut
+                        réduire le rendement net.
+                      </li>
+                    </ul>
+                  </p>
                 </InfoBubble>
 
                 <InfoBubble
@@ -813,7 +977,58 @@ const Investments: React.FC = () => {
                   title="Cryptoactifs et Web3"
                   color="text-yellow-400"
                 >
-                  <p>Description à venir</p>
+                  <p>
+                    Les cryptoactifs regroupent les cryptomonnaies comme le
+                    Bitcoin ou l'Ethereum ainsi que les projets Web3 (NFT, DeFi,
+                    DAO). Ces actifs reposent sur la technologie blockchain et
+                    permettent d’investir dans des innovations financières et
+                    technologiques. Ils sont très volatils, mais peuvent offrir
+                    un potentiel de rendement élevé et une diversification
+                    différente des actifs traditionnels.
+                  </p>
+                  <p>
+                    Avantages :
+                    <ul className="list-disc list-inside">
+                      <li>
+                        Diversification par rapport aux actifs traditionnels
+                        comme les actions ou les obligations.
+                      </li>
+                      <li>
+                        Accès à des innovations technologiques et financières.
+                      </li>
+                      <li>
+                        Possibilité d’investir de manière fractionnée et de
+                        gérer facilement le portefeuille via des plateformes en
+                        ligne.
+                      </li>
+                      <li>
+                        Aucune heure d'ouverture ou fermeture de marché,
+                        accessible 24/7.
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Inconvénients :
+                    <ul className="list-disc list-inside">
+                      <li>
+                        Volatilité extrême, le prix peut varier de manière très
+                        rapide et importante.
+                      </li>
+                      <li>
+                        Risque technologique, bugs, piratages ou défaillances
+                        des plateformes.
+                      </li>
+                      <li>
+                        Réglementation et fiscalité incertaines dans certains
+                        pays, avec des obligations déclaratives spécifiques et
+                        des taxes sur les plus-values.
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Une grosse partie est consacré à ces actifs dans les pages
+                    suivantes. Je ne détaille pas plus ici.
+                  </p>
                 </InfoBubble>
 
                 <InfoBubble
@@ -821,7 +1036,17 @@ const Investments: React.FC = () => {
                   title="Private Equity"
                   color="text-yellow-400"
                 >
-                  <p>Description à venir</p>
+                  <p>
+                    Le Private Equity (capital-investissement) consiste à
+                    investir dans des entreprises non cotées en bourse, souvent
+                    en phase de croissance, de transformation ou de
+                    transmission. L’objectif est de financer leur développement
+                    et de réaliser une plus-value lors de leur revente ou de
+                    leur introduction en bourse. Ce type d’investissement
+                    s’inscrit dans une optique de long terme et s’adresse
+                    généralement à des investisseurs prêts à immobiliser leur
+                    capital plusieurs années.
+                  </p>
                 </InfoBubble>
 
                 <InfoBubble
@@ -829,7 +1054,58 @@ const Investments: React.FC = () => {
                   title="Hedge Funds"
                   color="text-yellow-400"
                 >
-                  <p>Description à venir</p>
+                  <p>
+                    Les Hedge Funds sont des fonds d’investissement alternatifs
+                    qui utilisent des stratégies financières avancées pour
+                    générer de la performance, indépendamment de la direction
+                    des marchés. Ils peuvent recourir à la vente à découvert, à
+                    l’effet de levier, à l’arbitrage ou encore à des produits
+                    dérivés. Leur objectif est souvent d’obtenir un rendement
+                    absolu, c’est-à-dire positif quelle que soit la conjoncture
+                    boursière.
+                  </p>
+                  <p>
+                    Avantages :
+                    <ul className="list-disc list-inside">
+                      <li>
+                        Recherche de performance stable et décorrélée des
+                        marchés traditionnels.
+                      </li>
+                      <li>
+                        Grande flexibilité stratégique permettant de s’adapter
+                        aux cycles économiques.
+                      </li>
+                      <li>
+                        Accès à des opportunités d’investissement sophistiquées
+                        et diversifiées.
+                      </li>
+                      <li>
+                        Encadrement professionnel par des gestionnaires
+                        expérimentés.
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Inconvénients :
+                    <ul className="list-disc list-inside">
+                      <li>
+                        Manque de transparence, les stratégies employées sont
+                        souvent complexes et peu détaillées.
+                      </li>
+                      <li>
+                        Risque élevé lié à l’utilisation de l’effet de levier ou
+                        de produits dérivés.
+                      </li>
+                      <li>
+                        Frais de gestion et de performance généralement plus
+                        importants que dans les fonds classiques.
+                      </li>
+                      <li>
+                        Accès restreint, la plupart des Hedge Funds sont
+                        réservés aux investisseurs qualifiés ou institutionnels.
+                      </li>
+                    </ul>
+                  </p>
                 </InfoBubble>
 
                 <InfoBubble
@@ -837,7 +1113,62 @@ const Investments: React.FC = () => {
                   title="Placements atypiques (art, vin, montres...)"
                   color="text-yellow-400"
                 >
-                  <p>Description à venir</p>
+                  <p>
+                    Les placements atypiques regroupent les investissements dans
+                    des biens tangibles comme l’art, le vin, les montres, les
+                    voitures de collection ou encore certains objets rares tels
+                    que les cartes Pokémon. Ces actifs reposent sur la rareté,
+                    la demande des collectionneurs et la valeur culturelle ou
+                    symbolique qu’ils représentent.
+                  </p>
+                  <p>
+                    Avantages :
+                    <ul className="list-disc list-inside">
+                      <li>
+                        Diversification du patrimoine avec des actifs décorrélés
+                        des marchés financiers.
+                      </li>
+                      <li>
+                        Valeur tangible et esthétique, l’objet peut être
+                        conservé, exposé ou utilisé.
+                      </li>
+                      <li>
+                        Potentiel d’appréciation important à long terme pour les
+                        pièces rares et recherchées.
+                      </li>
+                      <li>
+                        Investissement souvent guidé par la passion, rendant
+                        l’expérience personnelle et gratifiante.
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Inconvénients :
+                    <ul className="list-disc list-inside">
+                      <li>
+                        Marché peu liquide, la revente dépend fortement de la
+                        demande et du contexte économique.
+                      </li>
+                      <li>
+                        Risque de contrefaçons ou d’évaluation erronée de la
+                        valeur d’un objet.
+                      </li>
+                      <li>
+                        Frais de conservation, d’assurance et parfois de
+                        restauration à prévoir.
+                      </li>
+                      <li>
+                        Fiscalité spécifique sur les plus-values, variable selon
+                        le type d’objet et le pays.
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Ce type d’investissement doit rester partiellement guidé par
+                    la passion, il ne faut pas y investir uniquement pour le
+                    rendement, mais aussi pour l’intérêt personnel qu’il
+                    suscite.
+                  </p>
                 </InfoBubble>
               </div>
             </section>

@@ -1,7 +1,7 @@
 # AmarokeInsights
 
 Un site personnel où je partage mes apprentissages en **finance**, sous une forme claire et progressive.  
-L’objectif est double : consolider mes connaissances et les rendre accessibles à toute personne qui souhaite découvrir la finance étape par étape.
+L’objectif est double, consolider mes connaissances et les rendre accessibles à toute personne qui souhaite découvrir la finance étape par étape.
 
 ## 💬 Feedback & Contributions
 
@@ -15,6 +15,10 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 👉 [Voir le site en ligne](https://amaroke.github.io/AmarokeInsights)
 
 ## Changelog
+
+- 29/10/2025
+  - **Finalisation de la page Stratégie personelle et de la page sur les placements.**
+  - **Ajout de la page Contact.**
 
 - 28/10/2025
   - **Ajout de la page Stratégie personelle.**
@@ -46,10 +50,8 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Prochaines étapes
 
-- Page de Contact avec Formspree
-- Finir la page sur les placements
-- Finir l'outil sur le comparatif achat vs location
 - S'occuper du glossaire + infobulles de définition partout dans le site
+- Outil comparatif achat vs location
 - Page sur le trading
 - Page sur les cryptomonnaies
 - Page sur la fiscalité

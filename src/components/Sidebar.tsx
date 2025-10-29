@@ -56,7 +56,7 @@ const sections = [
     title: "Placements",
     path: "investments",
     icon: <FaChartLine />,
-    lastUpdated: "2025-10-26",
+    lastUpdated: "2025-10-29",
     items: [
       { title: "Qu'est-ce qu'investir ?", path: "what-is-invest" },
       {
@@ -117,7 +117,7 @@ const sections = [
     title: "Stratégie personelle",
     path: "strategy",
     icon: <GiBullseye />,
-    lastUpdated: "2025-10-28",
+    lastUpdated: "2025-10-29",
     items: [],
   },
   {
@@ -135,7 +135,7 @@ const sections = [
     title: "Me contacter",
     path: "contact",
     icon: <FaEnvelope />,
-    lastUpdated: "",
+    lastUpdated: "2025-10-29",
     items: [],
   },
 ];

@@ -37,21 +37,18 @@ const Strategy: React.FC = () => {
                 </p>
 
                 <p className="leading-relaxed mt-3">
-                  ⚠️ Ce contenu est à titre <strong>informatif</strong>. Il
-                  n’est pas destiné à être copié ou utilisé comme conseil
-                  financier. Je suis encore en phase d’apprentissage et cette
-                  stratégie évolue avec le temps. Elle est là pour donner une
-                  idée de ma perception du monde financier et expliquer mes
-                  prises de positions (bien que je sois resté le plus neutre
-                  possible) dans mon site, et ainsi développer votre critique
-                  sur l'intégralité du contenu proposé.
+                  ⚠️ Ce contenu est fourni à titre informatif uniquement. Il ne
+                  doit pas être considéré comme un conseil financier ou
+                  reproduit tel quel. Je suis encore en phase d’apprentissage,
+                  et mes stratégies évoluent avec le temps. L’objectif est de
+                  partager ma perception du monde financier et d’expliquer mes
+                  prises de position sur ce site, bien que je sois resté le plus
+                  neutre possible, afin de nourrir votre propre critique.
                 </p>
 
                 <p className="leading-relaxed mt-3 italic text-gray-400">
-                  Je rappel que mon objectif initial est de partager ma vision,
-                  mes réflexions et d’expliquer certaines de mes prises de
-                  positions, tout en restant ouvert aux retours et aux
-                  discussions constructives.
+                  Rappelons que mon objectif initial est de partager ma vision,
+                  mes réflexions et avant tout d'apprendre à travers ce projet.
                 </p>
               </InfoBubble>
 
@@ -64,7 +61,7 @@ const Strategy: React.FC = () => {
                   J’ai rempli un <strong>Livret A</strong> afin d’avoir une
                   réserve de sécurité. Même si la somme est importante, elle me
                   rassure, j’ai du <em>cash disponible</em> immédiatement en cas
-                  d’imprévu.
+                  d’imprévu ou de dépenses nécessaires.
                 </p>
                 <p className="leading-relaxed">
                   Ce capital ne vise pas le rendement, mais la sérénité. Il
@@ -73,8 +70,8 @@ const Strategy: React.FC = () => {
                 </p>
                 <p className="leading-relaxed">
                   Mon livret A est ouvert dans la même banque physique que mon
-                  compte courant. En raison de la simplicité d’accès et de la
-                  possibilité de déposer des chèques et des espèces si besoin.
+                  compte courant. En raison de la possibilité de déposer des
+                  chèques et des espèces si besoin.
                 </p>
               </InfoBubble>
 
@@ -85,7 +82,9 @@ const Strategy: React.FC = () => {
               >
                 <p className="leading-relaxed">
                   Le <strong>PEA</strong> représente le cœur de ma stratégie
-                  d’investissement à moyen / long terme.
+                  d’investissement à moyen / long terme. Je l'ai ouvert chez
+                  Saxo Banque, ce qui était le plus avantageux pour moi au vu de
+                  la somme investie chaque mois.
                 </p>
                 <p className="leading-relaxed">
                   J’y investis environ <strong>2 000 € par mois</strong> et
@@ -122,7 +121,7 @@ const Strategy: React.FC = () => {
                       <tr className="border-b border-gray-700">
                         <td className="px-3 py-2">DCAM (MSCI World)</td>
                         <td className="px-3 py-2 text-right" rowSpan={2}>
-                          60,00%
+                          65 %
                         </td>
                         <td className="px-3 py-2" rowSpan={2}>
                           MSCI World principalement pour construire une base
@@ -134,22 +133,24 @@ const Strategy: React.FC = () => {
                       </tr>
                       <tr className="border-b border-gray-700">
                         <td className="px-3 py-2">PUST (NASDAQ 100)</td>
-                        <td className="px-3 py-2 text-right">20,00%</td>
+                        <td className="px-3 py-2 text-right">15 %</td>
                         <td className="px-3 py-2">
-                          Pour surpondérer les grandes entreprises
-                          technologiques américaines.
+                          Pour surpondérer les GAFAM et la tech américaine en
+                          général, car j’ai la conviction qu’ils occuperont une
+                          place encore plus importante sur les marchés futurs.
                         </td>
                       </tr>
                       <tr className="border-b border-gray-700">
                         <td className="px-3 py-2">PAEEM (Emerging Markets)</td>
-                        <td className="px-3 py-2 text-right">15,00%</td>
+                        <td className="px-3 py-2 text-right">15 %</td>
                         <td className="px-3 py-2">
-                          Pour capter le potentiel des marchés émergents.
+                          Pour obtenir une exposition aux pays émergents sans
+                          trop fragiliser le noyau de mon PEA.{" "}
                         </td>
                       </tr>
                       <tr className="border-b border-gray-700">
                         <td className="px-3 py-2">LWLD (MSCI World x2)</td>
-                        <td className="px-3 py-2 text-right">5,00%</td>
+                        <td className="px-3 py-2 text-right">5 %</td>
                         <td className="px-3 py-2">
                           Pour tenter un effet de levier sur le MSCI World sur
                           le long terme.
@@ -159,7 +160,7 @@ const Strategy: React.FC = () => {
                   </table>
                 </div>
                 <p className="leading-relaxed mt-3">
-                  Cette répartition reste <strong>évolutive</strong> : je
+                  Cette répartition reste <strong>évolutive</strong>, je
                   l’ajuste selon les conditions du marché et mes objectifs
                   financiers. Elle est également influencée par le fait que{" "}
                   <strong>Saxo Banque</strong> propose ces ETF Amundi{" "}
@@ -179,14 +180,10 @@ const Strategy: React.FC = () => {
                   d’apprentissage.
                 </p>
                 <p className="leading-relaxed">
-                  Ces actifs représentent aujourd’hui une part significative de
-                  mon capital (environ la moitié), mais je ne compte pas y
-                  injecter davantage de fonds pour le moment.
-                </p>
-                <p className="leading-relaxed">
-                  L’objectif est avant tout <em>pédagogique</em>, comprendre les
-                  dynamiques de marché, la psychologie des investisseurs et les
-                  mécanismes techniques de trading.
+                  J’en possède (BTC, ETH, SOL, DOT, …), mais je ne prévois pas
+                  d’en acquérir davantage dans un futur proche. Et je ne
+                  souhaite pas entrer dans les détails de cette partie pour le
+                  moment.
                 </p>
               </InfoBubble>
             </div>

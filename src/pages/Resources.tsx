@@ -68,7 +68,7 @@ const Resources: React.FC = () => {
               >
                 <p className="leading-relaxed mb-3">
                   Compare l’impact financier d’un achat immobilier par rapport à
-                  une location sur le long terme.
+                  une location couplé a des investissements sur le long terme.
                 </p>
                 <NavLink
                   to="/buy-vs-rent"
