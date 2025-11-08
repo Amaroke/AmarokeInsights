@@ -60,7 +60,7 @@ const Strategy: React.FC = () => {
                 <p className="leading-relaxed">
                   J’ai rempli un <strong>Livret A</strong> afin d’avoir une
                   réserve de sécurité. Même si la somme est importante, elle me
-                  rassure, j’ai du <em>cash disponible</em> immédiatement en cas
+                  rassure, j’ai du cash disponible immédiatemement en cas
                   d’imprévu ou de dépenses nécessaires.
                 </p>
                 <p className="leading-relaxed">
