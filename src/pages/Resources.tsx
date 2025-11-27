@@ -1,13 +1,9 @@
 import React from "react";
-import {
-  FaExternalLinkAlt,
-  FaBookOpen,
-  FaBrain,
-  FaCalculator,
-} from "react-icons/fa";
+import { FaExternalLinkAlt, FaBookOpen, FaCalculator } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import { useSidebar } from "../context/SidebarContext";
 import { NavLink } from "react-router-dom";
+import { terms, type TermKey } from "../data/terms";
 
 const Resources: React.FC = () => {
   const { isOpen } = useSidebar();
@@ -19,7 +15,7 @@ const Resources: React.FC = () => {
           isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-12">
+        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-12 md:mb-0 mb-16">
           <section id="tools" className="scroll-mt-22">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Outils
@@ -252,17 +248,23 @@ const Resources: React.FC = () => {
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Glossaire
             </h2>
-            <InfoBubble
-              icon={<FaBrain />}
-              title="Tous les termes techniques utilisés dans le site sont expliqués ici"
-              color="text-blue-400"
-            >
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  <strong>X</strong> : XXX
-                </li>
-              </ul>
-            </InfoBubble>
+
+            <ul className="list-disc pl-6 space-y-2">
+              {Object.keys(terms)
+                .sort((a, b) =>
+                  terms[a as TermKey].title
+                    .toLowerCase()
+                    .localeCompare(terms[b as TermKey].title.toLowerCase())
+                )
+                .map((key) => {
+                  const term = terms[key as TermKey];
+                  return (
+                    <li key={key}>
+                      <strong>{term.title}</strong> : {term.definition}
+                    </li>
+                  );
+                })}
+            </ul>
           </section>
         </div>
       </main>

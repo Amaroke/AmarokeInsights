@@ -18,7 +18,7 @@ const Strategy: React.FC = () => {
           isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6">
+        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 md:mb-0 mb-16">
           <section id="strategie-personnelle" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Stratégie personnelle
@@ -37,18 +37,23 @@ const Strategy: React.FC = () => {
                 </p>
 
                 <p className="leading-relaxed mt-3">
-                  ⚠️ Ce contenu est fourni à titre informatif uniquement. Il ne
-                  doit pas être considéré comme un conseil financier ou
-                  reproduit tel quel. Je suis encore en phase d’apprentissage,
-                  et mes stratégies évoluent avec le temps. L’objectif est de
-                  partager ma perception du monde financier et d’expliquer mes
-                  prises de position sur ce site, bien que je sois resté le plus
-                  neutre possible, afin de nourrir votre propre critique.
+                  ⚠️ Ce contenu est fourni{" "}
+                  <strong>à titre informatif uniquement</strong>. Il ne doit pas
+                  être considéré comme un conseil financier ou reproduit tel
+                  quel. Je suis encore en phase d’apprentissage, et mes
+                  stratégies évoluent avec le temps. L’objectif est de partager
+                  ma perception du monde financier le plus neutrement possible,
+                  sans inciter à suivre mes choix.
                 </p>
 
                 <p className="leading-relaxed mt-3 italic text-gray-400">
                   Rappelons que mon objectif initial est de partager ma vision,
                   mes réflexions et avant tout d'apprendre à travers ce projet.
+                  Si je partage ici ma stratégie personnelle, c'est dans un
+                  esprit d'exposition de mes choix et non d'incitation à les
+                  suivre aveuglément. Au contraire, j'espère que cela
+                  encouragera chacun à forger sa propre voie en fonction de ses
+                  objectifs et de sa situation personnelle.
                 </p>
               </InfoBubble>
 
@@ -65,8 +70,7 @@ const Strategy: React.FC = () => {
                 </p>
                 <p className="leading-relaxed">
                   Ce capital ne vise pas le rendement, mais la sérénité. Il
-                  constitue la base de ma stratégie financière, mon filet de
-                  sécurité avant tout investissement.
+                  constitue mon filet de sécurité avant tout investissement.
                 </p>
                 <p className="leading-relaxed">
                   Mon livret A est ouvert dans la même banque physique que mon
@@ -165,7 +169,7 @@ const Strategy: React.FC = () => {
                   financiers. Elle est également influencée par le fait que{" "}
                   <strong>Saxo Banque</strong> propose ces ETF Amundi{" "}
                   <strong>sans frais de courtage</strong>, ce qui rend leur
-                  utilisation particulièrement intéressante.
+                  utilisation particulièrement intéressante pour mon cas.
                 </p>
               </InfoBubble>
 

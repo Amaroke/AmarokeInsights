@@ -16,6 +16,10 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
+- 27/11/2025
+  - Correction de multiples prolèmes d'affichage sur mobile. Mise en place du système de définition.
+  - Relecture et corrections diverses sur plusieurs pages.
+
 - 29/10/2025
   - **Finalisation de la page Stratégie personelle et de la page sur les placements.**
   - **Ajout de la page Contact.**

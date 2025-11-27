@@ -70,7 +70,7 @@ const LoanCalculator: React.FC = () => {
           isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 py-6 space-y-6">
+        <div className="max-w-6xl mx-auto px-4 py-6 space-y-6 md:mb-0 mb-16">
           <div className="bg-[#1a1a25] rounded-2xl p-6 shadow-lg border border-white/5">
             <h2 className="text-lg font-semibold mb-4 flex items-center gap-2 text-purple-400">
               <FaCalculator /> Paramètres du prêt
@@ -96,8 +96,12 @@ const LoanCalculator: React.FC = () => {
                   </label>
                   <input
                     type="number"
-                    value={value}
-                    onChange={(e) => setter(Number(e.target.value))}
+                    value={isNaN(value) ? "" : value}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      if (val === "") setter(NaN);
+                      else setter(Number(val));
+                    }}
                     className="w-full bg-[#101017] border border-gray-700 rounded-lg p-2 text-gray-200 focus:border-purple-400 focus:outline-none"
                   />
                 </div>

@@ -62,7 +62,7 @@ const ContactForm: React.FC = () => {
         >
           <div className="flex flex-col space-y-3">
             <label htmlFor="email" className="font-medium text-gray-200">
-              Email
+              Ton email (pour que je puisse te répondre uniquement)
             </label>
             <input
               id="email"
@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
           isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4">
+        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-16">
           <ContactForm />
         </div>
       </main>

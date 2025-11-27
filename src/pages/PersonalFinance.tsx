@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import { useSidebar } from "../context/SidebarContext";
+import Term from "../components/Term";
 
 const PersonalFinance: React.FC = () => {
   const { isOpen } = useSidebar();
@@ -22,7 +23,7 @@ const PersonalFinance: React.FC = () => {
           isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6">
+        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 md:mb-0 mb-16">
           <section id="budget" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Gérer un budget
@@ -123,8 +124,8 @@ const PersonalFinance: React.FC = () => {
                   </li>
                   <li className="mt-4">
                     <strong>Contributions entreprise</strong> : si vous avez
-                    accès à un PEE, cotisez au minimum pour profiter de
-                    l’abondement employeur.
+                    accès à un <Term id={"PEE"} />, cotisez au minimum pour
+                    profiter de l’abondement employeur.
                     <p className="mt-1">
                       Exemple : si votre employeur double vos 100 € versés, vous
                       obtenez immédiatement 200 €. C’est un rendement garanti

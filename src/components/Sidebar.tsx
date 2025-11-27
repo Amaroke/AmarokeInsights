@@ -7,7 +7,6 @@ import {
   FaMoneyCheckAlt,
   FaWallet,
   FaBitcoin,
-  FaUser,
   FaFolderOpen,
   FaEnvelope,
 } from "react-icons/fa";
@@ -103,17 +102,6 @@ const sections = [
     ],
   },
   {
-    title: "Psychologie",
-    path: "psychology",
-    icon: <FaUser />,
-    lastUpdated: "",
-    items: [
-      { title: "Biais cognitifs & émotions", path: "cognitive-biases" },
-      { title: "FOMO & discipline", path: "fomo-discipline" },
-      { title: "Patience et horizon long terme", path: "long-term-horizon" },
-    ],
-  },
-  {
     title: "Stratégie personelle",
     path: "strategy",
     icon: <GiBullseye />,
@@ -180,7 +168,7 @@ const Sidebar: React.FC = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <ul className="space-y-3">
+        <ul className="space-y-3  md:mb-0 mb-32">
           {sections.map((section) => {
             const isActive = currentPath === section.path;
             const showNew = isNew(section.path, section.lastUpdated);

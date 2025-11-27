@@ -6,7 +6,6 @@ import PersonalFinance from "./pages/PersonalFinance";
 import Investments from "./pages/Investments";
 import Trading from "./pages/Trading";
 import Taxes from "./pages/Taxes";
-import Psychology from "./pages/Psychology";
 import Resources from "./pages/Resources";
 import Cryptos from "./pages/Cryptos";
 import Sidebar from "./components/Sidebar";
@@ -31,7 +30,6 @@ function App() {
           <Route path="/cryptos/*" element={<Cryptos />} />
           <Route path="/trading/*" element={<Trading />} />
           <Route path="/taxes/*" element={<Taxes />} />
-          <Route path="/psychology/*" element={<Psychology />} />
           <Route path="/resources/*" element={<Resources />} />
           <Route path="/strategy/*" element={<Strategy />} />
           <Route path="/contact/*" element={<Contact />} />

@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import { useSidebar } from "../context/SidebarContext";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   const { isOpen } = useSidebar();
@@ -18,7 +19,7 @@ const Home: React.FC = () => {
           isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4">
+        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-16">
           <InfoBubble
             icon={<FaLightbulb />}
             title="Bienvenue !"
@@ -68,16 +69,12 @@ const Home: React.FC = () => {
               souhaitez discuter, proposer une amélioration ou me signaler une
               erreur, <strong>n’hésitez pas à me contacter</strong>.
             </p>
-            <p className="leading-relaxed">
-              Vous pouvez m’écrire par email ou <strong>via Discord</strong>{" "}
-              (pseudo : amaroke).
-            </p>
-            <a
-              href="mailto:hugo.amaroke@gmail.com"
-              className="text-blue-400 font-medium hover:underline"
+            <Link
+              to="/contact"
+              className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-500 transition-colors"
             >
-              hugo.amaroke@gmail.com
-            </a>
+              Me contacter
+            </Link>
           </InfoBubble>
 
           <InfoBubble
@@ -86,26 +83,29 @@ const Home: React.FC = () => {
             color="text-red-400"
           >
             <p className="leading-relaxed">
-              <strong>Ce site n’est pas un conseil financier</strong>. Je suis
-              un développeur de 25 ans qui s'intéresse au monde de la finance
-              seulement depuis quelques années, je ne suis donc{" "}
-              <strong>pas un expert</strong>.
+              <strong>
+                Ce site ne constitue en aucun cas un conseil financier.
+              </strong>{" "}
+              Je suis simplement un développeur de 25 ans passionné par la
+              finance depuis quelques années,{" "}
+              <strong>je ne suis pas un expert</strong>.
             </p>
+
             <p className="leading-relaxed">
-              Investir comporte toujours des{" "}
-              <strong>risques (perte en capital, volatilité)</strong>.
-              Considérez ces contenus comme un point de départ, et non comme des
-              recommandations. L’économie et la finance sont des{" "}
-              <strong>domaines complexes</strong>, influencés par de nombreux
-              facteurs (politiques, psychologiques, technologiques…). Ce qui est
-              vrai aujourd’hui peut ne plus l’être demain.
+              Investir comporte toujours des <strong>risques importants</strong>
+              . Les informations présentées ici doivent être considérées comme
+              des pistes de réflexion, non comme des recommandations. Les
+              domaines économiques et financiers sont{" "}
+              <strong>complexes et changeants</strong>, influencés par de
+              multiples facteurs (politiques, psychologiques, technologiques…).
+              Ce qui est vrai aujourd’hui peut ne plus l’être demain.
             </p>
+
             <p className="leading-relaxed">
               Vous restez seul{" "}
-              <strong>responsable de vos choix financiers</strong>. Il est
-              essentiel de toujours vérifier les informations, garder un esprit
-              critique et croiser vos sources avant de prendre des décisions
-              concrètes.
+              <strong>responsable de vos décisions financières</strong>. Prenez
+              toujours le temps de vérifier vos informations, garder un esprit
+              critique et croiser vos sources avant d’agir.
             </p>
           </InfoBubble>
         </div>

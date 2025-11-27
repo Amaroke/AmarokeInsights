@@ -23,7 +23,7 @@ const Basics: React.FC = () => {
           isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6">
+        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 md:mb-0 mb-16">
           <section id="concepts-fundamentals" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Concepts fondamentaux
@@ -84,7 +84,7 @@ const Basics: React.FC = () => {
                   Les banques centrales visent généralement ~2 % d’inflation
                   pour stimuler consommation et investissement. La déflation,
                   souvent liée à une crise, peut bloquer l’économie (revenus en
-                  baisse, licenciements, cercle vicieux).
+                  baisse, licenciements, etc.).
                 </p>
               </InfoBubble>
 
