@@ -13,7 +13,7 @@ const Trading: React.FC = () => {
           isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-16">
+        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-24">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             En cours de conception
           </h2>

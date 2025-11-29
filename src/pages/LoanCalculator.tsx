@@ -70,7 +70,7 @@ const LoanCalculator: React.FC = () => {
           isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4 py-6 space-y-6 md:mb-0 mb-16">
+        <div className="max-w-6xl mx-auto px-4 py-6 space-y-6 md:mb-0 mb-24">
           <div className="bg-[#1a1a25] rounded-2xl p-6 shadow-lg border border-white/5">
             <h2 className="text-lg font-semibold mb-4 flex items-center gap-2 text-purple-400">
               <FaCalculator /> Paramètres du prêt
