@@ -7,6 +7,7 @@ import {
   FaBitcoin,
   FaLightbulb,
 } from "react-icons/fa";
+import Term from "../components/Term";
 
 const Strategy: React.FC = () => {
   const { isOpen } = useSidebar();
@@ -63,7 +64,7 @@ const Strategy: React.FC = () => {
                 color="text-blue-400"
               >
                 <p className="leading-relaxed">
-                  J’ai rempli un <strong>Livret A</strong> afin d’avoir une
+                  J’ai rempli un <Term id={"LivretA"} /> afin d’avoir une
                   réserve de sécurité. Même si la somme est importante, elle me
                   rassure, j’ai du cash disponible immédiatemement en cas
                   d’imprévu ou de dépenses nécessaires.
@@ -85,7 +86,7 @@ const Strategy: React.FC = () => {
                 color="text-green-400"
               >
                 <p className="leading-relaxed">
-                  Le <strong>PEA</strong> représente le cœur de ma stratégie
+                  Le <Term id={"PEA"} /> représente le cœur de ma stratégie
                   d’investissement à moyen / long terme. Je l'ai ouvert chez
                   Saxo Banque, ce qui était le plus avantageux pour moi au vu de
                   la somme investie chaque mois.
@@ -97,8 +98,8 @@ const Strategy: React.FC = () => {
                   plus tôt.
                 </p>
                 <p className="leading-relaxed">
-                  Mon portefeuille PEA est principalement construit autour de
-                  plusieurs ETF
+                  Mon portefeuille est principalement construit autour de
+                  plusieurs <Term id={"ETF"} />
                   <strong> Amundi </strong> :
                 </p>
 
@@ -111,10 +112,10 @@ const Strategy: React.FC = () => {
                     <thead>
                       <tr className="bg-gray-800 text-gray-200">
                         <th className="px-3 py-2 text-left border-b border-gray-600">
-                          Ticket (Indice)
+                          Ticker
                         </th>
                         <th className="px-3 py-2 text-right border-b border-gray-600">
-                          Poids cible
+                          Poids
                         </th>
                         <th className="px-3 py-2 text-left border-b border-gray-600">
                           Commentaire
@@ -139,9 +140,9 @@ const Strategy: React.FC = () => {
                         <td className="px-3 py-2">PUST (NASDAQ 100)</td>
                         <td className="px-3 py-2 text-right">15 %</td>
                         <td className="px-3 py-2">
-                          Pour surpondérer les GAFAM et la tech américaine en
-                          général, car j’ai la conviction qu’ils occuperont une
-                          place encore plus importante sur les marchés futurs.
+                          Pour surpondérer la tech américaine en général, car
+                          j’ai la conviction qu’elle occupera une place encore
+                          plus importante sur les marchés futurs.
                         </td>
                       </tr>
                       <tr className="border-b border-gray-700">
@@ -156,8 +157,8 @@ const Strategy: React.FC = () => {
                         <td className="px-3 py-2">LWLD (MSCI World x2)</td>
                         <td className="px-3 py-2 text-right">5 %</td>
                         <td className="px-3 py-2">
-                          Pour tenter un effet de levier sur le MSCI World sur
-                          le long terme.
+                          Pour tenter un effet de levier sur le MSCI World à
+                          long terme.
                         </td>
                       </tr>
                     </tbody>
@@ -167,9 +168,9 @@ const Strategy: React.FC = () => {
                   Cette répartition reste <strong>évolutive</strong>, je
                   l’ajuste selon les conditions du marché et mes objectifs
                   financiers. Elle est également influencée par le fait que{" "}
-                  <strong>Saxo Banque</strong> propose ces ETF Amundi{" "}
-                  <strong>sans frais de courtage</strong>, ce qui rend leur
-                  utilisation particulièrement intéressante pour mon cas.
+                  <strong>Saxo Banque</strong> propose ces <Term id={"ETF"} />{" "}
+                  Amundi <strong>sans frais de courtage</strong>, ce qui rend
+                  leur utilisation particulièrement intéressante pour mon cas.
                 </p>
               </InfoBubble>
 
@@ -184,10 +185,14 @@ const Strategy: React.FC = () => {
                   d’apprentissage.
                 </p>
                 <p className="leading-relaxed">
-                  J’en possède (BTC, ETH, SOL, DOT, …), mais je ne prévois pas
-                  d’en acquérir davantage dans un futur proche. Et je ne
+                  Je possède des crytomonnaies et j'en utilise, mais je ne
                   souhaite pas entrer dans les détails de cette partie pour le
                   moment.
+                </p>
+                <p className="leading-relaxed">
+                  Je m'expérimente aussi au trading avec un capital limité, dans
+                  le but de comprendre les mécanismes et stratégies sans prendre
+                  de risques excessifs.
                 </p>
               </InfoBubble>
             </div>

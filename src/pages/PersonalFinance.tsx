@@ -125,7 +125,7 @@ const PersonalFinance: React.FC = () => {
                   <li className="mt-4">
                     <strong>Contributions entreprise</strong> : si vous avez
                     accès à un <Term id={"PEE"} />, cotisez au minimum pour
-                    profiter de l’abondement employeur.
+                    profiter au maximum de l’abondement employeur.
                     <p className="mt-1">
                       Exemple : si votre employeur double vos 100 € versés, vous
                       obtenez immédiatement 200 €. C’est un rendement garanti
@@ -138,9 +138,10 @@ const PersonalFinance: React.FC = () => {
                     disponible.
                     <p className="mt-1">
                       Cette épargne doit rester disponible à tout moment, de
-                      préférence sur un Livret A ou un LDDS. Elle couvre les
-                      imprévus : panne de voiture, frais médicaux, perte
-                      d’emploi, etc. Nous y revenons en détail plus bas.
+                      préférence sur un <Term id={"LivretA"} /> ou un{" "}
+                      <Term id={"LDDS"} />. Elle couvre les imprévus : panne de
+                      voiture, frais médicaux, perte d’emploi, etc. Nous y
+                      revenons en détail plus bas.
                     </p>
                   </li>
                   <li className="mt-4">
@@ -165,7 +166,7 @@ const PersonalFinance: React.FC = () => {
                   <li className="mt-4">
                     <strong>Épargne défiscalisée</strong> : profitez des
                     dispositifs permettant de réduire votre imposition, comme le{" "}
-                    PER.
+                    <Term id={"PER"} />.
                     <p className="mt-1">
                       Les sommes investies peuvent être déduites de vos revenus
                       imposables, ce qui augmente votre pouvoir d’épargne net.
@@ -180,17 +181,18 @@ const PersonalFinance: React.FC = () => {
                     à vos grands projets de vie.
                     <ul className="list-disc list-inside pl-4 space-y-1">
                       <li>
-                        <strong>Retraite</strong> : via une assurance-vie en
-                        unités de compte ou un PEA actions.
+                        <strong>Retraite</strong> : via une{" "}
+                        <Term id={"AssuranceVie"} /> ou un <Term id={"PEA"} />{" "}
+                        par exemple.
                       </li>
                       <li>
                         <strong>Achat immobilier</strong> : constitution d’un
                         apport pour un futur logement.
                       </li>
                       <li>
-                        <strong>Investissements</strong> : actions, ETF,
-                        immobilier locatif pour générer des revenus
-                        complémentaires.
+                        <strong>Investissements</strong> : actions,{" "}
+                        <Term id={"ETF"} />, immobilier locatif pour générer des
+                        revenus complémentaires.
                       </li>
                     </ul>
                   </li>
@@ -255,8 +257,10 @@ const PersonalFinance: React.FC = () => {
                 <p className="leading-relaxed">
                   La recommandation courante est d’avoir{" "}
                   <strong>3 à 6 mois de dépenses courantes</strong> mis de côté,
-                  idéalement sur un livret accessible et sécurisé (Livret A,
-                  LDDS…). Exemple : si vos dépenses mensuelles sont de 1 500€,
+                  idéalement sur un livret accessible et sécurisé (
+                  <Term id={"LivretA"} />,
+                  <Term id={"LDDS"} />
+                  ...). Exemple : si vos dépenses mensuelles sont de 1 500€,
                   visez un fonds de secours compris entre 4 500€ et 9 000€.
                 </p>
                 <p className="leading-relaxed">
@@ -477,7 +481,7 @@ const PersonalFinance: React.FC = () => {
                   risque supplémentaire.
                 </p>
 
-                <p className="leading-relaxed font-semibold">Exemples :</p>
+                <p className="leading-relaxed font-semibold">Exemple :</p>
                 <ul className="list-disc list-inside space-y-1 pl-2">
                   <li>
                     <strong>Investissement immobilier :</strong> emprunter pour
@@ -485,12 +489,6 @@ const PersonalFinance: React.FC = () => {
                     des mensualités et des charges. Exemple : un crédit
                     immobilier à 2 %/an pour un bien qui génère 5 % de rendement
                     locatif.
-                  </li>
-                  <li>
-                    <strong>Investissement en bourse :</strong> certains
-                    investisseurs expérimentés utilisent un effet de levier
-                    modéré pour amplifier leurs gains, en s’assurant que le coût
-                    du crédit reste inférieur au rendement attendu.
                   </li>
                 </ul>
 

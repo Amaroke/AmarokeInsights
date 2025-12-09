@@ -56,24 +56,6 @@ const Resources: React.FC = () => {
                   <span>Accéder au simulateur</span>
                 </NavLink>
               </InfoBubble>
-
-              <InfoBubble
-                icon={<FaCalculator />}
-                title="Comparaison Achat vs Location"
-                color="text-pink-400"
-              >
-                <p className="leading-relaxed mb-3">
-                  Compare l’impact financier d’un achat immobilier par rapport à
-                  une location couplé a des investissements sur le long terme.
-                </p>
-                <NavLink
-                  to="/buy-vs-rent"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 rounded-xl transition-colors duration-200 font-medium"
-                >
-                  <FaCalculator className="text-pink-400" />
-                  <span>Lancer la simulation</span>
-                </NavLink>
-              </InfoBubble>
             </div>
           </section>
 
@@ -170,7 +152,6 @@ const Resources: React.FC = () => {
                   </a>
                 </div>
               </InfoBubble>
-
               <InfoBubble
                 icon={<FaBookOpen />}
                 title="Lectures recommandées"

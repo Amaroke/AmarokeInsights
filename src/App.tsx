@@ -10,7 +10,6 @@ import Resources from "./pages/Resources";
 import Cryptos from "./pages/Cryptos";
 import Sidebar from "./components/Sidebar";
 import { SidebarProvider } from "./context/SidebarContext";
-import BuyVsRent from "./pages/BuyVsRent";
 import CompoundInterest from "./pages/CompoundInterest";
 import LoanCalculator from "./pages/LoanCalculator";
 import Contact from "./pages/Contact";
@@ -35,7 +34,6 @@ function App() {
           <Route path="/contact/*" element={<Contact />} />
           <Route path="/compound-interest/*" element={<CompoundInterest />} />
           <Route path="/loan/*" element={<LoanCalculator />} />
-          <Route path="/buy-vs-rent/*" element={<BuyVsRent />} />
         </Routes>
       </SidebarProvider>
     </BrowserRouter>

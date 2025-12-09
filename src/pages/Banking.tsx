@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import { useSidebar } from "../context/SidebarContext";
+import Term from "../components/Term";
 
 const Banking: React.FC = () => {
   const { isOpen } = useSidebar();
@@ -176,16 +177,16 @@ const Banking: React.FC = () => {
                   <strong>Taux :</strong> Très variable, fortement lié à votre
                   stratégie / Plafond 150 000 €
                   <br />
-                  <strong>Fiscalité :</strong> PFU, 12,8 % d'impôt sur le revenu
-                  et 17,2 % de prélèvements sociaux, 30% au total si retiré
-                  avant 5 ans, uniquement les prélèvements sociaux 17,2% après 5
-                  ans
+                  <strong>Fiscalité :</strong> <Term id={"PFU"} />, 12,8 %
+                  d'impôt sur le revenu et 17,2 % de prélèvements sociaux, 30%
+                  au total si retiré avant 5 ans, uniquement les prélèvements
+                  sociaux 17,2% après 5 ans
                   <br />
                   <strong>Avantages :</strong> Rendement potentiel élevé,
                   fiscalité attractive.
                   <br />
                   <strong>Inconvénients :</strong> Risque de perte en capital,
-                  limité aux actions UE.
+                  limité aux actions de l'Union Européenne.
                   <br />
                   <strong>Stratégie :</strong> Investissement long terme.
                 </InfoBubble>
@@ -196,8 +197,8 @@ const Banking: React.FC = () => {
                   color="text-blue-400"
                 >
                   <strong>Description :</strong> Compte collectif proposé par
-                  l’entreprise pour investir dans des fonds communs (FCPE),
-                  souvent avec abondement de l’employeur.
+                  l’entreprise pour investir dans des fonds communs, souvent
+                  avec abondement de l’employeur.
                   <br />
                   <strong>Type :</strong> Investissement
                   <br />
@@ -280,17 +281,16 @@ const Banking: React.FC = () => {
                   color="text-blue-400"
                 >
                   <strong>Description :</strong> Compte permettant d’acheter et
-                  vendre librement actions, obligations, ETF, cryptos et autres
-                  titres financiers.
+                  vendre librement actions, obligations, <Term id={"ETF"} />,
+                  cryptos et autres titres financiers.
                   <br />
                   <strong>Type :</strong> Investissement
                   <br />
                   <strong>Taux :</strong> Variable selon performance des titres
                   choisis
                   <br />
-                  <strong>Fiscalité :</strong> Gains et dividendes soumis au
-                  PFU, 12,8 % d'impôt sur le revenu et 17,2 % de prélèvements
-                  sociaux, 30% au total.
+                  <strong>Fiscalité :</strong> Gains et dividendes soumis au{" "}
+                  <Term id={"PFU"} />.
                   <br />
                   <strong>Avantages :</strong> Liberté totale d’investissement,
                   aucun plafond, possibilité de diversifier internationalement.
@@ -319,8 +319,8 @@ const Banking: React.FC = () => {
                   la clôture. Certains PEL ouverts il y a longtemps ont des taux
                   très intéressants.
                   <br />
-                  <strong>Fiscalité :</strong> PFU, 12,8 % d'impôt sur le revenu
-                  et 17,2 % de prélèvements sociaux.
+                  <strong>Fiscalité :</strong> Gains soumis au{" "}
+                  <Term id={"PFU"} />.
                   <br />
                   <strong>Avantages :</strong> Possibilité de prêt immobilier.
                   <br />
@@ -343,8 +343,8 @@ const Banking: React.FC = () => {
                   <br />
                   <strong>Taux :</strong> 1,25% / Plafond 15 300 €
                   <br />
-                  <strong>Fiscalité :</strong> PFU, 12,8 % d'impôt sur le revenu
-                  et 17,2 % de prélèvements sociaux.
+                  <strong>Fiscalité :</strong> Gains soumis au{" "}
+                  <Term id={"PFU"} />.
                   <br />
                   <strong>Avantages :</strong> Possibilité de prêt immobilier,
                   fonds disponibles au delà de 300 €.
@@ -367,13 +367,13 @@ const Banking: React.FC = () => {
                   <br />
                   <strong>Taux :</strong> 2%, variable selon durée et banque
                   <br />
-                  <strong>Fiscalité :</strong> PFU, 12,8 % d'impôt sur le revenu
-                  et 17,2 % de prélèvements sociaux, 30% au total.
+                  <strong>Fiscalité :</strong> Gains soumis au{" "}
+                  <Term id={"PFU"} />.
                   <br />
                   <strong>Avantages :</strong> Rendement stable, sécurisé.
                   <br />
                   <strong>Inconvénients :</strong> Fonds bloqués jusqu’à
-                  échéance, autrement aucun intérêt, rendements soumis au PFU.
+                  échéance, autrement aucun intérêt.
                   <br />
                   <strong>Stratégie :</strong> Épargne moyen terme avec faible
                   risque.
@@ -391,14 +391,13 @@ const Banking: React.FC = () => {
                   <br />
                   <strong>Taux :</strong> 1% à 2% en moyenne et selon la banque
                   <br />
-                  <strong>Fiscalité :</strong> PFU, 12,8 % d'impôt sur le revenu
-                  et 17,2 % de prélèvements sociaux, 30% au total.
+                  <strong>Fiscalité :</strong> Gains soumis au{" "}
+                  <Term id={"PFU"} />.
                   <br />
                   <strong>Avantages :</strong> Flexibilité, fonds disponibles
                   immédiatement.
                   <br />
-                  <strong>Inconvénients :</strong> Rendement faible et soumis
-                  aux PFU.
+                  <strong>Inconvénients :</strong> Rendement faible.
                   <br />
                   <strong>Stratégie :</strong> Épargne flexible.
                 </InfoBubble>
@@ -426,8 +425,8 @@ const Banking: React.FC = () => {
                   Fonds bloqués 5 ans et avant 18 ans. Fermeture automatique
                   l'année des 30 ans.
                   <br />
-                  <strong>Stratégie :</strong> Investissements ESG
-                  (Environnementaux, Sociaux et Gouvernance), long terme.
+                  <strong>Stratégie :</strong> Investissements{" "}
+                  <Term id={"ESG"} />, long terme.
                 </InfoBubble>
               </div>
             </section>
@@ -494,7 +493,7 @@ const Banking: React.FC = () => {
 
                   <p className="leading-relaxed mt-2">
                     ⚠️ Ces taux <strong>ne sont pas garantis</strong> : ils
-                    dépendent des taux directeurs de la <strong>BCE</strong> et
+                    dépendent des taux directeurs de la <Term id={"BCE"} /> et
                     des frais de dépôt appliqués par la plateforme. Une baisse
                     de la BCE = une baisse immédiate du rendement. Un produit
                     séduisant peut rapporter moins qu’un livret garanti et
@@ -597,9 +596,9 @@ const Banking: React.FC = () => {
                       annuel assurez vous d'utiliser les avantages inclus.
                     </li>
                     <li>
-                      <strong>Frais de virements :</strong> domestiques, SEPA ou
-                      internationaux, certains comptes gratuits ne facturent
-                      rien pour les virements standards.
+                      <strong>Frais de virements :</strong> domestiques,{" "}
+                      <Term id={"SEPA"} /> ou internationaux, certains comptes
+                      gratuits ne facturent rien pour les virements standards.
                     </li>
                     <li>
                       <strong>Commissions de courtage :</strong> si vous

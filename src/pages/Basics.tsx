@@ -208,7 +208,8 @@ const Basics: React.FC = () => {
                   Il survient lorsqu’une personne ou institution ne respecte pas
                   ses engagements financiers (par exemple, un ami qui ne
                   rembourse pas un prêt). On peut le réduire en choisissant des
-                  partenaires fiables et en évitant de concentrer ses risques.
+                  partenaires fiables et en évitant de concentrer ses actifs au
+                  même endroit.
                 </p>
               </InfoBubble>
 

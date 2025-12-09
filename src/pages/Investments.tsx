@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import { useSidebar } from "../context/SidebarContext";
+import Term from "../components/Term";
 
 const Investments: React.FC = () => {
   const { isOpen } = useSidebar();
@@ -116,21 +117,15 @@ const Investments: React.FC = () => {
                   <p>
                     Il est important de ne pas rechercher un enrichissement
                     rapide et d’éviter que les décisions soient guidées par les
-                    émotions. Par exemple, les investisseurs débutants vendent
-                    souvent leurs actions au plus bas lors d’une crise, pour
-                    constater ensuite que le marché a rebondi et que la reprise
-                    a été manquée.
-                  </p>
-
-                  <p>
-                    La patience, la discipline et la diversification sont les
-                    meilleures pratiques pour limiter les risques. Il est
-                    important de noter que l’investissement n’est pas recommandé
-                    pour les personnes sensibles aux émotions ou qui craignent
-                    la perte de capital. Pour ceux qui souhaitent minimiser tout
-                    risque, il existe des placements à capital garanti, comme
-                    les livrets ou les fonds euros en assurance-vie. Leur
-                    rendement est faible, mais le capital est sécurisé.
+                    émotions. La patience, la discipline et la diversification
+                    sont les meilleures pratiques pour limiter les risques. Il
+                    est important de noter que l’investissement à risque n’est
+                    pas recommandé pour les personnes sensibles aux émotions ou
+                    qui craignent la perte de capital. Pour ceux qui souhaitent
+                    minimiser tout risque, il existe des placements à capital
+                    garanti, comme les livrets ou les fonds euros en
+                    assurance-vie. Leur rendement est faible, mais le capital
+                    est sécurisé.
                   </p>
 
                   <p>
@@ -184,14 +179,14 @@ const Investments: React.FC = () => {
                     actions cotées sont négociées sur des marchés boursiers
                     comme Euronext Paris. Elles sont liquides, ce qui permet de
                     les acheter ou de les revendre facilement. Les actions non
-                    cotées, émises par des PME ou des TPE, ne sont pas négociées
-                    en bourse. Elles sont moins liquides et plus risquées, et
-                    leur revente peut être difficile voire impossible. Les
-                    actions peuvent être au porteur ou nominatives. Les actions
-                    au porteur ne permettent pas d’identifier l’actionnaire
-                    auprès de la société, tandis que les actions nominatives
-                    identifient l’actionnaire, qui peut bénéficier d’avantages
-                    supplémentaires.
+                    cotées, émises par des <Term id={"PME"} /> ou des{" "}
+                    <Term id={"TPE"} />, ne sont pas négociées en bourse. Elles
+                    sont moins liquides et plus risquées, et leur revente peut
+                    être difficile voire impossible. Les actions peuvent être au
+                    porteur ou nominatives. Les actions au porteur ne permettent
+                    pas d’identifier l’actionnaire auprès de la société, tandis
+                    que les actions nominatives identifient l’actionnaire, qui
+                    peut bénéficier d’avantages supplémentaires.
                   </p>
                   <h3 className="font-semibold mt-4">Où acheter et vendre ?</h3>
                   <p>
@@ -223,9 +218,11 @@ const Investments: React.FC = () => {
                     17h40 (pour la bourse de Paris). Les autres valeurs sont
                     échangées via des <strong>fixing</strong> à horaires fixes :
                     11h30 et 16h30 (ou 15h00 pour le marché libre, non
-                    réglementé, principalement utilisé par des PME). Chaque
-                    marché financier dans le monde possède ses propres horaires
-                    d’ouverture et de fermeture selon son fuseau horaire.
+                    réglementé, principalement utilisé par des{" "}
+                    <Term id={"PME"} />
+                    ). Chaque marché financier dans le monde possède ses propres
+                    horaires d’ouverture et de fermeture selon son fuseau
+                    horaire.
                   </p>
 
                   <h3 className="font-semibold mt-4">
@@ -271,15 +268,15 @@ const Investments: React.FC = () => {
                   <p>
                     Les ETF se négocient et s'achètent comme des actions, leur
                     prix varie en continu selon l’offre et la demande. Ils
-                    peuvent être standard (suivi passif d’un indice comme le CAC
-                    40 par exemple) ou complexes (effet de levier, inverse,
-                    matières premières, stratégies sophistiquées). Le prix d’un
-                    ETF dépend de sa valeur liquidative, calculée à partir du
-                    portefeuille qu’il réplique, et de la valeur de marché, qui
-                    fluctue selon l’offre et la demande. Des acteurs comme les
-                    émetteurs ou arbitragistes assurent la liquidité et veillent
-                    à ce que le prix reste proche de la valeur réelle du panier
-                    d’actions.
+                    peuvent être standard (suivi passif d’un indice comme le{" "}
+                    <Term id={"CAC40"} /> par exemple) ou complexes (effet de
+                    levier, inverse, matières premières, stratégies
+                    sophistiquées). Le prix d’un ETF dépend de sa valeur
+                    liquidative, calculée à partir du portefeuille qu’il
+                    réplique, et de la valeur de marché, qui fluctue selon
+                    l’offre et la demande. Des acteurs comme les émetteurs ou
+                    arbitragistes assurent la liquidité et veillent à ce que le
+                    prix reste proche de la valeur réelle du panier d’actions.
                   </p>
 
                   <p>
@@ -557,13 +554,13 @@ const Investments: React.FC = () => {
                     d’acquérir directement ces titres un à un, un investisseur
                     peut souscrire à un fonds et ainsi détenir une part d’un
                     portefeuille géré par des professionnels. Pour souscrire une
-                    part d’un FCP ou acquérir une action d’une SICAV,
-                    l’investisseur transmet un ordre via son intermédiaire (sa
-                    banque, son courtier), qui le fait exécuter par la société
-                    de gestion du fonds. Les ordres peuvent nécessiter un délai
-                    avant d’être effectivement traités, en raison de la
-                    centralisation et de la fréquence de calcul (parfois
-                    hebdomadaire) du fond.
+                    part d’un <Term id={"FCP"} /> ou acquérir une action d’une{" "}
+                    <Term id={"SICAV"} />, l’investisseur transmet un ordre via
+                    son intermédiaire (sa banque, son courtier), qui le fait
+                    exécuter par la société de gestion du fonds. Les ordres
+                    peuvent nécessiter un délai avant d’être effectivement
+                    traités, en raison de la centralisation et de la fréquence
+                    de calcul (parfois hebdomadaire) du fond.
                   </p>
 
                   <p className="mt-3">
@@ -752,7 +749,7 @@ const Investments: React.FC = () => {
 
                   <p className="mt-2">
                     Je n’en détaille pas plus ici, car leur usage est complexe,
-                    dépend de la plateforme et je n'ai aucune expérience avec
+                    dépend de la plateforme et je n'ai que peu d'expérience avec
                     ces produits.
                   </p>
                 </InfoBubble>
@@ -979,8 +976,10 @@ const Investments: React.FC = () => {
                 >
                   <p>
                     Les cryptoactifs regroupent les cryptomonnaies comme le
-                    Bitcoin ou l'Ethereum ainsi que les projets Web3 (NFT, DeFi,
-                    DAO). Ces actifs reposent sur la technologie blockchain et
+                    Bitcoin ou l'Ethereum ainsi que les projets{" "}
+                    <Term id={"Web3"} /> (<Term id={"NFT"} />,{" "}
+                    <Term id={"DeFi"} />, <Term id={"DAO"} />
+                    ). Ces actifs reposent sur la technologie blockchain et
                     permettent d’investir dans des innovations financières et
                     technologiques. Ils sont très volatils, mais peuvent offrir
                     un potentiel de rendement élevé et une diversification

@@ -16,6 +16,14 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
+- Dans le futur :
+  - **Page sur les cryptomonnaies.**
+  - **Page sur le trading.**
+  - **Page sur la fiscalité.**
+
+- 09/12/2025
+  - Ajout de définitions pour les termes financiers utilisés dans le site. Petits correctifs et ajouts divers.
+  
 - 27/11/2025
   - Correction de multiples prolèmes d'affichage sur mobile. Mise en place du système de définition.
   - Relecture et corrections diverses sur plusieurs pages.
@@ -51,15 +59,6 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
   - Mise en place du site.
   - Mise en place du déploiement.
   - **Ajout de la page d'accueil**.
-
-## Prochaines étapes
-
-- S'occuper du glossaire + infobulles de définition partout dans le site
-- Outil comparatif achat vs location
-- Page sur le trading
-- Page sur les cryptomonnaies
-- Page sur la fiscalité
-- Page sur la psychologie
 
 ---
 

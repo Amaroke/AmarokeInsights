@@ -4,6 +4,8 @@ import {
   FaBookOpen,
   FaLightbulb,
   FaExclamationTriangle,
+  FaListOl,
+  FaBars,
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import { useSidebar } from "../context/SidebarContext";
@@ -55,6 +57,31 @@ const Home: React.FC = () => {
               Enfin, certains domaines ou stratégies qui m’intéressent peu ne
               seront pas abordés ici, une raison supplémentaire de{" "}
               <strong>poursuivre vos recherches de votre côté</strong>.
+            </p>
+          </InfoBubble>
+
+          <InfoBubble
+            icon={<FaListOl />}
+            title="Ordre conseillé"
+            color="text-purple-400"
+          >
+            <p className="leading-relaxed">
+              Les sections principales du site sont présentées dans un ordre
+              logique. Si vous avez peu de connaissances en finance, il est
+              conseillé de les lire dans cet ordre, car la plupart des termes
+              utilisés sont définis dans les sections précédentes. Les sections
+              "Ressources & outils" et "Me contacter" peuvent être consultées à
+              tout moment.
+            </p>
+            <p className="leading-relaxed">
+              Pour débuter la navigation, vous pouvez ouvrir le menu en cliquant
+              sur l’icône
+              <span className="inline-block align-middle mx-1">
+                <FaBars className="inline" />
+              </span>
+              située en haut à gauche de la page. Ce menu (accessibles à tout
+              moment) vous permet d’accéder rapidement à toutes les sections du
+              site.
             </p>
           </InfoBubble>
 

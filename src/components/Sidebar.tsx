@@ -41,7 +41,7 @@ const sections = [
     ],
   },
   {
-    title: "Banque",
+    title: "Comptes et frais",
     path: "banking",
     icon: <FaPiggyBank />,
     lastUpdated: "2025-08-31",
