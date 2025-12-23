@@ -138,6 +138,77 @@ const Investments: React.FC = () => {
                     faire.
                   </p>
                 </InfoBubble>
+
+                <InfoBubble
+                  icon={<FaChartLine />}
+                  title="Le DCA (Dollar Cost Averaging)"
+                  color="text-blue-400"
+                >
+                  <p className="leading-relaxed mb-3">
+                    Le <strong>DCA</strong> (Dollar Cost Averaging), ou
+                    <strong> investissement progressif</strong>, consiste à
+                    investir
+                    <strong> la même somme régulièrement</strong> (chaque mois
+                    par exemple), plutôt que d’investir tout son capital d’un
+                    coup. Cette méthode permet de
+                    <strong> lisser le prix d’achat</strong> et de réduire
+                    l’impact des fluctuations des marchés.
+                  </p>
+
+                  <p className="leading-relaxed">Concrètement :</p>
+
+                  <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
+                    <li>Vous investissez une somme fixe (ex : 200 €).</li>
+                    <li>À une fréquence régulière (ex : tous les mois).</li>
+                    <li>Sur un même actif.</li>
+                  </ul>
+
+                  <p className="leading-relaxed">
+                    Par exemple, vous investissez{" "}
+                    <strong>200 € par mois</strong> pendant
+                    <strong> 3 mois</strong> sur le même actif :
+                  </p>
+
+                  <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
+                    <li>Mois 1 : prix = 100 € ➜ vous achetez 2 parts</li>
+                    <li>Mois 2 : prix = 80 € ➜ vous achetez 2,5 parts</li>
+                    <li>Mois 3 : prix = 120 € ➜ vous achetez 1,67 part</li>
+                  </ul>
+
+                  <p className="leading-relaxed mt-3">
+                    Total investi : <strong>600 €</strong>
+                    <br />
+                    Nombre total de parts : <strong>environ 6,17</strong>
+                    <br />
+                    Prix moyen d’achat : <strong>environ 97 €</strong> par part,
+                    malgré un marché volatil.
+                  </p>
+
+                  <p className="leading-relaxed mt-3">
+                    Si le prix final de l’actif est à 120 €, votre portefeuille
+                    vaut environ
+                    <strong> 740 €</strong>. Le DCA vous a permis de réduire
+                    l’impact des variations de prix sans avoir à « deviner le
+                    bon moment ».
+                  </p>
+
+                  <p className="leading-relaxed mt-3 italic">
+                    Avantages du DCA :
+                  </p>
+
+                  <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
+                    <li>Réduit le stress lié au timing du marché.</li>
+                    <li>Disciplinaire : vous investissez régulièrement.</li>
+                    <li>Particulièrement adapté aux marchés volatils.</li>
+                  </ul>
+
+                  <p className="leading-relaxed mt-3">
+                    ⚠️ Le DCA <strong>ne supprime pas le risque</strong> : si le
+                    marché baisse durablement, la valeur de l’investissement
+                    peut diminuer. Il s’agit d’une stratégie de long terme,
+                    efficace surtout sur des actifs diversifiés.
+                  </p>
+                </InfoBubble>
               </div>
             </section>
 

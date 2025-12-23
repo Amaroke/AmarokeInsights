@@ -41,13 +41,14 @@ const sections = [
     ],
   },
   {
-    title: "Comptes et frais",
+    title: "Banques, Frais, Comptes & Fraudes",
     path: "banking",
     icon: <FaPiggyBank />,
-    lastUpdated: "2025-08-31",
+    lastUpdated: "2025-12-23",
     items: [
-      { title: "Types de comptes", path: "types-of-accounts" },
+      { title: "Fonctionnement d'une banque", path: "how-banks-work" },
       { title: "Taux et frais", path: "rates-fees" },
+      { title: "Types de comptes", path: "types-of-accounts" },
       { title: "Sécurité & fraude", path: "security-fraud" },
     ],
   },
@@ -55,7 +56,7 @@ const sections = [
     title: "Placements",
     path: "investments",
     icon: <FaChartLine />,
-    lastUpdated: "2025-10-29",
+    lastUpdated: "2025-12-23",
     items: [
       { title: "Qu'est-ce qu'investir ?", path: "what-is-invest" },
       {

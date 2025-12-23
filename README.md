@@ -21,6 +21,10 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
   - **Page sur le trading.**
   - **Page sur la fiscalité.**
 
+- 23/12/2025
+  - Ajout d'une partie sur les banques.
+  - Ajout d'une partie sur le DCA.
+
 - 09/12/2025
   - Ajout de définitions pour les termes financiers utilisés dans le site. Petits correctifs et ajouts divers.
   
