@@ -19,7 +19,6 @@ const Cryptos: React.FC = () => {
           isOpen ? "md:ml-64" : "md:ml-0"
         }`}
       >
-        {/* Work in Progress */}
         <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-24">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             En cours de conception
@@ -36,7 +35,6 @@ const Cryptos: React.FC = () => {
         </div>
 
         <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-24">
-          {/* Qu’est-ce qu’une crypto ? */}
           <section id="what-are-cryptos" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Qu’est-ce qu’une crypto ?
@@ -59,7 +57,6 @@ const Cryptos: React.FC = () => {
             </div>
           </section>
 
-          {/* Les principales cryptos */}
           <section id="top-cryptos" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Les principales cryptos
@@ -86,7 +83,6 @@ const Cryptos: React.FC = () => {
             </div>
           </section>
 
-          {/* Acheter, stocker et sécuriser */}
           <section id="buy-store-secure" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Acheter, stocker et sécuriser
