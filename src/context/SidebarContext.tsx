@@ -7,6 +7,8 @@ interface SidebarContextType {
   expandedSection: string | null;
   setExpandedSection: React.Dispatch<React.SetStateAction<string | null>>;
   resetSidebar: () => void;
+  isAdvanced: boolean;
+  toggleAdvanced: () => void;
 }
 
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
@@ -30,6 +32,17 @@ export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
     setExpandedSection(null);
   };
 
+  const [isAdvanced, setIsAdvanced] = useState<boolean>(() => {
+    const stored = localStorage.getItem("sidebarAdvancedMode");
+    return stored ? JSON.parse(stored) : false;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("sidebarAdvancedMode", JSON.stringify(isAdvanced));
+  }, [isAdvanced]);
+
+  const toggleAdvanced = () => setIsAdvanced((prev) => !prev);
+
   return (
     <SidebarContext.Provider
       value={{
@@ -39,6 +52,8 @@ export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
         expandedSection,
         setExpandedSection,
         resetSidebar,
+        isAdvanced,
+        toggleAdvanced,
       }}
     >
       {children}

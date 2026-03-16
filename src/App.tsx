@@ -14,6 +14,9 @@ import CompoundInterest from "./pages/CompoundInterest";
 import LoanCalculator from "./pages/LoanCalculator";
 import Contact from "./pages/Contact";
 import Strategy from "./pages/Strategy";
+import Trading2 from "./pages/Trading2";
+import Cryptos2 from "./pages/Cryptos2";
+import Accounts from "./pages/Accounts";
 
 function App() {
   return (
@@ -25,9 +28,12 @@ function App() {
           <Route path="/basics/*" element={<Basics />} />
           <Route path="/personal-finance/*" element={<PersonalFinance />} />
           <Route path="/banking/*" element={<Banking />} />
+          <Route path="/accounts/*" element={<Accounts />} />
           <Route path="/investments/*" element={<Investments />} />
           <Route path="/cryptos/*" element={<Cryptos />} />
+          <Route path="/cryptos2/*" element={<Cryptos2 />} />
           <Route path="/trading/*" element={<Trading />} />
+          <Route path="/trading2/*" element={<Trading2 />} />
           <Route path="/taxes/*" element={<Taxes />} />
           <Route path="/resources/*" element={<Resources />} />
           <Route path="/strategy/*" element={<Strategy />} />

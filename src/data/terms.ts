@@ -48,7 +48,7 @@ export const terms = {
   PFU: {
     title: "PFU",
     definition:
-      "Prélèvement Forfaitaire Unique : Taxe forfaitaire de 30 % sur les revenus du capital (dividendes, intérêts, plus-values) en France, comprenant 12,8 % d’impôt sur le revenu et 17,2 % de prélèvements sociaux.",
+      "Prélèvement Forfaitaire Unique : Taxe forfaitaire de 31,4 % sur les revenus du capital (dividendes, intérêts, plus-values) en France, comprenant 12,8 % d’impôt sur le revenu et 18,6 % de prélèvements sociaux.",
   },
   SEPA: {
     title: "SEPA",
@@ -99,6 +99,11 @@ export const terms = {
     title: "DAO",
     definition:
       "Decentralized Autonomous Organization : organisation gouvernée par ses membres via des règles inscrites dans la blockchain. Les décisions sont prises collectivement grâce à des votes, souvent via des jetons de gouvernance.",
+  },
+  FGDR: {
+    title: "FGDR",
+    definition:
+      "Fonds de Garantie des Dépôts et de Résolution : organisme français qui protège les déposants en garantissant leurs dépôts jusqu’à un certain montant (100 000 € par déposant et par établissement) en cas de faillite d’une banque ou d’un établissement financier.",
   },
 } as const;
 

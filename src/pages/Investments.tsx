@@ -820,8 +820,8 @@ const Investments: React.FC = () => {
 
                   <p className="mt-2">
                     Je n’en détaille pas plus ici, car leur usage est complexe,
-                    dépend de la plateforme et je n'ai que peu d'expérience avec
-                    ces produits.
+                    dépend de la plateforme et ne sont pas adaptés à un
+                    investissement long terme.
                   </p>
                 </InfoBubble>
               </div>

@@ -70,7 +70,7 @@ const Home: React.FC = () => {
               logique. Si vous avez peu de connaissances en finance, il est
               conseillé de les lire dans cet ordre, car la plupart des termes
               utilisés sont définis dans les sections précédentes. Les sections
-              "Ressources & outils" et "Me contacter" peuvent être consultées à
+              "Outils & Ressources" et "Me contacter" peuvent être consultées à
               tout moment.
             </p>
             <p className="leading-relaxed">
@@ -113,9 +113,8 @@ const Home: React.FC = () => {
               <strong>
                 Ce site ne constitue en aucun cas un conseil financier.
               </strong>{" "}
-              Je suis simplement un développeur de 25 ans passionné par la
-              finance depuis quelques années,{" "}
-              <strong>je ne suis pas un expert</strong>.
+              Je suis simplement un développeur passionné par la finance depuis
+              quelques années, <strong>je ne suis pas un expert</strong>.
             </p>
 
             <p className="leading-relaxed">

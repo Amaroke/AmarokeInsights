@@ -118,10 +118,6 @@ const PersonalFinance: React.FC = () => {
                   pour vos revenus disponibles après dépenses essentielles :
                 </p>
                 <ol className="list-decimal list-inside space-y-2 pl-4">
-                  <li>
-                    <strong>Dépenses obligatoires</strong> : logement, impôts,
-                    énergie, alimentation, crédit immobilier.
-                  </li>
                   <li className="mt-4">
                     <strong>Contributions entreprise</strong> : si vous avez
                     accès à un <Term id={"PEE"} />, cotisez au minimum pour
@@ -205,7 +201,7 @@ const PersonalFinance: React.FC = () => {
             </div>
           </section>
 
-          <section id="savings-emergency-fund" className="scroll-mt-22 mb-12">
+          <section id="fire" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Épargne, fonds de secours et FIRE
             </h2>
@@ -259,9 +255,9 @@ const PersonalFinance: React.FC = () => {
                   <strong>3 à 6 mois de dépenses courantes</strong> mis de côté,
                   idéalement sur un livret accessible et sécurisé (
                   <Term id={"LivretA"} />,
-                  <Term id={"LDDS"} />
-                  ...). Exemple : si vos dépenses mensuelles sont de 1 500€,
-                  visez un fonds de secours compris entre 4 500€ et 9 000€.
+                  <Term id={"LDDS"} />, ...). Exemple : si vos dépenses
+                  mensuelles sont de 1 500€, visez un fonds de secours compris
+                  entre 4 500€ et 9 000€.
                 </p>
                 <p className="leading-relaxed">
                   Astuce : commencez par un petit montant régulier et
@@ -289,20 +285,24 @@ const PersonalFinance: React.FC = () => {
                   <li>
                     <strong>LeanFIRE</strong> : vivre de manière minimaliste
                     pour atteindre l’indépendance financière avec moins de
-                    revenus. Exemple : épargner 60-70% de ses revenus et vivre
-                    avec un budget réduit.
+                    revenus.
+                    <br />
+                    Exemple : épargner 60-70% de ses revenus et vivre avec un
+                    budget réduit.
                   </li>
                   <li>
                     <strong>FatFIRE</strong> : viser l’indépendance financière
-                    tout en conservant un style de vie confortable. Exemple :
-                    épargner et investir pour générer un revenu passif élevé
-                    permettant de maintenir un niveau de vie similaire à celui
-                    d’avant la retraite anticipée.
+                    tout en conservant un style de vie confortable.
+                    <br />
+                    Exemple : épargner et investir pour générer un revenu passif
+                    élevé permettant de maintenir un niveau de vie similaire à
+                    celui d’avant la retraite anticipée.
                   </li>
                   <li>
                     <strong>BaristaFIRE</strong> : atteindre partiellement
                     l’indépendance financière et continuer à travailler
                     légèrement ou à temps partiel pour compléter les revenus.
+                    <br />
                     Exemple : quitter son emploi principal et travailler
                     quelques heures en freelance pour financer certains loisirs.
                   </li>

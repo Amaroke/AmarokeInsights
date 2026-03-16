@@ -66,17 +66,12 @@ const Strategy: React.FC = () => {
                 <p className="leading-relaxed">
                   J’ai rempli un <Term id={"LivretA"} /> afin d’avoir une
                   réserve de sécurité. Même si la somme est importante, elle me
-                  rassure, j’ai du cash disponible immédiatemement en cas
+                  rassure, j’ai des liquidités disponibles immédiatement en cas
                   d’imprévu ou de dépenses nécessaires.
                 </p>
                 <p className="leading-relaxed">
                   Ce capital ne vise pas le rendement, mais la sérénité. Il
                   constitue mon filet de sécurité avant tout investissement.
-                </p>
-                <p className="leading-relaxed">
-                  Mon livret A est ouvert dans la même banque physique que mon
-                  compte courant. En raison de la possibilité de déposer des
-                  chèques et des espèces si besoin.
                 </p>
               </InfoBubble>
 
@@ -87,9 +82,7 @@ const Strategy: React.FC = () => {
               >
                 <p className="leading-relaxed">
                   Le <Term id={"PEA"} /> représente le cœur de ma stratégie
-                  d’investissement à moyen / long terme. Je l'ai ouvert chez
-                  Saxo Banque, ce qui était le plus avantageux pour moi au vu de
-                  la somme investie chaque mois.
+                  d’investissement à moyen / long terme.
                 </p>
                 <p className="leading-relaxed">
                   J’y investis environ <strong>2 000 € par mois</strong> et

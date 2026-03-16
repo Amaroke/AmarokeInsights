@@ -2,13 +2,13 @@
 
 Un site personnel où je partage mes apprentissages en **finance**, sous une forme claire et progressive.  
 L’objectif est double, consolider mes connaissances et les rendre accessibles à toute personne qui souhaite découvrir la finance étape par étape.
+La première version du site est correspond au mode normal, avec des contenus destinés à un public débutant.  
+Dans le futur et au fur à mesure, je prévois d’ajouter des contenus plus avancés, destinés à un public plus expérimenté. Disponible dans le mode avancé du site.
 
 ## 💬 Feedback & Contributions
 
 Je suis toujours preneur de retours, suggestions et contributions !  
-Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur, n’hésitez pas à me contacter :  
-
-📧 **<hugo.amaroke@gmail.com>**
+Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur, n’hésitez pas à me contacter !
 
 ## 🚀 Accéder au site
 
@@ -16,10 +16,11 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
-- Dans le futur :
-  - **Page sur les cryptomonnaies.**
-  - **Page sur le trading.**
-  - **Page sur la fiscalité.**
+- 16/03/2026
+  - Refonte du menu et ajout d'un second mode "avancé" avec des contenus plus poussés.
+  - Ajout des bases de la page sur le trading.
+  - Ajout des bases de la page sur les cryptomonnaies.
+  - Divers corrections et ajouts suite aux retours.
 
 - 23/12/2025
   - Ajout d'une partie sur les banques.

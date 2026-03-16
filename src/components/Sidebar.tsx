@@ -5,21 +5,24 @@ import {
   FaPiggyBank,
   FaChartLine,
   FaMoneyCheckAlt,
-  FaWallet,
   FaBitcoin,
   FaFolderOpen,
+  FaLightbulb,
+  FaChartBar,
   FaEnvelope,
 } from "react-icons/fa";
 import { useEffect } from "react";
 import { useSidebar } from "../context/SidebarContext";
 import { setVisit, isNew } from "../utils/visitTracker";
-import { GiBullseye } from "react-icons/gi";
+import { GiBullseye, GiPathDistance, GiWallet } from "react-icons/gi";
+import { MdCurrencyBitcoin } from "react-icons/md";
 
 const sections = [
   {
-    title: "Bases",
+    title: "Fondamentaux",
+    advanced: false,
     path: "basics",
-    icon: <FaBook />,
+    icon: <FaLightbulb />,
     lastUpdated: "2025-08-25",
     items: [
       { title: "Concepts fondamentaux", path: "concepts-fundamentals" },
@@ -27,33 +30,47 @@ const sections = [
     ],
   },
   {
-    title: "Gestion financière",
+    title: "Finance Personnelle",
+    advanced: false,
     path: "personal-finance",
-    icon: <FaWallet />,
+    icon: <GiWallet />,
     lastUpdated: "2025-08-30",
     items: [
       { title: "Budget", path: "budget" },
       {
         title: "Épargne & FIRE",
-        path: "savings-emergency-fund",
+        path: "fire",
       },
       { title: "Dettes & emprunts", path: "debt" },
     ],
   },
   {
-    title: "Banques, Frais, Comptes & Fraudes",
+    title: "Système Bancaire",
+    advanced: false,
     path: "banking",
     icon: <FaPiggyBank />,
-    lastUpdated: "2025-12-23",
+    lastUpdated: "2026-03-16",
     items: [
-      { title: "Fonctionnement d'une banque", path: "how-banks-work" },
+      { title: "Les banques", path: "how-banks-work" },
       { title: "Taux et frais", path: "rates-fees" },
-      { title: "Types de comptes", path: "types-of-accounts" },
       { title: "Sécurité & fraude", path: "security-fraud" },
     ],
   },
   {
-    title: "Placements",
+    title: "Types de Comptes",
+    advanced: false,
+    path: "accounts",
+    icon: <FaMoneyCheckAlt />,
+    lastUpdated: "2026-03-16",
+    items: [
+      { title: "Comptes courants", path: "current-accounts" },
+      { title: "Comptes d'épargne", path: "saving-account" },
+      { title: "Comptes d'investissement", path: "investment-account" },
+    ],
+  },
+  {
+    title: "Investissements",
+    advanced: false,
     path: "investments",
     icon: <FaChartLine />,
     lastUpdated: "2025-12-23",
@@ -69,51 +86,71 @@ const sections = [
     ],
   },
   {
+    title: "Intro au Trading",
+    advanced: false,
+    path: "trading",
+    icon: <FaChartBar />,
+    lastUpdated: "2026-03-16",
+    items: [
+      { title: "Qu’est-ce que le trading ?", path: "trading-intro" },
+      {
+        title: "Marchés & plateformes",
+        path: "markets-platforms",
+      },
+      { title: "Les types de trading", path: "trading-types" },
+      { title: "Positions Long / Short", path: "long-short" },
+    ],
+  },
+  {
+    title: "Stratégies de Trading",
+    advanced: true,
+    path: "trading2",
+    icon: <GiBullseye />,
+    lastUpdated: "",
+    items: [],
+  },
+  {
     title: "Cryptomonnaies",
+    advanced: false,
     path: "cryptos",
     icon: <FaBitcoin />,
     lastUpdated: "",
     items: [
-      { title: "C'est quoi les crypto", path: "what-are-cryptos" },
-      { title: "Choisir un broker", path: "choose-broker" },
-      { title: "Investir en cryptos", path: "invest-cryptos" },
-      { title: "Trader des cryptos", path: "trade-cryptos" },
+      { title: "Qu’est-ce qu’une crypto ?", path: "what-are-cryptos" },
+      { title: "Les principales cryptos", path: "top-cryptos" },
+      { title: "Acheter, stocker et sécuriser", path: "buy-store-secure" },
     ],
   },
   {
-    title: "Trading",
-    path: "trading",
-    icon: <FaMoneyCheckAlt />,
+    title: "Cryptos & Usages",
+    advanced: true,
+    path: "cryptos2",
+    icon: <MdCurrencyBitcoin />,
     lastUpdated: "",
-    items: [
-      { title: "Analyse technique", path: "technical-analysis" },
-      { title: "Analyse fondamentale", path: "fundamental-analysis" },
-      { title: "Dérivés financiers", path: "derivatives" },
-    ],
-  },
-  {
-    title: "Fiscalité",
-    path: "taxes",
-    icon: <FaFolderOpen />,
-    lastUpdated: "",
-    items: [
-      { title: "Impôt sur le revenu", path: "income-tax" },
-      { title: "Impôt sur les investissements", path: "investment-tax" },
-      { title: "Optimisation fiscale", path: "tax-optimization" },
-    ],
-  },
-  {
-    title: "Stratégie personelle",
-    path: "strategy",
-    icon: <GiBullseye />,
-    lastUpdated: "2025-10-29",
     items: [],
   },
   {
-    title: "Ressources & outils",
+    title: "Optimisation Fiscale",
+    advanced: true,
+    path: "taxes",
+    icon: <FaFolderOpen />,
+    lastUpdated: "",
+    items: [],
+  },
+  {
+    title: "Ma Stratégie",
+    advanced: false,
+    path: "strategy",
+    icon: <GiPathDistance />,
+    lastUpdated: "",
+    items: [],
+  },
+  {
+    title: "Outils & Ressources",
+    advanced: false,
     path: "resources",
     icon: <FaBook />,
-    lastUpdated: "2025-10-27",
+    lastUpdated: "",
     items: [
       { title: "Outils", path: "tools" },
       { title: "Documentation", path: "documentation" },
@@ -121,10 +158,11 @@ const sections = [
     ],
   },
   {
-    title: "Me contacter",
+    title: "Me Contacter",
+    advanced: false,
     path: "contact",
     icon: <FaEnvelope />,
-    lastUpdated: "2025-10-29",
+    lastUpdated: "",
     items: [],
   },
 ];
@@ -132,8 +170,14 @@ const sections = [
 const Sidebar: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { isOpen, setIsOpen, expandedSection, setExpandedSection } =
-    useSidebar();
+  const {
+    isOpen,
+    setIsOpen,
+    expandedSection,
+    setExpandedSection,
+    isAdvanced,
+    toggleAdvanced,
+  } = useSidebar();
 
   const currentPath = location.pathname.split("/")[1];
 
@@ -169,57 +213,111 @@ const Sidebar: React.FC = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <ul className="space-y-3  md:mb-0 mb-32">
-          {sections.map((section) => {
-            const isActive = currentPath === section.path;
-            const showNew = isNew(section.path, section.lastUpdated);
+        <div className="mt-auto pb-4 border-b border-gray-700">
+          <button
+            onClick={toggleAdvanced}
+            className="w-full flex items-center justify-between px-2 py-2"
+          >
+            <span
+              className={`text-sm font-medium transition ${
+                !isAdvanced ? "text-white" : "text-gray-400"
+              }`}
+            >
+              Normal
+            </span>
+            <div
+              className={`relative w-14 h-7 rounded-full transition ${
+                isAdvanced
+                  ? "bg-linear-to-r from-orange-300 to-orange-400"
+                  : "bg-gray-400"
+              }`}
+            >
+              <div
+                className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-300 ${
+                  isAdvanced ? "translate-x-7" : "translate-x-0"
+                }`}
+              />
+            </div>
+            <span className="text-sm font-medium transition flex items-center gap-1">
+              <span
+                className={`${
+                  isAdvanced
+                    ? "bg-linear-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent"
+                    : "text-gray-400"
+                }`}
+              >
+                Avancé
+              </span>
+              <span
+                className={`${!isAdvanced && "bg-linear-to-r bg-clip-text text-transparent bg-gray-400"}`}
+              >
+                🔥
+              </span>
+            </span>
+          </button>
+        </div>
+        <ul className="space-y-3 pt-4 md:mb-0 mb-32">
+          {sections
+            .filter((section) => isAdvanced || !section.advanced)
+            .map((section) => {
+              const isActive = currentPath === section.path;
+              const showNew = isNew(section.path, section.lastUpdated);
 
-            return (
-              <li key={section.path}>
-                <NavLink
-                  to={`/${section.path}`}
-                  onClick={(e) => {
-                    setVisit(section.path);
-                    if (window.innerWidth < 768) {
-                      e.preventDefault();
-                      setExpandedSection(
-                        expandedSection === section.path ? null : section.path
-                      );
-                      navigate(`/${section.path}`);
-                    }
-                  }}
-                  className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors duration-200 ${
-                    isActive
-                      ? "bg-blue-600 text-white"
-                      : "hover:bg-gray-700 hover:text-white"
-                  }`}
-                >
-                  <span className="text-lg">{section.icon}</span>
-                  <span className="font-medium">{section.title}</span>
-                  {showNew && (
-                    <span className="text-xs bg-red-500 text-white px-1.5 py-0.5 rounded-full">
-                      NEW
+              return (
+                <li key={section.path}>
+                  <NavLink
+                    to={`/${section.path}`}
+                    onClick={(e) => {
+                      setVisit(section.path);
+                      if (window.innerWidth < 768) {
+                        e.preventDefault();
+                        setExpandedSection(
+                          expandedSection === section.path
+                            ? null
+                            : section.path,
+                        );
+                        navigate(`/${section.path}`);
+                      }
+                    }}
+                    className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors duration-200 ${
+                      isActive
+                        ? "bg-blue-600 text-white"
+                        : "hover:bg-gray-700 hover:text-white"
+                    }`}
+                  >
+                    <span className="text-lg">{section.icon}</span>
+                    <span
+                      className={`font-medium ${
+                        section.advanced &&
+                        "bg-linear-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent"
+                      }`}
+                    >
+                      {section.title}
                     </span>
-                  )}
-                </NavLink>
-                {expandedSection === section.path &&
-                  section.items.length > 0 && (
-                    <ul className="mt-2 ml-6 space-y-1">
-                      {section.items.map((item) => (
-                        <li key={item.path}>
-                          <button
-                            onClick={() => handleScrollTo(item.path)}
-                            className="w-full text-left block px-2 py-1 rounded-lg text-sm hover:bg-gray-600 hover:text-white transition-colors duration-200"
-                          >
-                            {item.title}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-              </li>
-            );
-          })}
+                    {showNew && (
+                      <span className="text-xs bg-red-500 text-white px-1.5 py-0.5 rounded-full">
+                        NEW
+                      </span>
+                    )}
+                  </NavLink>
+                  {expandedSection === section.path &&
+                    section.items.length > 0 && (
+                      <ul className="mt-2 ml-6 space-y-1">
+                        {section.items.map((item) => (
+                          <li key={item.path}>
+                            <button
+                              onClick={() => handleScrollTo(item.path)}
+                              className="w-full text-left block px-2 py-1 rounded-lg text-sm hover:bg-gray-600 hover:text-white transition-colors duration-200"
+                            >
+                              {item.title}
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                </li>
+              );
+            })}
         </ul>
       </nav>
     </>

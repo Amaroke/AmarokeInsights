@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  FaPiggyBank,
-  FaChartLine,
   FaExclamationTriangle,
   FaPercentage,
   FaShieldAlt,
@@ -43,25 +41,35 @@ const Banking: React.FC = () => {
                 >
                   <p className="leading-relaxed mb-3">
                     Quand vous déposez de l’argent sur votre compte bancaire, il
-                    ne reste pas « stocké dans un coffre ». Pour la banque,
-                    votre dépôt devient une
-                    <strong> ressource financière</strong>. Elle peut l’utiliser
-                    pour prêter, investir ou renforcer sa solidité financière.
+                    ne reste pas « stocké dans un coffre ». En réalité,{" "}
+                    <strong>
+                      la banque devient propriétaire de votre argent
+                    </strong>
+                    , et ce que vous possédez, c’est une
+                    <strong> créance sur la banque</strong>. Elle peut utiliser
+                    votre argent pour prêter, investir ou renforcer sa solidité
+                    financière.
                   </p>
 
-                  <p className="leading-relaxed">
-                    En échange, la banque vous doit :
+                  <p className="leading-relaxed mb-3">
+                    Même si vous ne possédez plus physiquement l’argent, la
+                    banque doit :
                   </p>
 
                   <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
                     <li>
-                      La restitution de votre argent à tout moment (compte
-                      courant).
+                      Vous restituer vos fonds à tout moment (compte courant) ou
+                      selon les conditions du compte (compte à terme).
                     </li>
                     <li>
-                      Une rémunération éventuelle (livrets, comptes rémunérés).
+                      Vous offrir une rémunération éventuelle (livrets, comptes
+                      rémunérés).
                     </li>
-                    <li>Une sécurité réglementée (garantie des dépôts).</li>
+                    <li>
+                      Assurer une sécurité réglementaire : vos dépôts sont
+                      protégés jusqu’à 100 000 € par le <Term id={"FGDR"} /> en
+                      cas de faillite de la banque.
+                    </li>
                   </ul>
                 </InfoBubble>
 
@@ -229,7 +237,8 @@ const Banking: React.FC = () => {
                     </li>
                     <li>
                       <strong>
-                        Frais sur les produits d’épargne et d’investissement :{" "}
+                        Frais sur les produits d’épargne et d’investissement
+                        :{" "}
                       </strong>{" "}
                       <Term id={"AssuranceVie"} />, <Term id={"PEA"} />, etc.
                     </li>
@@ -397,14 +406,14 @@ const Banking: React.FC = () => {
 
                   <p className="leading-relaxed mt-3">
                     - <strong>Cartes premium</strong> (Gold, Platinum, Infinite)
-                    ➜ coûtent entre 120 € et 350 €/an mais incluent assurances
-                    voyage, assistance médicale, retraits gratuits à l’étranger…
-                    Intéressantes uniquement si vous exploitez réellement ces
-                    avantages.
+                    ➜ peuvent coûter plus chères ou nécessiter des conditions
+                    spécifiques mais incluent assurances voyage, assistance
+                    médicale, retraits gratuits à l’étranger… Intéressantes
+                    uniquement si vous exploitez réellement ces avantages.
                   </p>
 
                   <p className="leading-relaxed italic">
-                    Exemple : une carte Gold (130 €/an) peut être rentabilisée
+                    Exemple : une carte Gold à 130 €/an peut être rentabilisée
                     si vous voyagez souvent, car une assurance annulation coûte
                     40–60 € par trajet.
                   </p>
@@ -480,412 +489,6 @@ const Banking: React.FC = () => {
               </div>
             </section>
 
-            <section id="types-of-accounts" className="scroll-mt-22 mb-12">
-              <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-                Comptes bancaires, livrets et plans d’épargne
-              </h2>
-
-              <div className="space-y-4">
-                <InfoBubble
-                  icon={<FaPiggyBank />}
-                  title="Compte courant (Single)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Compte principal pour gérer ses
-                  opérations bancaires quotidiennes individuellement.
-                  <br />
-                  <strong>Avantages :</strong> Gestion individuelle et accès
-                  immédiat aux fonds.
-                  <br />
-                  <strong>Inconvénients :</strong> Aucun rendement, frais
-                  bancaires possibles.
-                  <br />
-                  <strong>Stratégie :</strong> Gestion de la trésorerie
-                  quotidienne.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaPiggyBank />}
-                  title="Compte courant (Joint)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Compte principal partagé pour
-                  gérer les opérations bancaires quotidiennes à plusieurs.
-                  <br />
-                  <strong>Avantages :</strong> Partage des dépenses et
-                  transparence entre co-titulaires.
-                  <br />
-                  <strong>Inconvénients :</strong> Responsabilité partagée,
-                  aucun rendement.
-                  <br />
-                  <strong>Stratégie :</strong> Gestion commune des finances
-                  quotidiennes.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaPiggyBank />}
-                  title="Livret A"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Livret d'épargne réglementé,
-                  accessible à tous.
-                  <br />
-                  <strong>Type :</strong> Épargne
-                  <br />
-                  <strong>Taux :</strong> 1,7% / Plafond 22 950 €
-                  <br />
-                  <strong>Fiscalité :</strong> Exonéré d'impôt sur le revenu et
-                  prélèvements sociaux.
-                  <br />
-                  <strong>Avantages :</strong> Sécurisé, fonds disponibles à
-                  tout moment.
-                  <br />
-                  <strong>Inconvénients :</strong> Rendement limité.
-                  <br />
-                  <strong>Stratégie :</strong> Épargne de précaution.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaPiggyBank />}
-                  title="Livret de Développement Durable et Solidaire (LDDS)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Livret similaire au Livret A,
-                  destiné à financer des projets durables.
-                  <br />
-                  <strong>Type :</strong> Épargne
-                  <br />
-                  <strong>Taux :</strong> 1,7% / Plafond 12 000 €
-                  <br />
-                  <strong>Fiscalité :</strong> Exonéré d'impôt et prélèvements
-                  sociaux.
-                  <br />
-                  <strong>Avantages :</strong> Sécurisé, fonds disponibles à
-                  tout moment.
-                  <br />
-                  <strong>Inconvénients :</strong> Rendement limité.
-                  <br />
-                  <strong>Stratégie :</strong> Épargne de précaution.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaPiggyBank />}
-                  title="Livret d'Épargne Populaire (LEP)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Livret réservé aux revenus
-                  modestes avec taux attractif.
-                  <br />
-                  <strong>Type :</strong> Épargne
-                  <br />
-                  <strong>Taux :</strong> 2,7% / Plafond 10 000 €
-                  <br />
-                  <strong>Fiscalité :</strong> Exonéré d'impôt et prélèvements
-                  sociaux.
-                  <br />
-                  <strong>Avantages :</strong> Rendement plus élevé que le
-                  Livret A et LDDS.
-                  <br />
-                  <strong>Inconvénients :</strong> Plafond limité, conditions de
-                  revenus strictes.
-                  <br />
-                  <strong>Stratégie :</strong> Épargne de précaution, avec un
-                  taux supérieur aux autres livrets réglementés couvrant la même
-                  fonction. À prioriser si vous êtes éligible.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaPiggyBank />}
-                  title="Livret Jeune"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Livret pour les jeunes de 12 à
-                  25 ans, taux parfois attractif.
-                  <br />
-                  <strong>Type :</strong> Épargne
-                  <br />
-                  <strong>Taux :</strong> 1.7% / Plafond 1 600 €
-                  <br />
-                  <strong>Fiscalité :</strong> Exonéré d'impôt et prélèvements
-                  sociaux.
-                  <br />
-                  <strong>Avantages :</strong> Taux parfois attractif, toujours
-                  supérieur au livret A, disponibilité immédiate.
-                  <br />
-                  <strong>Inconvénients :</strong> Plafond faible, réservé aux
-                  jeunes.
-                  <br />
-                  <strong>Stratégie :</strong> Épargne jeunesse et de précaution
-                  avec un taux parfois supérieur au Livret A et au LDDS.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaChartLine />}
-                  title="Plan Épargne en Actions (PEA)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Compte pour investir en actions
-                  européennes avec avantage fiscal.
-                  <br />
-                  <strong>Type :</strong> Investissement
-                  <br />
-                  <strong>Taux :</strong> Très variable, fortement lié à votre
-                  stratégie / Plafond 150 000 €
-                  <br />
-                  <strong>Fiscalité :</strong> <Term id={"PFU"} />, 12,8 %
-                  d'impôt sur le revenu et 17,2 % de prélèvements sociaux, 30%
-                  au total si retiré avant 5 ans, uniquement les prélèvements
-                  sociaux 17,2% après 5 ans
-                  <br />
-                  <strong>Avantages :</strong> Rendement potentiel élevé,
-                  fiscalité attractive.
-                  <br />
-                  <strong>Inconvénients :</strong> Risque de perte en capital,
-                  limité aux actions de l'Union Européenne.
-                  <br />
-                  <strong>Stratégie :</strong> Investissement long terme.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaChartLine />}
-                  title="Plan d'Épargne Entreprise (PEE)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Compte collectif proposé par
-                  l’entreprise pour investir dans des fonds communs, souvent
-                  avec abondement de l’employeur.
-                  <br />
-                  <strong>Type :</strong> Investissement
-                  <br />
-                  <strong>Taux :</strong> Variable selon fonds choisis
-                  <br />
-                  <strong>Fiscalité :</strong> Abondement exonéré d’impôt sur le
-                  revenu et soumis uniquement aux prélèvements sociaux.
-                  Plus-value des fonds défiscalisée si retrait après 5 ans.
-                  <br />
-                  <strong>Avantages :</strong> Abondement employeur, fiscalité
-                  avantageuse.
-                  <br />
-                  <strong>Inconvénients :</strong> Fonds bloqués 5 ans minimum
-                  (sauf cas exceptionnels : mariage, naissance, licenciement,
-                  etc.), choix limité de fonds.
-                  <br />
-                  <strong>Stratégie :</strong> Épargne salariale à moyen terme,
-                  profiter de l’abondement et optimiser la fiscalité.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaChartLine />}
-                  title="Plan Épargne Retraite (PER)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Épargne retraite avec avantages
-                  fiscaux immédiats.
-                  <br />
-                  <strong>Type :</strong> Investissement
-                  <br />
-                  <strong>Taux :</strong> Variable selon fonds
-                  <br />
-                  <strong>Fiscalité :</strong> Déduction des versements du
-                  revenu imposable, report d'imposition, prélèvements sociaux à
-                  la sortie. 30% si sortie en capital, barème de l'impôt sur le
-                  revenu si sortie en rente.
-                  <br />
-                  <strong>Avantages :</strong> Réduction d’impôt, capital
-                  disponible à la retraite.
-                  <br />
-                  <strong>Inconvénients :</strong> Argent bloqué jusqu’à la
-                  retraite.
-                  <br />
-                  <strong>Stratégie :</strong> Préparer sa retraite à long
-                  terme.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaChartLine />}
-                  title="Assurance Vie (AV)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Contrat d’épargne permettant de
-                  préparer projets et succession.
-                  <br />
-                  <strong>Type :</strong> Investissement
-                  <br />
-                  <strong>Taux :</strong> Variable selon fonds choisis
-                  <br />
-                  <strong>Fiscalité :</strong> Avantage fiscal après 8 ans :
-                  abattement annuel 4 600€ (célibataires) ou 9 200€ (couples)
-                  sur les gains, prélèvements sociaux 17,2%, succession
-                  optimisée.
-                  <br />
-                  <strong>Avantages :</strong> Flexibilité des supports, gestion
-                  libre ou pilotée, succession facilitée, liquidité partielle
-                  possible.
-                  <br />
-                  <strong>Inconvénients :</strong> Rendement fonds euros faible,
-                  unités de compte risquées, frais d’entrée et de gestion à
-                  surveiller.
-                  <br />
-                  <strong>Stratégie :</strong> Épargne long terme diversifiée,
-                  optimisation fiscale, préparation succession.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaChartLine />}
-                  title="Compte-Titres Ordinaire (CTO)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Compte permettant d’acheter et
-                  vendre librement actions, obligations, <Term id={"ETF"} />,
-                  cryptos et autres titres financiers.
-                  <br />
-                  <strong>Type :</strong> Investissement
-                  <br />
-                  <strong>Taux :</strong> Variable selon performance des titres
-                  choisis
-                  <br />
-                  <strong>Fiscalité :</strong> Gains et dividendes soumis au{" "}
-                  <Term id={"PFU"} />.
-                  <br />
-                  <strong>Avantages :</strong> Liberté totale d’investissement,
-                  aucun plafond, possibilité de diversifier internationalement.
-                  <br />
-                  <strong>Inconvénients :</strong> Risque de perte en capital,
-                  fiscalité moins avantageuse qu’un PEA ou PER.
-                  <br />
-                  <strong>Stratégie :</strong> Investissement à long terme pour
-                  diversifier et compléter un PEA ou un PER.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaPiggyBank />}
-                  title="Plan Épargne Logement (PEL)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Livret pour préparer un projet
-                  immobilier, possibilité de prêt à taux préférentiel.
-                  <br />
-                  <strong>Type :</strong> Épargne
-                  <br />
-                  <strong>Taux :</strong> 1,75% / Plafond 61 200 €, attention
-                  cependant le taux est bloqué à l'ouverture du plan, certains
-                  PEL ouverts il y a plusieurs années ont des taux plus élevés.
-                  Il est important de vérifier le taux à l'ouverture et lors de
-                  la clôture. Certains PEL ouverts il y a longtemps ont des taux
-                  très intéressants.
-                  <br />
-                  <strong>Fiscalité :</strong> Gains soumis au{" "}
-                  <Term id={"PFU"} />.
-                  <br />
-                  <strong>Avantages :</strong> Possibilité de prêt immobilier.
-                  <br />
-                  <strong>Inconvénients :</strong> Fonds bloqués 2 ans minimum,
-                  autrement retour au taux du CEL.
-                  <br />
-                  <strong>Stratégie :</strong> Épargne projet immobilier à moyen
-                  terme.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaPiggyBank />}
-                  title="Compte Épargne Logement (CEL)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Livret pour financer un projet
-                  immobilier.
-                  <br />
-                  <strong>Type :</strong> Épargne
-                  <br />
-                  <strong>Taux :</strong> 1,25% / Plafond 15 300 €
-                  <br />
-                  <strong>Fiscalité :</strong> Gains soumis au{" "}
-                  <Term id={"PFU"} />.
-                  <br />
-                  <strong>Avantages :</strong> Possibilité de prêt immobilier,
-                  fonds disponibles au delà de 300 €.
-                  <br />
-                  <strong>Inconvénients :</strong> Rendement faible et imposé,
-                  fonds bloqués minimum 18 mois.
-                  <br />
-                  <strong>Stratégie :</strong> Épargne projet immobilier.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaPiggyBank />}
-                  title="Compte à terme (CAT)"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Épargne placée pour une durée
-                  déterminée avec taux garanti.
-                  <br />
-                  <strong>Type :</strong> Épargne
-                  <br />
-                  <strong>Taux :</strong> 2%, variable selon durée et banque
-                  <br />
-                  <strong>Fiscalité :</strong> Gains soumis au{" "}
-                  <Term id={"PFU"} />.
-                  <br />
-                  <strong>Avantages :</strong> Rendement stable, sécurisé.
-                  <br />
-                  <strong>Inconvénients :</strong> Fonds bloqués jusqu’à
-                  échéance, autrement aucun intérêt.
-                  <br />
-                  <strong>Stratégie :</strong> Épargne moyen terme avec faible
-                  risque.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaPiggyBank />}
-                  title="Compte sur livret / Livret bancaire"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Compte d’épargne flexible
-                  proposé par les banques.
-                  <br />
-                  <strong>Type :</strong> Épargne
-                  <br />
-                  <strong>Taux :</strong> 1% à 2% en moyenne et selon la banque
-                  <br />
-                  <strong>Fiscalité :</strong> Gains soumis au{" "}
-                  <Term id={"PFU"} />.
-                  <br />
-                  <strong>Avantages :</strong> Flexibilité, fonds disponibles
-                  immédiatement.
-                  <br />
-                  <strong>Inconvénients :</strong> Rendement faible.
-                  <br />
-                  <strong>Stratégie :</strong> Épargne flexible.
-                </InfoBubble>
-
-                <InfoBubble
-                  icon={<FaChartLine />}
-                  title="Plan Épargne Avenir Climat"
-                  color="text-blue-400"
-                >
-                  <strong>Description :</strong> Compte pour investir dans des
-                  projets durables et climatiques.
-                  <br />
-                  <strong>Type :</strong> Investissement
-                  <br />
-                  <strong>Taux :</strong> Variable selon fonds / Plafond 22 950
-                  €
-                  <br />
-                  <strong>Fiscalité :</strong> Exonéré d'impôt sur le revenu et
-                  prélèvements sociaux.
-                  <br />
-                  <strong>Avantages :</strong> Contribue à la transition
-                  écologique.
-                  <br />
-                  <strong>Inconvénients :</strong> Risque de perte en capital.
-                  Fonds bloqués 5 ans et avant 18 ans. Fermeture automatique
-                  l'année des 30 ans.
-                  <br />
-                  <strong>Stratégie :</strong> Investissements{" "}
-                  <Term id={"ESG"} />, long terme.
-                </InfoBubble>
-              </div>
-            </section>
-
             <section id="security-fraud" className="scroll-mt-22">
               <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
                 Sécurité et fraude
@@ -900,14 +503,31 @@ const Banking: React.FC = () => {
                   <p className="leading-relaxed">
                     En France, vos dépôts sont protégés jusqu’à{" "}
                     <strong>100 000 € par établissement bancaire</strong> grâce
-                    au Fonds de Garantie des Dépôts et de Résolution (FGDR).
-                    Cela couvre comptes courants, livrets, et comptes d’épargne.
+                    au <Term id={"FGDR"} />. Cela couvre comptes courants,
+                    livrets, et comptes d’épargne. Il ne s’applique pas aux
+                    pertes dues à des fraudes, piratages ou erreurs de gestion
+                    de votre part. Par exemple, si vous êtes victime d’une
+                    arnaque et que votre compte est vidé, le{" "}
+                    <Term id={"FGDR"} /> ne vous remboursera pas.
                   </p>
 
                   <p className="leading-relaxed mt-2">
                     Exemple : si vous avez 80 000 € sur votre compte courant et
                     30 000 € sur un livret, seuls{" "}
                     <strong>100 000 € seront remboursés</strong>.
+                  </p>
+
+                  <p className="leading-relaxed mt-2">
+                    Ce plafond de 100 000 € par établissement bancaire
+                    s’applique uniquement en cas de défaillance de la banque,
+                    c’est-à-dire si la banque fait faillite et ne peut plus
+                    restituer vos fonds. Une manère d'utiliser le{" "}
+                    <Term id={"FGDR"} /> est de répartir vos fonds sur plusieurs
+                    banques pour bénéficier de plusieurs plafonds de garantie.
+                    Exemple : 150 000 € répartis sur deux banques (80 000 € dans
+                    la banque A et 70 000 € dans la banque B) seraient
+                    entièrement couverts, car chaque banque ne dépasse pas le
+                    plafond de 100 000 €.
                   </p>
                 </InfoBubble>
 
