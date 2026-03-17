@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Basics from "./pages/Basics";
 import Banking from "./pages/Banking";
@@ -20,7 +20,7 @@ import Accounts from "./pages/Accounts";
 
 function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <SidebarProvider>
         <Sidebar />
         <Routes>
@@ -42,7 +42,7 @@ function App() {
           <Route path="/loan/*" element={<LoanCalculator />} />
         </Routes>
       </SidebarProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
