@@ -86,7 +86,7 @@ const sections = [
     ],
   },
   {
-    title: "Intro au Trading",
+    title: "Bases du Trading",
     advanced: false,
     path: "trading",
     icon: <FaChartBar />,
@@ -117,7 +117,7 @@ const sections = [
     lastUpdated: "",
     items: [
       { title: "Qu’est-ce qu’une crypto ?", path: "what-are-cryptos" },
-      { title: "Les principales cryptos", path: "top-cryptos" },
+      { title: "Les différentes cryptos", path: "different-cryptos" },
       { title: "Acheter, stocker et sécuriser", path: "buy-store-secure" },
     ],
   },

@@ -53,7 +53,7 @@ const LoanCalculator: React.FC = () => {
           "Intérêts restants": Math.max(Math.round(remainingInterest), 0),
           "Total restant": Math.max(
             Math.round(remainingCapital + remainingInterest),
-            0
+            0,
           ),
         });
       }

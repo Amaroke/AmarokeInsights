@@ -35,13 +35,13 @@ const Investments: React.FC = () => {
                   color="text-blue-400"
                 >
                   <p>
-                    Investir permet de protéger son pouvoir d’achat contre
-                    l’inflation, de préparer ses projets futurs (achat
-                    immobilier, retraite, indépendance financière), et de
-                    soutenir l’économie réelle en finançant des entreprises et
-                    des innovations. Ce n’est pas un moyen de s’enrichir
-                    rapidement, mais une stratégie à long terme pour faire
-                    fructifier son capital.
+                    Investir permet de <b>protéger son pouvoir d’achat</b>{" "}
+                    contre l’inflation, de <b>préparer ses projets futurs</b>{" "}
+                    (achat immobilier, retraite, indépendance financière), et de
+                    <b>soutenir l’économie</b> réelle en finançant des
+                    entreprises et des innovations. Ce n’est{" "}
+                    <b>pas un moyen de s’enrichir rapidement</b>, mais une
+                    stratégie à long terme pour faire fructifier son capital.
                   </p>
                 </InfoBubble>
 
@@ -60,9 +60,9 @@ const Investments: React.FC = () => {
                     <strong>Exemples :</strong>
                     <ul className="list-disc list-inside mt-2 space-y-1">
                       <li>
-                        <strong>Livret A :</strong> très sûr et liquide (on peut
-                        retirer son argent quand on le souhaite, il n'est pas
-                        bloqué), mais rendement faible.
+                        <Term id={"CAT"} /> très sûr et liquide (on peut
+                        récupérer son argent à l’échéance, ou en cas de besoin),
+                        mais avec un rendement faible.
                       </li>
                       <li>
                         <strong>Actions :</strong> rendement potentiellement
@@ -85,11 +85,11 @@ const Investments: React.FC = () => {
                   color="text-blue-400"
                 >
                   <p>
-                    Tout placement offre un rendement potentiel mais implique
-                    également un risque de perte. Plus le rendement attendu est
-                    élevé, plus le risque l’est aussi. L’objectif est de trouver
-                    un équilibre adapté à son profil et à l’horizon de
-                    placement.
+                    Tout placement offre un <b>rendement potentiel</b> mais
+                    implique également un <b>risque de perte</b>. Plus le
+                    rendement attendu est élevé, plus le risque l’est aussi.
+                    L’objectif est de trouver un équilibre adapté à son profil
+                    et à l’horizon de placement.
                   </p>
 
                   <p>
@@ -123,19 +123,9 @@ const Investments: React.FC = () => {
                     pas recommandé pour les personnes sensibles aux émotions ou
                     qui craignent la perte de capital. Pour ceux qui souhaitent
                     minimiser tout risque, il existe des placements à capital
-                    garanti, comme les livrets ou les fonds euros en
-                    assurance-vie. Leur rendement est faible, mais le capital
-                    est sécurisé.
-                  </p>
-
-                  <p>
-                    Les sections suivantes, à l'image de celles de la page
-                    précédente sur les types de compte, détaillent les
-                    différents types de placements, afin de permettre des
-                    décisions éclairées et adaptées à votre situation.
-                    Attention, chaque investissement n'est pas disponible dans
-                    tous les types de compte, ce sont deux choix distincts à
-                    faire.
+                    garanti, comme les livrets, les comptes à terme ou les fonds
+                    euros en assurance-vie. Leur rendement est faible, mais le
+                    capital est sécurisé.
                   </p>
                 </InfoBubble>
 
@@ -197,9 +187,8 @@ const Investments: React.FC = () => {
                   </p>
 
                   <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
-                    <li>Réduit le stress lié au timing du marché.</li>
-                    <li>Disciplinaire : vous investissez régulièrement.</li>
-                    <li>Particulièrement adapté aux marchés volatils.</li>
+                    <li>Réduit le stress lié au timing du marché</li>
+                    <li>Discipline, vous investissez régulièrement</li>
                   </ul>
 
                   <p className="leading-relaxed mt-3">
@@ -302,9 +291,9 @@ const Investments: React.FC = () => {
                   <p>
                     Les particuliers passent par un intermédiaire financier
                     (courtier, banque, plateforme), via un{" "}
-                    <strong>compte-titres</strong> ou un <strong>PEA</strong>.
-                    L’intermédiaire transmet l’ordre au marché, avec des
-                    services et coûts propres à chaque prestataire.
+                    <strong>compte-titres</strong>. L’intermédiaire transmet
+                    l’ordre au marché, avec des services et coûts propres à
+                    chaque prestataire.
                   </p>
                   <h3 className="font-semibold mt-4">
                     Intérêts pour les entreprises et risques
@@ -395,8 +384,8 @@ const Investments: React.FC = () => {
 
                   <p>
                     D’autres mots-clés courants, <strong>Dist</strong> pour
-                    distributif (dividendes versés), <strong>LEVERAGE</strong>{" "}
-                    pour ETF à effet de levier, <strong>INVERSE</strong> pour
+                    distributif (dividendes versés), <strong>Leverage</strong>{" "}
+                    pour ETF à effet de levier, <strong>Inverse</strong> pour
                     ETF inversé, ou encore la mention d’un secteur ou d’une
                     région spécifique (exemple, Emerging Markets pour les pays
                     émergents). Certains portent également la mention{" "}
@@ -1096,7 +1085,7 @@ const Investments: React.FC = () => {
                     </ul>
                   </p>
                   <p>
-                    Une grosse partie est consacré à ces actifs dans les pages
+                    Une page est consacrée à ces actifs dans les pages
                     suivantes. Je ne détaille pas plus ici.
                   </p>
                 </InfoBubble>

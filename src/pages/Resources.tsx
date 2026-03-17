@@ -235,7 +235,7 @@ const Resources: React.FC = () => {
                 .sort((a, b) =>
                   terms[a as TermKey].title
                     .toLowerCase()
-                    .localeCompare(terms[b as TermKey].title.toLowerCase())
+                    .localeCompare(terms[b as TermKey].title.toLowerCase()),
                 )
                 .map((key) => {
                   const term = terms[key as TermKey];

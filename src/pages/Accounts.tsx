@@ -26,8 +26,8 @@ const Accounts: React.FC = () => {
                   title="Compte courant (Single)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Compte principal pour gérer ses
-                  opérations bancaires quotidiennes individuellement.
+                  Compte principal pour gérer ses opérations bancaires
+                  quotidiennes individuellement.
                   <br />
                   <strong>Avantages :</strong> Gestion individuelle et accès
                   immédiat aux fonds.
@@ -42,8 +42,8 @@ const Accounts: React.FC = () => {
                   title="Compte courant (Joint)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Compte principal partagé pour
-                  gérer les opérations bancaires quotidiennes à plusieurs.
+                  Compte principal partagé pour gérer les opérations bancaires
+                  quotidiennes à plusieurs.
                   <br />
                   <strong>Avantages :</strong> Partage des dépenses et
                   transparence entre co-titulaires.
@@ -64,8 +64,7 @@ const Accounts: React.FC = () => {
                   title="Livret A"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Livret d'épargne réglementé,
-                  accessible à tous.
+                  Livret d'épargne réglementé, accessible à tous.
                   <br />
                   <strong>Taux :</strong> 1,5% / Plafond 22 950 €
                   <br />
@@ -85,8 +84,8 @@ const Accounts: React.FC = () => {
                   title="Livret de Développement Durable et Solidaire (LDDS)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Livret similaire au Livret A,
-                  destiné à financer des projets durables.
+                  Livret similaire au Livret A, destiné à financer des projets
+                  durables.
                   <br />
                   <strong>Taux :</strong> 1,5% / Plafond 12 000 €
                   <br />
@@ -106,8 +105,7 @@ const Accounts: React.FC = () => {
                   title="Livret d'Épargne Populaire (LEP)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Livret réservé aux revenus
-                  modestes avec taux attractif.
+                  Livret réservé aux revenus modestes avec taux attractif.
                   <br />
                   <strong>Taux :</strong> 2,5% / Plafond 10 000 €
                   <br />
@@ -130,16 +128,16 @@ const Accounts: React.FC = () => {
                   title="Livret Jeune"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Livret pour les jeunes de 12 à
-                  25 ans, taux parfois attractif.
+                  Livret pour les jeunes de 12 à 25 ans, taux parfois attractif.
                   <br />
                   <strong>Taux :</strong> 1.5% minimum / Plafond 1 600 €
                   <br />
                   <strong>Fiscalité :</strong> Exonéré d'impôt et prélèvements
                   sociaux.
                   <br />
-                  <strong>Avantages :</strong> Taux parfois attractif, toujours
-                  supérieur au livret A, disponibilité immédiate.
+                  <strong>Avantages :</strong> Taux parfois attractif,
+                  potentiellement supérieur au livret A, disponibilité
+                  immédiate.
                   <br />
                   <strong>Inconvénients :</strong> Plafond faible, réservé aux
                   jeunes.
@@ -153,8 +151,8 @@ const Accounts: React.FC = () => {
                   title="Plan Épargne Logement (PEL)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Livret pour préparer un projet
-                  immobilier, possibilité de prêt à taux préférentiel.
+                  Livret pour préparer un projet immobilier, possibilité de prêt
+                  à taux préférentiel.
                   <br />
                   <strong>Taux :</strong> 2% pour les PEL ouverts à partir du
                   1er janvier 2026 / Plafond 61 200 €, attention cependant le
@@ -182,8 +180,7 @@ const Accounts: React.FC = () => {
                   title="Compte Épargne Logement (CEL)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Livret pour financer un projet
-                  immobilier.
+                  Livret pour financer un projet immobilier.
                   <br />
                   <strong>Taux :</strong> 1% / Plafond 15 300 €
                   <br />
@@ -211,8 +208,8 @@ const Accounts: React.FC = () => {
                   title="Plan Épargne en Actions (PEA)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Compte pour investir en actions
-                  européennes avec avantage fiscal.
+                  Compte pour investir en actions européennes avec avantage
+                  fiscal.
                   <br />
                   <strong>Taux :</strong> Très variable, fortement lié à votre
                   stratégie / Plafond 150 000 €
@@ -236,15 +233,16 @@ const Accounts: React.FC = () => {
                   title="Plan d'Épargne Entreprise (PEE)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Compte collectif proposé par
-                  l’entreprise pour investir dans des fonds communs, souvent
-                  avec abondement de l’employeur.
+                  Compte collectif proposé par l’entreprise pour investir dans
+                  des fonds communs, souvent avec abondement de l’employeur.
                   <br />
                   <strong>Taux :</strong> Variable selon fonds choisis
                   <br />
                   <strong>Fiscalité :</strong> Abondement exonéré d’impôt sur le
-                  revenu et soumis uniquement aux prélèvements sociaux.
-                  Plus-value des fonds défiscalisée si retrait après 5 ans.
+                  revenu et soumis uniquement aux prélèvements sociaux (
+                  <Term id={"CSG/CRDS"} />, 9,7 %). Les plus-values sont
+                  exonérées d’impôt sur le revenu si retrait après 5 ans, mais
+                  soumises aux prélèvements sociaux (18,6 %).
                   <br />
                   <strong>Avantages :</strong> Abondement employeur, fiscalité
                   avantageuse.
@@ -262,15 +260,14 @@ const Accounts: React.FC = () => {
                   title="Plan Épargne Retraite (PER)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Épargne retraite avec avantages
-                  fiscaux immédiats.
+                  Épargne retraite avec avantages fiscaux immédiats.
                   <br />
                   <strong>Taux :</strong> Variable selon fonds
                   <br />
                   <strong>Fiscalité :</strong> Déduction des versements du
                   revenu imposable, report d'imposition, prélèvements sociaux à
-                  la sortie. 30% si sortie en capital, barème de l'impôt sur le
-                  revenu si sortie en rente.
+                  la sortie. <Term id={"PFU"} /> si sortie en capital, barème de
+                  l'impôt sur le revenu si sortie en rente.
                   <br />
                   <strong>Avantages :</strong> Réduction d’impôt, capital
                   disponible à la retraite.
@@ -287,12 +284,12 @@ const Accounts: React.FC = () => {
                   title="Assurance Vie (AV)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Contrat d’épargne permettant de
-                  préparer projets et succession.
+                  Contrat d’épargne permettant de préparer projets et
+                  succession.
                   <br />
                   <strong>Taux :</strong> Variable selon fonds choisis
                   <br />
-                  <strong>Fiscalité :</strong> Avantage fiscal après 8 ans :
+                  <strong>Fiscalité :</strong> Avantage fiscal après 8 ans,
                   abattement annuel 4 600€ (célibataires) ou 9 200€ (couples)
                   sur les gains, prélèvements sociaux 18,6%, succession
                   optimisée.
@@ -314,9 +311,9 @@ const Accounts: React.FC = () => {
                   title="Compte-Titres Ordinaire (CTO)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Compte permettant d’acheter et
-                  vendre librement actions, obligations, <Term id={"ETF"} />,
-                  cryptos et autres titres financiers.
+                  Compte permettant d’acheter et vendre librement actions,
+                  obligations, <Term id={"ETF"} />, cryptos et autres titres
+                  financiers.
                   <br />
                   <strong>Taux :</strong> Variable selon performance des titres
                   choisis
@@ -339,8 +336,7 @@ const Accounts: React.FC = () => {
                   title="Compte à terme (CAT)"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Épargne placée pour une durée
-                  déterminée avec taux garanti.
+                  Épargne placée pour une durée déterminée avec taux garanti.
                   <br />
                   <strong>Taux :</strong> 2%, variable selon durée et banque
                   <br />
@@ -362,8 +358,7 @@ const Accounts: React.FC = () => {
                   title="Compte sur livret / Livret bancaire"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Compte d’épargne flexible
-                  proposé par les banques.
+                  Compte d’épargne flexible proposé par les banques.
                   <br />
                   <strong>Taux :</strong> 1% à 2% en moyenne et selon la banque
                   <br />
@@ -384,8 +379,7 @@ const Accounts: React.FC = () => {
                   title="Plan Épargne Avenir Climat"
                   color="text-blue-400"
                 >
-                  <strong>Description :</strong> Compte pour investir dans des
-                  projets durables et climatiques.
+                  Compte pour investir dans des projets durables et climatiques.
                   <br />
                   <strong>Taux :</strong> Variable selon fonds / Plafond 22 950
                   €

@@ -19,7 +19,6 @@ export const terms = {
     definition:
       "Exchange Traded Fund : fonds indiciel coté en Bourse qui réplique la performance d’un indice (comme le CAC 40 ou le S&P 500) tout en étant facile à acheter et à faible coût.",
   },
-
   LDDS: {
     title: "LDDS",
     definition:
@@ -104,6 +103,61 @@ export const terms = {
     title: "FGDR",
     definition:
       "Fonds de Garantie des Dépôts et de Résolution : organisme français qui protège les déposants en garantissant leurs dépôts jusqu’à un certain montant (100 000 € par déposant et par établissement) en cas de faillite d’une banque ou d’un établissement financier.",
+  },
+  "CSG/CRDS": {
+    title: "CSG/CRDS",
+    definition:
+      "Contribution Sociale Généralisée (CSG) et Contribution au Remboursement de la Dette Sociale (CRDS) : deux prélèvements sociaux en France qui s’appliquent sur les revenus d’activité, les revenus du capital et les prestations sociales. La CSG finance la protection sociale, tandis que la CRDS sert à rembourser la dette sociale.",
+  },
+  CAT: {
+    title: "CAT",
+    definition:
+      "Compte à Terme : produit d’épargne à taux fixe, bloqué pour une durée déterminée. Le capital est garanti, mais les fonds ne sont pas disponibles avant l’échéance sans pénalité.",
+  },
+  spread: {
+    title: "Spread",
+    definition:
+      "Différence entre le prix d’achat et le prix de vente d’un actif financier. Le spread représente le coût implicite de la transaction, et un spread plus large peut indiquer une moindre liquidité ou une plus grande volatilité.",
+  },
+  "S&P500": {
+    title: "S&P 500",
+    definition:
+      "Standard & Poor’s 500 : indice boursier américain composé de 500 grandes entreprises cotées en Bourse. Il est considéré comme un indicateur de référence de la performance du marché actions américain.",
+  },
+  broker: {
+    title: "Broker",
+    definition:
+      "Intermédiaire financier qui facilite l’achat et la vente d’actifs financiers (actions, obligations, ETF, etc.) pour le compte de ses clients. Les brokers peuvent être traditionnels (banques) ou en ligne (courtiers), et facturent généralement des frais pour leurs services.",
+  },
+  "stop-loss": {
+    title: "Stop-loss",
+    definition:
+      "Ordre de vente automatique d’un actif financier lorsque son prix atteint un certain niveau, afin de limiter les pertes potentielles.",
+  },
+  defi: {
+    title: "DeFi",
+    definition:
+      "Finance Décentralisée : ensemble d’applications financières construites sur la blockchain, permettant d’emprunter, prêter, échanger ou investir sans passer par les banques ou institutions traditionnelles.",
+  },
+  nft: {
+    title: "NFTs",
+    definition:
+      "Non-Fungible Token : jeton numérique unique basé sur la blockchain. Contrairement aux cryptomonnaies classiques, un NFT n’est pas interchangeable. Il sert à représenter la propriété d’un objet numérique (image, musique, carte de collection, etc.).",
+  },
+  staking: {
+    title: "Staking",
+    definition:
+      "Processus de verrouillage de cryptomonnaies dans un portefeuille pour soutenir les opérations d’une blockchain (comme la validation des transactions) en échange de récompenses, souvent sous forme de cryptomonnaies.",
+  },
+  decentralized: {
+    title: "décentralisée",
+    definition:
+      "Système ou réseau qui fonctionne sans autorité centrale, où le contrôle et la prise de décision sont répartis entre les participants, souvent grâce à des technologies comme la blockchain.",
+  },
+  blockchain: {
+    title: "blockchain",
+    definition:
+      "Technologie de registre distribué qui permet de stocker et de sécuriser des données de manière transparente et immuable. La blockchain est la base des cryptomonnaies et de nombreuses applications décentralisées.",
   },
 } as const;
 

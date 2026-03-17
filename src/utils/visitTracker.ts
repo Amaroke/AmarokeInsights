@@ -14,7 +14,7 @@ export function setVisit(sectionPath: string) {
 export function isNew(
   sectionPath: string,
   lastUpdated: string,
-  months = 1
+  months = 1,
 ): boolean {
   if (!lastUpdated) return false;
 

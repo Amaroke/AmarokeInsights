@@ -16,8 +16,13 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
+- 17/03/2026 - Version 1.0.0
+  - Lancement officiel du site avec les contenus sur les bases de la finance.
+
 - 17/03/2026
   - Correction du router pour accéder au site via des liens directs (ex: amaroke.github.io/AmarokeInsights/basics) et non plus uniquement via la page d'accueil.
+  - Complétion de la page sur les bases du Trading.
+  - Complétion de la page sur les bases des cryptomonnaies.
 
 - 16/03/2026
   - Refonte du menu et ajout d'un second mode "avancé" avec des contenus plus poussés.

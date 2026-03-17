@@ -165,6 +165,12 @@ const Strategy: React.FC = () => {
                   Amundi <strong>sans frais de courtage</strong>, ce qui rend
                   leur utilisation particulièrement intéressante pour mon cas.
                 </p>
+                <p className="leading-relaxed mt-3">
+                  La composition actuelle de mes actifs est pour le moment assez
+                  aggresive, mais je souhaite la faire évoluer vers une
+                  répartition plus équilibrée à mesure que j’approche de mon
+                  objectif.
+                </p>
               </InfoBubble>
 
               <InfoBubble

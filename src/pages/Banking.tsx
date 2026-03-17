@@ -118,7 +118,7 @@ const Banking: React.FC = () => {
 
                 <InfoBubble
                   icon={<FaLayerGroup />}
-                  title="Les réserves fractionnaires : comment 1 € permet de prêter plus"
+                  title="Les réserves fractionnaires, comment 1 € permet de prêter plus"
                   color="text-purple-400"
                 >
                   <p className="leading-relaxed mb-3">
@@ -348,7 +348,7 @@ const Banking: React.FC = () => {
                   <p className="leading-relaxed italic">
                     Exemple : un compte à 2 % brut dans une fintech ➜ après
                     impôt, le taux net tombe à seulement <strong>1,33 %</strong>
-                    , soit à peine au-dessus du Livret A (1,25 % net et garanti,
+                    , soit en-dessous du taux du Livret A (1,5 % net et garanti,
                     au moment où j’écris ces lignes).
                   </p>
 
