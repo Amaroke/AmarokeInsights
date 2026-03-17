@@ -16,6 +16,9 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
+- 17/03/2026
+  - Correction du router pour accéder au site via des liens directs (ex: amaroke.github.io/AmarokeInsights/basics) et non plus uniquement via la page d'accueil.
+
 - 16/03/2026
   - Refonte du menu et ajout d'un second mode "avancé" avec des contenus plus poussés.
   - Ajout des bases de la page sur le trading.
