@@ -6,6 +6,7 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
   const [open, setOpen] = useState(false);
   const [pos, setPos] = useState({ top: 0, left: 0 });
   const ref = useRef<HTMLSpanElement>(null);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     if (open && ref.current) {
@@ -24,9 +25,11 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
       const top = rect.top - 10;
 
       setPos({ top, left });
+      setReady(true);
+    } else {
+      setReady(false);
     }
   }, [open]);
-
   useEffect(() => {
     const handleClick = () => setOpen(false);
 
@@ -54,7 +57,7 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
         {title} <sup className="text-xs text-gray-400">?</sup>
       </span>
 
-      {open && (
+      {open && ready && (
         <div
           className="fixed z-50"
           style={{ top: pos.top, left: pos.left }}
