@@ -90,7 +90,7 @@ const sections = [
     advanced: false,
     path: "trading",
     icon: <FaChartBar />,
-    lastUpdated: "2026-03-16",
+    lastUpdated: "2026-03-18",
     items: [
       { title: "Qu’est-ce que le trading ?", path: "trading-intro" },
       {
@@ -114,7 +114,7 @@ const sections = [
     advanced: false,
     path: "cryptos",
     icon: <FaBitcoin />,
-    lastUpdated: "",
+    lastUpdated: "2026-03-18",
     items: [
       { title: "Qu’est-ce qu’une crypto ?", path: "what-are-cryptos" },
       { title: "Les différentes cryptos", path: "different-cryptos" },

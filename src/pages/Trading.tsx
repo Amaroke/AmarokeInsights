@@ -75,7 +75,7 @@ const Trading: React.FC = () => {
                   risque sont en général très différents.
                 </p>
 
-                <div className="overflow-x-auto">
+                <div className="hidden md:block overflow-x-auto">
                   <table className="w-full text-sm text-left border border-gray-700 rounded-lg overflow-hidden">
                     <thead className="bg-gray-800 text-gray-200">
                       <tr>
@@ -150,6 +150,59 @@ const Trading: React.FC = () => {
                       </tr>
                     </tbody>
                   </table>
+                </div>
+                <div className="md:hidden space-y-3">
+                  <div className="bg-gray-900/40 p-3 rounded-lg border border-gray-700">
+                    <p className="text-xs text-gray-400">Horizon de temps</p>
+                    <p className="text-blue-400 font-semibold">Trading</p>
+                    <p className="mb-2">
+                      Court terme (minutes à quelques jours)
+                    </p>
+                    <p className="text-green-400 font-semibold">
+                      Investissement
+                    </p>
+                    <p>Long terme (plusieurs années)</p>
+                  </div>
+
+                  <div className="bg-gray-900/40 p-3 rounded-lg border border-gray-700">
+                    <p className="text-xs text-gray-400">Objectif</p>
+                    <p className="text-blue-400 font-semibold">Trading</p>
+                    <p className="mb-2">Profit rapide sur les variations</p>
+                    <p className="text-green-400 font-semibold">
+                      Investissement
+                    </p>
+                    <p>Accumulation de richesse</p>
+                  </div>
+
+                  <div className="bg-gray-900/40 p-3 rounded-lg border border-gray-700">
+                    <p className="text-xs text-gray-400">Niveau de risque</p>
+                    <p className="text-blue-400 font-semibold">Trading</p>
+                    <p className="mb-2">Élevé (effet de levier)</p>
+                    <p className="text-green-400 font-semibold">
+                      Investissement
+                    </p>
+                    <p>Modéré</p>
+                  </div>
+
+                  <div className="bg-gray-900/40 p-3 rounded-lg border border-gray-700">
+                    <p className="text-xs text-gray-400">Fréquence</p>
+                    <p className="text-blue-400 font-semibold">Trading</p>
+                    <p className="mb-2">Élevée (plusieurs fois/jour)</p>
+                    <p className="text-green-400 font-semibold">
+                      Investissement
+                    </p>
+                    <p>Faible (mensuelle)</p>
+                  </div>
+
+                  <div className="bg-gray-900/40 p-3 rounded-lg border border-gray-700">
+                    <p className="text-xs text-gray-400">Compétences</p>
+                    <p className="text-blue-400 font-semibold">Trading</p>
+                    <p className="mb-2">Discipline, rapidité</p>
+                    <p className="text-green-400 font-semibold">
+                      Investissement
+                    </p>
+                    <p>Patience, vision long terme</p>
+                  </div>
                 </div>
                 <p className="leading-relaxed mt-4">
                   Bien entendu il existe des exceptions et des zones grises,

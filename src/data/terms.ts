@@ -150,12 +150,12 @@ export const terms = {
       "Processus de verrouillage de cryptomonnaies dans un portefeuille pour soutenir les opérations d’une blockchain (comme la validation des transactions) en échange de récompenses, souvent sous forme de cryptomonnaies.",
   },
   decentralized: {
-    title: "décentralisée",
+    title: "Décentralisée",
     definition:
       "Système ou réseau qui fonctionne sans autorité centrale, où le contrôle et la prise de décision sont répartis entre les participants, souvent grâce à des technologies comme la blockchain.",
   },
   blockchain: {
-    title: "blockchain",
+    title: "Blockchain",
     definition:
       "Technologie de registre distribué qui permet de stocker et de sécuriser des données de manière transparente et immuable. La blockchain est la base des cryptomonnaies et de nombreuses applications décentralisées.",
   },

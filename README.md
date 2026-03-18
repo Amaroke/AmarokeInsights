@@ -16,6 +16,9 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
+- 18/03/2026 - Version 1.0.1
+  - Corrections d'affichage du pop up de définition et des tableaux sur mobile.
+
 - 17/03/2026 - Version 1.0.0
   - Lancement officiel du site avec les contenus sur les bases de la finance.
 
