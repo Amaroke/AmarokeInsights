@@ -23,14 +23,21 @@ const CompoundInterest: React.FC = () => {
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
+    const safeInitial = isNaN(initial) ? 0 : initial;
+    const safeMonthly = isNaN(monthly) ? 0 : monthly;
+    const safeRate = isNaN(rate) ? 0 : rate;
+    const safeYears = isNaN(years) ? 0 : years;
+
     const points = [];
-    let capital = initial;
-    for (let year = 0; year <= years; year++) {
+    let capital = safeInitial;
+
+    for (let year = 0; year <= safeYears; year++) {
       if (year > 0) {
-        capital = capital * (1 + rate / 100) + monthly * 12;
+        capital = capital * (1 + safeRate / 100) + safeMonthly * 12;
       }
-      const apport = initial + monthly * 12 * year;
+      const apport = safeInitial + safeMonthly * 12 * year;
       const interets = capital - apport;
+
       points.push({
         Année: year,
         "Apport cumulé": Math.round(apport),
@@ -38,6 +45,7 @@ const CompoundInterest: React.FC = () => {
         "Capital total": Math.round(capital),
       });
     }
+
     setData(points);
   }, [initial, monthly, rate, years]);
 
@@ -133,7 +141,10 @@ const CompoundInterest: React.FC = () => {
                 <YAxis
                   stroke="#aaa"
                   orientation="right"
-                  tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`}
+                  tickFormatter={(v) => {
+                    if (v < 1000) return v.toLocaleString("fr-FR");
+                    return `${(v / 1000).toLocaleString("fr-FR")}k`;
+                  }}
                 />
                 <Tooltip
                   contentStyle={{

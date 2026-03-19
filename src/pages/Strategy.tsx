@@ -85,7 +85,7 @@ const Strategy: React.FC = () => {
                   d’investissement à moyen / long terme.
                 </p>
                 <p className="leading-relaxed">
-                  J’y investis environ <strong>2 000 € par mois</strong> et
+                  J’y investis environ 2/3 de mes revenus chaque mois et
                   souhaite le <strong>remplir d’ici fin 2030</strong>. Cet
                   objectif marque ma première étape vers le FIRE dont j’ai parlé
                   plus tôt.

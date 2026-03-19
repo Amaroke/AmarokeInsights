@@ -341,7 +341,7 @@ const Banking: React.FC = () => {
                     - <strong>Comptes rémunérés type fintech</strong> ➜
                     rémunération quotidienne ou mensuelle, avec des taux
                     attractifs (souvent 2 à 4 %). Mais attention : ces produits
-                    sont <strong>100 % imposés</strong> au PFU (30 %),
+                    sont <strong>100 % imposés</strong> au <Term id={"PFU"} />{" "}
                     contrairement aux livrets réglementés.
                   </p>
 
