@@ -24,42 +24,71 @@ const LoanCalculator: React.FC = () => {
   const [totalPayment, setTotalPayment] = useState(0);
   const [data, setData] = useState<any[]>([]);
 
+  const safe = (v: number) => (isNaN(v) ? 0 : v);
+
   useEffect(() => {
-    const n = years * 12;
-    const monthlyRate = rate / 100 / 12;
-    const monthlyInsurance = (insurance / 100 / 12) * loanAmount;
+    const safeLoanAmount = safe(loanAmount);
+    const safeYears = safe(years);
+    const safeRate = safe(rate);
+    const safeInsurance = safe(insurance);
+
+    const n = safeYears * 12;
+
+    if (n === 0) {
+      setMonthlyPayment(0);
+      setTotalPayment(0);
+      setData([]);
+      return;
+    }
+
+    const monthlyRate = safeRate / 100 / 12;
+    const monthlyInsurance = (safeInsurance / 100 / 12) * safeLoanAmount;
 
     const monthly =
-      (loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, n))) /
-      (Math.pow(1 + monthlyRate, n) - 1);
+      monthlyRate === 0
+        ? safeLoanAmount / n
+        : (safeLoanAmount * (monthlyRate * Math.pow(1 + monthlyRate, n))) /
+          (Math.pow(1 + monthlyRate, n) - 1);
 
     const totalMonthly = monthly + monthlyInsurance;
-    setMonthlyPayment(totalMonthly);
 
-    let remainingCapital = loanAmount;
-    let remainingInterest = monthly * n - loanAmount;
+    setMonthlyPayment(isNaN(totalMonthly) ? 0 : totalMonthly);
+
+    let remainingCapital = safeLoanAmount;
+    let remainingInterest = monthly * n - safeLoanAmount;
     const pointsTemp: any[] = [];
 
     for (let month = 1; month <= n; month++) {
       const interest = remainingCapital * monthlyRate;
       const principal = monthly - interest;
+
       remainingCapital -= principal;
       remainingInterest -= interest;
 
       if (month % 12 === 0 || month === 1) {
         pointsTemp.push({
           Année: month / 12,
-          "Capital restant": Math.max(Math.round(remainingCapital), 0),
-          "Intérêts restants": Math.max(Math.round(remainingInterest), 0),
+          "Capital restant": Math.max(
+            Math.round(isNaN(remainingCapital) ? 0 : remainingCapital),
+            0,
+          ),
+          "Intérêts restants": Math.max(
+            Math.round(isNaN(remainingInterest) ? 0 : remainingInterest),
+            0,
+          ),
           "Total restant": Math.max(
-            Math.round(remainingCapital + remainingInterest),
+            Math.round(
+              isNaN(remainingCapital + remainingInterest)
+                ? 0
+                : remainingCapital + remainingInterest,
+            ),
             0,
           ),
         });
       }
     }
 
-    setTotalPayment(Math.round(totalMonthly * n));
+    setTotalPayment(isNaN(totalMonthly * n) ? 0 : Math.round(totalMonthly * n));
     setData(pointsTemp);
   }, [loanAmount, years, rate, insurance]);
 
@@ -137,7 +166,10 @@ const LoanCalculator: React.FC = () => {
                 <XAxis dataKey="Année" stroke="#aaa" />
                 <YAxis
                   stroke="#aaa"
-                  tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`}
+                  tickFormatter={(v) => {
+                    if (v < 1000) return v.toLocaleString("fr-FR");
+                    return `${(v / 1000).toLocaleString("fr-FR")}k`;
+                  }}
                 />
                 <Tooltip
                   contentStyle={{
