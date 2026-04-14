@@ -16,6 +16,9 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
+- 14/04/2026 - Version 1.1.1
+  - Setup autodeploy.
+
 - 14/04/2026 - Version 1.1.0
   - Ajout d'une section avancée "Comment Investir", avec un organigrame.
   - Ajout d'une explication sur les chandeliers japonais dans la partie sur le trading.
