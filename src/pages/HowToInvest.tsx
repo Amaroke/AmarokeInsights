@@ -18,7 +18,7 @@ const HowToInvest: React.FC = () => {
       >
         <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-6 md:mb-0 mb-24">
           <h2 className="text-xl font-semibold border-b border-gray-700 pb-2">
-            Comment investir
+            Comment investir ?
           </h2>
           <InfoBubble
             icon={<FaExclamationTriangle />}
@@ -98,6 +98,11 @@ const HowToInvest: React.FC = () => {
             title="Organigramme d’investissement"
             color="text-green-400"
           >
+            Cet organigramme représente la manière dont j’organiserais mes
+            décisions d’investissement avec mes connaissances actuelles. Il ne
+            s’agit pas d’une règle absolue, mais d’une approche personnelle
+            basée sur ce que j’ai appris sur la gestion du risque et la
+            structuration d’un capital.
             <InvestmentTree />
           </InfoBubble>
         </div>
