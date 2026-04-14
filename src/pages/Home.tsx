@@ -86,6 +86,33 @@ const Home: React.FC = () => {
           </InfoBubble>
 
           <InfoBubble
+            icon={<FaLightbulb />}
+            title="Mode avancé"
+            color="text-orange-300"
+          >
+            <p className="leading-relaxed">
+              Le mode avancé regroupe des sections plus détaillées et plus
+              subjectives. J’y aborde des sujets qui m’intéressent ou que je
+              découvre, sans forcément suivre une structure stricte ou un plan
+              pédagogique.
+            </p>
+
+            <p className="leading-relaxed">
+              Le contenu y est donc plus libre, plus approfondi et parfois plus
+              complexe que le reste du site. Il reflète davantage mes réflexions
+              personnelles. Ces sections sont identifiées par une couleur orange
+              pour leur titre. Et elles sont accessibles depuis le menu lorsque
+              le mode est activé.
+            </p>
+
+            <p className="leading-relaxed">
+              Ces pages sont également les plus susceptibles d’évoluer, d’être
+              modifiées ou réorganisées au fur et à mesure de mes
+              apprentissages.
+            </p>
+          </InfoBubble>
+
+          <InfoBubble
             icon={<FaEnvelope />}
             title="Contact & retours"
             color="text-green-400"

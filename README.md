@@ -16,6 +16,11 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
+- 14/04/2026 - Version 1.1.0
+  - Ajout d'une section avancée "Comment Investir", avec un organigrame.
+  - Ajout d'une explication sur les chandeliers japonais dans la partie sur le trading.
+  - Ajout d'une partie FAQ dans la partie sur ma stratégie personnelle.
+
 - 18/03/2026 - Version 1.0.1
   - Corrections d'affichage du pop up de définition et des tableaux sur mobile.
 

@@ -1,33 +1,49 @@
 @import "tailwindcss";
 
 html {
-    background: #12121b;
+  background: #12121b;
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
-    ::-webkit-scrollbar {
-        display: none;
-    }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
-    * {
-        scrollbar-width: none;
-    }
+  * {
+    scrollbar-width: none;
+  }
+}
+
+@layer base {
+  .react-flow__handle {
+    @apply opacity-0 pointer-events-none;
+  }
+}
+
+@layer base {
+  .react-flow__controls {
+    @apply hidden;
+  }
+
+  .react-flow__attribution {
+    @apply hidden;
+  }
 }

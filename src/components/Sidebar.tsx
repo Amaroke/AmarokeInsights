@@ -10,12 +10,12 @@ import {
   FaLightbulb,
   FaChartBar,
   FaEnvelope,
+  FaMoneyBillWave,
 } from "react-icons/fa";
 import { useEffect } from "react";
 import { useSidebar } from "../context/SidebarContext";
 import { setVisit, isNew } from "../utils/visitTracker";
 import { GiBullseye, GiPathDistance, GiWallet } from "react-icons/gi";
-import { MdCurrencyBitcoin } from "react-icons/md";
 
 const sections = [
   {
@@ -86,11 +86,19 @@ const sections = [
     ],
   },
   {
+    title: "Comment investir ?",
+    advanced: true,
+    path: "investments2",
+    icon: <FaMoneyBillWave />,
+    lastUpdated: "2026-04-14",
+    items: [],
+  },
+  {
     title: "Bases du Trading",
     advanced: false,
     path: "trading",
     icon: <FaChartBar />,
-    lastUpdated: "2026-03-18",
+    lastUpdated: "2026-04-14",
     items: [
       { title: "Qu’est-ce que le trading ?", path: "trading-intro" },
       {
@@ -98,7 +106,7 @@ const sections = [
         path: "markets-platforms",
       },
       { title: "Les types de trading", path: "trading-types" },
-      { title: "Positions Long / Short", path: "long-short" },
+      { title: "Positions Long / Short & Chandeliers", path: "long-short" },
     ],
   },
   {
@@ -122,14 +130,6 @@ const sections = [
     ],
   },
   {
-    title: "Cryptos & Usages",
-    advanced: true,
-    path: "cryptos2",
-    icon: <MdCurrencyBitcoin />,
-    lastUpdated: "",
-    items: [],
-  },
-  {
     title: "Optimisation Fiscale",
     advanced: true,
     path: "taxes",
@@ -143,7 +143,10 @@ const sections = [
     path: "strategy",
     icon: <GiPathDistance />,
     lastUpdated: "",
-    items: [],
+    items: [
+      { title: "Stratégie personnelle", path: "strategie-personnelle" },
+      { title: "FAQ", path: "faq" },
+    ],
   },
   {
     title: "Outils & Ressources",

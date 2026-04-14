@@ -515,7 +515,7 @@ const Trading: React.FC = () => {
 
           <section id="long-short" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-              Positions Long / Short
+              Positions Long / Short & Chandeliers
             </h2>
 
             <div className="space-y-6">
@@ -625,6 +625,90 @@ const Trading: React.FC = () => {
                   Le short nécessite une gestion stricte du risque,
                   l’utilisation de <Term id="stop-loss" /> et une bonne
                   compréhension du marché.
+                </p>
+              </InfoBubble>
+
+              <InfoBubble
+                icon={<FaChartArea />}
+                title="Les chandeliers japonais"
+                color="text-blue-400"
+              >
+                <p className="leading-relaxed mb-3">
+                  Les chandeliers japonais représentent l’évolution du prix sur
+                  une période donnée. Chaque bougie contient 4 informations :
+                  ouverture, clôture, plus haut et plus bas.
+                </p>
+                <br />
+                <div className="flex items-end gap-1 my-4 h-16">
+                  <div className="flex flex-col items-center">
+                    <div className="w-0.5 h-5 bg-gray-400" />
+                    <div className="w-3 h-9 bg-green-400 rounded-sm" />
+                    <div className="w-0.5 h-3 bg-gray-400" />
+                  </div>
+
+                  <div className="flex flex-col items-center">
+                    <div className="w-0.5 h-3 bg-gray-400" />
+                    <div className="w-3 h-11 bg-red-400 rounded-sm" />
+                    <div className="w-0.5 h-6 bg-gray-400" />
+                  </div>
+
+                  <div className="flex flex-col items-center">
+                    <div className="w-0.5 h-6 bg-gray-400" />
+                    <div className="w-3 h-12 bg-green-400 rounded-sm" />
+                    <div className="w-0.5 h-2 bg-gray-400" />
+                  </div>
+
+                  <div className="flex flex-col items-center">
+                    <div className="w-0.5 h-2 bg-gray-400" />
+                    <div className="w-3 h-6 bg-red-400 rounded-sm" />
+                    <div className="w-0.5 h-8 bg-gray-400" />
+                  </div>
+                </div>
+                <br />
+
+                <p className="leading-relaxed mb-3">
+                  Les traits fins au-dessus et en dessous s’appellent les{" "}
+                  <b>mèches</b> (ou “queues”). Ils représentent les extrêmes
+                  atteints pendant la période : le plus haut et le plus bas du
+                  prix.
+                </p>
+
+                <ul className="list-disc list-inside space-y-2 mb-3">
+                  <li>
+                    <b>Mèche haute :</b> le prix est monté plus haut avant de
+                    redescendre.
+                  </li>
+                  <li>
+                    <b>Mèche basse :</b> le prix est descendu plus bas avant de
+                    remonter.
+                  </li>
+                </ul>
+
+                <p className="leading-relaxed mb-3 font-semibold">
+                  Exemples concrets :
+                </p>
+
+                <ul className="list-disc list-inside space-y-2 mb-3">
+                  <li>
+                    Bougie verte avec longue mèche basse : les acheteurs ont
+                    repris le contrôle après une forte baisse → signal potentiel
+                    de rebond.
+                  </li>
+                  <li>
+                    Bougie rouge avec longue mèche haute : les vendeurs ont
+                    dominé après une tentative de hausse → pression vendeuse
+                    forte.
+                  </li>
+                  <li>
+                    Petite bougie sans mèche : marché indécis, peu de mouvement.
+                  </li>
+                </ul>
+
+                <p className="leading-relaxed">
+                  Une bougie verte indique une hausse entre ouverture et
+                  clôture. Une bougie rouge indique une baisse. L’analyse des
+                  mèches permet de comprendre les réactions du marché et les
+                  zones de rejet.
                 </p>
               </InfoBubble>
             </div>

@@ -15,8 +15,8 @@ import LoanCalculator from "./pages/LoanCalculator";
 import Contact from "./pages/Contact";
 import Strategy from "./pages/Strategy";
 import Trading2 from "./pages/Trading2";
-import Cryptos2 from "./pages/Cryptos2";
 import Accounts from "./pages/Accounts";
+import HowToInvest from "./pages/HowToInvest";
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
           <Route path="/accounts/*" element={<Accounts />} />
           <Route path="/investments/*" element={<Investments />} />
           <Route path="/cryptos/*" element={<Cryptos />} />
-          <Route path="/cryptos2/*" element={<Cryptos2 />} />
+          <Route path="/investments2/*" element={<HowToInvest />} />
           <Route path="/trading/*" element={<Trading />} />
           <Route path="/trading2/*" element={<Trading2 />} />
           <Route path="/taxes/*" element={<Taxes />} />
