@@ -1,46 +1,52 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
-import Home from "./pages/Home";
-import Basics from "./pages/Basics";
-import Banking from "./pages/Banking";
-import PersonalFinance from "./pages/PersonalFinance";
-import Investments from "./pages/Investments";
-import Trading from "./pages/Trading";
-import Taxes from "./pages/Taxes";
-import Resources from "./pages/Resources";
-import Cryptos from "./pages/Cryptos";
-import Sidebar from "./components/Sidebar";
 import { SidebarProvider } from "./context/SidebarContext";
-import CompoundInterest from "./pages/CompoundInterest";
-import LoanCalculator from "./pages/LoanCalculator";
-import Contact from "./pages/Contact";
-import Strategy from "./pages/Strategy";
-import Trading2 from "./pages/Trading2";
-import Accounts from "./pages/Accounts";
-import HowToInvest from "./pages/HowToInvest";
+import { lazy, Suspense } from "react";
+import Sidebar from "./components/Sidebar";
+
+const Home = lazy(() => import("./pages/Home"));
+const Basics = lazy(() => import("./pages/Basics"));
+const Banking = lazy(() => import("./pages/Banking"));
+const PersonalFinance = lazy(() => import("./pages/PersonalFinance"));
+const Investments = lazy(() => import("./pages/Investments"));
+const Trading = lazy(() => import("./pages/Trading"));
+const Trading2 = lazy(() => import("./pages/Trading2"));
+const Taxes = lazy(() => import("./pages/Taxes"));
+const Resources = lazy(() => import("./pages/Resources"));
+const Cryptos = lazy(() => import("./pages/Cryptos"));
+const CompoundInterest = lazy(() => import("./pages/CompoundInterest"));
+const LoanCalculator = lazy(() => import("./pages/LoanCalculator"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Strategy = lazy(() => import("./pages/Strategy"));
+const Accounts = lazy(() => import("./pages/Accounts"));
+const HowToInvest = lazy(() => import("./pages/HowToInvest"));
 
 function App() {
   return (
     <HashRouter>
       <SidebarProvider>
         <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/basics/*" element={<Basics />} />
-          <Route path="/personal-finance/*" element={<PersonalFinance />} />
-          <Route path="/banking/*" element={<Banking />} />
-          <Route path="/accounts/*" element={<Accounts />} />
-          <Route path="/investments/*" element={<Investments />} />
-          <Route path="/cryptos/*" element={<Cryptos />} />
-          <Route path="/investments2/*" element={<HowToInvest />} />
-          <Route path="/trading/*" element={<Trading />} />
-          <Route path="/trading2/*" element={<Trading2 />} />
-          <Route path="/taxes/*" element={<Taxes />} />
-          <Route path="/resources/*" element={<Resources />} />
-          <Route path="/strategy/*" element={<Strategy />} />
-          <Route path="/contact/*" element={<Contact />} />
-          <Route path="/compound-interest/*" element={<CompoundInterest />} />
-          <Route path="/loan/*" element={<LoanCalculator />} />
-        </Routes>
+        <Suspense
+          fallback={<div className="loading-spinner">Chargement...</div>}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/basics/*" element={<Basics />} />
+            <Route path="/personal-finance/*" element={<PersonalFinance />} />
+            <Route path="/banking/*" element={<Banking />} />
+            <Route path="/accounts/*" element={<Accounts />} />
+            <Route path="/investments/*" element={<Investments />} />
+            <Route path="/cryptos/*" element={<Cryptos />} />
+            <Route path="/investments2/*" element={<HowToInvest />} />
+            <Route path="/trading/*" element={<Trading />} />
+            <Route path="/trading2/*" element={<Trading2 />} />
+            <Route path="/taxes/*" element={<Taxes />} />
+            <Route path="/resources/*" element={<Resources />} />
+            <Route path="/strategy/*" element={<Strategy />} />
+            <Route path="/contact/*" element={<Contact />} />
+            <Route path="/compound-interest/*" element={<CompoundInterest />} />
+            <Route path="/loan/*" element={<LoanCalculator />} />
+          </Routes>
+        </Suspense>
       </SidebarProvider>
     </HashRouter>
   );
