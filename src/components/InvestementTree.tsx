@@ -20,16 +20,11 @@ const nodeStyle = {
   boxShadow: "0 12px 35px rgba(0,0,0,0.6)",
 };
 
-// ── Positions manuelles en grille logique ─────────────────────────────────────
-// X : 4 colonnes — 0-risque(0), faible(1), modéré(2), élevé(3)
-// Y : rangs descendants
-
 const COL = { safe: 0, low: 1, medium: 2, high: 3 };
-const W = 240; // espacement horizontal
-const H = 160; // espacement vertical
+const W = 240;
+const H = 160;
 
 const nodes: Node[] = [
-  // Rang 0 — entrée
   {
     id: "start",
     position: { x: W * 1.5, y: 0 },
@@ -38,7 +33,6 @@ const nodes: Node[] = [
     style: nodeStyle,
   },
 
-  // Rang 1
   {
     id: "debt",
     position: { x: W * 1.5, y: H },
@@ -46,7 +40,6 @@ const nodes: Node[] = [
     style: nodeStyle,
   },
 
-  // Rang 2 — deux branches
   {
     id: "repay",
     position: { x: W * 0.2, y: H * 2 },
@@ -60,7 +53,6 @@ const nodes: Node[] = [
     style: nodeStyle,
   },
 
-  // Rang 3
   {
     id: "risk_appetite",
     position: { x: W * 2.5, y: H * 3 },
@@ -68,7 +60,6 @@ const nodes: Node[] = [
     style: nodeStyle,
   },
 
-  // Rang 4 — 4 colonnes
   {
     id: "safe",
     position: { x: W * COL.safe, y: H * 4 },
@@ -94,7 +85,6 @@ const nodes: Node[] = [
     style: nodeStyle,
   },
 
-  // Rang 5 — livrets (colonne safe)
   {
     id: "safe_accounts1",
     position: { x: W * COL.safe, y: H * 5 },
@@ -114,7 +104,6 @@ const nodes: Node[] = [
     style: nodeStyle,
   },
 
-  // Rang 5-7 — horizons faible
   {
     id: "ct_low",
     position: { x: W * COL.low, y: H * 5 },
@@ -134,7 +123,6 @@ const nodes: Node[] = [
     style: nodeStyle,
   },
 
-  // Rang 5-7 — horizons modéré
   {
     id: "ct_medium",
     position: { x: W * COL.medium, y: H * 5 },
@@ -154,7 +142,6 @@ const nodes: Node[] = [
     style: nodeStyle,
   },
 
-  // Rang 5-7 — horizons élevé
   {
     id: "ct_high",
     position: { x: W * COL.high, y: H * 5 },

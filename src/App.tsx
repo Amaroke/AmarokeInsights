@@ -1,4 +1,4 @@
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { SidebarProvider } from "./context/SidebarContext";
 import { lazy, Suspense } from "react";
 import Sidebar from "./components/Sidebar";
@@ -22,9 +22,11 @@ const Accounts = lazy(() => import("./pages/Accounts"));
 const HowToInvest = lazy(() => import("./pages/HowToInvest"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={basename}>
       <SidebarProvider>
         <Sidebar />
         <ErrorBoundary>
@@ -32,28 +34,31 @@ function App() {
             fallback={<div className="loading-spinner">Chargement...</div>}
           >
             <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/basics/*" element={<Basics />} />
-            <Route path="/personal-finance/*" element={<PersonalFinance />} />
-            <Route path="/banking/*" element={<Banking />} />
-            <Route path="/accounts/*" element={<Accounts />} />
-            <Route path="/investments/*" element={<Investments />} />
-            <Route path="/cryptos/*" element={<Cryptos />} />
-            <Route path="/investments2/*" element={<HowToInvest />} />
-            <Route path="/trading/*" element={<Trading />} />
-            <Route path="/trading2/*" element={<Trading2 />} />
-            <Route path="/taxes/*" element={<Taxes />} />
-            <Route path="/resources/*" element={<Resources />} />
-            <Route path="/strategy/*" element={<Strategy />} />
-            <Route path="/contact/*" element={<Contact />} />
-            <Route path="/compound-interest/*" element={<CompoundInterest />} />
-            <Route path="/loan/*" element={<LoanCalculator />} />
-            <Route path="*" element={<NotFound />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/basics/*" element={<Basics />} />
+              <Route path="/personal-finance/*" element={<PersonalFinance />} />
+              <Route path="/banking/*" element={<Banking />} />
+              <Route path="/accounts/*" element={<Accounts />} />
+              <Route path="/investments/*" element={<Investments />} />
+              <Route path="/cryptos/*" element={<Cryptos />} />
+              <Route path="/investments2/*" element={<HowToInvest />} />
+              <Route path="/trading/*" element={<Trading />} />
+              <Route path="/trading2/*" element={<Trading2 />} />
+              <Route path="/taxes/*" element={<Taxes />} />
+              <Route path="/resources/*" element={<Resources />} />
+              <Route path="/strategy/*" element={<Strategy />} />
+              <Route path="/contact/*" element={<Contact />} />
+              <Route
+                path="/compound-interest/*"
+                element={<CompoundInterest />}
+              />
+              <Route path="/loan/*" element={<LoanCalculator />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </ErrorBoundary>
       </SidebarProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

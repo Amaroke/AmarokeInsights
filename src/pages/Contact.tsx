@@ -2,7 +2,7 @@ import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { FaDiscord, FaEnvelope } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
-import { useSidebar } from "../context/useSidebar";
+import PageLayout from "../components/PageLayout";
 
 const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xkgpbqvk");
@@ -107,20 +107,15 @@ const ContactForm: React.FC = () => {
 };
 
 const Contact: React.FC = () => {
-  const { isOpen } = useSidebar();
-
   return (
-    <div className="flex h-screen text-gray-300 bg-[#12121b]">
-      <main
-        className={`flex-1 overflow-auto pt-16 md:mt-16 md:pt-0 transition-all duration-300 ${
-          isOpen ? "md:ml-64" : "md:ml-0"
-        }`}
-      >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-24">
-          <ContactForm />
-        </div>
-      </main>
-    </div>
+    <PageLayout
+      title="Me contacter"
+      description="Une question, une suggestion ou une correction ? Contacte-moi via le formulaire ou Discord."
+    >
+      <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-24">
+        <ContactForm />
+      </div>
+    </PageLayout>
   );
 };
 

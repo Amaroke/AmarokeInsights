@@ -29,7 +29,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
       return (
         <div className="flex h-screen flex-col items-center justify-center gap-4 bg-[#12121b] px-4 text-center text-gray-300">
           <h1 className="text-2xl font-semibold text-white">
-            Oups, une erreur est survenue
+            Une erreur est survenue
           </h1>
           <p className="max-w-md text-gray-400">
             Une erreur inattendue a interrompu l'affichage de cette page. Tu

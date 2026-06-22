@@ -19,6 +19,9 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
+- 22/06/2026 - Version 1.2.0
+  - Multiples fixes, corrections et améliorations techniques et de SEO.
+
 - 14/04/2026 - Version 1.1.1
   - Setup autodeploy.
 
