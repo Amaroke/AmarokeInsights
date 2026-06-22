@@ -2,7 +2,12 @@ export const VISIT_KEY = "amaroke_visits";
 
 export function getVisits(): Record<string, string> {
   const stored = localStorage.getItem(VISIT_KEY);
-  return stored ? JSON.parse(stored) : {};
+  if (!stored) return {};
+  try {
+    return JSON.parse(stored) as Record<string, string>;
+  } catch {
+    return {};
+  }
 }
 
 export function setVisit(sectionPath: string) {

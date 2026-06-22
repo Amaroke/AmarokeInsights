@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { SidebarContext } from "./useSidebar";
 
+const readBoolean = (key: string, fallback: boolean): boolean => {
+  const stored = localStorage.getItem(key);
+  if (stored === null) return fallback;
+  try {
+    return JSON.parse(stored) === true;
+  } catch {
+    return fallback;
+  }
+};
+
 export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(() => {
-    const stored = localStorage.getItem("sidebarIsOpen");
-    return stored ? JSON.parse(stored) : false;
-  });
+  const [isOpen, setIsOpen] = useState<boolean>(() =>
+    readBoolean("sidebarIsOpen", false),
+  );
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
   useEffect(() => {
@@ -20,10 +29,9 @@ export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
     setExpandedSection(null);
   };
 
-  const [isAdvanced, setIsAdvanced] = useState<boolean>(() => {
-    const stored = localStorage.getItem("sidebarAdvancedMode");
-    return stored ? JSON.parse(stored) : false;
-  });
+  const [isAdvanced, setIsAdvanced] = useState<boolean>(() =>
+    readBoolean("sidebarAdvancedMode", false),
+  );
 
   useEffect(() => {
     localStorage.setItem("sidebarAdvancedMode", JSON.stringify(isAdvanced));

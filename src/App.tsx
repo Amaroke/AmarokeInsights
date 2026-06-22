@@ -2,6 +2,7 @@ import { Routes, Route, HashRouter } from "react-router-dom";
 import { SidebarProvider } from "./context/SidebarContext";
 import { lazy, Suspense } from "react";
 import Sidebar from "./components/Sidebar";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const Home = lazy(() => import("./pages/Home"));
 const Basics = lazy(() => import("./pages/Basics"));
@@ -19,16 +20,18 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Strategy = lazy(() => import("./pages/Strategy"));
 const Accounts = lazy(() => import("./pages/Accounts"));
 const HowToInvest = lazy(() => import("./pages/HowToInvest"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function App() {
   return (
     <HashRouter>
       <SidebarProvider>
         <Sidebar />
-        <Suspense
-          fallback={<div className="loading-spinner">Chargement...</div>}
-        >
-          <Routes>
+        <ErrorBoundary>
+          <Suspense
+            fallback={<div className="loading-spinner">Chargement...</div>}
+          >
+            <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/basics/*" element={<Basics />} />
             <Route path="/personal-finance/*" element={<PersonalFinance />} />
@@ -45,8 +48,10 @@ function App() {
             <Route path="/contact/*" element={<Contact />} />
             <Route path="/compound-interest/*" element={<CompoundInterest />} />
             <Route path="/loan/*" element={<LoanCalculator />} />
-          </Routes>
-        </Suspense>
+            <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
       </SidebarProvider>
     </HashRouter>
   );
