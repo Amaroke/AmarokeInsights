@@ -1,7 +1,7 @@
 import React from "react";
 import { FaExternalLinkAlt, FaBookOpen, FaCalculator } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
 import { NavLink } from "react-router-dom";
 import { terms, type TermKey } from "../data/terms";
 

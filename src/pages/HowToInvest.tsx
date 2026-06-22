@@ -1,9 +1,9 @@
 import React from "react";
 import { FaChartLine, FaExclamationTriangle } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
 
-import "reactflow/dist/style.css";
+import "@xyflow/react/dist/style.css";
 import InvestmentTree from "../components/InvestementTree";
 
 const HowToInvest: React.FC = () => {

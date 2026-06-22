@@ -8,7 +8,7 @@ import {
   FaBars,
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
 import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {

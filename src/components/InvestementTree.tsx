@@ -1,6 +1,7 @@
 import { useMemo } from "react";
-import ReactFlow, { Background, MarkerType } from "reactflow";
-import "reactflow/dist/style.css";
+import { ReactFlow, Background, MarkerType, Position } from "@xyflow/react";
+import type { Node, Edge } from "@xyflow/react";
+import "@xyflow/react/dist/style.css";
 import dagre from "dagre";
 
 const nodeStyle = {
@@ -203,7 +204,10 @@ const edges = [
   },
 ];
 
-function getLayouted(nodes: any[], edges: any[]) {
+function getLayouted(
+  nodes: Omit<Node, "position">[],
+  edges: Edge[],
+): { nodes: Node[]; edges: Edge[] } {
   const g = new dagre.graphlib.Graph();
   g.setDefaultEdgeLabel(() => ({}));
 
@@ -241,8 +245,8 @@ function getLayouted(nodes: any[], edges: any[]) {
         x: pos.x - nodeWidth / 2,
         y: pos.y - nodeHeight / 2,
       },
-      sourcePosition: "bottom",
-      targetPosition: "top",
+      sourcePosition: Position.Bottom,
+      targetPosition: Position.Top,
     };
   });
 

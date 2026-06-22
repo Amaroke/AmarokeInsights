@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
 import Logo from "../assets/logo.png";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
 
 const Navbar: React.FC = () => {
   const { toggleSidebar, resetSidebar } = useSidebar();

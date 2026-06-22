@@ -1,6 +1,9 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "AmarokeInsights",
+  "short_name": "AmarokeInsights",
+  "description": "Apprendre la finance étape par étape : épargne, investissement, trading, cryptos.",
+  "start_url": "/AmarokeInsights/",
+  "scope": "/AmarokeInsights/",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

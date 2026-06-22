@@ -1,7 +1,7 @@
 import React from "react";
 import { FaHammer } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
 
 const Trading2: React.FC = () => {
   const { isOpen } = useSidebar();

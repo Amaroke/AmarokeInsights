@@ -1,5 +1,8 @@
 # AmarokeInsights
 
+[![Deploy](https://github.com/Amaroke/AmarokeInsights/actions/workflows/deploy.yml/badge.svg)](https://github.com/Amaroke/AmarokeInsights/actions/workflows/deploy.yml)
+[![PageSpeed](https://img.shields.io/badge/PageSpeed-report-4285F4?logo=googlechrome&logoColor=white)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Famaroke.github.io%2FAmarokeInsights%2F)
+
 Un site personnel où je partage mes apprentissages en **finance**, sous une forme claire et progressive.  
 L’objectif est double, consolider mes connaissances et les rendre accessibles à toute personne qui souhaite découvrir la finance étape par étape.
 La première version du site est correspond au mode normal, avec des contenus destinés à un public débutant.  

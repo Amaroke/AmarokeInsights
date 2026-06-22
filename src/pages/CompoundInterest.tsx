@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import {
   ComposedChart,
   Bar,
@@ -11,7 +11,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { FaChartBar } from "react-icons/fa";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
 
 const CompoundInterest: React.FC = () => {
   const { isOpen } = useSidebar();
@@ -20,9 +20,7 @@ const CompoundInterest: React.FC = () => {
   const [monthly, setMonthly] = useState(1000);
   const [rate, setRate] = useState(7);
   const [years, setYears] = useState(30);
-  const [data, setData] = useState<any[]>([]);
-
-  useEffect(() => {
+  const data = useMemo(() => {
     const safeInitial = isNaN(initial) ? 0 : initial;
     const safeMonthly = isNaN(monthly) ? 0 : monthly;
     const safeRate = isNaN(rate) ? 0 : rate;
@@ -46,7 +44,7 @@ const CompoundInterest: React.FC = () => {
       });
     }
 
-    setData(points);
+    return points;
   }, [initial, monthly, rate, years]);
 
   return (
@@ -152,8 +150,8 @@ const CompoundInterest: React.FC = () => {
                     border: "1px solid #333",
                     borderRadius: "10px",
                   }}
-                  formatter={(value: number) =>
-                    `${value.toLocaleString("fr-FR")} €`
+                  formatter={(value) =>
+                    `${Number(value).toLocaleString("fr-FR")} €`
                   }
                 />
                 <Legend />

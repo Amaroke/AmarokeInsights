@@ -2,7 +2,7 @@ import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { FaDiscord, FaEnvelope } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
 
 const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xkgpbqvk");
@@ -84,7 +84,7 @@ const ContactForm: React.FC = () => {
               id="message"
               name="message"
               required
-              className="px-3 py-2 rounded bg-[#1e1e2a] min-h-[200px] border border-gray-700 text-gray-200 focus:outline-none focus:border-blue-400"
+              className="px-3 py-2 rounded bg-[#1e1e2a] min-h-50 border border-gray-700 text-gray-200 focus:outline-none focus:border-blue-400"
             />
             <ValidationError
               prefix="Message"

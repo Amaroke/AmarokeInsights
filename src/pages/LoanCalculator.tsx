@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import {
   ComposedChart,
   Bar,
@@ -11,7 +11,16 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { FaHome, FaCalculator } from "react-icons/fa";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
+
+type AmortizationPoint = {
+  Année: number;
+  "Capital restant": number;
+  "Intérêts restants": number;
+  "Total restant": number;
+};
+
+const safe = (v: number) => (isNaN(v) ? 0 : v);
 
 const LoanCalculator: React.FC = () => {
   const { isOpen } = useSidebar();
@@ -20,13 +29,8 @@ const LoanCalculator: React.FC = () => {
   const [years, setYears] = useState(20);
   const [rate, setRate] = useState(2);
   const [insurance, setInsurance] = useState(0);
-  const [monthlyPayment, setMonthlyPayment] = useState(0);
-  const [totalPayment, setTotalPayment] = useState(0);
-  const [data, setData] = useState<any[]>([]);
 
-  const safe = (v: number) => (isNaN(v) ? 0 : v);
-
-  useEffect(() => {
+  const { monthlyPayment, totalPayment, data } = useMemo(() => {
     const safeLoanAmount = safe(loanAmount);
     const safeYears = safe(years);
     const safeRate = safe(rate);
@@ -35,10 +39,11 @@ const LoanCalculator: React.FC = () => {
     const n = safeYears * 12;
 
     if (n === 0) {
-      setMonthlyPayment(0);
-      setTotalPayment(0);
-      setData([]);
-      return;
+      return {
+        monthlyPayment: 0,
+        totalPayment: 0,
+        data: [] as AmortizationPoint[],
+      };
     }
 
     const monthlyRate = safeRate / 100 / 12;
@@ -52,11 +57,9 @@ const LoanCalculator: React.FC = () => {
 
     const totalMonthly = monthly + monthlyInsurance;
 
-    setMonthlyPayment(isNaN(totalMonthly) ? 0 : totalMonthly);
-
     let remainingCapital = safeLoanAmount;
     let remainingInterest = monthly * n - safeLoanAmount;
-    const pointsTemp: any[] = [];
+    const pointsTemp: AmortizationPoint[] = [];
 
     for (let month = 1; month <= n; month++) {
       const interest = remainingCapital * monthlyRate;
@@ -88,8 +91,11 @@ const LoanCalculator: React.FC = () => {
       }
     }
 
-    setTotalPayment(isNaN(totalMonthly * n) ? 0 : Math.round(totalMonthly * n));
-    setData(pointsTemp);
+    return {
+      monthlyPayment: isNaN(totalMonthly) ? 0 : totalMonthly,
+      totalPayment: isNaN(totalMonthly * n) ? 0 : Math.round(totalMonthly * n),
+      data: pointsTemp,
+    };
   }, [loanAmount, years, rate, insurance]);
 
   return (
@@ -177,8 +183,8 @@ const LoanCalculator: React.FC = () => {
                     border: "1px solid #333",
                     borderRadius: "10px",
                   }}
-                  formatter={(value: number) =>
-                    `${value.toLocaleString("fr-FR")} €`
+                  formatter={(value) =>
+                    `${Number(value).toLocaleString("fr-FR")} €`
                   }
                 />
                 <Legend />

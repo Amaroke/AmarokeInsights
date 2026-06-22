@@ -13,7 +13,7 @@ import {
   FaMoneyBillWave,
 } from "react-icons/fa";
 import { useEffect } from "react";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
 import { setVisit, isNew } from "../utils/visitTracker";
 import { GiBullseye, GiPathDistance, GiWallet } from "react-icons/gi";
 
@@ -188,7 +188,7 @@ const Sidebar: React.FC = () => {
     if (currentPath) {
       setExpandedSection(currentPath);
     }
-  }, [currentPath]);
+  }, [currentPath, setExpandedSection]);
 
   const handleScrollTo = (id: string) => {
     const el = document.getElementById(id);

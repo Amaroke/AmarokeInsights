@@ -1,7 +1,7 @@
 import React from "react";
 import { FaPiggyBank, FaChartLine } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
-import { useSidebar } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
 import Term from "../components/Term";
 
 const Accounts: React.FC = () => {
@@ -240,9 +240,9 @@ const Accounts: React.FC = () => {
                   <br />
                   <strong>Fiscalité :</strong> Abondement exonéré d’impôt sur le
                   revenu et soumis uniquement aux prélèvements sociaux (
-                  <Term id={"CSG/CRDS"} />, 9,7 %). Les plus-values sont
+                  <Term id={"CSG/CRDS"} />, 9,7 %). Les plus-values sont
                   exonérées d’impôt sur le revenu si retrait après 5 ans, mais
-                  soumises aux prélèvements sociaux (18,6 %).
+                  soumises aux prélèvements sociaux (18,6 %).
                   <br />
                   <strong>Avantages :</strong> Abondement employeur, fiscalité
                   avantageuse.
