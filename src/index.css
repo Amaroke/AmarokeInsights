@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Raleway", ui-sans-serif, system-ui, sans-serif;
+}
+
 html {
   background: #12121b;
 }
