@@ -61,6 +61,14 @@ const ContactForm: React.FC = () => {
           color="text-blue-400"
         >
           <div className="flex flex-col space-y-3">
+            <input
+              type="text"
+              name="_gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="hidden"
+            />
             <label htmlFor="email" className="font-medium text-gray-200">
               Ton email (pour que je puisse te répondre uniquement)
             </label>

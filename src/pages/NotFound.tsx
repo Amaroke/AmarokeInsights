@@ -5,7 +5,7 @@ import PageLayout from "../components/PageLayout";
 
 const NotFound: React.FC = () => {
   return (
-    <PageLayout title="Page introuvable" description="">
+    <PageLayout title="Page introuvable" noindex>
       <div className="flex h-full flex-col items-center justify-center gap-4 px-4 text-center">
         <FaCompass className="text-5xl text-blue-400" />
         <h1 className="text-3xl font-semibold text-white">

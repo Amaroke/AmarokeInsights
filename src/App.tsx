@@ -26,10 +26,10 @@ const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 function App() {
   return (
-    <BrowserRouter basename={basename}>
-      <SidebarProvider>
-        <Sidebar />
-        <ErrorBoundary>
+    <ErrorBoundary>
+      <BrowserRouter basename={basename}>
+        <SidebarProvider>
+          <Sidebar />
           <Suspense
             fallback={<div className="loading-spinner">Chargement...</div>}
           >
@@ -56,9 +56,9 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
-        </ErrorBoundary>
-      </SidebarProvider>
-    </BrowserRouter>
+        </SidebarProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
   );
 }
 

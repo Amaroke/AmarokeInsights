@@ -49,8 +49,8 @@ const LoanCalculator: React.FC = () => {
                 value: insurance,
                 setter: setInsurance,
               },
-            ].map(({ label, value, setter }, i) => (
-              <div key={i}>
+            ].map(({ label, value, setter }) => (
+              <div key={label}>
                 <label className="block text-sm text-gray-400 mb-1">
                   {label}
                 </label>

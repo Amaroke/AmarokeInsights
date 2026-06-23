@@ -252,6 +252,7 @@ const Sidebar: React.FC = () => {
                 Avancé
               </span>
               <span
+                aria-hidden="true"
                 className={
                   !isAdvanced
                     ? "bg-linear-to-r bg-clip-text text-transparent bg-gray-400"

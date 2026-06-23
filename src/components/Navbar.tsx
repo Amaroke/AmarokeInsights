@@ -43,6 +43,8 @@ const Navbar: React.FC = () => {
         <img
           src={Logo}
           alt="AmarokeInsights Logo"
+          width={32}
+          height={32}
           className="h-8 w-8 object-contain"
         />
         <span className="text-2xl font-sans font-semibold tracking-tight">

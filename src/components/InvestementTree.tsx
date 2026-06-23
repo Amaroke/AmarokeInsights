@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import {
   ReactFlow,
   Background,
@@ -203,14 +202,11 @@ const defaultEdgeOptions = {
 };
 
 export default function InvestmentTree() {
-  const memoNodes = useMemo(() => nodes, []);
-  const memoEdges = useMemo(() => edges, []);
-
   return (
     <div style={{ height: 500 }}>
       <ReactFlow
-        nodes={memoNodes}
-        edges={memoEdges}
+        nodes={nodes}
+        edges={edges}
         fitView
         fitViewOptions={{ padding: 0.1 }}
         defaultEdgeOptions={defaultEdgeOptions}
