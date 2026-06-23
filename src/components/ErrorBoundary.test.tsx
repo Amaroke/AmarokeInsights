@@ -9,7 +9,7 @@ const Boom = () => {
 };
 
 describe("ErrorBoundary", () => {
-  it("affiche le contenu normal quand aucun enfant ne plante", () => {
+  it("renders normal content when no child throws", () => {
     render(
       <ErrorBoundary>
         <p>contenu ok</p>
@@ -18,7 +18,7 @@ describe("ErrorBoundary", () => {
     expect(screen.getByText("contenu ok")).toBeTruthy();
   });
 
-  it("affiche le fallback quand un enfant lève une erreur", () => {
+  it("renders the fallback when a child throws an error", () => {
     const spy = vi.spyOn(console, "error").mockImplementation(() => {});
     render(
       <ErrorBoundary>

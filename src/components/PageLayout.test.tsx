@@ -23,7 +23,7 @@ const renderWithProviders = (
   );
 
 describe("PageLayout", () => {
-  it("rend le contenu enfant", () => {
+  it("renders child content", () => {
     renderWithProviders(
       <PageLayout title="Les bases">
         <p>contenu page</p>
@@ -32,7 +32,7 @@ describe("PageLayout", () => {
     expect(screen.getByText("contenu page")).toBeTruthy();
   });
 
-  it("définit le titre du document (suffixé par le nom du site)", async () => {
+  it("sets the document title (suffixed with the site name)", async () => {
     renderWithProviders(
       <PageLayout title="Les bases" description="desc">
         <p>x</p>
@@ -43,7 +43,7 @@ describe("PageLayout", () => {
     );
   });
 
-  it("ne suffixe pas le titre quand il vaut déjà le nom du site", async () => {
+  it("does not suffix the title when it already equals the site name", async () => {
     renderWithProviders(
       <PageLayout title="AmarokeInsights">
         <p>x</p>

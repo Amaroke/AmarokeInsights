@@ -20,13 +20,13 @@ const renderSidebar = (route = "/basics") =>
   );
 
 describe("Sidebar", () => {
-  it("affiche les sections normales mais masque les sections avancées par défaut", () => {
+  it("shows normal sections but hides advanced sections by default", () => {
     renderSidebar();
     expect(screen.getByText("Bases du Trading")).toBeTruthy();
     expect(screen.queryByText("Stratégies de Trading")).toBeNull();
   });
 
-  it("révèle les sections avancées après activation du mode avancé", () => {
+  it("reveals advanced sections after enabling advanced mode", () => {
     renderSidebar();
     fireEvent.click(
       screen.getByRole("button", {

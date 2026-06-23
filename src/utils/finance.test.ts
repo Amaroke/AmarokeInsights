@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { computeCompoundInterest, computeLoan } from "./finance";
 
 describe("computeCompoundInterest", () => {
-  it("renvoie un point par année, de 0 à years inclus", () => {
+  it("returns one point per year, from 0 to years inclusive", () => {
     const data = computeCompoundInterest({
       initial: 0,
       monthly: 0,
@@ -14,7 +14,7 @@ describe("computeCompoundInterest", () => {
     expect(data[30].Année).toBe(30);
   });
 
-  it("année 0 = capital initial, sans intérêts", () => {
+  it("year 0 = initial capital, with no interest", () => {
     const [first] = computeCompoundInterest({
       initial: 1000,
       monthly: 50,
@@ -26,7 +26,7 @@ describe("computeCompoundInterest", () => {
     expect(first["Capital total"]).toBe(1000);
   });
 
-  it("capitalise correctement sur un an (1000 € à 10 %)", () => {
+  it("compounds correctly over one year (1000 € at 10 %)", () => {
     const data = computeCompoundInterest({
       initial: 1000,
       monthly: 0,
@@ -38,7 +38,7 @@ describe("computeCompoundInterest", () => {
     expect(data[1]["Intérêts générés"]).toBe(100);
   });
 
-  it("traite les entrées NaN comme 0 (pas de crash)", () => {
+  it("treats NaN inputs as 0 (no crash)", () => {
     const data = computeCompoundInterest({
       initial: NaN,
       monthly: NaN,
@@ -49,7 +49,7 @@ describe("computeCompoundInterest", () => {
     expect(data[2]["Capital total"]).toBe(0);
   });
 
-  it("neutralise les valeurs non finies (Infinity)", () => {
+  it("neutralizes non-finite values (Infinity)", () => {
     const data = computeCompoundInterest({
       initial: Infinity,
       monthly: 0,
@@ -61,13 +61,13 @@ describe("computeCompoundInterest", () => {
 });
 
 describe("computeLoan", () => {
-  it("renvoie un résultat vide quand la durée est nulle", () => {
+  it("returns an empty result when the duration is zero", () => {
     expect(
       computeLoan({ loanAmount: 1000, years: 0, rate: 2, insurance: 0 }),
     ).toEqual({ monthlyPayment: 0, totalPayment: 0, data: [] });
   });
 
-  it("taux 0 % : mensualité = capital / nombre de mois", () => {
+  it("0 % rate: monthly payment = capital / number of months", () => {
     const res = computeLoan({
       loanAmount: 1200,
       years: 1,
@@ -78,7 +78,7 @@ describe("computeLoan", () => {
     expect(res.totalPayment).toBe(1200);
   });
 
-  it("calcule la mensualité d'un prêt classique (100 000 €, 10 ans, 5 %)", () => {
+  it("computes the monthly payment of a standard loan (100 000 €, 10 years, 5 %)", () => {
     const res = computeLoan({
       loanAmount: 100000,
       years: 10,
@@ -88,23 +88,23 @@ describe("computeLoan", () => {
     expect(Math.round(res.monthlyPayment)).toBe(1061);
   });
 
-  it("l'assurance augmente la mensualité totale", () => {
-    const sans = computeLoan({
+  it("insurance increases the total monthly payment", () => {
+    const without = computeLoan({
       loanAmount: 100000,
       years: 10,
       rate: 5,
       insurance: 0,
     });
-    const avec = computeLoan({
+    const with_ = computeLoan({
       loanAmount: 100000,
       years: 10,
       rate: 5,
       insurance: 0.3,
     });
-    expect(avec.monthlyPayment).toBeGreaterThan(sans.monthlyPayment);
+    expect(with_.monthlyPayment).toBeGreaterThan(without.monthlyPayment);
   });
 
-  it("le capital restant tend vers 0 en fin de prêt", () => {
+  it("remaining capital approaches 0 at the end of the loan", () => {
     const res = computeLoan({
       loanAmount: 1200,
       years: 1,
@@ -115,7 +115,7 @@ describe("computeLoan", () => {
     expect(last["Capital restant"]).toBe(0);
   });
 
-  it("commence par un point année 0 avec le capital initial", () => {
+  it("starts with a year-0 point holding the initial capital", () => {
     const res = computeLoan({
       loanAmount: 100000,
       years: 10,

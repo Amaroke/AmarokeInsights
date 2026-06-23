@@ -16,13 +16,13 @@ const renderPage = () =>
   );
 
 describe("LoanCalculator", () => {
-  it("affiche la mensualité et le total payé", () => {
+  it("displays the monthly payment and total paid", () => {
     renderPage();
     expect(screen.getByText(/Mensualité totale/)).toBeTruthy();
     expect(screen.getByText(/Total payé/)).toBeTruthy();
   });
 
-  it("ne crashe pas quand un champ est vidé", () => {
+  it("does not crash when a field is cleared", () => {
     renderPage();
     const amount = screen.getByLabelText(
       "Montant du prêt (€)",

@@ -5,12 +5,12 @@ import Term from "./Term";
 afterEach(cleanup);
 
 describe("Term", () => {
-  it("affiche le titre du terme", () => {
+  it("displays the term title", () => {
     render(<Term id="ETF" />);
     expect(screen.getByRole("button", { name: /ETF/ })).toBeTruthy();
   });
 
-  it("révèle la définition au clic et expose aria-expanded", async () => {
+  it("reveals the definition on click and exposes aria-expanded", async () => {
     render(<Term id="ETF" />);
     const trigger = screen.getByRole("button", { name: /ETF/ });
     expect(trigger.getAttribute("aria-expanded")).toBe("false");
