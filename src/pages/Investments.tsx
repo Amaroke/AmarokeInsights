@@ -491,14 +491,14 @@ const Investments: React.FC = () => {
 
                 <h3 className="font-semibold mt-4">Exemples concrets</h3>
                 <p>
-                  <strong>Exemple 1 – Variation des taux :</strong> vous
+                  <strong>Exemple 1 - Variation des taux :</strong> vous
                   possédez une obligation qui verse 50 € d'intérêt par an. Si
                   les taux d'intérêt du marché augmentent, les nouvelles
                   obligations sont plus intéressantes. La vôtre devient moins
                   attrayante et son prix baisse.
                 </p>
                 <p>
-                  <strong>Exemple 2 – Obligation avec coupon :</strong> vous
+                  <strong>Exemple 2 - Obligation avec coupon :</strong> vous
                   achetez une obligation de 1 000 € qui verse 50 € par an
                   pendant 5 ans. Si vous payez 1 050 € pour l'acheter, vous
                   recevrez toujours 50 € par an, mais votre rendement réel sera
@@ -506,7 +506,7 @@ const Investments: React.FC = () => {
                   nominal.
                 </p>
                 <p>
-                  <strong>Exemple 3 – Zéro-coupon :</strong> vous achetez une
+                  <strong>Exemple 3 - Zéro-coupon :</strong> vous achetez une
                   obligation qui ne verse pas d'intérêt mais remboursera 1 000 €
                   dans 3 ans. Si vous l'achetez pour 900 €, vous gagnez 100 € à
                   l'échéance, même sans recevoir d'intérêt annuel.

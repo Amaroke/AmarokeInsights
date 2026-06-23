@@ -130,7 +130,7 @@ const staticNodes: Node[] = [
   {
     id: "debt",
     position: { x: SX, y: H * 2 },
-    data: { label: label("Dettes à taux élevé ?", "(> 5–7 %)") },
+    data: { label: label("Dettes à taux élevé ?", "(> 5-7 %)") },
     style: baseNode(ACCENT.spine),
   },
   {
@@ -274,13 +274,13 @@ const RISKS: RiskBranch[] = [
       {
         id: "low_ct",
         term: "Court terme",
-        sub: "0–5 ans",
+        sub: "0-5 ans",
         products: "Livret A, LDDS, comptes à terme (CAT)",
       },
       {
         id: "low_mt",
         term: "Moyen terme",
-        sub: "5–15 ans",
+        sub: "5-15 ans",
         products: "Fonds euros, obligations, CAT",
       },
       {
@@ -302,14 +302,14 @@ const RISKS: RiskBranch[] = [
       {
         id: "med_ct",
         term: "Court terme",
-        sub: "0–5 ans",
+        sub: "0-5 ans",
         products: "Fonds euros + obligations court terme",
         env: "via PEA + Assurance-vie",
       },
       {
         id: "med_mt",
         term: "Moyen terme",
-        sub: "5–15 ans",
+        sub: "5-15 ans",
         products: "≈ 60 % ETF World / 40 % obligations",
         env: "via PEA + Assurance-vie",
       },
@@ -332,7 +332,7 @@ const RISKS: RiskBranch[] = [
       {
         id: "high_mt",
         term: "Moyen terme",
-        sub: "5–15 ans",
+        sub: "5-15 ans",
         products: "ETF World + potentiels ETF thématiques (selon conviction)",
         env: "via PEA / CTO / PER / AV",
       },

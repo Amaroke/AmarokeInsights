@@ -99,12 +99,6 @@ const LoanCalculator: React.FC = () => {
             ]}
             line={{ key: "Total restant", color: "#facc15" }}
           />
-          <p className="mt-4 text-xs text-gray-500">
-            Estimation simplifiée à titre indicatif : mensualité constante
-            (amortissement classique), assurance calculée sur le capital initial
-            pour toute la durée. Les frais de dossier et de garantie ne sont pas
-            inclus.
-          </p>
         </div>
       </Container>
     </PageLayout>

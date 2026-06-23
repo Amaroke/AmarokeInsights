@@ -386,7 +386,7 @@ const Banking: React.FC = () => {
                   France au niveau des banques. Elle est surtout proposée par
                   certaines enseignes (Carrefour, Fnac, etc.) et fonctionne avec
                   un <strong>crédit renouvelable</strong>. Attention : les{" "}
-                  <strong>taux d'intérêt sont élevés (15–20 %)</strong>. À
+                  <strong>taux d'intérêt sont élevés (15-20 %)</strong>. À
                   éviter sauf si vous en comprenez et acceptez parfaitement les
                   risques et le coût.
                 </p>
@@ -406,7 +406,7 @@ const Banking: React.FC = () => {
 
                 <p className="leading-relaxed italic">
                   Exemple : une carte Gold à 130 €/an peut être rentabilisée si
-                  vous voyagez souvent, car une assurance annulation coûte 40–60
+                  vous voyagez souvent, car une assurance annulation coûte 40-60
                   € par trajet.
                 </p>
 
