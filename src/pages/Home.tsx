@@ -102,6 +102,12 @@ const Home: React.FC = () => {
             Ces pages sont également les plus susceptibles d'évoluer, d'être
             modifiées ou réorganisées au fur et à mesure de mes apprentissages.
           </p>
+
+          <p className="leading-relaxed">
+            Soyez donc d'avantage critique et vigilant sur ces pages. Elles
+            reflètent mon point de vue personnel et ne constituent pas un
+            conseil financier.
+          </p>
         </InfoBubble>
 
         <InfoBubble

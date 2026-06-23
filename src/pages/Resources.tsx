@@ -183,7 +183,7 @@ const Resources: React.FC = () => {
                     <FaBookOpen className="text-green-400" />
                     <div>
                       <p className="font-medium text-green-300">
-                        How to Day Trade for a Living — Andrew Aziz
+                        How to Day Trade for a Living - Andrew Aziz
                       </p>
                       <p className="text-sm text-gray-400">
                         Une introduction accessible au day trading, aux
@@ -204,7 +204,7 @@ const Resources: React.FC = () => {
                     <FaBookOpen className="text-green-400" />
                     <div>
                       <p className="font-medium text-green-300">
-                        How To Swing Trade — Brian Pezim
+                        How To Swing Trade - Brian Pezim
                       </p>
                       <p className="text-sm text-gray-400">
                         Focus sur le swift trading, la discipline et la maîtrise

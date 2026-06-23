@@ -22,8 +22,9 @@ const renderSidebar = (route = "/basics") =>
 describe("Sidebar", () => {
   it("shows normal sections but hides advanced sections by default", () => {
     renderSidebar();
-    expect(screen.getByText("Bases du Trading")).toBeTruthy();
-    expect(screen.queryByText("Stratégies de Trading")).toBeNull();
+    expect(screen.getByText("Fondamentaux")).toBeTruthy();
+    expect(screen.queryByText("Bases du Trading")).toBeNull();
+    expect(screen.queryByText("Cryptomonnaies")).toBeNull();
   });
 
   it("reveals advanced sections after enabling advanced mode", () => {
@@ -33,6 +34,8 @@ describe("Sidebar", () => {
         name: /Activer ou désactiver le mode avancé/i,
       }),
     );
+    expect(screen.getByText("Bases du Trading")).toBeTruthy();
+    expect(screen.getByText("Cryptomonnaies")).toBeTruthy();
     expect(screen.getByText("Stratégies de Trading")).toBeTruthy();
     expect(screen.getByText("Optimisation Fiscale")).toBeTruthy();
   });

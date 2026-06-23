@@ -9,7 +9,7 @@ const NotFound: React.FC = () => {
       <div className="flex h-full flex-col items-center justify-center gap-4 px-4 text-center">
         <FaCompass className="text-5xl text-blue-400" />
         <h1 className="text-3xl font-semibold text-white">
-          404 — Page introuvable
+          404 - Page introuvable
         </h1>
         <p className="max-w-md text-gray-400">
           La page que vous cherchez n'existe pas ou a été déplacée.

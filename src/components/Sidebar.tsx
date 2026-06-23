@@ -91,11 +91,32 @@ const sections = [
     path: "investments2",
     icon: FaMoneyBillWave,
     lastUpdated: "2026-04-14",
-    items: [],
+    items: [
+      {
+        title: "Organigramme : comment j'investirais ?",
+        path: "organigram",
+      },
+      {
+        title: "Pourquoi le PEA ?",
+        path: "pea-interesting",
+      },
+      {
+        title: "PEA vs Plan 111bis Luxembourgeois",
+        path: "pea-vs-plan-111bis",
+      },
+      {
+        title: "Assurance Vie vs CTO",
+        path: "av-vs-cto",
+      },
+      {
+        title: "Limites des assurances vie",
+        path: "av-limits",
+      },
+    ],
   },
   {
     title: "Bases du Trading",
-    advanced: false,
+    advanced: true,
     path: "trading",
     icon: FaChartBar,
     lastUpdated: "2026-04-14",
@@ -119,7 +140,7 @@ const sections = [
   },
   {
     title: "Cryptomonnaies",
-    advanced: false,
+    advanced: true,
     path: "cryptos",
     icon: FaBitcoin,
     lastUpdated: "2026-03-18",
