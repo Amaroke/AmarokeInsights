@@ -5,7 +5,7 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
   const { title, definition } = terms[id];
   const [open, setOpen] = useState(false);
   const [pos, setPos] = useState({ top: 0, left: 0 });
-  const ref = useRef<HTMLSpanElement>(null);
+  const ref = useRef<HTMLButtonElement>(null);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -32,21 +32,31 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
   }, [open]);
   useEffect(() => {
     const handleClick = () => setOpen(false);
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
 
     if (open) {
       document.addEventListener("click", handleClick);
+      document.addEventListener("keydown", handleKey);
     }
 
     return () => {
       document.removeEventListener("click", handleClick);
+      document.removeEventListener("keydown", handleKey);
     };
   }, [open]);
 
+  const tooltipId = `term-${id}`;
+
   return (
     <>
-      <span
+      <button
+        type="button"
         ref={ref}
-        className="underline underline-offset-2 decoration-dotted cursor-pointer font-semibold"
+        aria-expanded={open}
+        aria-describedby={open ? tooltipId : undefined}
+        className="underline underline-offset-2 decoration-dotted cursor-pointer font-semibold text-inherit bg-transparent p-0"
         onClick={(e) => {
           e.stopPropagation();
           setOpen(!open);
@@ -55,10 +65,12 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
         onMouseLeave={() => setOpen(false)}
       >
         {title} <sup className="text-xs text-gray-400">?</sup>
-      </span>
+      </button>
 
       {open && ready && (
         <div
+          id={tooltipId}
+          role="tooltip"
           className="fixed z-50"
           style={{ top: pos.top, left: pos.left }}
           onClick={(e) => e.stopPropagation()}

@@ -134,16 +134,6 @@ export const terms = {
     definition:
       "Ordre de vente automatique d’un actif financier lorsque son prix atteint un certain niveau, afin de limiter les pertes potentielles.",
   },
-  defi: {
-    title: "DeFi",
-    definition:
-      "Finance Décentralisée : ensemble d’applications financières construites sur la blockchain, permettant d’emprunter, prêter, échanger ou investir sans passer par les banques ou institutions traditionnelles.",
-  },
-  nft: {
-    title: "NFTs",
-    definition:
-      "Non-Fungible Token : jeton numérique unique basé sur la blockchain. Contrairement aux cryptomonnaies classiques, un NFT n’est pas interchangeable. Il sert à représenter la propriété d’un objet numérique (image, musique, carte de collection, etc.).",
-  },
   staking: {
     title: "Staking",
     definition:

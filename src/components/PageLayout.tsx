@@ -3,9 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useSidebar } from "../context/useSidebar";
 
 interface PageLayoutProps {
-  /** Titre de l'onglet / SEO. Suffixé automatiquement par le nom du site. */
   title: string;
-  /** Meta description pour le SEO. Optionnelle. */
   description?: string;
   children: React.ReactNode;
 }

@@ -74,7 +74,7 @@ const Home: React.FC = () => {
             <span className="inline-block align-middle mx-1">
               <FaBars className="inline" />
             </span>
-            située en haut à gauche de la page. Ce menu (accessibles à tout
+            située en haut à gauche de la page. Ce menu (accessible à tout
             moment) vous permet d’accéder rapidement à toutes les sections du
             site.
           </p>

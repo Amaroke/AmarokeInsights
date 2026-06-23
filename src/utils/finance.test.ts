@@ -52,8 +52,9 @@ describe("computeCompoundInterest", () => {
 
 describe("computeLoan", () => {
   it("renvoie un résultat vide quand la durée est nulle", () => {
-    expect(computeLoan({ loanAmount: 1000, years: 0, rate: 2, insurance: 0 }))
-      .toEqual({ monthlyPayment: 0, totalPayment: 0, data: [] });
+    expect(
+      computeLoan({ loanAmount: 1000, years: 0, rate: 2, insurance: 0 }),
+    ).toEqual({ monthlyPayment: 0, totalPayment: 0, data: [] });
   });
 
   it("taux 0 % : mensualité = capital / nombre de mois", () => {

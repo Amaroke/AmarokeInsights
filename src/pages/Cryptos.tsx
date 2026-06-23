@@ -121,14 +121,14 @@ const Cryptos: React.FC = () => {
             >
               <p className="leading-relaxed mb-2">
                 Ces blockchains permettent de créer des applications
-                décentralisées : <Term id="defi" />, jeux, <Term id="nft" />,
+                décentralisées : <Term id="DeFi" />, jeux, <Term id="NFT" />,
                 réseaux sociaux, etc.
               </p>
 
               <p className="leading-relaxed mb-2">
                 <strong>Ethereum (ETH)</strong> : pionnier des smart contracts,
-                base de la majorité de la <Term id="defi" /> et des{" "}
-                <Term id="nft" />.
+                base de la majorité de la <Term id="DeFi" /> et des{" "}
+                <Term id="NFT" />.
               </p>
 
               <p className="leading-relaxed mb-2">

@@ -1,16 +1,9 @@
-// Calculs financiers purs (sans dépendance React), réutilisés par les pages
-// calculatrices et couverts par des tests unitaires.
-
 const safe = (v: number) => (isNaN(v) ? 0 : v);
 
 export interface CompoundInterestParams {
-  /** Capital de départ (€). */
   initial: number;
-  /** Versement mensuel (€). */
   monthly: number;
-  /** Taux annuel (%). */
   rate: number;
-  /** Durée (années). */
   years: number;
 }
 
@@ -21,10 +14,6 @@ export interface CompoundInterestPoint {
   "Capital total": number;
 }
 
-/**
- * Projection année par année d'un capital avec versements mensuels et
- * capitalisation annuelle des intérêts.
- */
 export function computeCompoundInterest(
   params: CompoundInterestParams,
 ): CompoundInterestPoint[] {
@@ -55,13 +44,9 @@ export function computeCompoundInterest(
 }
 
 export interface LoanParams {
-  /** Montant emprunté (€). */
   loanAmount: number;
-  /** Durée (années). */
   years: number;
-  /** Taux annuel (%). */
   rate: number;
-  /** Taux d'assurance annuel (%). */
   insurance: number;
 }
 
@@ -73,18 +58,11 @@ export interface AmortizationPoint {
 }
 
 export interface LoanResult {
-  /** Mensualité totale (crédit + assurance), en €. */
   monthlyPayment: number;
-  /** Coût total payé sur toute la durée, arrondi en €. */
   totalPayment: number;
-  /** Tableau d'amortissement annuel pour le graphique. */
   data: AmortizationPoint[];
 }
 
-/**
- * Calcule la mensualité, le coût total et le tableau d'amortissement d'un prêt
- * à taux fixe (avec assurance optionnelle calculée sur le capital initial).
- */
 export function computeLoan(params: LoanParams): LoanResult {
   const loanAmount = safe(params.loanAmount);
   const years = safe(params.years);

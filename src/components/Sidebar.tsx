@@ -252,7 +252,11 @@ const Sidebar: React.FC = () => {
                 Avancé
               </span>
               <span
-                className={`${!isAdvanced && "bg-linear-to-r bg-clip-text text-transparent bg-gray-400"}`}
+                className={
+                  !isAdvanced
+                    ? "bg-linear-to-r bg-clip-text text-transparent bg-gray-400"
+                    : ""
+                }
               >
                 🔥
               </span>
@@ -291,8 +295,9 @@ const Sidebar: React.FC = () => {
                     <span className="text-lg">{section.icon}</span>
                     <span
                       className={`font-medium ${
-                        section.advanced &&
-                        "bg-linear-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent"
+                        section.advanced
+                          ? "bg-linear-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent"
+                          : ""
                       }`}
                     >
                       {section.title}

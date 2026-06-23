@@ -5,8 +5,8 @@
 
 Un site personnel où je partage mes apprentissages en **finance**, sous une forme claire et progressive.  
 L’objectif est double, consolider mes connaissances et les rendre accessibles à toute personne qui souhaite découvrir la finance étape par étape.
-La première version du site est correspond au mode normal, avec des contenus destinés à un public débutant.  
-Dans le futur et au fur à mesure, je prévois d’ajouter des contenus plus avancés, destinés à un public plus expérimenté. Disponible dans le mode avancé du site.
+La première version du site correspond au mode normal, avec des contenus destinés à un public débutant.  
+Dans le futur et au fur et à mesure, je prévois d’ajouter des contenus plus avancés, destinés à un public plus expérimenté. Disponible dans le mode avancé du site.
 
 ## 💬 Feedback & Contributions
 
@@ -26,7 +26,7 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
   - Setup autodeploy.
 
 - 14/04/2026 - Version 1.1.0
-  - Ajout d'une section avancée "Comment Investir", avec un organigrame.
+  - Ajout d'une section avancée "Comment Investir", avec un organigramme.
   - Ajout d'une explication sur les chandeliers japonais dans la partie sur le trading.
   - Ajout d'une partie FAQ dans la partie sur ma stratégie personnelle.
 
@@ -45,7 +45,7 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
   - Refonte du menu et ajout d'un second mode "avancé" avec des contenus plus poussés.
   - Ajout des bases de la page sur le trading.
   - Ajout des bases de la page sur les cryptomonnaies.
-  - Divers corrections et ajouts suite aux retours.
+  - Diverses corrections et ajouts suite aux retours.
 
 - 23/12/2025
   - Ajout d'une partie sur les banques.
@@ -55,15 +55,15 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
   - Ajout de définitions pour les termes financiers utilisés dans le site. Petits correctifs et ajouts divers.
   
 - 27/11/2025
-  - Correction de multiples prolèmes d'affichage sur mobile. Mise en place du système de définition.
+  - Correction de multiples problèmes d'affichage sur mobile. Mise en place du système de définition.
   - Relecture et corrections diverses sur plusieurs pages.
 
 - 29/10/2025
-  - **Finalisation de la page Stratégie personelle et de la page sur les placements.**
+  - **Finalisation de la page Stratégie personnelle et de la page sur les placements.**
   - **Ajout de la page Contact.**
 
 - 28/10/2025
-  - **Ajout de la page Stratégie personelle.**
+  - **Ajout de la page Stratégie personnelle.**
 
 - 27/10/2025
   - **Ajout de la page Ressources & Outils, ajout des outils de calculs d'intérêts composés et de prêts**
