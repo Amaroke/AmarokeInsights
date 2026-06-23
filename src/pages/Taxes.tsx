@@ -8,6 +8,7 @@ const Taxes: React.FC = () => {
     <PageLayout
       title="Optimisation fiscale"
       description="Optimiser sa fiscalité sur les revenus du capital."
+      noindex
     >
       <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-24">
         <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">

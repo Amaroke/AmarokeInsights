@@ -190,11 +190,27 @@ const Sidebar: React.FC = () => {
     }
   }, [currentPath, setExpandedSection]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [isOpen, setIsOpen]);
+
   const handleScrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    let attempts = 0;
+    const tryScroll = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else if (attempts < 20) {
+        attempts++;
+        setTimeout(tryScroll, 100);
+      }
+    };
+    tryScroll();
     if (window.innerWidth < 768) {
       setIsOpen(false);
     }
