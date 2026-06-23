@@ -18,6 +18,7 @@ const LoanCalculator: React.FC = () => {
   const [years, setYears] = useState(20);
   const [rate, setRate] = useState(2);
   const [insurance, setInsurance] = useState(0);
+  const [startYear, setStartYear] = useState(new Date().getFullYear());
 
   const { monthlyPayment, totalPayment, data } = useMemo(
     () => computeLoan({ loanAmount, years, rate, insurance }),
@@ -66,6 +67,13 @@ const LoanCalculator: React.FC = () => {
               step={0.1}
               focusClass="focus:border-purple-400"
             />
+            <NumberField
+              label="Année de départ"
+              value={startYear}
+              onChange={setStartYear}
+              min={0}
+              focusClass="focus:border-purple-400"
+            />
           </div>
         </div>
 
@@ -84,6 +92,7 @@ const LoanCalculator: React.FC = () => {
           <FinanceChart
             data={data}
             xKey="Année"
+            startYear={startYear}
             bars={[
               { key: "Capital restant", color: "#9333ea" },
               { key: "Intérêts restants", color: "#f472b6" },

@@ -23,6 +23,7 @@ interface FinanceChartProps {
   line: ChartSeries;
   yAxisOrientation?: "left" | "right";
   height?: number;
+  startYear?: number;
 }
 
 const formatThousands = (v: number) =>
@@ -40,12 +41,23 @@ const FinanceChart: FC<FinanceChartProps> = ({
   line,
   yAxisOrientation = "left",
   height = 420,
+  startYear,
 }) => {
+  const base = Number.isFinite(startYear) ? (startYear as number) : 0;
+
   return (
     <ResponsiveContainer width="100%" height={height}>
-      <ComposedChart data={data}>
+      <ComposedChart data={data} margin={{ bottom: 24 }}>
         <CartesianGrid strokeDasharray="3 3" stroke="#2c2c3a" />
-        <XAxis dataKey={xKey} stroke="#aaa" />
+        <XAxis
+          dataKey={xKey}
+          stroke="#aaa"
+          height={56}
+          angle={-90}
+          textAnchor="end"
+          tickMargin={8}
+          tickFormatter={(v) => String(base + Number(v))}
+        />
         <YAxis
           stroke="#aaa"
           orientation={yAxisOrientation}
@@ -58,6 +70,7 @@ const FinanceChart: FC<FinanceChartProps> = ({
             borderRadius: "10px",
           }}
           formatter={formatEuro}
+          labelFormatter={(label) => `Année ${base + Number(label)}`}
         />
         <Legend />
         {bars.map((bar) => (

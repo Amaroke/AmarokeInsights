@@ -11,6 +11,7 @@ const CompoundInterest: React.FC = () => {
   const [monthly, setMonthly] = useState(1000);
   const [rate, setRate] = useState(7);
   const [years, setYears] = useState(30);
+  const [startYear, setStartYear] = useState(new Date().getFullYear());
 
   const data = useMemo(
     () => computeCompoundInterest({ initial, monthly, rate, years }),
@@ -58,6 +59,13 @@ const CompoundInterest: React.FC = () => {
               max={100}
               focusClass="focus:border-green-400"
             />
+            <NumberField
+              label="Année de départ"
+              value={startYear}
+              onChange={setStartYear}
+              min={0}
+              focusClass="focus:border-green-400"
+            />
           </div>
         </div>
 
@@ -69,6 +77,7 @@ const CompoundInterest: React.FC = () => {
           <FinanceChart
             data={data}
             xKey="Année"
+            startYear={startYear}
             yAxisOrientation="right"
             bars={[
               { key: "Apport cumulé", color: "#60a5fa" },
