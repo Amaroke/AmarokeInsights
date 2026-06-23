@@ -2,6 +2,7 @@ import { type CSSProperties, type ReactNode } from "react";
 import {
   ReactFlow,
   Background,
+  Controls,
   BaseEdge,
   EdgeLabelRenderer,
   getSmoothStepPath,
@@ -431,26 +432,33 @@ const defaultEdgeOptions = {
 
 export default function InvestmentTree() {
   return (
-    <div className="mt-4 h-160 rounded-2xl border border-white/10 bg-[#0d0d14] overflow-hidden">
+    <div className="mt-4 h-104 md:h-160 rounded-2xl border border-white/10 bg-[#0d0d14] overflow-hidden touch-none">
       <ReactFlow
         nodes={nodes}
         edges={edges}
         edgeTypes={edgeTypes}
         fitView
-        fitViewOptions={{ padding: 0.1 }}
+        fitViewOptions={{ padding: 0.15 }}
         defaultEdgeOptions={defaultEdgeOptions}
-        minZoom={0.12}
+        minZoom={0.1}
+        maxZoom={2.5}
         nodesDraggable={false}
         nodesConnectable={false}
         nodesFocusable={false}
         edgesFocusable={false}
         elementsSelectable={false}
-        zoomOnScroll={false}
+        zoomOnScroll
+        zoomOnPinch
+        zoomOnDoubleClick
+        panOnDrag
         panOnScroll={false}
-        preventScrolling={false}
         proOptions={{ hideAttribution: true }}
       >
         <Background color="rgba(148,163,184,0.12)" gap={26} />
+        <Controls
+          showInteractive={false}
+          className="shadow-lg! [&_button]:border-white/10! [&_button]:bg-[#1f1f2e]! [&_button]:text-gray-200! [&_button:hover]:bg-[#2a2a3d]! [&_svg]:fill-current!"
+        />
       </ReactFlow>
     </div>
   );

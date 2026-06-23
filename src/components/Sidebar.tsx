@@ -278,7 +278,7 @@ const Sidebar: React.FC = () => {
           <button
             onClick={toggleAdvanced}
             aria-pressed={isAdvanced}
-            aria-label="Activer ou désactiver le mode avancé"
+            aria-label="Activer ou désactiver le mode subjectif"
             className="w-full flex items-center justify-between px-2 py-2"
           >
             <span
@@ -309,7 +309,7 @@ const Sidebar: React.FC = () => {
                     : "text-gray-400"
                 }`}
               >
-                Avancé
+                Subjectif
               </span>
               <span
                 aria-hidden="true"

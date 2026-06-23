@@ -708,7 +708,7 @@ const Trading: React.FC = () => {
                 encore certains éléments essentiels pour se mettre au trading :
                 gestion du risque, psychologie du trading, indicateurs et
                 outils, exemples pratiques détaillés, etc... Ces sujets seront
-                abordés dans la partie <b>avancée</b> du site. Rappelons que le
+                abordés dans la partie <b>subjective</b> du site. Rappelons que le
                 trading comporte un risque de perte en capital. Vous ne devez
                 investir que l'argent que vous pouvez vous permettre de perdre.
                 Il est fortement recommandé de se former (et pas uniquement via

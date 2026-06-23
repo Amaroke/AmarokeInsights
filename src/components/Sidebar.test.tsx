@@ -31,7 +31,7 @@ describe("Sidebar", () => {
     renderSidebar();
     fireEvent.click(
       screen.getByRole("button", {
-        name: /Activer ou désactiver le mode avancé/i,
+        name: /Activer ou désactiver le mode subjectif/i,
       }),
     );
     expect(screen.getByText("Bases du Trading")).toBeTruthy();

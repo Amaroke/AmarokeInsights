@@ -80,11 +80,11 @@ const Home: React.FC = () => {
 
         <InfoBubble
           icon={<FaLightbulb />}
-          title="Mode avancé"
+          title="Mode subjectif"
           color="text-orange-300"
         >
           <p className="leading-relaxed">
-            Le mode avancé regroupe des sections plus détaillées et plus
+            Le mode subjectif regroupe des sections plus détaillées et plus
             subjectives. J'y aborde des sujets qui m'intéressent ou que je
             découvre, sans forcément suivre une structure stricte ou un plan
             pédagogique.

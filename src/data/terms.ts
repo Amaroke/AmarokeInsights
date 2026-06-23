@@ -34,6 +34,11 @@ export const terms = {
     definition:
       "Plan d'Épargne en Actions : compte permettant d'investir en actions européennes avec une fiscalité avantageuse après 5 ans, tout en bénéficiant d'un cadre réglementé.",
   },
+  CTO: {
+    title: "CTO",
+    definition:
+      "Compte-Titres Ordinaire : compte d'investissement sans plafond ni restriction d'actifs (actions, ETF, obligations, cryptos, etc.), mais dont les gains sont imposés au PFU dès le premier euro, sans avantage fiscal lié à la durée de détention.",
+  },
   PEE: {
     title: "PEE",
     definition:
