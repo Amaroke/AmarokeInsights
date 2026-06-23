@@ -1,5 +1,8 @@
 const safe = (v: number) => (Number.isFinite(v) ? v : 0);
 
+const clampYears = (v: number) =>
+  Math.min(Math.max(Math.trunc(safe(v)), 0), 120);
+
 export interface CompoundInterestParams {
   initial: number;
   monthly: number;
@@ -20,7 +23,7 @@ export function computeCompoundInterest(
   const initial = safe(params.initial);
   const monthly = safe(params.monthly);
   const rate = safe(params.rate);
-  const years = safe(params.years);
+  const years = clampYears(params.years);
 
   const points: CompoundInterestPoint[] = [];
   let capital = initial;
@@ -65,7 +68,7 @@ export interface LoanResult {
 
 export function computeLoan(params: LoanParams): LoanResult {
   const loanAmount = safe(params.loanAmount);
-  const years = safe(params.years);
+  const years = clampYears(params.years);
   const rate = safe(params.rate);
   const insurance = safe(params.insurance);
 
@@ -87,33 +90,29 @@ export function computeLoan(params: LoanParams): LoanResult {
   const totalMonthly = monthly + monthlyInsurance;
 
   let remainingCapital = loanAmount;
-  let remainingInterest = monthly * n - loanAmount;
   const data: AmortizationPoint[] = [];
 
-  const pushPoint = (year: number) => {
+  const pushPoint = (year: number, monthsElapsed: number) => {
+    const capital = Math.max(safe(remainingCapital), 0);
+    const interest = Math.max(monthly * (n - monthsElapsed) - capital, 0);
     data.push({
       Année: year,
-      "Capital restant": Math.max(Math.round(safe(remainingCapital)), 0),
-      "Intérêts restants": Math.max(Math.round(safe(remainingInterest)), 0),
-      "Total restant": Math.max(
-        Math.round(safe(remainingCapital + remainingInterest)),
-        0,
-      ),
+      "Capital restant": Math.round(capital),
+      "Intérêts restants": Math.round(interest),
+      "Total restant": Math.round(capital + interest),
     });
   };
 
-  // Point initial (année 0) : capital et intérêts encore dus en totalité.
-  pushPoint(0);
+  pushPoint(0, 0);
 
   for (let month = 1; month <= n; month++) {
     const interest = remainingCapital * monthlyRate;
     const principal = monthly - interest;
 
     remainingCapital -= principal;
-    remainingInterest -= interest;
 
     if (month % 12 === 0) {
-      pushPoint(month / 12);
+      pushPoint(month / 12, month);
     }
   }
 

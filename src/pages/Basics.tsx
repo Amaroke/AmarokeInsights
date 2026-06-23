@@ -27,32 +27,32 @@ const Basics: React.FC = () => {
           <div className="space-y-4">
             <InfoBubble
               icon={<FaBookOpen />}
-              title="Valeur de l’argent dans le temps, inflation et déflation"
+              title="Valeur de l'argent dans le temps, inflation et déflation"
               color="text-blue-400"
             >
               <p className="leading-relaxed">
-                L’argent possédé aujourd’hui n’a pas la même valeur dans le
+                L'argent possédé aujourd'hui n'a pas la même valeur dans le
                 futur.
               </p>
               <p className="leading-relaxed">
-                <strong>L’inflation</strong> est une hausse des prix générale
+                <strong>L'inflation</strong> est une hausse des prix générale
                 affectant tous les biens et services. Elle{" "}
-                <strong>réduit le pouvoir d’achat</strong>. Ce que l’on peut
-                acheter avec 100 € aujourd’hui coûtera plus cher demain.
+                <strong>réduit le pouvoir d'achat</strong>. Ce que l'on peut
+                acheter avec 100 € aujourd'hui coûtera plus cher demain.
               </p>
               <p className="leading-relaxed">
                 Exemple concret :<br />
-                - Aujourd’hui, panier de courses ➜ 100 €<br />
-                - Dans 1 an avec 3 % d’inflation ➜ 103 €<br />
-                - Dans 10 ans avec 3 % d’inflation ➜ ~134 €<br />
+                - Aujourd'hui, panier de courses ➜ 100 €<br />
+                - Dans 1 an avec 3 % d'inflation ➜ 103 €<br />
+                - Dans 10 ans avec 3 % d'inflation ➜ ~134 €<br />
                 Conclusion : si 100 € restent inactifs (non dépensés sur un
-                compte courant, sans générer d’intérêts), on perd environ 34 %
-                de pouvoir d’achat sur 10 ans.
+                compte courant, sans générer d'intérêts), on perd environ 34 %
+                de pouvoir d'achat sur 10 ans.
               </p>
               <p className="leading-relaxed">
-                <strong>L’argent peut "travailler"</strong> grâce aux intérêts :
-                lorsqu’il est investi ou placé, il génère des revenus qui
-                compensent l’inflation et augmentent le pouvoir d’achat.
+                <strong>L'argent peut "travailler"</strong> grâce aux intérêts :
+                lorsqu'il est investi ou placé, il génère des revenus qui
+                compensent l'inflation et augmentent le pouvoir d'achat.
               </p>
               <p className="leading-relaxed">
                 Exemple concret :<br />
@@ -60,39 +60,39 @@ const Basics: React.FC = () => {
                 <br />
                 - Après 1 an ➜ 105 €<br />
                 - Après 10 ans ➜ 163 €<br />
-                - Rendement net après 3 % d’inflation ➜ 2 % par an
-                <br />- Pouvoir d’achat réel après 10 ans ➜ ~122 €
+                - Rendement net après 3 % d'inflation ➜ 2 % par an
+                <br />- Pouvoir d'achat réel après 10 ans ➜ ~122 €
               </p>
               <p className="leading-relaxed">
-                <strong>La déflation</strong> est l’inverse de l’inflation :
+                <strong>La déflation</strong> est l'inverse de l'inflation :
                 baisse générale et durable des prix, ce qui augmente le pouvoir
-                d’achat.
+                d'achat.
               </p>
               <p className="leading-relaxed">
-                Exemple concret :<br />- Un panier de 100 € aujourd’hui coûtera
-                97 € l’an prochain avec 3 % de déflation.
+                Exemple concret :<br />- Un panier de 100 € aujourd'hui coûtera
+                97 € l'an prochain avec 3 % de déflation.
               </p>
               <p className="leading-relaxed">
                 <strong>
-                  Pourquoi l’inflation est plus fréquente que la déflation ?
+                  Pourquoi l'inflation est plus fréquente que la déflation ?
                 </strong>
                 <br />
-                Les banques centrales visent généralement ~2 % d’inflation pour
+                Les banques centrales visent généralement ~2 % d'inflation pour
                 stimuler consommation et investissement. La déflation, souvent
-                liée à une crise, peut bloquer l’économie (revenus en baisse,
+                liée à une crise, peut bloquer l'économie (revenus en baisse,
                 licenciements, etc.).
               </p>
             </InfoBubble>
 
             <InfoBubble
               icon={<FaBookOpen />}
-              title="Taux d’intérêt & intérêt composé"
+              title="Taux d'intérêt & intérêt composé"
               color="text-green-400"
             >
               <p className="leading-relaxed">
                 <strong>Intérêt simple</strong> : calculé uniquement sur le
                 capital initial. Par exemple, si vous prêtez 1 000 € à un ami à
-                5 % par an, les intérêts ne produisent pas d’intérêts
+                5 % par an, les intérêts ne produisent pas d'intérêts
                 supplémentaires.
               </p>
               <p className="leading-relaxed">
@@ -120,7 +120,7 @@ const Basics: React.FC = () => {
               color="text-purple-400"
             >
               <p className="leading-relaxed">
-                <strong>Le revenu</strong> correspond à un flux d’argent
+                <strong>Le revenu</strong> correspond à un flux d'argent
                 régulier (salaire, loyers, dividendes). Une personne peut
                 percevoir un salaire élevé mais ne pas accumuler de richesse.
               </p>
@@ -131,8 +131,8 @@ const Basics: React.FC = () => {
                 si tout est dépensé.
               </p>
               <p className="leading-relaxed">
-                <strong>Le patrimoine</strong> correspond au stock (ce que l’on
-                possède moins ce que l’on doit). Même avec un revenu modeste, un
+                <strong>Le patrimoine</strong> correspond au stock (ce que l'on
+                possède moins ce que l'on doit). Même avec un revenu modeste, un
                 patrimoine solide peut assurer une sécurité financière.
               </p>
               <p className="leading-relaxed">
@@ -148,7 +148,7 @@ const Basics: React.FC = () => {
               color="text-pink-400"
             >
               <p className="leading-relaxed">
-                <strong>L’épargne</strong> est sécurisée mais rapporte peu
+                <strong>L'épargne</strong> est sécurisée mais rapporte peu
                 (livret, compte épargne). Elle protège le capital et génère un
                 petit revenu.
               </p>
@@ -158,7 +158,7 @@ const Basics: React.FC = () => {
                 €
               </p>
               <p className="leading-relaxed">
-                <strong>L’investissement</strong> peut rapporter plus mais
+                <strong>L'investissement</strong> peut rapporter plus mais
                 comporte un risque. La valeur du capital peut fluctuer selon les
                 marchés (actions, immobilier…).
               </p>
@@ -187,9 +187,9 @@ const Basics: React.FC = () => {
               color="text-red-400"
             >
               <p className="leading-relaxed">
-                Le risque de marché, c’est la perte possible quand les prix des
+                Le risque de marché, c'est la perte possible quand les prix des
                 actions, obligations ou autres actifs changent rapidement, comme
-                lors d’une crise économique. On peut le limiter en diversifiant
+                lors d'une crise économique. On peut le limiter en diversifiant
                 et en gardant une vision long terme.
               </p>
             </InfoBubble>
@@ -200,7 +200,7 @@ const Basics: React.FC = () => {
               color="text-red-400"
             >
               <p className="leading-relaxed">
-                Il survient lorsqu’une personne ou institution ne respecte pas
+                Il survient lorsqu'une personne ou institution ne respecte pas
                 ses engagements financiers (par exemple, un ami qui ne rembourse
                 pas un prêt). On peut le réduire en choisissant des partenaires
                 fiables et en évitant de concentrer ses actifs au même endroit.
@@ -213,8 +213,8 @@ const Basics: React.FC = () => {
               color="text-red-400"
             >
               <p className="leading-relaxed">
-                Ce risque apparaît quand les taux d’intérêt évoluent et
-                augmentent le coût d’un emprunt (par exemple, un prêt immobilier
+                Ce risque apparaît quand les taux d'intérêt évoluent et
+                augmentent le coût d'un emprunt (par exemple, un prêt immobilier
                 à taux variable). On peut le gérer en diversifiant les
                 types/durées de taux ou en utilisant des protections.
               </p>
@@ -226,9 +226,9 @@ const Basics: React.FC = () => {
               color="text-red-400"
             >
               <p className="leading-relaxed">
-                La variation des devises peut affecter la valeur d’un
-                investissement à l’étranger (par exemple, un placement en
-                dollars perd de la valeur si l’euro monte). On peut limiter ce
+                La variation des devises peut affecter la valeur d'un
+                investissement à l'étranger (par exemple, un placement en
+                dollars perd de la valeur si l'euro monte). On peut limiter ce
                 risque par diversification ou couverture.
               </p>
             </InfoBubble>
@@ -251,7 +251,7 @@ const Basics: React.FC = () => {
               color="text-red-400"
             >
               <p className="leading-relaxed">
-                Lié à une crise politique/économique d’un pays (guerre, défaut
+                Lié à une crise politique/économique d'un pays (guerre, défaut
                 de dette) qui affecte les entreprises locales. Il se réduit en
                 évaluant la stabilité et en diversifiant géographiquement.
               </p>
@@ -275,9 +275,9 @@ const Basics: React.FC = () => {
               color="text-red-400"
             >
               <p className="leading-relaxed">
-                C’est le risque lié à un seul investissement (« mettre tous ses
+                C'est le risque lié à un seul investissement (« mettre tous ses
                 œufs dans le même panier »), par exemple, détenir uniquement les
-                actions d’une entreprise qui chute. On le réduit en diversifiant
+                actions d'une entreprise qui chute. On le réduit en diversifiant
                 son portefeuille.
               </p>
             </InfoBubble>

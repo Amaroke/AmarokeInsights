@@ -29,7 +29,7 @@ const Cryptos: React.FC = () => {
           <div className="space-y-4">
             <InfoBubble
               icon={<FaBitcoin />}
-              title="Qu’est-ce qu’une crypto-monnaie ?"
+              title="Qu'est-ce qu'une crypto-monnaie ?"
               color="text-blue-400"
             >
               <p className="leading-relaxed mb-3">
@@ -48,13 +48,13 @@ const Cryptos: React.FC = () => {
                 La <Term id="blockchain" /> fonctionne comme un livre ouvert,
                 toutes les transactions sont enregistrées de façon chronologique
                 et visible par tous. Chaque participant peut vérifier ce qui se
-                passe, et personne ne peut modifier l’historique sans l’accord
+                passe, et personne ne peut modifier l'historique sans l'accord
                 du réseau.
               </p>
 
               <p className="leading-relaxed mb-3">
                 Cette transparence permet de créer de la confiance sans
-                intermédiaire centralisé. À l’origine, l’idée était de donner
+                intermédiaire centralisé. À l'origine, l'idée était de donner
                 aux individus le contrôle de leur argent et de proposer un
                 système financier plus libre et ouvert, indépendant des banques
                 et des États.
@@ -88,7 +88,7 @@ const Cryptos: React.FC = () => {
 
         <section id="different-cryptos" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-            Les différents types de cryptomonnaies et leur vision d’origine
+            Les différents types de cryptomonnaies et leur vision d'origine
           </h2>
 
           <div className="space-y-4">
@@ -98,13 +98,13 @@ const Cryptos: React.FC = () => {
               color="text-yellow-400"
             >
               <p className="leading-relaxed mb-2">
-                Conçues pour servir d’argent numérique : transférer de la valeur
-                sans banque et, dans certains cas, protéger contre l’inflation.
+                Conçues pour servir d'argent numérique : transférer de la valeur
+                sans banque et, dans certains cas, protéger contre l'inflation.
               </p>
 
               <p className="leading-relaxed mb-2">
                 <strong>Bitcoin (BTC)</strong> : première crypto, offre limitée
-                à 21 millions d’unités. Souvent utilisée comme réserve de valeur
+                à 21 millions d'unités. Souvent utilisée comme réserve de valeur
                 (« or numérique ») et pour des paiements internationaux.
               </p>
 
@@ -137,7 +137,7 @@ const Cryptos: React.FC = () => {
               </p>
 
               <p className="leading-relaxed mb-2">
-                <strong>Cardano (ADA)</strong> : met l’accent sur la sécurité et
+                <strong>Cardano (ADA)</strong> : met l'accent sur la sécurité et
                 la recherche scientifique.
               </p>
 
@@ -149,11 +149,11 @@ const Cryptos: React.FC = () => {
 
             <InfoBubble
               icon={<FaExchangeAlt />}
-              title="Tokens d’exchange"
+              title="Tokens d'exchange"
               color="text-orange-400"
             >
               <p className="leading-relaxed mb-2">
-                Créés par des plateformes d’échange pour offrir des avantages
+                Créés par des plateformes d'échange pour offrir des avantages
                 internes : réduction de frais, <Term id="staking" /> ou accès à
                 certains services.
               </p>
@@ -191,7 +191,7 @@ const Cryptos: React.FC = () => {
               color="text-purple-400"
             >
               <p className="leading-relaxed mb-2">
-                Conçues pour masquer l’identité des utilisateurs et rendre les
+                Conçues pour masquer l'identité des utilisateurs et rendre les
                 transactions difficiles à tracer.
               </p>
 
@@ -219,19 +219,19 @@ const Cryptos: React.FC = () => {
               </p>
 
               <p className="leading-relaxed">
-                <strong>Uniswap (UNI)</strong> : token de gouvernance d’un
+                <strong>Uniswap (UNI)</strong> : token de gouvernance d'un
                 échange <Term id="decentralized" /> sans intermédiaire.
               </p>
             </InfoBubble>
 
             <InfoBubble
               icon={<FaUniversity />}
-              title="Cryptos d’infrastructure financière"
+              title="Cryptos d'infrastructure financière"
               color="text-pink-400"
             >
               <p className="leading-relaxed mb-2">
                 Axées sur les paiements rapides entre institutions financières
-                et l’intégration avec le système bancaire.
+                et l'intégration avec le système bancaire.
               </p>
 
               <p className="leading-relaxed">
@@ -255,7 +255,7 @@ const Cryptos: React.FC = () => {
             >
               <p className="leading-relaxed mb-2">
                 Les hot wallets sont connectés à Internet. Ils permettent
-                d’acheter, vendre et utiliser ses cryptos facilement, mais sont
+                d'acheter, vendre et utiliser ses cryptos facilement, mais sont
                 plus exposés aux piratages.
               </p>
 
@@ -263,7 +263,7 @@ const Cryptos: React.FC = () => {
 
               <ul className="list-disc list-inside leading-relaxed mb-2">
                 <li>
-                  Comptes sur des plateformes d’échange (Binance, Coinbase,
+                  Comptes sur des plateformes d'échange (Binance, Coinbase,
                   Kraken)
                 </li>
                 <li>
@@ -273,7 +273,7 @@ const Cryptos: React.FC = () => {
 
               <p className="leading-relaxed">
                 Ces solutions sont pratiques pour débuter ou pour le trading,
-                mais il est déconseillé d’y stocker de grosses sommes sur le
+                mais il est déconseillé d'y stocker de grosses sommes sur le
                 long terme.
               </p>
             </InfoBubble>
@@ -291,13 +291,13 @@ const Cryptos: React.FC = () => {
               </p>
 
               <p className="leading-relaxed mb-2">
-                Il s’agit généralement d’appareils physiques appelés hardware
+                Il s'agit généralement d'appareils physiques appelés hardware
                 wallets (par exemple Ledger ou Trezor).
               </p>
 
               <p className="leading-relaxed">
                 Même si votre ordinateur est compromis, un attaquant ne peut pas
-                accéder directement à vos fonds sans posséder l’appareil.
+                accéder directement à vos fonds sans posséder l'appareil.
               </p>
             </InfoBubble>
 
@@ -309,7 +309,7 @@ const Cryptos: React.FC = () => {
               <p className="leading-relaxed mb-2">
                 Les cryptomonnaies ne sont pas stockées dans le wallet lui-même.
                 Elles existent sur la <Term id="blockchain" />. Le portefeuille
-                contient les clés permettant d’y accéder.
+                contient les clés permettant d'y accéder.
               </p>
 
               <p className="leading-relaxed mb-2">
@@ -344,15 +344,15 @@ const Cryptos: React.FC = () => {
               </p>
 
               <ul className="list-disc list-inside leading-relaxed mb-2">
-                <li>Activer l’authentification à deux facteurs (2FA)</li>
-                <li>Vérifier l’adresse des sites pour éviter le phishing</li>
+                <li>Activer l'authentification à deux facteurs (2FA)</li>
+                <li>Vérifier l'adresse des sites pour éviter le phishing</li>
                 <li>Ne jamais partager sa clé privée ou sa seed phrase</li>
                 <li>Utiliser un cold wallet pour les montants importants</li>
               </ul>
 
               <p className="leading-relaxed">
-                En crypto, il n’existe généralement aucun recours en cas de vol
-                : la sécurité dépend entièrement de l’utilisateur.
+                En crypto, il n'existe généralement aucun recours en cas de vol
+                : la sécurité dépend entièrement de l'utilisateur.
               </p>
             </InfoBubble>
           </div>
@@ -370,12 +370,12 @@ const Cryptos: React.FC = () => {
             >
               <p className="leading-relaxed mb-3">
                 Cette page présente les bases des cryptomonnaies. Pour se lancer
-                sereinement, il est recommandé de se former, d’expérimenter sur
-                des comptes démo et de suivre l’actualité des marchés.
+                sereinement, il est recommandé de se former, d'expérimenter sur
+                des comptes démo et de suivre l'actualité des marchés.
               </p>
               <p className="leading-relaxed">
                 Ne considérez jamais les cryptos comme un moyen rapide de
-                s’enrichir. Discipline, patience et gestion du risque sont
+                s'enrichir. Discipline, patience et gestion du risque sont
                 essentiels.
               </p>
             </InfoBubble>

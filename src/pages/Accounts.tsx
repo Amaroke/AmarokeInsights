@@ -225,15 +225,15 @@ const Accounts: React.FC = () => {
                 title="Plan d'Épargne Entreprise (PEE)"
                 color="text-blue-400"
               >
-                Compte collectif proposé par l’entreprise pour investir dans des
-                fonds communs, souvent avec abondement de l’employeur.
+                Compte collectif proposé par l'entreprise pour investir dans des
+                fonds communs, souvent avec abondement de l'employeur.
                 <br />
                 <strong>Taux :</strong> Variable selon fonds choisis
                 <br />
-                <strong>Fiscalité :</strong> Abondement exonéré d’impôt sur le
+                <strong>Fiscalité :</strong> Abondement exonéré d'impôt sur le
                 revenu et soumis uniquement aux prélèvements sociaux (
                 <Term id={"CSG/CRDS"} />, 9,7 %). Les plus-values sont exonérées
-                d’impôt sur le revenu si retrait après 5 ans, mais soumises aux
+                d'impôt sur le revenu si retrait après 5 ans, mais soumises aux
                 prélèvements sociaux (18,6 %).
                 <br />
                 <strong>Avantages :</strong> Abondement employeur, fiscalité
@@ -244,7 +244,7 @@ const Accounts: React.FC = () => {
                 etc.), choix limité de fonds.
                 <br />
                 <strong>Stratégie :</strong> Épargne salariale à moyen terme,
-                profiter de l’abondement et optimiser la fiscalité.
+                profiter de l'abondement et optimiser la fiscalité.
               </InfoBubble>
 
               <InfoBubble
@@ -261,10 +261,10 @@ const Accounts: React.FC = () => {
                 sortie. <Term id={"PFU"} /> si sortie en capital, barème de
                 l'impôt sur le revenu si sortie en rente.
                 <br />
-                <strong>Avantages :</strong> Réduction d’impôt, capital
+                <strong>Avantages :</strong> Réduction d'impôt, capital
                 disponible à la retraite.
                 <br />
-                <strong>Inconvénients :</strong> Argent bloqué jusqu’à la
+                <strong>Inconvénients :</strong> Argent bloqué jusqu'à la
                 retraite.
                 <br />
                 <strong>Stratégie :</strong> Préparer sa retraite à long terme.
@@ -275,7 +275,7 @@ const Accounts: React.FC = () => {
                 title="Assurance Vie (AV)"
                 color="text-blue-400"
               >
-                Contrat d’épargne permettant de préparer projets et succession.
+                Contrat d'épargne permettant de préparer projets et succession.
                 <br />
                 <strong>Taux :</strong> Variable selon fonds choisis
                 <br />
@@ -288,7 +288,7 @@ const Accounts: React.FC = () => {
                 possible.
                 <br />
                 <strong>Inconvénients :</strong> Rendement fonds euros faible,
-                unités de compte risquées, frais d’entrée et de gestion à
+                unités de compte risquées, frais d'entrée et de gestion à
                 surveiller.
                 <br />
                 <strong>Stratégie :</strong> Épargne long terme diversifiée,
@@ -300,7 +300,7 @@ const Accounts: React.FC = () => {
                 title="Compte-Titres Ordinaire (CTO)"
                 color="text-blue-400"
               >
-                Compte permettant d’acheter et vendre librement actions,
+                Compte permettant d'acheter et vendre librement actions,
                 obligations, <Term id={"ETF"} />, cryptos et autres titres
                 financiers.
                 <br />
@@ -310,11 +310,11 @@ const Accounts: React.FC = () => {
                 <strong>Fiscalité :</strong> Gains et dividendes soumis au{" "}
                 <Term id={"PFU"} />.
                 <br />
-                <strong>Avantages :</strong> Liberté totale d’investissement,
+                <strong>Avantages :</strong> Liberté totale d'investissement,
                 aucun plafond, possibilité de diversifier internationalement.
                 <br />
                 <strong>Inconvénients :</strong> Risque de perte en capital,
-                fiscalité moins avantageuse qu’un PEA ou PER.
+                fiscalité moins avantageuse qu'un PEA ou PER.
                 <br />
                 <strong>Stratégie :</strong> Investissement à long terme pour
                 diversifier et compléter un PEA ou un PER.
@@ -334,7 +334,7 @@ const Accounts: React.FC = () => {
                 <br />
                 <strong>Avantages :</strong> Rendement stable, sécurisé.
                 <br />
-                <strong>Inconvénients :</strong> Fonds bloqués jusqu’à échéance,
+                <strong>Inconvénients :</strong> Fonds bloqués jusqu'à échéance,
                 autrement aucun intérêt.
                 <br />
                 <strong>Stratégie :</strong> Épargne moyen terme avec faible
@@ -346,7 +346,7 @@ const Accounts: React.FC = () => {
                 title="Compte sur livret / Livret bancaire"
                 color="text-blue-400"
               >
-                Compte d’épargne flexible proposé par les banques.
+                Compte d'épargne flexible proposé par les banques.
                 <br />
                 <strong>Taux :</strong> 1% à 2% en moyenne et selon la banque
                 <br />

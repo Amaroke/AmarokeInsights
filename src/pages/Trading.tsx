@@ -28,7 +28,7 @@ const Trading: React.FC = () => {
           <div className="space-y-4">
             <InfoBubble
               icon={<FaChartLine />}
-              title="Qu’est-ce que le trading ?"
+              title="Qu'est-ce que le trading ?"
               color="text-blue-400"
             >
               <p className="leading-relaxed mb-3">
@@ -38,23 +38,23 @@ const Trading: React.FC = () => {
               </p>
 
               <p className="leading-relaxed mb-3">
-                Contrairement à l’investissement à long terme, le trading
+                Contrairement à l'investissement à long terme, le trading
                 cherche à exploiter les fluctuations de prix, parfois sur
                 quelques minutes, heures ou jours seulement.
               </p>
 
               <p className="leading-relaxed">
-                Le trader ne cherche pas forcément à investir sur la valeur d’un
+                Le trader ne cherche pas forcément à investir sur la valeur d'un
                 actif, mais plutôt les{" "}
                 <b>opportunités offertes par le marché</b>. Les prix évoluent en
-                permanence en fonction de l’offre et de la demande, des annonces
-                économiques, des résultats d’entreprises ou encore des
+                permanence en fonction de l'offre et de la demande, des annonces
+                économiques, des résultats d'entreprises ou encore des
                 événements mondiaux, c'est sur ces mouvements que le trader
                 tente de tirer profit.
               </p>
               <p className="leading-relaxed">
-                Grâce aux plateformes en ligne, il est aujourd’hui possible pour
-                un particulier d’accéder aux marchés financiers du monde entier.
+                Grâce aux plateformes en ligne, il est aujourd'hui possible pour
+                un particulier d'accéder aux marchés financiers du monde entier.
                 Cependant, le trading demande de la discipline, de la formation
                 et une bonne gestion du risque pour espérer être rentable sur le
                 long terme.
@@ -66,7 +66,7 @@ const Trading: React.FC = () => {
               color="text-green-400"
             >
               <p className="leading-relaxed mb-4">
-                Le trading et l’investissement sont souvent confondus, mais
+                Le trading et l'investissement sont souvent confondus, mais
                 leurs objectifs, leurs horizons de temps et leurs niveaux de
                 risque sont en général très différents.
               </p>
@@ -122,7 +122,7 @@ const Trading: React.FC = () => {
 
                     <tr className="bg-gray-900/40">
                       <td className="px-4 py-3 font-medium">
-                        Fréquence d’intervention
+                        Fréquence d'intervention
                       </td>
                       <td className="px-4 py-3">
                         Très élevée / élevée (quotidienne, voire plusieurs fois
@@ -208,14 +208,14 @@ const Trading: React.FC = () => {
               <p className="leading-relaxed mb-3">
                 Les marchés financiers sont{" "}
                 <b>principalement occupés par des institutions</b> (banques,
-                hedge funds, fonds d’investissement) et des traders
-                professionnels qui disposent de ressources, d’outils et
-                d’algorithmes très avancés.
+                hedge funds, fonds d'investissement) et des traders
+                professionnels qui disposent de ressources, d'outils et
+                d'algorithmes très avancés.
               </p>
 
               <p className="leading-relaxed mb-3">
                 Pour un particulier, il peut être difficile de trouver sa place
-                et d’obtenir un avantage durable.{" "}
+                et d'obtenir un avantage durable.{" "}
                 <b>Les marchés sont très compétitifs</b> et les mouvements de
                 prix peuvent être imprévisibles.
               </p>
@@ -224,7 +224,7 @@ const Trading: React.FC = () => {
                 Statistiques réalistes sur le trading particulier :
                 <ul className="list-disc list-inside space-y-1 mt-2">
                   <li>
-                    Environ <b>9 traders sur 10</b> perdent de l’argent
+                    Environ <b>9 traders sur 10</b> perdent de l'argent
                   </li>
                   <li>
                     Le trading est <b>très risqué</b> et peut créer une{" "}
@@ -238,11 +238,11 @@ const Trading: React.FC = () => {
               </p>
 
               <p className="leading-relaxed">
-                Cette réalité souligne l’importance de se former, de commencer
+                Cette réalité souligne l'importance de se former, de commencer
                 petit (compte démo ou faible capital) et de{" "}
                 <b>
                   ne jamais considérer le trading comme un moyen rapide de
-                  s’enrichir
+                  s'enrichir
                 </b>
                 .
               </p>
@@ -268,15 +268,15 @@ const Trading: React.FC = () => {
 
               <ul className="space-y-3">
                 <li>
-                  <strong>Actions :</strong> parts d’entreprises cotées en
-                  bourse. Elles permettent de spéculer sur la performance d’une
+                  <strong>Actions :</strong> parts d'entreprises cotées en
+                  bourse. Elles permettent de spéculer sur la performance d'une
                   société. Volatilité modérée et horaires limités aux heures
-                  d’ouverture des places boursières.
+                  d'ouverture des places boursières.
                 </li>
 
                 <li>
                   <strong>Forex (devises) :</strong> marché des monnaies
-                  (EUR/USD, USD/JPY…). C’est le plus grand marché au monde,
+                  (EUR/USD, USD/JPY…). C'est le plus grand marché au monde,
                   ouvert 24h/24 en semaine, très liquide mais parfois volatile.
                 </li>
 
@@ -288,21 +288,21 @@ const Trading: React.FC = () => {
 
                 <li>
                   <strong>Matières premières :</strong> or, pétrole, gaz, blé…
-                  Leur prix dépend fortement de l’offre, de la demande et des
+                  Leur prix dépend fortement de l'offre, de la demande et des
                   événements géopolitiques.
                 </li>
 
                 <li>
-                  <strong>Indices :</strong> paniers d’actions représentant une
+                  <strong>Indices :</strong> paniers d'actions représentant une
                   économie ou un secteur (ex : <Term id="CAC40" />,{" "}
                   <Term id="S&P500" />
-                  ). Permettent de trader la performance globale d’un marché.
+                  ). Permettent de trader la performance globale d'un marché.
                 </li>
               </ul>
 
               <p className="leading-relaxed mt-4">
                 Chaque marché demande une approche différente, certains sont
-                plus stables, d’autres plus rapides et risqués.
+                plus stables, d'autres plus rapides et risqués.
               </p>
             </InfoBubble>
 
@@ -312,14 +312,14 @@ const Trading: React.FC = () => {
               color="text-green-400"
             >
               <p className="leading-relaxed mb-3">
-                Une plateforme de trading est l’outil qui permet d’accéder aux
-                marchés, d’analyser les prix et de passer des ordres d’achat ou
+                Une plateforme de trading est l'outil qui permet d'accéder aux
+                marchés, d'analyser les prix et de passer des ordres d'achat ou
                 de vente en temps réel.
               </p>
 
               <p className="leading-relaxed mb-3">
                 Elles proposent généralement des graphiques interactifs, des
-                indicateurs techniques et différents types d’ordres pour gérer
+                indicateurs techniques et différents types d'ordres pour gérer
                 ses positions.
               </p>
 
@@ -335,7 +335,7 @@ const Trading: React.FC = () => {
 
                 <li>
                   <strong>Frais :</strong> commissions, <Term id="spread" />,
-                  frais de retrait ou d’inactivité.
+                  frais de retrait ou d'inactivité.
                 </li>
 
                 <li>
@@ -350,17 +350,17 @@ const Trading: React.FC = () => {
 
                 <li>
                   <strong>Qualité des outils :</strong> graphiques, indicateurs,
-                  rapidité d’exécution.
+                  rapidité d'exécution.
                 </li>
 
                 <li>
-                  <strong>Facilité d’utilisation :</strong> interface claire,
+                  <strong>Facilité d'utilisation :</strong> interface claire,
                   adaptée aux débutants ou aux utilisateurs avancés.
                 </li>
 
                 <li>
                   <strong>Compte démo/papier :</strong> possibilité de
-                  s’entraîner sans risque avec de l’argent virtuel.
+                  s'entraîner sans risque avec de l'argent virtuel.
                 </li>
               </ul>
             </InfoBubble>
@@ -405,18 +405,18 @@ const Trading: React.FC = () => {
             >
               <p className="leading-relaxed mb-3">
                 Le swing trading consiste à conserver une position pendant
-                plusieurs jours ou semaines afin de profiter d’une tendance à
+                plusieurs jours ou semaines afin de profiter d'une tendance à
                 court ou moyen terme.
               </p>
 
               <p className="leading-relaxed mb-3">
                 Exemple : acheter un indice ou une action après une correction
-                et la conserver jusqu’à ce que la tendance haussière reprenne.
+                et la conserver jusqu'à ce que la tendance haussière reprenne.
               </p>
 
               <p className="leading-relaxed">
                 Ce style est souvent considéré comme plus accessible car il
-                nécessite moins de présence constante devant l’écran.
+                nécessite moins de présence constante devant l'écran.
               </p>
             </InfoBubble>
 
@@ -438,8 +438,8 @@ const Trading: React.FC = () => {
               </p>
 
               <p className="leading-relaxed">
-                C’est une stratégie exigeante nécessitant une excellente
-                réactivité, des frais faibles et souvent l’utilisation d’un
+                C'est une stratégie exigeante nécessitant une excellente
+                réactivité, des frais faibles et souvent l'utilisation d'un
                 effet de levier.
               </p>
             </InfoBubble>
@@ -450,7 +450,7 @@ const Trading: React.FC = () => {
             >
               <p className="leading-relaxed mb-3">
                 Le position trading consiste à conserver une position pendant
-                plusieurs mois, voire années, afin de profiter d’une tendance
+                plusieurs mois, voire années, afin de profiter d'une tendance
                 majeure du marché.
               </p>
 
@@ -461,8 +461,8 @@ const Trading: React.FC = () => {
               </p>
 
               <p className="leading-relaxed">
-                Ce style se rapproche de l’investissement long terme, mais reste
-                basé sur une logique de trading avec des points d’entrée et de
+                Ce style se rapproche de l'investissement long terme, mais reste
+                basé sur une logique de trading avec des points d'entrée et de
                 sortie précis. Il demande surtout de la patience et une vision
                 globale du marché.
               </p>
@@ -473,7 +473,7 @@ const Trading: React.FC = () => {
               color="text-purple-400"
             >
               <p className="leading-relaxed mb-3">
-                L’algorithmic trading, ou trading automatisé, consiste à
+                L'algorithmic trading, ou trading automatisé, consiste à
                 utiliser des programmes informatiques (algorithmes) pour passer
                 automatiquement des ordres selon des conditions prédéfinies.
               </p>
@@ -506,9 +506,9 @@ const Trading: React.FC = () => {
               color="text-pink-400"
             >
               <p className="leading-relaxed mb-3">
-                La position long consiste à acheter un actif dans l’espoir que
+                La position long consiste à acheter un actif dans l'espoir que
                 son prix augmente. Le profit est réalisé lorsque vous revendez
-                l’actif à un prix supérieur à celui d’achat.
+                l'actif à un prix supérieur à celui d'achat.
               </p>
 
               <p className="leading-relaxed mb-3 font-semibold">
@@ -516,13 +516,13 @@ const Trading: React.FC = () => {
               </p>
 
               <ul className="list-disc list-inside space-y-2 mb-3">
-                <li>Vous achetez l’actif au prix actuel du marché.</li>
+                <li>Vous achetez l'actif au prix actuel du marché.</li>
                 <li>
                   Vous conservez la position tant que le prix monte ou que votre
-                  objectif de gain n’est pas atteint.
+                  objectif de gain n'est pas atteint.
                 </li>
                 <li>
-                  Vous vendez l’actif à un prix supérieur pour réaliser un
+                  Vous vendez l'actif à un prix supérieur pour réaliser un
                   profit.
                 </li>
               </ul>
@@ -556,9 +556,9 @@ const Trading: React.FC = () => {
               color="text-pink-400"
             >
               <p className="leading-relaxed mb-3">
-                La position short consiste à parier sur la baisse du prix d’un
-                actif. Contrairement à l’achat classique (long), on vend d’abord
-                un actif que l’on ne possède pas, puis on le rachète plus tard à
+                La position short consiste à parier sur la baisse du prix d'un
+                actif. Contrairement à l'achat classique (long), on vend d'abord
+                un actif que l'on ne possède pas, puis on le rachète plus tard à
                 un prix inférieur pour réaliser un profit.
               </p>
 
@@ -568,8 +568,8 @@ const Trading: React.FC = () => {
 
               <ul className="list-disc list-inside space-y-2 mb-3">
                 <li>
-                  Vous empruntez des actions auprès d’un <Term id="broker" /> ou
-                  d’un autre investisseur.
+                  Vous empruntez des actions auprès d'un <Term id="broker" /> ou
+                  d'un autre investisseur.
                 </li>
                 <li>
                   Vous vendez immédiatement ces actions sur le marché au prix
@@ -602,7 +602,7 @@ const Trading: React.FC = () => {
               </p>
 
               <p className="leading-relaxed">
-                Le short nécessite une gestion stricte du risque, l’utilisation
+                Le short nécessite une gestion stricte du risque, l'utilisation
                 de <Term id="stop-loss" /> et une bonne compréhension du marché.
               </p>
             </InfoBubble>
@@ -613,7 +613,7 @@ const Trading: React.FC = () => {
               color="text-blue-400"
             >
               <p className="leading-relaxed mb-3">
-                Les chandeliers japonais représentent l’évolution du prix sur
+                Les chandeliers japonais représentent l'évolution du prix sur
                 une période donnée. Chaque bougie contient 4 informations :
                 ouverture, clôture, plus haut et plus bas.
               </p>
@@ -646,7 +646,7 @@ const Trading: React.FC = () => {
               <br />
 
               <p className="leading-relaxed mb-3">
-                Les traits fins au-dessus et en dessous s’appellent les{" "}
+                Les traits fins au-dessus et en dessous s'appellent les{" "}
                 <b>mèches</b> (ou “queues”). Ils représentent les extrêmes
                 atteints pendant la période : le plus haut et le plus bas du
                 prix.
@@ -684,7 +684,7 @@ const Trading: React.FC = () => {
 
               <p className="leading-relaxed">
                 Une bougie verte indique une hausse entre ouverture et clôture.
-                Une bougie rouge indique une baisse. L’analyse des mèches permet
+                Une bougie rouge indique une baisse. L'analyse des mèches permet
                 de comprendre les réactions du marché et les zones de rejet.
               </p>
             </InfoBubble>
@@ -703,16 +703,16 @@ const Trading: React.FC = () => {
             >
               <p className="leading-relaxed mb-3">
                 Cette page présente les <b>bases du trading</b> pour vous
-                familiariser avec les concepts principaux. Elle n’inclut pas
+                familiariser avec les concepts principaux. Elle n'inclut pas
                 encore certains éléments essentiels pour se mettre au trading :
                 gestion du risque, psychologie du trading, indicateurs et
                 outils, exemples pratiques détaillés, etc... Ces sujets seront
                 abordés dans la partie <b>avancée</b> du site. Rappelons que le
                 trading comporte un risque de perte en capital. Vous ne devez
-                investir que l’argent que vous pouvez vous permettre de perdre.
+                investir que l'argent que vous pouvez vous permettre de perdre.
                 Il est fortement recommandé de se former (et pas uniquement via
                 ce site), de pratiquer sur un compte démo et de commencer petit
-                avant d’envisager quoi que ce soit dans le domaine du trading.
+                avant d'envisager quoi que ce soit dans le domaine du trading.
               </p>
             </InfoBubble>
           </div>

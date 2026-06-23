@@ -35,7 +35,16 @@ const NumberField: FC<NumberFieldProps> = ({
         value={Number.isNaN(value) ? "" : value}
         onChange={(e) => {
           const val = e.target.value;
-          onChange(val === "" ? NaN : Number(val));
+          if (val === "") {
+            onChange(NaN);
+            return;
+          }
+          let next = Number(val);
+          if (Number.isFinite(next)) {
+            if (min !== undefined) next = Math.max(next, min);
+            if (max !== undefined) next = Math.min(next, max);
+          }
+          onChange(next);
         }}
         className={`w-full bg-[#101017] border border-gray-700 rounded-lg p-2 text-gray-200 focus:outline-none ${focusClass}`}
       />

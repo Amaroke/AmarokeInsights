@@ -16,7 +16,10 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    reportError(error, { componentStack: info.componentStack });
+    console.error("ErrorBoundary", error, info.componentStack);
+    if (typeof reportError === "function") {
+      reportError(error);
+    }
   }
 
   handleReload = () => {

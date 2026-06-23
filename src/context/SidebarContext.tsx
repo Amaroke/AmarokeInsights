@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { SidebarContext } from "./useSidebar";
+import { storage } from "../utils/storage";
 
 const readBoolean = (key: string, fallback: boolean): boolean => {
-  const stored = localStorage.getItem(key);
+  const stored = storage.get(key);
   if (stored === null) return fallback;
   try {
     return JSON.parse(stored) === true;
@@ -20,7 +21,7 @@ export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
   useEffect(() => {
-    localStorage.setItem("sidebarIsOpen", JSON.stringify(isOpen));
+    storage.set("sidebarIsOpen", JSON.stringify(isOpen));
   }, [isOpen]);
 
   const toggleSidebar = () => setIsOpen((prev) => !prev);
@@ -34,7 +35,7 @@ export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 
   useEffect(() => {
-    localStorage.setItem("sidebarAdvancedMode", JSON.stringify(isAdvanced));
+    storage.set("sidebarAdvancedMode", JSON.stringify(isAdvanced));
   }, [isAdvanced]);
 
   const toggleAdvanced = () => setIsAdvanced((prev) => !prev);

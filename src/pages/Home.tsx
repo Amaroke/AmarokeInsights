@@ -13,10 +13,7 @@ import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
-    <PageLayout
-      title="AmarokeInsights"
-      description="AmarokeInsights : apprendre la finance étape par étape — épargne, investissement, trading et cryptos, expliqués simplement."
-    >
+    <PageLayout title="AmarokeInsights">
       <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-24">
         <InfoBubble
           icon={<FaLightbulb />}
@@ -29,7 +26,7 @@ const Home: React.FC = () => {
             claire possible.
           </p>
           <p className="leading-relaxed">
-            L’objectif est double, <strong>consolider mes connaissances</strong>{" "}
+            L'objectif est double, <strong>consolider mes connaissances</strong>{" "}
             et les rendre accessibles à toute personne souhaitant découvrir la
             finance étape par étape.
           </p>
@@ -45,11 +42,11 @@ const Home: React.FC = () => {
             site sont amenés à changer.
           </p>
           <p className="leading-relaxed">
-            L’approche est <strong>progressive et expérimentale</strong>,
-            certains sujets seront approfondis, d’autres resteront en surface.
+            L'approche est <strong>progressive et expérimentale</strong>,
+            certains sujets seront approfondis, d'autres resteront en surface.
           </p>
           <p className="leading-relaxed">
-            Enfin, certains domaines ou stratégies qui m’intéressent peu ne
+            Enfin, certains domaines ou stratégies qui m'intéressent peu ne
             seront pas abordés ici, une raison supplémentaire de{" "}
             <strong>poursuivre vos recherches de votre côté</strong>.
           </p>
@@ -70,12 +67,12 @@ const Home: React.FC = () => {
           </p>
           <p className="leading-relaxed">
             Pour débuter la navigation, vous pouvez ouvrir le menu en cliquant
-            sur l’icône
+            sur l'icône
             <span className="inline-block align-middle mx-1">
               <FaBars className="inline" />
             </span>
             située en haut à gauche de la page. Ce menu (accessible à tout
-            moment) vous permet d’accéder rapidement à toutes les sections du
+            moment) vous permet d'accéder rapidement à toutes les sections du
             site.
           </p>
         </InfoBubble>
@@ -87,7 +84,7 @@ const Home: React.FC = () => {
         >
           <p className="leading-relaxed">
             Le mode avancé regroupe des sections plus détaillées et plus
-            subjectives. J’y aborde des sujets qui m’intéressent ou que je
+            subjectives. J'y aborde des sujets qui m'intéressent ou que je
             découvre, sans forcément suivre une structure stricte ou un plan
             pédagogique.
           </p>
@@ -101,7 +98,7 @@ const Home: React.FC = () => {
           </p>
 
           <p className="leading-relaxed">
-            Ces pages sont également les plus susceptibles d’évoluer, d’être
+            Ces pages sont également les plus susceptibles d'évoluer, d'être
             modifiées ou réorganisées au fur et à mesure de mes apprentissages.
           </p>
         </InfoBubble>
@@ -115,7 +112,7 @@ const Home: React.FC = () => {
             Je suis toujours preneur de{" "}
             <strong>retours, suggestions et contributions</strong> ! Si vous
             souhaitez discuter, proposer une amélioration ou me signaler une
-            erreur, <strong>n’hésitez pas à me contacter</strong>.
+            erreur, <strong>n'hésitez pas à me contacter</strong>.
           </p>
           <Link
             to="/contact"
@@ -145,14 +142,14 @@ const Home: React.FC = () => {
             économiques et financiers sont{" "}
             <strong>complexes et changeants</strong>, influencés par de
             multiples facteurs (politiques, psychologiques, technologiques…). Ce
-            qui est vrai aujourd’hui peut ne plus l’être demain.
+            qui est vrai aujourd'hui peut ne plus l'être demain.
           </p>
 
           <p className="leading-relaxed">
             Vous restez seul{" "}
             <strong>responsable de vos décisions financières</strong>. Prenez
             toujours le temps de vérifier vos informations, garder un esprit
-            critique et croiser vos sources avant d’agir.
+            critique et croiser vos sources avant d'agir.
           </p>
         </InfoBubble>
       </div>

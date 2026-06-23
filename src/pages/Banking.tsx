@@ -36,19 +36,19 @@ const Banking: React.FC = () => {
                 color="text-purple-400"
               >
                 <p className="leading-relaxed mb-3">
-                  Quand vous déposez de l’argent sur votre compte bancaire, il
+                  Quand vous déposez de l'argent sur votre compte bancaire, il
                   ne reste pas « stocké dans un coffre ». En réalité,{" "}
                   <strong>
                     la banque devient propriétaire de votre argent
                   </strong>
-                  , et ce que vous possédez, c’est une
+                  , et ce que vous possédez, c'est une
                   <strong> créance sur la banque</strong>. Elle peut utiliser
                   votre argent pour prêter, investir ou renforcer sa solidité
                   financière.
                 </p>
 
                 <p className="leading-relaxed mb-3">
-                  Même si vous ne possédez plus physiquement l’argent, la banque
+                  Même si vous ne possédez plus physiquement l'argent, la banque
                   doit :
                 </p>
 
@@ -63,7 +63,7 @@ const Banking: React.FC = () => {
                   </li>
                   <li>
                     Assurer une sécurité réglementaire : vos dépôts sont
-                    protégés jusqu’à 100 000 € par le <Term id={"FGDR"} /> en
+                    protégés jusqu'à 100 000 € par le <Term id={"FGDR"} /> en
                     cas de faillite de la banque.
                   </li>
                 </ul>
@@ -71,16 +71,16 @@ const Banking: React.FC = () => {
 
               <InfoBubble
                 icon={<FaExchangeAlt />}
-                title="Le cœur du modèle bancaire : prêter plus cher qu’ils n’empruntent"
+                title="Le cœur du modèle bancaire : prêter plus cher qu'ils n'empruntent"
                 color="text-purple-400"
               >
                 <p className="leading-relaxed mb-3">
-                  Le principal métier d’une banque est simple :
+                  Le principal métier d'une banque est simple :
                   <strong>
                     {" "}
-                    emprunter de l’argent à bas coût et le prêter plus cher
+                    emprunter de l'argent à bas coût et le prêter plus cher
                   </strong>
-                  . La différence entre les deux s’appelle la{" "}
+                  . La différence entre les deux s'appelle la{" "}
                   <strong>marge bancaire</strong>.
                 </p>
 
@@ -100,7 +100,7 @@ const Banking: React.FC = () => {
                   </li>
                   <li>
                     Chaque année, elle perçoit environ{" "}
-                    <strong>600 € d’intérêts</strong>.
+                    <strong>600 € d'intérêts</strong>.
                   </li>
                 </ul>
 
@@ -116,13 +116,13 @@ const Banking: React.FC = () => {
                 color="text-purple-400"
               >
                 <p className="leading-relaxed mb-3">
-                  Les banques ne prêtent pas uniquement l’argent que vous
+                  Les banques ne prêtent pas uniquement l'argent que vous
                   déposez. Elles fonctionnent avec un système appelé
                   <strong> réserves fractionnaires</strong>.
                 </p>
 
                 <p className="leading-relaxed">
-                  Cela signifie qu’elles ne gardent qu’une petite partie des
+                  Cela signifie qu'elles ne gardent qu'une petite partie des
                   dépôts en réserve, et peuvent prêter le reste.
                 </p>
 
@@ -161,7 +161,7 @@ const Banking: React.FC = () => {
                 </ul>
 
                 <p className="leading-relaxed mt-3">
-                  À chaque étape, une partie de l’argent est conservée en
+                  À chaque étape, une partie de l'argent est conservée en
                   réserve et <strong>le reste est prêté à nouveau</strong>. Le
                   montant total de crédits accordés devient bien supérieur au
                   dépôt initial de 1 000 €.
@@ -169,7 +169,7 @@ const Banking: React.FC = () => {
 
                 <p className="leading-relaxed mt-3">
                   Résultat : <strong>le crédit crée de la monnaie</strong>. Ce
-                  n’est pas de l’argent « imprimé », mais de l’argent scriptural
+                  n'est pas de l'argent « imprimé », mais de l'argent scriptural
                   créé par le système bancaire, sous le contrôle des autorités
                   financières.
                 </p>
@@ -187,10 +187,10 @@ const Banking: React.FC = () => {
                 color="text-purple-400"
               >
                 <p className="leading-relaxed mb-3">
-                  Les banques peuvent aussi emprunter de l’argent auprès de la{" "}
+                  Les banques peuvent aussi emprunter de l'argent auprès de la{" "}
                   <Term id={"BCE"} />. Celle-ci fixe les
                   <strong> taux directeurs</strong>, qui influencent toute
-                  l’économie.
+                  l'économie.
                 </p>
 
                 <p className="leading-relaxed">
@@ -200,15 +200,15 @@ const Banking: React.FC = () => {
                 <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
                   <li>Les banques empruntent à faible coût.</li>
                   <li>Les crédits sont moins chers pour les particuliers.</li>
-                  <li>L’économie est stimulée.</li>
+                  <li>L'économie est stimulée.</li>
                 </ul>
 
                 <p className="leading-relaxed">
                   Par exemple, si une banque emprunte à la BCE à 3 % et prête
                   des crédits immobiliers à 4,5 %, elle conserve une marge de
-                  1,5 %. À l’inverse, quand la BCE augmente ses taux, les
+                  1,5 %. À l'inverse, quand la BCE augmente ses taux, les
                   crédits deviennent plus chers et les rendements des produits
-                  d’épargne augmentent, car elles doivent attirer des dépôts.
+                  d'épargne augmentent, car elles doivent attirer des dépôts.
                 </p>
               </InfoBubble>
 
@@ -229,7 +229,7 @@ const Banking: React.FC = () => {
                   </li>
                   <li>
                     <strong>
-                      Frais sur les produits d’épargne et d’investissement
+                      Frais sur les produits d'épargne et d'investissement
                       :{" "}
                     </strong>{" "}
                     <Term id={"AssuranceVie"} />, <Term id={"PEA"} />, etc.
@@ -259,7 +259,7 @@ const Banking: React.FC = () => {
                 </p>
 
                 <p className="leading-relaxed">
-                  En France, vos dépôts sont garantis jusqu’à
+                  En France, vos dépôts sont garantis jusqu'à
                   <strong> 100 000 € par personne et par banque</strong>.
                 </p>
 
@@ -269,14 +269,14 @@ const Banking: React.FC = () => {
 
                 <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
                   <li>
-                    La banque est surveillée et reçoit de l’argent pour rester
+                    La banque est surveillée et reçoit de l'argent pour rester
                     solide
                   </li>
                   <li>
                     Elle peut être rachetée ou fusionner avec une autre banque
                   </li>
                   <li>
-                    Elle peut être réorganisée sous le contrôle de l’État pour
+                    Elle peut être réorganisée sous le contrôle de l'État pour
                     éviter les problèmes
                   </li>
                 </ul>
@@ -291,33 +291,33 @@ const Banking: React.FC = () => {
             <div className="space-y-4">
               <InfoBubble
                 icon={<FaPercentage />}
-                title="Taux d’épargne"
+                title="Taux d'épargne"
                 color="text-purple-400"
               >
                 <p className="leading-relaxed mb-3">
-                  Tous les produits d’épargne affichent un taux, mais il faut
+                  Tous les produits d'épargne affichent un taux, mais il faut
                   distinguer le <strong>taux brut</strong> (avant impôts et
                   prélèvements sociaux) du <strong>taux net</strong> (ce que
                   vous touchez réellement). Comprendre comment ces taux sont
-                  fixés permet d’éviter de tomber dans le piège des offres "trop
+                  fixés permet d'éviter de tomber dans le piège des offres "trop
                   belles pour être vraies".
                 </p>
 
                 <p className="leading-relaxed mt-3">
                   - <strong>Livrets réglementés</strong> (Livret A, LDDS, LEP) ➜
-                  taux fixés par l’État et révisés 2 fois par an. Leur rendement
-                  est <strong>garanti et exonéré d’impôt</strong>. En revanche,
+                  taux fixés par l'État et révisés 2 fois par an. Leur rendement
+                  est <strong>garanti et exonéré d'impôt</strong>. En revanche,
                   ils sont souvent
-                  <strong> inférieurs à l’inflation</strong>, ce qui entraîne
-                  une perte de pouvoir d’achat à long terme. Exemple : un Livret
-                  A à 3 % alors que l’inflation est à 4 %.
+                  <strong> inférieurs à l'inflation</strong>, ce qui entraîne
+                  une perte de pouvoir d'achat à long terme. Exemple : un Livret
+                  A à 3 % alors que l'inflation est à 4 %.
                 </p>
 
                 <p className="leading-relaxed mt-3">
-                  - <strong>PEL / CEL</strong> ➜ taux déterminés à l’ouverture
+                  - <strong>PEL / CEL</strong> ➜ taux déterminés à l'ouverture
                   et figés dans le temps. Un ancien PEL (avant 2016) peut
-                  rapporter jusqu’à <strong>2,5 % net garanti</strong>, ce qui
-                  est intéressant aujourd’hui. Mais les nouveaux PEL plafonnés à{" "}
+                  rapporter jusqu'à <strong>2,5 % net garanti</strong>, ce qui
+                  est intéressant aujourd'hui. Mais les nouveaux PEL plafonnés à{" "}
                   <strong>1 % brut</strong> ne sont plus compétitifs.
                 </p>
 
@@ -341,7 +341,7 @@ const Banking: React.FC = () => {
                   Exemple : un compte à 2 % brut dans une fintech ➜ après impôt,
                   le taux net tombe à seulement <strong>1,33 %</strong>, soit
                   en-dessous du taux du Livret A (1,5 % net et garanti, au
-                  moment où j’écris ces lignes).
+                  moment où j'écris ces lignes).
                 </p>
 
                 <p className="leading-relaxed mt-2">
@@ -349,7 +349,7 @@ const Banking: React.FC = () => {
                   dépendent des taux directeurs de la <Term id={"BCE"} /> et des
                   frais de dépôt appliqués par la plateforme. Une baisse de la
                   BCE = une baisse immédiate du rendement. Un produit séduisant
-                  peut rapporter moins qu’un livret garanti et défiscalisé.
+                  peut rapporter moins qu'un livret garanti et défiscalisé.
                 </p>
               </InfoBubble>
 
@@ -363,8 +363,8 @@ const Banking: React.FC = () => {
                   valent pas : entre débit immédiat, différé, crédit
                   renouvelable ou cartes premium, les différences peuvent avoir
                   un impact direct sur vos finances. Bien choisir sa carte
-                  permet d’
-                  <strong>éviter des frais inutiles</strong> et d’
+                  permet d'
+                  <strong>éviter des frais inutiles</strong> et d'
                   <strong>optimiser ses avantages</strong>.
                 </p>
 
@@ -385,21 +385,21 @@ const Banking: React.FC = () => {
                   France au niveau des banques. Elle est surtout proposée par
                   certaines enseignes (Carrefour, Fnac, etc.) et fonctionne avec
                   un <strong>crédit renouvelable</strong>. Attention : les{" "}
-                  <strong>taux d’intérêt sont élevés (15–20 %)</strong>. À
+                  <strong>taux d'intérêt sont élevés (15–20 %)</strong>. À
                   éviter sauf si vous en comprenez et acceptez parfaitement les
                   risques et le coût.
                 </p>
 
                 <p className="leading-relaxed italic">
                   Exemple : un achat de 1 000 € remboursé sur 12 mois à 18 % =
-                  environ <strong>90 € d’intérêts</strong> en plus.
+                  environ <strong>90 € d'intérêts</strong> en plus.
                 </p>
 
                 <p className="leading-relaxed mt-3">
                   - <strong>Cartes premium</strong> (Gold, Platinum, Infinite) ➜
                   peuvent coûter plus chères ou nécessiter des conditions
                   spécifiques mais incluent assurances voyage, assistance
-                  médicale, retraits gratuits à l’étranger… Intéressantes
+                  médicale, retraits gratuits à l'étranger… Intéressantes
                   uniquement si vous exploitez réellement ces avantages.
                 </p>
 
@@ -469,9 +469,9 @@ const Banking: React.FC = () => {
 
                 <p className="leading-relaxed mt-3">
                   Choisir une banque et un compte qui minimisent vos frais
-                  fixes, et un courtier ou une plateforme d’investissement
-                  compétitive si vous placez de l’argent. Optimiser les frais,
-                  c’est directement augmenter le rendement net de vos
+                  fixes, et un courtier ou une plateforme d'investissement
+                  compétitive si vous placez de l'argent. Optimiser les frais,
+                  c'est directement augmenter le rendement net de vos
                   placements.
                 </p>
               </InfoBubble>
@@ -490,12 +490,12 @@ const Banking: React.FC = () => {
                 color="text-red-400"
               >
                 <p className="leading-relaxed">
-                  En France, vos dépôts sont protégés jusqu’à{" "}
+                  En France, vos dépôts sont protégés jusqu'à{" "}
                   <strong>100 000 € par établissement bancaire</strong> grâce au{" "}
                   <Term id={"FGDR"} />. Cela couvre comptes courants, livrets,
-                  et comptes d’épargne. Il ne s’applique pas aux pertes dues à
+                  et comptes d'épargne. Il ne s'applique pas aux pertes dues à
                   des fraudes, piratages ou erreurs de gestion de votre part.
-                  Par exemple, si vous êtes victime d’une arnaque et que votre
+                  Par exemple, si vous êtes victime d'une arnaque et que votre
                   compte est vidé, le <Term id={"FGDR"} /> ne vous remboursera
                   pas.
                 </p>
@@ -507,8 +507,8 @@ const Banking: React.FC = () => {
                 </p>
 
                 <p className="leading-relaxed mt-2">
-                  Ce plafond de 100 000 € par établissement bancaire s’applique
-                  uniquement en cas de défaillance de la banque, c’est-à-dire si
+                  Ce plafond de 100 000 € par établissement bancaire s'applique
+                  uniquement en cas de défaillance de la banque, c'est-à-dire si
                   la banque fait faillite et ne peut plus restituer vos fonds.
                   Une manère d'utiliser le <Term id={"FGDR"} /> est de répartir
                   vos fonds sur plusieurs banques pour bénéficier de plusieurs
@@ -540,7 +540,7 @@ const Banking: React.FC = () => {
                     <strong>
                       Ne jamais partager ses codes ou mots de passe
                     </strong>{" "}
-                    : ils sont strictement personnels et permettent d’accéder à
+                    : ils sont strictement personnels et permettent d'accéder à
                     vos comptes.
                   </li>
                   <li>
@@ -586,7 +586,7 @@ const Banking: React.FC = () => {
                   </li>
                   <li>
                     <strong>Escroqueries en ligne</strong> : prêts fictifs,
-                    offres d’investissement trop belles pour être vraies.
+                    offres d'investissement trop belles pour être vraies.
                     Vérifier la légitimité des plateformes avant tout
                     engagement.
                   </li>

@@ -27,13 +27,13 @@ const PersonalFinance: React.FC = () => {
           <div className="space-y-4">
             <InfoBubble
               icon={<FaWallet />}
-              title="Qu’est-ce qu’un budget ?"
+              title="Qu'est-ce qu'un budget ?"
               color="text-yellow-400"
             >
               <p className="leading-relaxed">
-                Le budget est la base d’une bonne gestion financière. Il
+                Le budget est la base d'une bonne gestion financière. Il
                 consiste à<strong> suivre vos revenus et vos dépenses</strong>{" "}
-                afin de savoir où part votre argent et d’éviter les mauvaises
+                afin de savoir où part votre argent et d'éviter les mauvaises
                 surprises.
               </p>
 
@@ -46,13 +46,13 @@ const PersonalFinance: React.FC = () => {
               <ol className="list-decimal list-inside space-y-2 pl-4">
                 <li>
                   <strong>Faites le point</strong> : recensez vos ressources et
-                  vos dépenses réelles sur l’année passée (salaires, revenus
+                  vos dépenses réelles sur l'année passée (salaires, revenus
                   annexes, charges fixes, dépenses variables).
                 </li>
 
                 <li>
                   <strong>Établissez des prévisions</strong> : projetez vos
-                  revenus et dépenses pour le semestre ou l’année à venir.
+                  revenus et dépenses pour le semestre ou l'année à venir.
                   Anticipez les hausses ponctuelles, abonnements et projets
                   (vacances, travaux, etc.).
                 </li>
@@ -60,7 +60,7 @@ const PersonalFinance: React.FC = () => {
                 <li>
                   <strong>Suivez régulièrement</strong> : comparez
                   périodiquement vos prévisions aux dépenses réelles et ajustez
-                  le budget. Avant d’engager une nouvelle dépense, vérifiez que
+                  le budget. Avant d'engager une nouvelle dépense, vérifiez que
                   vous disposez des ressources nécessaires.
                 </li>
               </ol>
@@ -93,7 +93,7 @@ const PersonalFinance: React.FC = () => {
                 </li>
                 <li>
                   <strong>20% : Épargne et remboursement de dettes</strong> :
-                  livret d’épargne, investissements, remboursement anticipé de
+                  livret d'épargne, investissements, remboursement anticipé de
                   crédit.
                 </li>
               </ul>
@@ -116,10 +116,10 @@ const PersonalFinance: React.FC = () => {
                 <li className="mt-4">
                   <strong>Contributions entreprise</strong> : si vous avez accès
                   à un <Term id={"PEE"} />, cotisez au minimum pour profiter au
-                  maximum de l’abondement employeur.
+                  maximum de l'abondement employeur.
                   <p className="mt-1">
                     Exemple : si votre employeur double vos 100 € versés, vous
-                    obtenez immédiatement 200 €. C’est un rendement garanti
+                    obtenez immédiatement 200 €. C'est un rendement garanti
                     difficile à égaler ailleurs.
                   </p>
                 </li>
@@ -130,13 +130,13 @@ const PersonalFinance: React.FC = () => {
                     Cette épargne doit rester disponible à tout moment, de
                     préférence sur un <Term id={"LivretA"} /> ou un{" "}
                     <Term id={"LDDS"} />. Elle couvre les imprévus : panne de
-                    voiture, frais médicaux, perte d’emploi, etc. Nous y
+                    voiture, frais médicaux, perte d'emploi, etc. Nous y
                     revenons en détail plus bas.
                   </p>
                 </li>
                 <li className="mt-4">
                   <strong>Rembourser les dettes</strong> : ciblez en priorité
-                  les crédits à taux élevés (souvent supérieurs à l’inflation).
+                  les crédits à taux élevés (souvent supérieurs à l'inflation).
                   <ul className="list-disc list-inside pl-4 space-y-1">
                     <li>
                       <strong>Prioritaires</strong> : crédits à la consommation,
@@ -144,12 +144,12 @@ const PersonalFinance: React.FC = () => {
                     </li>
                     <li>
                       <strong>Moins urgents</strong> : crédit immobilier (taux
-                      plus faible, parfois inférieur à l’inflation)
+                      plus faible, parfois inférieur à l'inflation)
                     </li>
                   </ul>
                   <p className="mt-1">
-                    Rembourser ces dettes, c’est comme obtenir un rendement
-                    garanti équivalent au taux d’intérêt économisé.
+                    Rembourser ces dettes, c'est comme obtenir un rendement
+                    garanti équivalent au taux d'intérêt économisé.
                   </p>
                 </li>
                 <li className="mt-4">
@@ -158,8 +158,8 @@ const PersonalFinance: React.FC = () => {
                   <Term id={"PER"} />.
                   <p className="mt-1">
                     Les sommes investies peuvent être déduites de vos revenus
-                    imposables, ce qui augmente votre pouvoir d’épargne net.
-                    Attention toutefois : l’argent est bloqué jusqu’à la
+                    imposables, ce qui augmente votre pouvoir d'épargne net.
+                    Attention toutefois : l'argent est bloqué jusqu'à la
                     retraite (hors cas exceptionnels) et ne peut donc pas
                     convenir à tous les objectifs.
                   </p>
@@ -175,7 +175,7 @@ const PersonalFinance: React.FC = () => {
                       exemple.
                     </li>
                     <li>
-                      <strong>Achat immobilier</strong> : constitution d’un
+                      <strong>Achat immobilier</strong> : constitution d'un
                       apport pour un futur logement.
                     </li>
                     <li>
@@ -201,12 +201,12 @@ const PersonalFinance: React.FC = () => {
           <div className="space-y-4">
             <InfoBubble
               icon={<FaPiggyBank />}
-              title="L’épargne"
+              title="L'épargne"
               color="text-green-400"
             >
               <p className="leading-relaxed">
                 Épargner signifie mettre de côté une partie de ses revenus pour
-                préparer l’avenir. L’épargne peut avoir différents objectifs :
+                préparer l'avenir. L'épargne peut avoir différents objectifs :
               </p>
               <ul className="list-disc list-inside space-y-1 pl-2">
                 <li>
@@ -215,7 +215,7 @@ const PersonalFinance: React.FC = () => {
                 </li>
                 <li>
                   <strong>Épargne projet</strong> : pour financer un objectif
-                  spécifique comme des vacances, l’achat d’une voiture ou d’un
+                  spécifique comme des vacances, l'achat d'une voiture ou d'un
                   bien immobilier.
                 </li>
                 <li>
@@ -227,7 +227,7 @@ const PersonalFinance: React.FC = () => {
               <p className="leading-relaxed">
                 Commencez petit mais de façon régulière :{" "}
                 <strong>mieux vaut 50€ par mois que rien du tout</strong>.
-                L’important est la constance et la discipline.
+                L'important est la constance et la discipline.
               </p>
             </InfoBubble>
 
@@ -238,12 +238,12 @@ const PersonalFinance: React.FC = () => {
             >
               <p className="leading-relaxed">
                 Le fonds de secours, aussi appelé épargne de précaution, est un{" "}
-                <strong>coussin de sécurité</strong> qui permet d’affronter un
+                <strong>coussin de sécurité</strong> qui permet d'affronter un
                 imprévu sans avoir à emprunter (panne de voiture, frais
                 médicaux, perte de revenus…).
               </p>
               <p className="leading-relaxed">
-                La recommandation courante est d’avoir{" "}
+                La recommandation courante est d'avoir{" "}
                 <strong>3 à 6 mois de dépenses courantes</strong> mis de côté,
                 idéalement sur un livret accessible et sécurisé (
                 <Term id={"LivretA"} />,
@@ -266,8 +266,8 @@ const PersonalFinance: React.FC = () => {
               <p className="leading-relaxed">
                 Le mouvement FIRE (Financial Independence, Retire Early)
                 consiste à épargner et investir massivement pour atteindre
-                l’indépendance financière le plus tôt possible, afin de pouvoir
-                arrêter de travailler avant l’âge légal de la retraite.
+                l'indépendance financière le plus tôt possible, afin de pouvoir
+                arrêter de travailler avant l'âge légal de la retraite.
               </p>
               <p className="leading-relaxed font-semibold">
                 Principaux types de FIRE :
@@ -275,22 +275,22 @@ const PersonalFinance: React.FC = () => {
               <ul className="list-disc list-inside space-y-1 pl-2">
                 <li>
                   <strong>LeanFIRE</strong> : vivre de manière minimaliste pour
-                  atteindre l’indépendance financière avec moins de revenus.
+                  atteindre l'indépendance financière avec moins de revenus.
                   <br />
                   Exemple : épargner 60-70% de ses revenus et vivre avec un
                   budget réduit.
                 </li>
                 <li>
-                  <strong>FatFIRE</strong> : viser l’indépendance financière
+                  <strong>FatFIRE</strong> : viser l'indépendance financière
                   tout en conservant un style de vie confortable.
                   <br />
                   Exemple : épargner et investir pour générer un revenu passif
                   élevé permettant de maintenir un niveau de vie similaire à
-                  celui d’avant la retraite anticipée.
+                  celui d'avant la retraite anticipée.
                 </li>
                 <li>
                   <strong>BaristaFIRE</strong> : atteindre partiellement
-                  l’indépendance financière et continuer à travailler légèrement
+                  l'indépendance financière et continuer à travailler légèrement
                   ou à temps partiel pour compléter les revenus.
                   <br />
                   Exemple : quitter son emploi principal et travailler quelques
@@ -320,35 +320,35 @@ const PersonalFinance: React.FC = () => {
 
             <InfoBubble
               icon={<FaWallet />}
-              title="Capacité d’épargne"
+              title="Capacité d'épargne"
               color="text-green-500"
             >
               <p className="leading-relaxed">
-                Pour quelqu’un qui gagne un salaire d'environ 2000 € net/mois et
-                paie un loyer, une <strong>capacité d’épargne correcte</strong>{" "}
+                Pour quelqu'un qui gagne un salaire d'environ 2000 € net/mois et
+                paie un loyer, une <strong>capacité d'épargne correcte</strong>{" "}
                 commence autour de <strong>10 % de son revenu net</strong>, soit
                 environ 200 € par mois.
               </p>
 
               <p className="leading-relaxed">
                 Une <strong>épargne plus agressive</strong> commence vers 20 %
-                du net (~400 € par mois) et permet d’accélérer la constitution
-                de patrimoine ou d’atteindre des objectifs FIRE plus rapidement.
+                du net (~400 € par mois) et permet d'accélérer la constitution
+                de patrimoine ou d'atteindre des objectifs FIRE plus rapidement.
               </p>
 
               <p className="leading-relaxed">
                 Si vous vivez chez vos parents ou gagnez plus que le salaire
                 médian, vous pouvez épargner davantage sans réduire votre niveau
-                de vie. Exemple : quelqu’un qui gagne le double (~3 500 € net)
+                de vie. Exemple : quelqu'un qui gagne le double (~3 500 € net)
                 peut raisonnablement épargner{" "}
                 <strong>30 à 40 % de son revenu net</strong> tout en conservant
                 un bon train de vie.
               </p>
 
               <p className="leading-relaxed">
-                À l’inverse, si vos revenus sont plus faibles ou que vous avez
+                À l'inverse, si vos revenus sont plus faibles ou que vous avez
                 des contraintes (enfants, santé, charges non couvertes),
-                atteindre 10 % peut être difficile. Néanmoins, c’est un objectif
+                atteindre 10 % peut être difficile. Néanmoins, c'est un objectif
                 intéressant pour se constituer un{" "}
                 <strong>fonds de précaution</strong> et sécuriser sa situation
                 financière sur le long terme.
@@ -377,7 +377,7 @@ const PersonalFinance: React.FC = () => {
               </p>
 
               <p className="leading-relaxed">
-                La clé est de <strong>maîtriser son taux d’endettement</strong>{" "}
+                La clé est de <strong>maîtriser son taux d'endettement</strong>{" "}
                 : vos mensualités ne devraient pas dépasser environ{" "}
                 <strong>30 à 35 % de vos revenus</strong>.
               </p>
@@ -389,15 +389,15 @@ const PersonalFinance: React.FC = () => {
               </p>
 
               <p className="leading-relaxed">
-                Pour un couple, le calcul change : on prend en compte l’ensemble
-                des revenus et des dettes. Par exemple, si l’un gagne 2 500 € et
-                l’autre 2 000 €, le taux d’endettement maximal de 30 à 35 %
-                s’applique sur 4 500 € de revenus combinés, soit 1 350 à 1 575 €
+                Pour un couple, le calcul change : on prend en compte l'ensemble
+                des revenus et des dettes. Par exemple, si l'un gagne 2 500 € et
+                l'autre 2 000 €, le taux d'endettement maximal de 30 à 35 %
+                s'applique sur 4 500 € de revenus combinés, soit 1 350 à 1 575 €
                 de mensualités totales.
               </p>
 
               <p className="leading-relaxed">
-                Avant d’emprunter, posez-vous deux questions simples :{" "}
+                Avant d'emprunter, posez-vous deux questions simples :{" "}
                 <em>en ai-je vraiment besoin ?</em> et{" "}
                 <em>
                   ai-je les moyens de rembourser sans fragiliser mon budget ?
@@ -426,7 +426,7 @@ const PersonalFinance: React.FC = () => {
                   personnels) avant de rembourser le crédit immobilier.
                 </li>
                 <li>
-                  <strong>Profiter des taux bas</strong> : si les taux d’intérêt
+                  <strong>Profiter des taux bas</strong> : si les taux d'intérêt
                   sont bas, il peut être intéressant de conserver un crédit à
                   faible coût tout en investissant votre épargne ailleurs.
                 </li>
@@ -443,7 +443,7 @@ const PersonalFinance: React.FC = () => {
                   payer normalement le crédit immobilier.
                 </li>
                 <li>
-                  <strong>Cas avec inflation :</strong> si l’inflation est de 5
+                  <strong>Cas avec inflation :</strong> si l'inflation est de 5
                   % et que votre crédit immobilier est à 2 %, la valeur réelle
                   de vos mensualités diminue chaque année. Dans ce cas, il peut
                   être intéressant de garder ce crédit plutôt que de le
@@ -458,9 +458,9 @@ const PersonalFinance: React.FC = () => {
               color="text-red-500"
             >
               <p className="leading-relaxed">
-                L’<strong>emprunt levier</strong> consiste à utiliser un crédit
-                pour investir, dans l’espoir que le rendement de
-                l’investissement soit supérieur au coût du crédit. Cela peut
+                L'<strong>emprunt levier</strong> consiste à utiliser un crédit
+                pour investir, dans l'espoir que le rendement de
+                l'investissement soit supérieur au coût du crédit. Cela peut
                 accélérer la constitution de patrimoine, mais comporte un risque
                 supplémentaire.
               </p>
@@ -476,8 +476,8 @@ const PersonalFinance: React.FC = () => {
               </ul>
 
               <p className="leading-relaxed">
-                ⚠️ Attention, l’emprunt levier augmente le risque. Si le
-                rendement attendu n’est pas atteint, vous devez tout de même
+                ⚠️ Attention, l'emprunt levier augmente le risque. Si le
+                rendement attendu n'est pas atteint, vous devez tout de même
                 rembourser le crédit. Il est conseillé de maîtriser parfaitement
                 son budget et de ne jamais emprunter au-delà de ses capacités
                 financières.

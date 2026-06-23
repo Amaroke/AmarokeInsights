@@ -19,7 +19,7 @@ const CompoundInterest: React.FC = () => {
   return (
     <PageLayout
       title="Calculateur d'intérêts composés"
-      description="Simule la croissance de ton capital grâce aux intérêts composés, mois après mois."
+      description="Simule la croissance de ton capital avec des versements mensuels et des intérêts composés annuels."
     >
       <div className="max-w-6xl mx-auto px-4 py-6 space-y-6 md:mb-0 mb-24">
         <div className="bg-[#1a1a25] rounded-2xl p-6 shadow-lg border border-white/5">

@@ -19,12 +19,12 @@ const Resources: React.FC = () => {
           <div className="space-y-4">
             <InfoBubble
               icon={<FaCalculator />}
-              title="Calcul d’intérêts composés"
+              title="Calcul d'intérêts composés"
               color="text-green-400"
             >
               <p className="leading-relaxed mb-3">
-                Simule la croissance d’un capital dans le temps grâce à
-                l’intérêt composé.
+                Simule la croissance d'un capital dans le temps grâce à
+                l'intérêt composé.
               </p>
               <NavLink
                 to="/compound-interest"
@@ -41,8 +41,8 @@ const Resources: React.FC = () => {
               color="text-purple-400"
             >
               <p className="leading-relaxed mb-3">
-                Estime les mensualités, la durée et le coût total d’un emprunt,
-                en prenant en compte le taux et l’assurance.
+                Estime les mensualités, la durée et le coût total d'un emprunt,
+                en prenant en compte le taux et l'assurance.
               </p>
               <NavLink
                 to="/loan"
@@ -78,7 +78,7 @@ const Resources: React.FC = () => {
                       <p className="font-medium text-yellow-300">Saxo Banque</p>
                       <p className="text-sm text-gray-400">
                         Documentation complète sur les produits et services
-                        d’investissement
+                        d'investissement
                       </p>
                     </div>
                   </div>
@@ -117,7 +117,7 @@ const Resources: React.FC = () => {
                       </p>
                       <p className="text-sm text-gray-400">
                         Chaîne YouTube francophone axée sur les finances
-                        personnelles et l’investissement.
+                        personnelles et l'investissement.
                       </p>
                     </div>
                   </div>
@@ -165,7 +165,7 @@ const Resources: React.FC = () => {
                       </p>
                       <p className="text-sm text-gray-400">
                         Guide collaboratif complet sur la gestion de budget,
-                        l’investissement et la fiscalité.
+                        l'investissement et la fiscalité.
                       </p>
                     </div>
                   </div>

@@ -9,26 +9,35 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    if (open && ref.current) {
+    if (!open) return;
+
+    const updatePosition = () => {
+      if (!ref.current) return;
       const rect = ref.current.getBoundingClientRect();
 
       const margin = 8;
       const width = Math.min(260, window.innerWidth - 16);
 
       let left = rect.left + rect.width / 2 - width / 2;
-
       left = Math.max(
         margin,
         Math.min(left, window.innerWidth - width - margin),
       );
 
-      const top = rect.top - 10;
-
-      setPos({ top, left });
+      setPos({ top: rect.top - 10, left });
       setReady(true);
-    } else {
+    };
+
+    updatePosition();
+
+    window.addEventListener("scroll", updatePosition, true);
+    window.addEventListener("resize", updatePosition);
+
+    return () => {
+      window.removeEventListener("scroll", updatePosition, true);
+      window.removeEventListener("resize", updatePosition);
       setReady(false);
-    }
+    };
   }, [open]);
   useEffect(() => {
     const handleClick = () => setOpen(false);

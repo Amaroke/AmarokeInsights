@@ -12,9 +12,9 @@ import {
   FaEnvelope,
   FaMoneyBillWave,
 } from "react-icons/fa";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useSidebar } from "../context/useSidebar";
-import { setVisit, isNew } from "../utils/visitTracker";
+import { setVisit, isNew, getVisits } from "../utils/visitTracker";
 import { GiBullseye, GiPathDistance, GiWallet } from "react-icons/gi";
 
 const sections = [
@@ -22,7 +22,7 @@ const sections = [
     title: "Fondamentaux",
     advanced: false,
     path: "basics",
-    icon: <FaLightbulb />,
+    icon: FaLightbulb,
     lastUpdated: "2025-08-25",
     items: [
       { title: "Concepts fondamentaux", path: "concepts-fundamentals" },
@@ -33,7 +33,7 @@ const sections = [
     title: "Finance Personnelle",
     advanced: false,
     path: "personal-finance",
-    icon: <GiWallet />,
+    icon: GiWallet,
     lastUpdated: "2025-08-30",
     items: [
       { title: "Budget", path: "budget" },
@@ -48,7 +48,7 @@ const sections = [
     title: "Système Bancaire",
     advanced: false,
     path: "banking",
-    icon: <FaPiggyBank />,
+    icon: FaPiggyBank,
     lastUpdated: "2026-03-16",
     items: [
       { title: "Les banques", path: "how-banks-work" },
@@ -60,7 +60,7 @@ const sections = [
     title: "Types de Comptes",
     advanced: false,
     path: "accounts",
-    icon: <FaMoneyCheckAlt />,
+    icon: FaMoneyCheckAlt,
     lastUpdated: "2026-03-16",
     items: [
       { title: "Comptes courants", path: "current-accounts" },
@@ -72,7 +72,7 @@ const sections = [
     title: "Investissements",
     advanced: false,
     path: "investments",
-    icon: <FaChartLine />,
+    icon: FaChartLine,
     lastUpdated: "2025-12-23",
     items: [
       { title: "Qu'est-ce qu'investir ?", path: "what-is-invest" },
@@ -89,7 +89,7 @@ const sections = [
     title: "Comment investir ?",
     advanced: true,
     path: "investments2",
-    icon: <FaMoneyBillWave />,
+    icon: FaMoneyBillWave,
     lastUpdated: "2026-04-14",
     items: [],
   },
@@ -97,10 +97,10 @@ const sections = [
     title: "Bases du Trading",
     advanced: false,
     path: "trading",
-    icon: <FaChartBar />,
+    icon: FaChartBar,
     lastUpdated: "2026-04-14",
     items: [
-      { title: "Qu’est-ce que le trading ?", path: "trading-intro" },
+      { title: "Qu'est-ce que le trading ?", path: "trading-intro" },
       {
         title: "Marchés & plateformes",
         path: "markets-platforms",
@@ -113,7 +113,7 @@ const sections = [
     title: "Stratégies de Trading",
     advanced: true,
     path: "trading2",
-    icon: <GiBullseye />,
+    icon: GiBullseye,
     lastUpdated: "",
     items: [],
   },
@@ -121,10 +121,10 @@ const sections = [
     title: "Cryptomonnaies",
     advanced: false,
     path: "cryptos",
-    icon: <FaBitcoin />,
+    icon: FaBitcoin,
     lastUpdated: "2026-03-18",
     items: [
-      { title: "Qu’est-ce qu’une crypto ?", path: "what-are-cryptos" },
+      { title: "Qu'est-ce qu'une crypto ?", path: "what-are-cryptos" },
       { title: "Les différentes cryptos", path: "different-cryptos" },
       { title: "Acheter, stocker et sécuriser", path: "buy-store-secure" },
     ],
@@ -133,7 +133,7 @@ const sections = [
     title: "Optimisation Fiscale",
     advanced: true,
     path: "taxes",
-    icon: <FaFolderOpen />,
+    icon: FaFolderOpen,
     lastUpdated: "",
     items: [],
   },
@@ -141,7 +141,7 @@ const sections = [
     title: "Ma Stratégie",
     advanced: false,
     path: "strategy",
-    icon: <GiPathDistance />,
+    icon: GiPathDistance,
     lastUpdated: "",
     items: [
       { title: "Stratégie personnelle", path: "strategie-personnelle" },
@@ -152,7 +152,7 @@ const sections = [
     title: "Outils & Ressources",
     advanced: false,
     path: "resources",
-    icon: <FaBook />,
+    icon: FaBook,
     lastUpdated: "",
     items: [
       { title: "Outils", path: "tools" },
@@ -164,7 +164,7 @@ const sections = [
     title: "Me Contacter",
     advanced: false,
     path: "contact",
-    icon: <FaEnvelope />,
+    icon: FaEnvelope,
     lastUpdated: "",
     items: [],
   },
@@ -184,11 +184,19 @@ const Sidebar: React.FC = () => {
 
   const currentPath = location.pathname.split("/")[1];
 
+  const visits = getVisits();
+
+  const scrollObserverRef = useRef<MutationObserver | null>(null);
+
   useEffect(() => {
     if (currentPath) {
       setExpandedSection(currentPath);
     }
   }, [currentPath, setExpandedSection]);
+
+  useEffect(() => {
+    return () => scrollObserverRef.current?.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -212,9 +220,11 @@ const Sidebar: React.FC = () => {
 
     if (scrollNow()) return;
 
+    scrollObserverRef.current?.disconnect();
     const observer = new MutationObserver(() => {
       if (scrollNow()) observer.disconnect();
     });
+    scrollObserverRef.current = observer;
     observer.observe(document.body, { childList: true, subtree: true });
     window.setTimeout(() => observer.disconnect(), 5000);
   };
@@ -294,7 +304,8 @@ const Sidebar: React.FC = () => {
             .filter((section) => isAdvanced || !section.advanced)
             .map((section) => {
               const isActive = currentPath === section.path;
-              const showNew = isNew(section.path, section.lastUpdated);
+              const showNew = isNew(section.path, section.lastUpdated, visits);
+              const Icon = section.icon;
 
               return (
                 <li key={section.path}>
@@ -318,7 +329,9 @@ const Sidebar: React.FC = () => {
                         : "hover:bg-gray-700 hover:text-white"
                     }`}
                   >
-                    <span className="text-lg">{section.icon}</span>
+                    <span className="text-lg">
+                      <Icon />
+                    </span>
                     <span
                       className={`font-medium ${
                         section.advanced
