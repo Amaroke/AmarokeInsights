@@ -9,12 +9,13 @@ import {
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
     <PageLayout title="AmarokeInsights">
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-24">
+      <Container gap="sm">
         <InfoBubble
           icon={<FaLightbulb />}
           title="Bienvenue !"
@@ -148,11 +149,11 @@ const Home: React.FC = () => {
           <p className="leading-relaxed">
             Vous restez seul{" "}
             <strong>responsable de vos décisions financières</strong>. Prenez
-            toujours le temps de vérifier vos informations, garder un esprit
-            critique et croiser vos sources avant d'agir.
+            toujours le temps de vérifier vos informations, de garder un esprit
+            critique et de croiser vos sources avant d'agir.
           </p>
         </InfoBubble>
-      </div>
+      </Container>
     </PageLayout>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { FaBookOpen } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import {
   FaChartLine,
   FaHandshake,
@@ -19,7 +20,7 @@ const Basics: React.FC = () => {
       title="Les bases de la finance"
       description="Concepts fondamentaux et risques : les bases pour comprendre la finance avant d'investir."
     >
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 md:mb-0 mb-24">
+      <Container>
         <section id="concepts-fundamentals" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Concepts fondamentaux
@@ -283,7 +284,7 @@ const Basics: React.FC = () => {
             </InfoBubble>
           </div>
         </section>
-      </div>
+      </Container>
     </PageLayout>
   );
 };

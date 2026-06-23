@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import Term from "../components/Term";
 
 const Banking: React.FC = () => {
@@ -23,7 +24,7 @@ const Banking: React.FC = () => {
         title="Le système bancaire"
         description="Comment fonctionnent les banques, les taux et frais, et comment se protéger de la fraude."
       >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 md:mb-0 mb-24">
+        <Container>
           <section id="how-banks-work" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Comment fonctionnent les banques ?
@@ -609,7 +610,7 @@ const Banking: React.FC = () => {
               </InfoBubble>
             </div>
           </section>
-        </div>
+        </Container>
       </PageLayout>
     </>
   );

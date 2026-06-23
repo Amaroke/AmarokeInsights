@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { FaHome, FaCalculator } from "react-icons/fa";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import FinanceChart from "../components/FinanceChart";
 import NumberField from "../components/NumberField";
 import { computeLoan } from "../utils/finance";
@@ -26,9 +27,9 @@ const LoanCalculator: React.FC = () => {
   return (
     <PageLayout
       title="Calculateur de prêt"
-      description="Calcule la mensualité, le coût total et l'amortissement de ton prêt."
+      description="Calculez la mensualité, le coût total et l'amortissement de votre prêt."
     >
-      <div className="max-w-6xl mx-auto px-4 py-6 space-y-6 md:mb-0 mb-24">
+      <Container gap="md" widePadding>
         <div className="bg-[#1a1a25] rounded-2xl p-6 shadow-lg border border-white/5">
           <h2 className="text-lg font-semibold mb-4 flex items-center gap-2 text-purple-400">
             <FaCalculator /> Paramètres du prêt
@@ -96,7 +97,7 @@ const LoanCalculator: React.FC = () => {
             inclus.
           </p>
         </div>
-      </div>
+      </Container>
     </PageLayout>
   );
 };

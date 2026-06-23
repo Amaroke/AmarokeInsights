@@ -2,6 +2,7 @@ import React from "react";
 import { FaChartLine, FaExclamationTriangle } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 
 import "@xyflow/react/dist/style.css";
 import InvestmentTree from "../components/InvestmentTree";
@@ -12,7 +13,7 @@ const HowToInvest: React.FC = () => {
       title="Comment investir ?"
       description="Une méthode pas à pas pour décider où placer son argent selon son horizon et son appétence au risque."
     >
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-6 md:mb-0 mb-24">
+      <Container gap="md">
         <h2 className="text-xl font-semibold border-b border-gray-700 pb-2">
           Comment investir ?
         </h2>
@@ -75,7 +76,7 @@ const HowToInvest: React.FC = () => {
           </p>
 
           <p className="leading-relaxed mb-2">
-            Au final, tu obtiens une exposition aux marchés assez proche d'une
+            Au final, on obtient une exposition aux marchés assez proche d'une
             allocation simple, mais avec plus de complexité, plus de couches
             d'intermédiaires, et une performance souvent plus contrainte.
           </p>
@@ -100,7 +101,7 @@ const HowToInvest: React.FC = () => {
           d'un capital.
           <InvestmentTree />
         </InfoBubble>
-      </div>
+      </Container>
     </PageLayout>
   );
 };

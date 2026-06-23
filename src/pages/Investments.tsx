@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import Term from "../components/Term";
 
 const Investments: React.FC = () => {
@@ -18,7 +19,7 @@ const Investments: React.FC = () => {
         title="Les investissements"
         description="Actions, ETF, obligations, fonds, immobilier et placements alternatifs : comprendre comment investir."
       >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 md:mb-0 mb-24">
+        <Container>
           <section id="what-is-invest" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Qu'est-ce qu'investir ?
@@ -1204,7 +1205,7 @@ const Investments: React.FC = () => {
               </InfoBubble>
             </div>
           </section>
-        </div>
+        </Container>
       </PageLayout>
     </>
   );

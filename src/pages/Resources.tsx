@@ -2,6 +2,7 @@ import React from "react";
 import { FaExternalLinkAlt, FaBookOpen, FaCalculator } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import { NavLink } from "react-router-dom";
 import { terms, type TermKey } from "../data/terms";
 
@@ -11,7 +12,7 @@ const Resources: React.FC = () => {
       title="Outils & ressources"
       description="Outils de calcul, documentation et glossaire pour aller plus loin en finance."
     >
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-12 md:mb-0 mb-24">
+      <Container gap="lg">
         <section id="tools" className="scroll-mt-22">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Outils
@@ -240,7 +241,7 @@ const Resources: React.FC = () => {
               })}
           </ul>
         </section>
-      </div>
+      </Container>
     </PageLayout>
   );
 };

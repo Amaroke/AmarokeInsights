@@ -12,7 +12,7 @@ const NotFound: React.FC = () => {
           404 — Page introuvable
         </h1>
         <p className="max-w-md text-gray-400">
-          La page que tu cherches n'existe pas ou a été déplacée.
+          La page que vous cherchez n'existe pas ou a été déplacée.
         </p>
         <Link
           to="/"

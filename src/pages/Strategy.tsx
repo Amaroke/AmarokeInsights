@@ -1,5 +1,6 @@
 import React from "react";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import InfoBubble from "../components/InfoBubble";
 import {
   FaPiggyBank,
@@ -15,7 +16,7 @@ const Strategy: React.FC = () => {
       title="Ma stratégie personnelle"
       description="Ma stratégie d'investissement personnelle et une FAQ pour la mettre en pratique."
     >
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 md:mb-0 mb-24">
+      <Container>
         <section id="strategie-personnelle" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Stratégie personnelle
@@ -317,7 +318,7 @@ const Strategy: React.FC = () => {
             </InfoBubble>
           </div>
         </section>
-      </div>
+      </Container>
     </PageLayout>
   );
 };

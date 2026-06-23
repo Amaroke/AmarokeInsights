@@ -3,6 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { FaDiscord, FaEnvelope } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 
 const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xkgpbqvk");
@@ -16,8 +17,8 @@ const ContactForm: React.FC = () => {
           color="text-purple-400"
         >
           <p className="text-gray-300">
-            Si tu veux parler finance, projets ou juste échanger quelques idées
-            ? Tu peux aussi venir discuter avec moi sur Discord :{" "}
+            Si vous voulez parler finance, projets ou juste échanger quelques
+            idées ? Vous pouvez aussi venir discuter avec moi sur Discord :{" "}
             <span className="font-semibold text-purple-300 select-all">
               amaroke
             </span>
@@ -44,13 +45,13 @@ const ContactForm: React.FC = () => {
         color="text-purple-400"
       >
         <p className="text-gray-300">
-          Tu veux parler finance, projets ou juste échanger quelques idées ?
-          Viens discuter avec moi sur Discord :{" "}
+          Vous voulez parler finance, projets ou juste échanger quelques idées ?
+          Venez discuter avec moi sur Discord :{" "}
           <span className="font-semibold text-purple-300 select-all">
             amaroke
           </span>
           <br />
-          Autrement tu peux aussi m'envoyer un message via le formulaire
+          Autrement vous pouvez aussi m'envoyer un message via le formulaire
           ci-dessous.
         </p>
       </InfoBubble>
@@ -120,9 +121,9 @@ const Contact: React.FC = () => {
       title="Me contacter"
       description="Une question, une suggestion ou une correction ? Contacte-moi via le formulaire ou Discord."
     >
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-24">
+      <Container gap="sm">
         <ContactForm />
-      </div>
+      </Container>
     </PageLayout>
   );
 };

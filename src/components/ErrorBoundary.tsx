@@ -35,8 +35,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             Une erreur est survenue
           </h1>
           <p className="max-w-md text-gray-400">
-            Une erreur inattendue a interrompu l'affichage de cette page. Tu
-            peux recharger pour réessayer.
+            Une erreur inattendue a interrompu l'affichage de cette page. Vous
+            pouvez recharger pour réessayer.
           </p>
           <button
             onClick={this.handleReload}

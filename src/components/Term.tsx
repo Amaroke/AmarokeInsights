@@ -30,12 +30,22 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
 
     updatePosition();
 
-    window.addEventListener("scroll", updatePosition, true);
-    window.addEventListener("resize", updatePosition);
+    let frame = 0;
+    const onViewportChange = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        updatePosition();
+      });
+    };
+
+    window.addEventListener("scroll", onViewportChange, true);
+    window.addEventListener("resize", onViewportChange);
 
     return () => {
-      window.removeEventListener("scroll", updatePosition, true);
-      window.removeEventListener("resize", updatePosition);
+      window.removeEventListener("scroll", onViewportChange, true);
+      window.removeEventListener("resize", onViewportChange);
+      if (frame) window.cancelAnimationFrame(frame);
       setReady(false);
     };
   }, [open]);

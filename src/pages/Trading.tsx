@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import Term from "../components/Term";
 
 const Trading: React.FC = () => {
@@ -19,7 +20,7 @@ const Trading: React.FC = () => {
       title="Les bases du trading"
       description="Marchés, plateformes, types de trading, positions long/short et chandeliers japonais."
     >
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 md:mb-0 mb-24">
+      <Container>
         <section id="trading-intro" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Bases du Trading
@@ -717,7 +718,7 @@ const Trading: React.FC = () => {
             </InfoBubble>
           </div>
         </section>
-      </div>
+      </Container>
     </PageLayout>
   );
 };

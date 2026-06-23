@@ -2,6 +2,7 @@ import React from "react";
 import { FaPiggyBank, FaChartLine } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import Term from "../components/Term";
 
 const Accounts: React.FC = () => {
@@ -11,7 +12,7 @@ const Accounts: React.FC = () => {
         title="Les types de comptes"
         description="Comptes courants, d'épargne et d'investissement : lequel choisir et pourquoi."
       >
-        <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 md:mb-0 mb-24">
+        <Container>
           <section id="current-accounts" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Comptes courants
@@ -385,7 +386,7 @@ const Accounts: React.FC = () => {
               </InfoBubble>
             </div>
           </section>
-        </div>
+        </Container>
       </PageLayout>
     </>
   );

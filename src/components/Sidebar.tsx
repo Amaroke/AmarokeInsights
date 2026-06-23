@@ -12,7 +12,7 @@ import {
   FaEnvelope,
   FaMoneyBillWave,
 } from "react-icons/fa";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useSidebar } from "../context/useSidebar";
 import { setVisit, isNew, getVisits } from "../utils/visitTracker";
 import { GiBullseye, GiPathDistance, GiWallet } from "react-icons/gi";
@@ -184,7 +184,7 @@ const Sidebar: React.FC = () => {
 
   const currentPath = location.pathname.split("/")[1];
 
-  const visits = getVisits();
+  const visits = useMemo(() => getVisits(), []);
 
   const scrollObserverRef = useRef<MutationObserver | null>(null);
 
@@ -207,9 +207,13 @@ const Sidebar: React.FC = () => {
     return () => document.removeEventListener("keydown", handleKey);
   }, [isOpen, setIsOpen]);
 
-  const handleScrollTo = (id: string) => {
+  const handleScrollTo = (sectionPath: string, id: string) => {
     if (window.innerWidth < 768) {
       setIsOpen(false);
+    }
+
+    if (currentPath !== sectionPath) {
+      navigate(`/${sectionPath}`);
     }
 
     const scrollNow = () => {
@@ -353,7 +357,9 @@ const Sidebar: React.FC = () => {
                         {section.items.map((item) => (
                           <li key={item.path}>
                             <button
-                              onClick={() => handleScrollTo(item.path)}
+                              onClick={() =>
+                                handleScrollTo(section.path, item.path)
+                              }
                               className="w-full text-left block px-2 py-1 rounded-lg text-sm hover:bg-gray-600 hover:text-white transition-colors duration-200"
                             >
                               {item.title}

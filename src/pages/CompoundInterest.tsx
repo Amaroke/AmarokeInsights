@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { FaChartBar } from "react-icons/fa";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import FinanceChart from "../components/FinanceChart";
 import NumberField from "../components/NumberField";
 import { computeCompoundInterest } from "../utils/finance";
@@ -19,9 +20,9 @@ const CompoundInterest: React.FC = () => {
   return (
     <PageLayout
       title="Calculateur d'intérêts composés"
-      description="Simule la croissance de ton capital avec des versements mensuels et des intérêts composés annuels."
+      description="Simulez la croissance de votre capital avec des versements mensuels et des intérêts composés annuels."
     >
-      <div className="max-w-6xl mx-auto px-4 py-6 space-y-6 md:mb-0 mb-24">
+      <Container gap="md" widePadding>
         <div className="bg-[#1a1a25] rounded-2xl p-6 shadow-lg border border-white/5">
           <h2 className="text-lg font-semibold mb-4 flex items-center gap-2 text-green-400">
             <FaChartBar /> Paramètres de la simulation
@@ -76,7 +77,7 @@ const CompoundInterest: React.FC = () => {
             line={{ key: "Capital total", color: "#facc15" }}
           />
         </div>
-      </div>
+      </Container>
     </PageLayout>
   );
 };

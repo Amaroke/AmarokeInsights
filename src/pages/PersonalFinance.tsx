@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import Term from "../components/Term";
 
 const PersonalFinance: React.FC = () => {
@@ -19,7 +20,7 @@ const PersonalFinance: React.FC = () => {
       title="Finance personnelle"
       description="Gérer son budget, son épargne (FIRE) et ses dettes : les fondamentaux de la finance personnelle."
     >
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 md:mb-0 mb-24">
+      <Container>
         <section id="budget" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Gérer un budget
@@ -485,7 +486,7 @@ const PersonalFinance: React.FC = () => {
             </InfoBubble>
           </div>
         </section>
-      </div>
+      </Container>
     </PageLayout>
   );
 };

@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
+import Container from "../components/Container";
 import Term from "../components/Term";
 
 const Cryptos: React.FC = () => {
@@ -21,7 +22,7 @@ const Cryptos: React.FC = () => {
       title="Les cryptomonnaies"
       description="Qu'est-ce qu'une cryptomonnaie, les différentes cryptos, et comment les acheter, stocker et sécuriser."
     >
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-4 md:mb-0 mb-24">
+      <Container gap="sm">
         <section id="what-are-cryptos" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Introduction aux cryptomonnaies
@@ -381,7 +382,7 @@ const Cryptos: React.FC = () => {
             </InfoBubble>
           </div>
         </section>
-      </div>
+      </Container>
     </PageLayout>
   );
 };
