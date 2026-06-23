@@ -7,7 +7,6 @@ import {
   type RenderResult,
 } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import { SidebarProvider } from "../context/SidebarContext";
 import PageLayout from "./PageLayout";
 
@@ -18,11 +17,9 @@ const renderWithProviders = (
   route = "/basics",
 ): RenderResult =>
   render(
-    <HelmetProvider>
-      <MemoryRouter initialEntries={[route]}>
-        <SidebarProvider>{ui}</SidebarProvider>
-      </MemoryRouter>
-    </HelmetProvider>,
+    <MemoryRouter initialEntries={[route]}>
+      <SidebarProvider>{ui}</SidebarProvider>
+    </MemoryRouter>,
   );
 
 describe("PageLayout", () => {
@@ -35,7 +32,7 @@ describe("PageLayout", () => {
     expect(screen.getByText("contenu page")).toBeTruthy();
   });
 
-  it("définit le titre du document via Helmet (suffixé par le nom du site)", async () => {
+  it("définit le titre du document (suffixé par le nom du site)", async () => {
     renderWithProviders(
       <PageLayout title="Les bases" description="desc">
         <p>x</p>

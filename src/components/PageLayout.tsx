@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { useSidebar } from "../context/useSidebar";
 
@@ -31,25 +30,24 @@ const PageLayout: React.FC<PageLayoutProps> = ({
 
   return (
     <>
-      <Helmet>
-        <title>{fullTitle}</title>
-        <meta name="description" content={metaDescription} />
-        {noindex && <meta name="robots" content="noindex" />}
-        <link rel="canonical" href={canonical} />
+      <title>{fullTitle}</title>
+      <meta name="description" content={metaDescription} />
+      {noindex && <meta name="robots" content="noindex" />}
+      <link rel="canonical" href={canonical} />
 
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="fr_FR" />
-        <meta property="og:site_name" content={SITE_NAME} />
-        <meta property="og:title" content={fullTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content="fr_FR" />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:image" content={OG_IMAGE} />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={fullTitle} />
-        <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content={OG_IMAGE} />
-      </Helmet>
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={OG_IMAGE} />
+
       <div className="flex h-screen text-gray-300 bg-[#12121b]">
         <main
           className={`flex-1 overflow-auto pt-16 md:mt-16 md:pt-0 transition-all duration-300 ${

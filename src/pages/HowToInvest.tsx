@@ -4,7 +4,7 @@ import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 
 import "@xyflow/react/dist/style.css";
-import InvestmentTree from "../components/InvestementTree";
+import InvestmentTree from "../components/InvestmentTree";
 
 const HowToInvest: React.FC = () => {
   return (

@@ -16,7 +16,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    console.error("ErrorBoundary a intercepté une erreur :", error, info);
+    reportError(error, { componentStack: info.componentStack });
   }
 
   handleReload = () => {

@@ -3,79 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript">
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash,
-          );
-        }
-      })(window.location);
-    </script>
-    <title>AmarokeInsights</title>
+    <script src="/spa-redirect.js"></script>
+
+    <title>AmarokeInsights — Apprendre la finance étape par étape</title>
     <meta name="author" content="Amaroke" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#12121b" />
     <meta
       name="google-site-verification"
       content="jsJS6GB6PVbKlI4X4VXBWuAyvwzzcmh31tBYiyG7css"
     />
 
     <meta
-      name="description"
-      content="AmarokeInsights : apprendre la finance étape par étape — épargne, investissement, trading et cryptos, expliqués simplement."
-    />
-    <link rel="canonical" href="https://amaroke.github.io/AmarokeInsights/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="fr_FR" />
-    <meta property="og:site_name" content="AmarokeInsights" />
-    <meta
-      property="og:url"
-      content="https://amaroke.github.io/AmarokeInsights/"
-    />
-    <meta
-      property="og:title"
-      content="AmarokeInsights — Apprendre la finance étape par étape"
-    />
-    <meta
-      property="og:description"
-      content="Apprendre la finance étape par étape — épargne, investissement, trading et cryptos, expliqués simplement."
-    />
-    <meta
-      property="og:image"
-      content="https://amaroke.github.io/AmarokeInsights/og-image.png"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="AmarokeInsights — Apprendre la finance étape par étape"
-    />
-    <meta
-      name="twitter:description"
-      content="Apprendre la finance étape par étape — épargne, investissement, trading et cryptos, expliqués simplement."
-    />
-    <meta
-      name="twitter:image"
-      content="https://amaroke.github.io/AmarokeInsights/og-image.png"
-    />
-
-    <meta
       http-equiv="Content-Security-Policy"
       content="
         default-src 'self';
-        script-src  'self' 'unsafe-inline';
+        script-src  'self';
         style-src   'self' 'unsafe-inline';
         font-src    'self';
         img-src     'self' data:;
         connect-src 'self' https://formspree.io;
+        object-src  'none';
+        base-uri    'self';
+        form-action 'self' https://formspree.io;
       "
     />
 

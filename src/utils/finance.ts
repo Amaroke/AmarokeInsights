@@ -1,4 +1,4 @@
-const safe = (v: number) => (isNaN(v) ? 0 : v);
+const safe = (v: number) => (Number.isFinite(v) ? v : 0);
 
 export interface CompoundInterestParams {
   initial: number;
@@ -90,6 +90,21 @@ export function computeLoan(params: LoanParams): LoanResult {
   let remainingInterest = monthly * n - loanAmount;
   const data: AmortizationPoint[] = [];
 
+  const pushPoint = (year: number) => {
+    data.push({
+      Année: year,
+      "Capital restant": Math.max(Math.round(safe(remainingCapital)), 0),
+      "Intérêts restants": Math.max(Math.round(safe(remainingInterest)), 0),
+      "Total restant": Math.max(
+        Math.round(safe(remainingCapital + remainingInterest)),
+        0,
+      ),
+    });
+  };
+
+  // Point initial (année 0) : capital et intérêts encore dus en totalité.
+  pushPoint(0);
+
   for (let month = 1; month <= n; month++) {
     const interest = remainingCapital * monthlyRate;
     const principal = monthly - interest;
@@ -97,26 +112,8 @@ export function computeLoan(params: LoanParams): LoanResult {
     remainingCapital -= principal;
     remainingInterest -= interest;
 
-    if (month % 12 === 0 || month === 1) {
-      data.push({
-        Année: month / 12,
-        "Capital restant": Math.max(
-          Math.round(isNaN(remainingCapital) ? 0 : remainingCapital),
-          0,
-        ),
-        "Intérêts restants": Math.max(
-          Math.round(isNaN(remainingInterest) ? 0 : remainingInterest),
-          0,
-        ),
-        "Total restant": Math.max(
-          Math.round(
-            isNaN(remainingCapital + remainingInterest)
-              ? 0
-              : remainingCapital + remainingInterest,
-          ),
-          0,
-        ),
-      });
+    if (month % 12 === 0) {
+      pushPoint(month / 12);
     }
   }
 

@@ -70,7 +70,7 @@ const ContactForm: React.FC = () => {
               className="hidden"
             />
             <label htmlFor="email" className="font-medium text-gray-200">
-              Ton email (pour que je puisse te répondre uniquement)
+              Votre email (pour que je puisse vous répondre uniquement)
             </label>
             <input
               id="email"
@@ -86,7 +86,7 @@ const ContactForm: React.FC = () => {
             />
 
             <label htmlFor="message" className="font-medium text-gray-200">
-              Message
+              Votre message
             </label>
             <textarea
               id="message"

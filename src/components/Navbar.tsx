@@ -6,7 +6,7 @@ import Logo from "../assets/logo.png";
 import { useSidebar } from "../context/useSidebar";
 
 const Navbar: React.FC = () => {
-  const { toggleSidebar, resetSidebar } = useSidebar();
+  const { toggleSidebar, resetSidebar, isOpen } = useSidebar();
   const navigate = useNavigate();
 
   const handleLogoClick = () => {
@@ -19,6 +19,8 @@ const Navbar: React.FC = () => {
       <button
         type="button"
         aria-label="Ouvrir ou fermer le menu"
+        aria-expanded={isOpen}
+        aria-controls="sidebar-nav"
         className="md:hidden mr-4 p-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors"
         onClick={toggleSidebar}
       >
@@ -28,6 +30,8 @@ const Navbar: React.FC = () => {
       <button
         type="button"
         aria-label="Ouvrir ou fermer le menu"
+        aria-expanded={isOpen}
+        aria-controls="sidebar-nav"
         className="hidden md:block mr-4 p-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors"
         onClick={toggleSidebar}
       >

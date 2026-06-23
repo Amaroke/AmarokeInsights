@@ -48,6 +48,16 @@ describe("computeCompoundInterest", () => {
     expect(data).toHaveLength(3);
     expect(data[2]["Capital total"]).toBe(0);
   });
+
+  it("neutralise les valeurs non finies (Infinity)", () => {
+    const data = computeCompoundInterest({
+      initial: Infinity,
+      monthly: 0,
+      rate: 0,
+      years: 1,
+    });
+    expect(data[1]["Capital total"]).toBe(0);
+  });
 });
 
 describe("computeLoan", () => {
@@ -103,5 +113,16 @@ describe("computeLoan", () => {
     });
     const last = res.data[res.data.length - 1];
     expect(last["Capital restant"]).toBe(0);
+  });
+
+  it("commence par un point année 0 avec le capital initial", () => {
+    const res = computeLoan({
+      loanAmount: 100000,
+      years: 10,
+      rate: 5,
+      insurance: 0,
+    });
+    expect(res.data[0].Année).toBe(0);
+    expect(res.data[0]["Capital restant"]).toBe(100000);
   });
 });

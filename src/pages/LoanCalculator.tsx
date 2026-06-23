@@ -1,18 +1,16 @@
 import React, { useState, useMemo } from "react";
-import {
-  ComposedChart,
-  Bar,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
 import { FaHome, FaCalculator } from "react-icons/fa";
 import PageLayout from "../components/PageLayout";
+import FinanceChart from "../components/FinanceChart";
+import NumberField from "../components/NumberField";
 import { computeLoan } from "../utils/finance";
+
+const EUR = {
+  style: "currency",
+  currency: "EUR",
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+} as const;
 
 const LoanCalculator: React.FC = () => {
   const [loanAmount, setLoanAmount] = useState(200000);
@@ -36,36 +34,37 @@ const LoanCalculator: React.FC = () => {
             <FaCalculator /> Paramètres du prêt
           </h2>
           <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4">
-            {[
-              {
-                label: "Montant du prêt (€)",
-                value: loanAmount,
-                setter: setLoanAmount,
-              },
-              { label: "Durée (années)", value: years, setter: setYears },
-              { label: "Taux annuel (%)", value: rate, setter: setRate },
-              {
-                label: "Assurance (%)",
-                value: insurance,
-                setter: setInsurance,
-              },
-            ].map(({ label, value, setter }) => (
-              <div key={label}>
-                <label className="block text-sm text-gray-400 mb-1">
-                  {label}
-                </label>
-                <input
-                  type="number"
-                  value={isNaN(value) ? "" : value}
-                  onChange={(e) => {
-                    const val = e.target.value;
-                    if (val === "") setter(NaN);
-                    else setter(Number(val));
-                  }}
-                  className="w-full bg-[#101017] border border-gray-700 rounded-lg p-2 text-gray-200 focus:border-purple-400 focus:outline-none"
-                />
-              </div>
-            ))}
+            <NumberField
+              label="Montant du prêt (€)"
+              value={loanAmount}
+              onChange={setLoanAmount}
+              min={0}
+              focusClass="focus:border-purple-400"
+            />
+            <NumberField
+              label="Durée (années)"
+              value={years}
+              onChange={setYears}
+              min={0}
+              max={50}
+              focusClass="focus:border-purple-400"
+            />
+            <NumberField
+              label="Taux annuel (%)"
+              value={rate}
+              onChange={setRate}
+              min={0}
+              step={0.1}
+              focusClass="focus:border-purple-400"
+            />
+            <NumberField
+              label="Assurance (%)"
+              value={insurance}
+              onChange={setInsurance}
+              min={0}
+              step={0.1}
+              focusClass="focus:border-purple-400"
+            />
           </div>
         </div>
 
@@ -75,65 +74,27 @@ const LoanCalculator: React.FC = () => {
           </h2>
           <p>
             <strong>Mensualité totale :</strong>{" "}
-            {monthlyPayment.toLocaleString("fr-FR", {
-              style: "currency",
-              currency: "EUR",
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 0,
-            })}
+            {monthlyPayment.toLocaleString("fr-FR", EUR)}
           </p>
           <p className="mb-4">
             <strong>Total payé :</strong>{" "}
-            {totalPayment.toLocaleString("fr-FR", {
-              style: "currency",
-              currency: "EUR",
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 0,
-            })}
+            {totalPayment.toLocaleString("fr-FR", EUR)}
           </p>
-          <ResponsiveContainer width="100%" height={420}>
-            <ComposedChart data={data}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#2c2c3a" />
-              <XAxis dataKey="Année" stroke="#aaa" />
-              <YAxis
-                stroke="#aaa"
-                tickFormatter={(v) => {
-                  if (v < 1000) return v.toLocaleString("fr-FR");
-                  return `${(v / 1000).toLocaleString("fr-FR")}k`;
-                }}
-              />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "#1f1f2e",
-                  border: "1px solid #333",
-                  borderRadius: "10px",
-                }}
-                formatter={(value) =>
-                  `${Number(value).toLocaleString("fr-FR")} €`
-                }
-              />
-              <Legend />
-              <Bar
-                dataKey="Capital restant"
-                stackId="a"
-                fill="#9333ea"
-                radius={[4, 4, 0, 0]}
-              />
-              <Bar
-                dataKey="Intérêts restants"
-                stackId="a"
-                fill="#f472b6"
-                radius={[4, 4, 0, 0]}
-              />
-              <Line
-                type="monotone"
-                dataKey="Total restant"
-                stroke="#facc15"
-                strokeWidth={2}
-                dot={false}
-              />
-            </ComposedChart>
-          </ResponsiveContainer>
+          <FinanceChart
+            data={data}
+            xKey="Année"
+            bars={[
+              { key: "Capital restant", color: "#9333ea" },
+              { key: "Intérêts restants", color: "#f472b6" },
+            ]}
+            line={{ key: "Total restant", color: "#facc15" }}
+          />
+          <p className="mt-4 text-xs text-gray-500">
+            Estimation simplifiée à titre indicatif : mensualité constante
+            (amortissement classique), assurance calculée sur le capital initial
+            pour toute la durée. Les frais de dossier et de garantie ne sont pas
+            inclus.
+          </p>
         </div>
       </div>
     </PageLayout>

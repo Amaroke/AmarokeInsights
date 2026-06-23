@@ -200,20 +200,23 @@ const Sidebar: React.FC = () => {
   }, [isOpen, setIsOpen]);
 
   const handleScrollTo = (id: string) => {
-    let attempts = 0;
-    const tryScroll = () => {
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-      } else if (attempts < 20) {
-        attempts++;
-        setTimeout(tryScroll, 100);
-      }
-    };
-    tryScroll();
     if (window.innerWidth < 768) {
       setIsOpen(false);
     }
+
+    const scrollNow = () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      return Boolean(el);
+    };
+
+    if (scrollNow()) return;
+
+    const observer = new MutationObserver(() => {
+      if (scrollNow()) observer.disconnect();
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    window.setTimeout(() => observer.disconnect(), 5000);
   };
 
   return (
@@ -228,13 +231,19 @@ const Sidebar: React.FC = () => {
       )}
 
       <nav
-        className={`fixed top-16 left-0 h-full bg-[#1b1b27]/95 text-gray-300 p-4 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] transform transition-transform duration-300 ease-in-out w-64 z-300 select-none ${
+        id="sidebar-nav"
+        aria-label="Navigation principale"
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+        className={`fixed top-16 left-0 h-full bg-[#1b1b27]/95 text-gray-300 p-4 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none transform transition-transform duration-300 ease-in-out w-64 z-300 select-none ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="mt-auto pb-4 border-b border-gray-700">
           <button
             onClick={toggleAdvanced}
+            aria-pressed={isAdvanced}
+            aria-label="Activer ou désactiver le mode avancé"
             className="w-full flex items-center justify-between px-2 py-2"
           >
             <span
