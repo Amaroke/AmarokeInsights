@@ -448,7 +448,7 @@ const PersonalFinance: React.FC = () => {
                 </p>
               </ExampleBox>
               <p className="leading-relaxed">
-                ⚠️ L'emprunt levier augmente le risque, si le rendement attendu
+                L'emprunt levier augmente le risque, si le rendement attendu
                 n'est pas atteint, vous devez tout de même rembourser le crédit.
                 Ne jamais emprunter au-delà de ses capacités financières.
               </p>

@@ -1,16 +1,27 @@
 import React from "react";
 import {
   FaChartLine,
+  FaChartBar,
   FaLandmark,
   FaCubes,
   FaHome,
   FaGem,
   FaCube,
+  FaBullseye,
+  FaBalanceScale,
+  FaCalendarAlt,
+  FaBuilding,
+  FaUsers,
+  FaHandshake,
+  FaShieldAlt,
+  FaPaintBrush,
+  FaRocket,
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
 import Term from "../components/Term";
+import ExampleBox from "../components/ExampleBox";
 
 const Investments: React.FC = () => {
   return (
@@ -27,14 +38,14 @@ const Investments: React.FC = () => {
 
             <div className="space-y-4">
               <InfoBubble
-                icon={<FaGem />}
+                icon={<FaBullseye />}
                 title="Pourquoi investir ?"
                 color="text-blue-400"
               >
                 <p>
                   Investir permet de <b>protéger son pouvoir d'achat</b> contre
                   l'inflation, de <b>préparer ses projets futurs</b> (achat
-                  immobilier, retraite, indépendance financière), et de
+                  immobilier, retraite, indépendance financière), et de{" "}
                   <b>soutenir l'économie</b> réelle en finançant des entreprises
                   et des innovations. Ce n'est{" "}
                   <b>pas un moyen de s'enrichir rapidement</b>, mais une
@@ -43,9 +54,9 @@ const Investments: React.FC = () => {
               </InfoBubble>
 
               <InfoBubble
-                icon={<FaCubes />}
+                icon={<FaBalanceScale />}
                 title="Les trois dimensions d'un investissement"
-                color="text-blue-400"
+                color="text-indigo-400"
               >
                 <p>
                   Chaque investissement se mesure selon trois critères :
@@ -53,33 +64,30 @@ const Investments: React.FC = () => {
                   <strong> le risque </strong> (la possibilité de perte), et{" "}
                   <strong> la liquidité </strong> (la facilité à récupérer son
                   argent). Aucun placement n'excelle sur les trois à la fois.
-                  <br />
-                  <strong>Exemples :</strong>
-                  <ul className="list-disc list-inside mt-2 space-y-1">
+                </p>
+                <ExampleBox>
+                  <ul>
                     <li>
-                      <Term id={"CAT"} /> très sûr et liquide (on peut récupérer
-                      son argent à l'échéance, ou en cas de besoin), mais avec
-                      un rendement faible.
+                      <Term id={"CAT"} /> : très sûr, capital garanti, mais
+                      rendement faible.
                     </li>
                     <li>
                       <strong>Actions :</strong> rendement potentiellement
-                      élevé, mais risque important et valeur qui peut beaucoup
-                      varier.
+                      élevé, mais risque important et valeur très variable.
                     </li>
                     <li>
                       <strong>Immobilier :</strong> rendement moyen à bon,
-                      risque modéré (selon le marché), mais liquidité faible
-                      (revente longue). Risque différent de celui des actions ou
-                      d'autres actifs financiers.
+                      risque modéré selon le marché, mais liquidité faible
+                      (revente longue).
                     </li>
                   </ul>
-                </p>
+                </ExampleBox>
               </InfoBubble>
 
               <InfoBubble
                 icon={<FaChartLine />}
                 title="Le couple rendement / risque, comment choisir ?"
-                color="text-blue-400"
+                color="text-blue-500"
               >
                 <p>
                   Tout placement offre un <b>rendement potentiel</b> mais
@@ -126,9 +134,9 @@ const Investments: React.FC = () => {
               </InfoBubble>
 
               <InfoBubble
-                icon={<FaChartLine />}
+                icon={<FaCalendarAlt />}
                 title="Le DCA (Dollar Cost Averaging)"
-                color="text-blue-400"
+                color="text-teal-400"
               >
                 <p className="leading-relaxed mb-3">
                   Le <strong>DCA</strong> (Dollar Cost Averaging), ou
@@ -141,44 +149,26 @@ const Investments: React.FC = () => {
                   l'impact des fluctuations des marchés.
                 </p>
 
-                <p className="leading-relaxed">Concrètement :</p>
+                <ExampleBox>
+                  <p>
+                    Vous investissez <strong>200 € par mois</strong> pendant{" "}
+                    <strong>3 mois</strong> sur le même actif :
+                  </p>
+                  <ul>
+                    <li>Mois 1 : prix = 100 € - vous achetez 2 parts</li>
+                    <li>Mois 2 : prix = 80 € - vous achetez 2,5 parts</li>
+                    <li>Mois 3 : prix = 120 € - vous achetez 1,67 part</li>
+                  </ul>
+                  <p>
+                    Total investi : <strong>600 €</strong>, nombre de parts :{" "}
+                    <strong>environ 6,17</strong>, prix moyen d'achat :{" "}
+                    <strong>environ 97 €</strong> par part malgré un marché
+                    volatil. Si le prix final est à 120 €, votre portefeuille
+                    vaut <strong>740 €</strong>.
+                  </p>
+                </ExampleBox>
 
-                <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
-                  <li>Vous investissez une somme fixe (ex : 200 €).</li>
-                  <li>À une fréquence régulière (ex : tous les mois).</li>
-                  <li>Sur un même actif.</li>
-                </ul>
-
-                <p className="leading-relaxed">
-                  Par exemple, vous investissez <strong>200 € par mois</strong>{" "}
-                  pendant
-                  <strong> 3 mois</strong> sur le même actif :
-                </p>
-
-                <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
-                  <li>Mois 1 : prix = 100 € ➜ vous achetez 2 parts</li>
-                  <li>Mois 2 : prix = 80 € ➜ vous achetez 2,5 parts</li>
-                  <li>Mois 3 : prix = 120 € ➜ vous achetez 1,67 part</li>
-                </ul>
-
-                <p className="leading-relaxed mt-3">
-                  Total investi : <strong>600 €</strong>
-                  <br />
-                  Nombre total de parts : <strong>environ 6,17</strong>
-                  <br />
-                  Prix moyen d'achat : <strong>environ 97 €</strong> par part,
-                  malgré un marché volatil.
-                </p>
-
-                <p className="leading-relaxed mt-3">
-                  Si le prix final de l'actif est à 120 €, votre portefeuille
-                  vaut environ
-                  <strong> 740 €</strong>. Le DCA vous a permis de réduire
-                  l'impact des variations de prix sans avoir à « deviner le bon
-                  moment ».
-                </p>
-
-                <p className="leading-relaxed mt-3 italic">
+                <p className="leading-relaxed mt-3 font-medium">
                   Avantages du DCA :
                 </p>
 
@@ -188,7 +178,7 @@ const Investments: React.FC = () => {
                 </ul>
 
                 <p className="leading-relaxed mt-3">
-                  ⚠️ Le DCA <strong>ne supprime pas le risque</strong> : si le
+                  Le DCA <strong>ne supprime pas le risque</strong>, si le
                   marché baisse durablement, la valeur de l'investissement peut
                   diminuer. Il s'agit d'une stratégie de long terme, efficace
                   surtout sur des actifs diversifiés.
@@ -204,7 +194,7 @@ const Investments: React.FC = () => {
 
             <div className="space-y-4">
               <InfoBubble
-                icon={<FaChartLine />}
+                icon={<FaBuilding />}
                 title="Les actions"
                 color="text-blue-400"
               >
@@ -305,9 +295,9 @@ const Investments: React.FC = () => {
               </InfoBubble>
 
               <InfoBubble
-                icon={<FaChartLine />}
+                icon={<FaChartBar />}
                 title="Les ETF (Trackers)"
-                color="text-blue-400"
+                color="text-sky-400"
               >
                 <p>
                   Un ETF (Exchange Traded Funds), ou tracker, est un produit
@@ -338,41 +328,38 @@ const Investments: React.FC = () => {
                   du produit. Comprendre ces mots-clés permet de savoir
                   exactement ce que vous achetez.
                 </p>
-                <p>
-                  Exemple :{" "}
-                  <strong>Amundi MSCI World Swap (Acc) UCITS ETF</strong>
-                </p>
-
-                <ul className="list-disc list-inside ml-4">
-                  <li>
-                    <strong>Amundi</strong> : émetteur du fonds, responsable de
-                    sa création et de sa gestion opérationnelle. C'est l'entité
-                    qui met le produit sur le marché et en assure le suivi.
-                  </li>
-                  <li>
-                    <strong>MSCI World</strong> : indique l'indice que l'ETF
-                    réplique. Ici, il suit l'indice mondial MSCI World, composé
-                    d'actions de pays développés.
-                  </li>
-                  <li>
-                    <strong>Swap</strong> : veut dire que l'ETF ne détient pas
-                    directement les actions de l'indice. Grâce à un accord
-                    (swap) avec une banque, il reproduit la même performance.
-                    C'est ce mécanisme qui permet d'accéder à des indices
-                    américains tout en restant éligible au PEA.
-                  </li>
-                  <li>
-                    <strong>UCITS</strong> : montre que l'ETF respecte la
-                    réglementation européenne sur les fonds d'investissement,
-                    garantissant un cadre de sécurité et de transparence.
-                  </li>
-                  <li>
-                    <strong>Acc (Accumulation)</strong> : signifie que les
-                    dividendes générés par les actions du panier sont réinvestis
-                    automatiquement dans l'ETF, au lieu d'être versés aux
-                    investisseurs.
-                  </li>
-                </ul>
+                <ExampleBox>
+                  <p>
+                    <strong>Amundi MSCI World Swap (Acc) UCITS ETF</strong>
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Amundi</strong> : l'émetteur du fonds, qui le crée
+                      et en assure la gestion opérationnelle.
+                    </li>
+                    <li>
+                      <strong>MSCI World</strong> : l'indice répliqué, ici le
+                      MSCI World, qui regroupe des actions de pays développés.
+                    </li>
+                    <li>
+                      <strong>Swap</strong> : l'ETF ne détient pas directement
+                      les actions. Via un accord avec une banque, il reproduit
+                      la même performance. C'est ce mécanisme qui permet
+                      d'accéder à des indices américains tout en restant
+                      éligible au PEA.
+                    </li>
+                    <li>
+                      <strong>UCITS</strong> : l'ETF respecte la réglementation
+                      européenne sur les fonds, garantissant transparence et
+                      cadre de sécurité.
+                    </li>
+                    <li>
+                      <strong>Acc (Accumulation)</strong> : les dividendes sont
+                      réinvestis automatiquement dans le fonds, sans être versés
+                      à l'investisseur.
+                    </li>
+                  </ul>
+                </ExampleBox>
 
                 <p>
                   D'autres mots-clés courants, <strong>Dist</strong> pour
@@ -414,7 +401,7 @@ const Investments: React.FC = () => {
               <InfoBubble
                 icon={<FaLandmark />}
                 title="Les Obligations"
-                color="text-blue-400"
+                color="text-purple-400"
               >
                 <p>
                   Une obligation est un prêt que vous faites à quelqu'un (État,
@@ -431,7 +418,7 @@ const Investments: React.FC = () => {
                     <strong>Obligations à taux fixe :</strong> elles rapportent
                     le même intérêt pendant toute la durée et remboursent le
                     capital à l'échéance. Leur prix peut varier selon les taux
-                    des nouvelles obligations : si les nouveaux taux montent, le
+                    des nouvelles obligations, si les nouveaux taux montent, le
                     prix des anciennes baisse, et inversement.
                   </li>
                   <li>
@@ -483,38 +470,43 @@ const Investments: React.FC = () => {
                   Si vous payez plus cher que la valeur normale (le nominal),
                   votre gain sera plus faible. Si vous payez moins, votre gain
                   sera plus élevé. Les prix peuvent aussi changer à cause des
-                  taux d'intérêt et de la demande sur le marché : si les taux
+                  taux d'intérêt et de la demande sur le marché, si les taux
                   augmentent ou que peu de gens veulent acheter l'obligation,
                   son prix baisse, si les taux baissent ou que beaucoup de gens
                   veulent l'obligation, son prix monte.
                 </p>
 
-                <h3 className="font-semibold mt-4">Exemples concrets</h3>
-                <p>
-                  <strong>Exemple 1 - Variation des taux :</strong> vous
-                  possédez une obligation qui verse 50 € d'intérêt par an. Si
-                  les taux d'intérêt du marché augmentent, les nouvelles
-                  obligations sont plus intéressantes. La vôtre devient moins
-                  attrayante et son prix baisse.
-                </p>
-                <p>
-                  <strong>Exemple 2 - Obligation avec coupon :</strong> vous
-                  achetez une obligation de 1 000 € qui verse 50 € par an
-                  pendant 5 ans. Si vous payez 1 050 € pour l'acheter, vous
-                  recevrez toujours 50 € par an, mais votre rendement réel sera
-                  un peu plus faible car vous avez payé plus cher que le
-                  nominal.
-                </p>
-                <p>
-                  <strong>Exemple 3 - Zéro-coupon :</strong> vous achetez une
-                  obligation qui ne verse pas d'intérêt mais remboursera 1 000 €
-                  dans 3 ans. Si vous l'achetez pour 900 €, vous gagnez 100 € à
-                  l'échéance, même sans recevoir d'intérêt annuel.
-                </p>
-                <p>
-                  Ces exemples supposent que vous gardez l'obligation jusqu'à
-                  son remboursement et que l'emprunteur ne fait pas défaut.
-                </p>
+                <ExampleBox>
+                  <p>
+                    <strong>Exemple 1 - Variation des taux</strong>
+                    <br />
+                    Vous possédez une obligation qui verse 50 € d'intérêt par
+                    an. Si les taux du marché augmentent, les nouvelles
+                    obligations rapportent plus. La vôtre devient moins
+                    attrayante, son prix baisse.
+                  </p>
+                  <p>
+                    <strong>Exemple 2 - Obligation avec coupon</strong>
+                    <br />
+                    Vous achetez une obligation de 1 000 € qui verse 50 € par an
+                    pendant 5 ans. Si vous payez 1 050 € pour l'acheter, vous
+                    recevrez toujours 50 € par an, mais votre rendement réel
+                    sera plus faible car vous avez payé plus cher que le
+                    nominal.
+                  </p>
+                  <p>
+                    <strong>Exemple 3 - Zéro-coupon</strong>
+                    <br />
+                    Vous achetez une obligation qui ne verse pas d'intérêt mais
+                    remboursera 1 000 € dans 3 ans. Si vous l'achetez pour 900
+                    €, vous gagnez 100 € à l'échéance sans recevoir d'intérêt
+                    annuel.
+                  </p>
+                  <p>
+                    Ces exemples supposent que vous gardez l'obligation jusqu'à
+                    son remboursement et que l'emprunteur ne fait pas défaut.
+                  </p>
+                </ExampleBox>
                 <h3 className="font-semibold mt-4">
                   Notation de risque d'une obligation
                 </h3>
@@ -590,9 +582,9 @@ const Investments: React.FC = () => {
               </InfoBubble>
 
               <InfoBubble
-                icon={<FaChartLine />}
+                icon={<FaUsers />}
                 title="Les Fonds d'investissement (OPCVM, SICAV, FCP)"
-                color="text-blue-400"
+                color="text-indigo-400"
               >
                 <p>
                   Les fonds d'investissement, également appelés{" "}
@@ -736,7 +728,7 @@ const Investments: React.FC = () => {
               <InfoBubble
                 icon={<FaCubes />}
                 title="Produits dérivés et structurés"
-                color="text-purple-400"
+                color="text-orange-400"
               >
                 <p>
                   Ces produits sont principalement utilisés pour le trading ou
@@ -842,16 +834,14 @@ const Investments: React.FC = () => {
                 <p>
                   L'immobilier direct implique une gestion active, entretien,
                   recherche de locataires, gestion administrative. Il est peu
-                  liquide, car la revente peut prendre du temps. C'est cet
-                  aspect qui me déplait le plus, et c'est pour cela que je n'en
-                  parle pas plus en détail ici.
+                  liquide, car la revente peut prendre du temps.
                 </p>
               </InfoBubble>
 
               <InfoBubble
-                icon={<FaHome />}
+                icon={<FaBuilding />}
                 title="SCPI (Société Civile de Placement Immobilier)"
-                color="text-green-400"
+                color="text-green-500"
               >
                 <p>
                   Une SCPI permet d'investir dans l'immobilier locatif collectif
@@ -898,38 +888,42 @@ const Investments: React.FC = () => {
               </InfoBubble>
 
               <InfoBubble
-                icon={<FaHome />}
+                icon={<FaHandshake />}
                 title="Crowdfunding immobilier"
-                color="text-green-400"
+                color="text-emerald-400"
               >
-                <p>
-                  Le crowdfunding immobilier permet de financer un projet
-                  immobilier en investissant via une plateforme en ligne,
-                  souvent sous forme de prêt ou de participation au capital. Il
-                  offre des rendements potentiels attractifs sur des projets
-                  ciblés, mais comporte un risque plus élevé et une liquidité
-                  limitée.
+                <p className="leading-relaxed">
+                  Permet de financer un projet immobilier (construction,
+                  rénovation) via une plateforme en ligne, en prêtant de
+                  l'argent à un promoteur ou en prenant une participation au
+                  capital. Durée courte (12 à 36 mois), rendements annoncés
+                  souvent entre 8 et 12 %, mais risque réel plus élevé que ce
+                  que les chiffres laissent penser.
                 </p>
-                <ul className="list-disc list-inside ml-4">
-                  <li>
-                    <strong>Prêt participatif :</strong> vous prêtez de l'argent
-                    au promoteur et recevez des intérêts selon le projet.
-                  </li>
-                  <li>
-                    <strong>Equity :</strong> vous devenez copropriétaire du
-                    projet, avec un potentiel de plus-value à la revente.
-                  </li>
-                  <li>
-                    <strong>Durée :</strong> généralement 12 à 36 mois selon le
-                    projet.
-                  </li>
-                  <li>
-                    <strong>Risques :</strong> retard ou défaut de livraison,
-                    défaut du promoteur, perte partielle ou totale du capital et
-                    liquidité limitée, car les fonds restent bloqués jusqu'à la
-                    fin du projet.
-                  </li>
-                </ul>
+                <ExampleBox>
+                  <p>
+                    <strong>Deux formes possibles</strong>
+                    <br />
+                    En prêt participatif, vous prêtez de l'argent au promoteur
+                    et recevez des intérêts fixes sur la durée du projet. En
+                    equity, vous devenez copropriétaire du projet et touchez une
+                    plus-value si la revente se passe bien - mais aussi une
+                    perte si ça se passe mal.
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Risque principal :</strong> retard ou défaut de
+                      livraison, promoteur en difficulté financière, perte
+                      partielle ou totale du capital. Les fonds sont bloqués
+                      jusqu'à la fin du projet.
+                    </li>
+                    <li>
+                      <strong>À noter :</strong> le taux affiché est brut. Après
+                      le <Term id={"PFU"} />, un rendement annoncé à 10 % donne
+                      environ 6,9 % net.
+                    </li>
+                  </ul>
+                </ExampleBox>
               </InfoBubble>
             </div>
           </section>
@@ -1010,7 +1004,7 @@ const Investments: React.FC = () => {
               <InfoBubble
                 icon={<FaCube />}
                 title="Cryptoactifs et Web3"
-                color="text-yellow-400"
+                color="text-orange-400"
               >
                 <p>
                   Les cryptoactifs regroupent les cryptomonnaies comme le
@@ -1068,9 +1062,9 @@ const Investments: React.FC = () => {
               </InfoBubble>
 
               <InfoBubble
-                icon={<FaCube />}
+                icon={<FaRocket />}
                 title="Private Equity"
-                color="text-yellow-400"
+                color="text-rose-400"
               >
                 <p>
                   Le Private Equity (capital-investissement) consiste à investir
@@ -1085,9 +1079,9 @@ const Investments: React.FC = () => {
               </InfoBubble>
 
               <InfoBubble
-                icon={<FaCube />}
+                icon={<FaShieldAlt />}
                 title="Hedge Funds"
-                color="text-yellow-400"
+                color="text-red-400"
               >
                 <p>
                   Les Hedge Funds sont des fonds d'investissement alternatifs
@@ -1143,9 +1137,9 @@ const Investments: React.FC = () => {
               </InfoBubble>
 
               <InfoBubble
-                icon={<FaGem />}
+                icon={<FaPaintBrush />}
                 title="Placements atypiques (art, vin, montres...)"
-                color="text-yellow-400"
+                color="text-amber-400"
               >
                 <p>
                   Les placements atypiques regroupent les investissements dans

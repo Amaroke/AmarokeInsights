@@ -9,6 +9,7 @@ import {
   FaLightbulb,
 } from "react-icons/fa";
 import Term from "../components/Term";
+import Disclaimer from "../components/Disclaimer";
 
 const Strategy: React.FC = () => {
   return (
@@ -17,44 +18,18 @@ const Strategy: React.FC = () => {
       description="Ma stratégie d'investissement personnelle et une FAQ pour la mettre en pratique."
     >
       <Container>
+        <Disclaimer title="Stratégie personnelle, pas un modèle universel">
+          Ce qui suit reflète mes choix et convictions personnels en matière
+          d'investissement. Ces décisions dépendent de ma situation, de mon
+          horizon de placement et de mon appétence au risque, ils ne sont pas
+          nécessairement adaptés à la vôtre. Rien ici ne constitue un conseil
+          financier.
+        </Disclaimer>
         <section id="strategie-personnelle" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Stratégie personnelle
           </h2>
           <div className="space-y-6">
-            <InfoBubble
-              icon={<FaLightbulb />}
-              title="Ma vision"
-              color="text-green-400"
-            >
-              <p className="leading-relaxed mt-3">
-                Cette section présente <strong>mon profil personnel</strong> et
-                ma manière d'investir. Les informations, choix et positions que
-                vous y trouverez reflètent mes expériences, mes convictions et
-                ma tolérance au risque.
-              </p>
-
-              <p className="leading-relaxed mt-3">
-                ⚠️ Ce contenu est fourni{" "}
-                <strong>à titre informatif uniquement</strong>. Il ne doit pas
-                être considéré comme un conseil financier ou reproduit tel quel.
-                Je suis encore en phase d'apprentissage, et mes stratégies
-                évoluent avec le temps. L'objectif est de partager ma perception
-                du monde financier le plus neutrement possible, sans inciter à
-                suivre mes choix.
-              </p>
-
-              <p className="leading-relaxed mt-3 text-gray-400">
-                Rappelons que mon objectif initial est de partager ma vision,
-                mes réflexions et avant tout d'apprendre à travers ce projet. Si
-                je partage ici ma stratégie personnelle, c'est dans un esprit
-                d'exposition de mes choix et non d'incitation à les suivre
-                aveuglément. Au contraire, j'espère que cela encouragera chacun
-                à forger sa propre voie en fonction de ses objectifs et de sa
-                situation personnelle.
-              </p>
-            </InfoBubble>
-
             <InfoBubble
               icon={<FaPiggyBank />}
               title="Matelas de sécurité - Livret A"

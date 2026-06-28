@@ -8,6 +8,8 @@ Tous les changements de ce projet sont documentés dans ce fichier.
 - Refonte visuelle et petits ajustements de la page sur les bases de la finance.
 - Mise à jour de la partie "Ma Stratégie" ajout d'une question sur la location dans la FAQ.
 - Refonte visuelle de la page sur les types de comptes bancaires.
+- Réorganisation de la page sur les investissements.
+- Refonte de la Sidebar.
 - Changement de police pour une meilleure lisibilité.
 
 ## [1.2.1] - 23/06/2026

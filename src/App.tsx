@@ -10,7 +10,6 @@ const Banking = lazy(() => import("./pages/Banking"));
 const PersonalFinance = lazy(() => import("./pages/PersonalFinance"));
 const Investments = lazy(() => import("./pages/Investments"));
 const Trading = lazy(() => import("./pages/Trading"));
-const Trading2 = lazy(() => import("./pages/Trading2"));
 const Taxes = lazy(() => import("./pages/Taxes"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Cryptos = lazy(() => import("./pages/Cryptos"));
@@ -45,7 +44,6 @@ function App() {
               <Route path="/cryptos/*" element={<Cryptos />} />
               <Route path="/investments2/*" element={<HowToInvest />} />
               <Route path="/trading/*" element={<Trading />} />
-              <Route path="/trading2/*" element={<Trading2 />} />
               <Route path="/taxes/*" element={<Taxes />} />
               <Route path="/resources/*" element={<Resources />} />
               <Route path="/strategy/*" element={<Strategy />} />

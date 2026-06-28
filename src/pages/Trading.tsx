@@ -13,6 +13,7 @@ import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
 import Term from "../components/Term";
+import Disclaimer from "../components/Disclaimer";
 
 const Trading: React.FC = () => {
   return (
@@ -21,15 +22,22 @@ const Trading: React.FC = () => {
       description="Marchés, plateformes, types de trading, positions long/short et chandeliers japonais."
     >
       <Container>
+        <Disclaimer title="Activité à haut risque de perte">
+          Le trading actif est une activité à haut risque. La grande majorité
+          des traders particuliers perdent de l'argent sur le long terme. Cette
+          section est informative et ne constitue pas un conseil financier. Ne
+          tradez jamais avec de l'argent que vous ne pouvez pas vous permettre
+          de perdre.
+        </Disclaimer>
         <section id="trading-intro" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-            Bases du Trading
+            Qu'est-ce que le trading ?
           </h2>
 
           <div className="space-y-4">
             <InfoBubble
               icon={<FaChartLine />}
-              title="Qu'est-ce que le trading ?"
+              title="Bases du Trading"
               color="text-blue-400"
             >
               <p className="leading-relaxed mb-3">
@@ -708,8 +716,8 @@ const Trading: React.FC = () => {
                 encore certains éléments essentiels pour se mettre au trading :
                 gestion du risque, psychologie du trading, indicateurs et
                 outils, exemples pratiques détaillés, etc... Ces sujets seront
-                abordés dans la partie <b>subjective</b> du site. Rappelons que le
-                trading comporte un risque de perte en capital. Vous ne devez
+                abordés dans la partie <b>subjective</b> du site. Rappelons que
+                le trading comporte un risque de perte en capital. Vous ne devez
                 investir que l'argent que vous pouvez vous permettre de perdre.
                 Il est fortement recommandé de se former (et pas uniquement via
                 ce site), de pratiquer sur un compte démo et de commencer petit

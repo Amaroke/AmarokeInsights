@@ -15,6 +15,7 @@ import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
 import Term from "../components/Term";
+import Disclaimer from "../components/Disclaimer";
 
 const Cryptos: React.FC = () => {
   return (
@@ -23,14 +24,20 @@ const Cryptos: React.FC = () => {
       description="Qu'est-ce qu'une cryptomonnaie, les différentes cryptos, et comment les acheter, stocker et sécuriser."
     >
       <Container gap="sm">
+        <Disclaimer title="Actifs à très haut risque">
+          Les cryptomonnaies sont des actifs extrêmement volatils. Leur valeur
+          peut chuter de 50 % ou plus en quelques semaines. Cette section est
+          informative et ne constitue pas un conseil d'investissement. Investir
+          en crypto comporte un risque de perte totale du capital.
+        </Disclaimer>
         <section id="what-are-cryptos" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-            Introduction aux cryptomonnaies
+            Qu'est-ce qu'une crypto-monnaie ?
           </h2>
           <div className="space-y-4">
             <InfoBubble
               icon={<FaBitcoin />}
-              title="Qu'est-ce qu'une crypto-monnaie ?"
+              title="Introduction aux cryptomonnaies"
               color="text-blue-400"
             >
               <p className="leading-relaxed mb-3">

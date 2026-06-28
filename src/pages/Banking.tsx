@@ -176,7 +176,7 @@ const Banking: React.FC = () => {
                 </p>
 
                 <p className="leading-relaxed mt-3 italic">
-                  ⚠️ Ce mécanisme est strictement encadré : les banques doivent
+                  Ce mécanisme est strictement encadré : les banques doivent
                   respecter des règles de solvabilité, de liquidité et de fonds
                   propres pour éviter les excès et les crises financières.
                 </p>
@@ -346,11 +346,11 @@ const Banking: React.FC = () => {
                 </p>
 
                 <p className="leading-relaxed mt-2">
-                  ⚠️ Ces taux <strong>ne sont pas garantis</strong> : ils
-                  dépendent des taux directeurs de la <Term id={"BCE"} /> et des
-                  frais de dépôt appliqués par la plateforme. Une baisse de la
-                  BCE = une baisse immédiate du rendement. Un produit séduisant
-                  peut rapporter moins qu'un livret garanti et défiscalisé.
+                  Ces taux <strong>ne sont pas garantis</strong> : ils dépendent
+                  des taux directeurs de la <Term id={"BCE"} /> et des frais de
+                  dépôt appliqués par la plateforme. Une baisse de la BCE = une
+                  baisse immédiate du rendement. Un produit séduisant peut
+                  rapporter moins qu'un livret garanti et défiscalisé.
                 </p>
               </InfoBubble>
 

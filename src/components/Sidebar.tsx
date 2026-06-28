@@ -6,7 +6,6 @@ import {
   FaChartLine,
   FaMoneyCheckAlt,
   FaBitcoin,
-  FaFolderOpen,
   FaLightbulb,
   FaChartBar,
   FaEnvelope,
@@ -15,14 +14,15 @@ import {
 import { useEffect, useMemo, useRef } from "react";
 import { useSidebar } from "../context/useSidebar";
 import { setVisit, isNew, getVisits } from "../utils/visitTracker";
-import { GiBullseye, GiPathDistance, GiWallet } from "react-icons/gi";
+import { GiPathDistance, GiWallet } from "react-icons/gi";
 
 const sections = [
   {
     title: "Fondamentaux",
-    advanced: false,
     path: "basics",
     icon: FaLightbulb,
+    iconColor: "text-yellow-400",
+    activeColor: "bg-yellow-500/10 text-yellow-50",
     lastUpdated: "2025-08-25",
     items: [
       { title: "Concepts fondamentaux", path: "concepts-fundamentals" },
@@ -31,24 +31,23 @@ const sections = [
   },
   {
     title: "Finance Personnelle",
-    advanced: false,
     path: "personal-finance",
     icon: GiWallet,
+    iconColor: "text-green-400",
+    activeColor: "bg-green-500/10 text-green-50",
     lastUpdated: "2025-08-30",
     items: [
       { title: "Budget", path: "budget" },
-      {
-        title: "Épargne & FIRE",
-        path: "fire",
-      },
+      { title: "Épargne & FIRE", path: "fire" },
       { title: "Dettes & emprunts", path: "debt" },
     ],
   },
   {
     title: "Système Bancaire",
-    advanced: false,
     path: "banking",
     icon: FaPiggyBank,
+    iconColor: "text-blue-400",
+    activeColor: "bg-blue-500/10 text-blue-50",
     lastUpdated: "2026-03-16",
     items: [
       { title: "Les banques", path: "how-banks-work" },
@@ -58,9 +57,10 @@ const sections = [
   },
   {
     title: "Types de Comptes",
-    advanced: false,
     path: "accounts",
     icon: FaMoneyCheckAlt,
+    iconColor: "text-indigo-400",
+    activeColor: "bg-indigo-500/10 text-indigo-50",
     lastUpdated: "2026-03-16",
     items: [
       { title: "Comptes courants", path: "current-accounts" },
@@ -70,9 +70,10 @@ const sections = [
   },
   {
     title: "Investissements",
-    advanced: false,
     path: "investments",
     icon: FaChartLine,
+    iconColor: "text-emerald-400",
+    activeColor: "bg-emerald-500/10 text-emerald-50",
     lastUpdated: "2025-12-23",
     items: [
       { title: "Qu'est-ce qu'investir ?", path: "what-is-invest" },
@@ -87,62 +88,42 @@ const sections = [
   },
   {
     title: "Comment investir ?",
-    advanced: true,
     path: "investments2",
     icon: FaMoneyBillWave,
+    iconColor: "text-teal-400",
+    activeColor: "bg-teal-500/10 text-teal-50",
     lastUpdated: "2026-04-14",
     items: [
-      {
-        title: "Organigramme : comment j'investirais ?",
-        path: "organigram",
-      },
-      {
-        title: "Pourquoi le PEA ?",
-        path: "pea-interesting",
-      },
+      { title: "Organigramme : comment j'investirais ?", path: "organigram" },
+      { title: "Pourquoi le PEA ?", path: "pea-interesting" },
       {
         title: "PEA vs Plan 111bis Luxembourgeois",
         path: "pea-vs-plan-111bis",
       },
-      {
-        title: "Assurance Vie vs CTO",
-        path: "av-vs-cto",
-      },
-      {
-        title: "Limites des assurances vie",
-        path: "av-limits",
-      },
+      { title: "Assurance Vie vs CTO", path: "av-vs-cto" },
+      { title: "Limites des assurances vie", path: "av-limits" },
     ],
   },
   {
-    title: "Bases du Trading",
-    advanced: true,
+    title: "Trading",
     path: "trading",
     icon: FaChartBar,
+    iconColor: "text-orange-400",
+    activeColor: "bg-orange-500/10 text-orange-50",
     lastUpdated: "2026-04-14",
     items: [
       { title: "Qu'est-ce que le trading ?", path: "trading-intro" },
-      {
-        title: "Marchés & plateformes",
-        path: "markets-platforms",
-      },
+      { title: "Marchés & plateformes", path: "markets-platforms" },
       { title: "Les types de trading", path: "trading-types" },
       { title: "Positions Long / Short & Chandeliers", path: "long-short" },
     ],
   },
   {
-    title: "Stratégies de Trading",
-    advanced: true,
-    path: "trading2",
-    icon: GiBullseye,
-    lastUpdated: "",
-    items: [],
-  },
-  {
     title: "Cryptomonnaies",
-    advanced: true,
     path: "cryptos",
     icon: FaBitcoin,
+    iconColor: "text-amber-400",
+    activeColor: "bg-amber-500/10 text-amber-50",
     lastUpdated: "2026-03-18",
     items: [
       { title: "Qu'est-ce qu'une crypto ?", path: "what-are-cryptos" },
@@ -150,19 +131,21 @@ const sections = [
       { title: "Acheter, stocker et sécuriser", path: "buy-store-secure" },
     ],
   },
-  {
+  /* {
     title: "Optimisation Fiscale",
-    advanced: true,
     path: "taxes",
     icon: FaFolderOpen,
+    iconColor: "text-gray-400",
+    activeColor: "bg-gray-500/10 text-gray-50",
     lastUpdated: "",
     items: [],
-  },
+  }, */
   {
     title: "Ma Stratégie",
-    advanced: false,
     path: "strategy",
     icon: GiPathDistance,
+    iconColor: "text-violet-400",
+    activeColor: "bg-violet-500/10 text-violet-50",
     lastUpdated: "",
     items: [
       { title: "Stratégie personnelle", path: "strategie-personnelle" },
@@ -171,9 +154,10 @@ const sections = [
   },
   {
     title: "Outils & Ressources",
-    advanced: false,
     path: "resources",
     icon: FaBook,
+    iconColor: "text-slate-400",
+    activeColor: "bg-slate-500/10 text-slate-50",
     lastUpdated: "",
     items: [
       { title: "Outils", path: "tools" },
@@ -183,9 +167,10 @@ const sections = [
   },
   {
     title: "Me Contacter",
-    advanced: false,
     path: "contact",
     icon: FaEnvelope,
+    iconColor: "text-pink-400",
+    activeColor: "bg-pink-500/10 text-pink-50",
     lastUpdated: "",
     items: [],
   },
@@ -194,14 +179,8 @@ const sections = [
 const Sidebar: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const {
-    isOpen,
-    setIsOpen,
-    expandedSection,
-    setExpandedSection,
-    isAdvanced,
-    toggleAdvanced,
-  } = useSidebar();
+  const { isOpen, setIsOpen, expandedSection, setExpandedSection } =
+    useSidebar();
 
   const currentPath = location.pathname.split("/")[1];
 
@@ -275,128 +254,72 @@ const Sidebar: React.FC = () => {
         }`}
       >
         <div className="flex flex-col min-h-full">
-          <div className="pb-4 border-b border-gray-700">
-            <button
-              onClick={toggleAdvanced}
-              aria-pressed={isAdvanced}
-              aria-label="Activer ou désactiver le mode subjectif"
-              className="w-full flex items-center justify-between px-2 py-2"
-            >
-              <span
-                className={`text-sm font-medium transition ${
-                  !isAdvanced ? "text-white" : "text-gray-400"
-                }`}
-              >
-                Normal
-              </span>
-              <div
-                className={`relative w-14 h-7 rounded-full transition ${
-                  isAdvanced
-                    ? "bg-linear-to-r from-orange-300 to-orange-400"
-                    : "bg-gray-400"
-                }`}
-              >
-                <div
-                  className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-300 ${
-                    isAdvanced ? "translate-x-7" : "translate-x-0"
-                  }`}
-                />
-              </div>
-              <span className="text-sm font-medium transition flex items-center gap-1">
-                <span
-                  className={`${
-                    isAdvanced
-                      ? "bg-linear-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent"
-                      : "text-gray-400"
-                  }`}
-                >
-                  Subjectif
-                </span>
-                <span
-                  aria-hidden="true"
-                  className={
-                    !isAdvanced
-                      ? "bg-linear-to-r bg-clip-text text-transparent bg-gray-400"
-                      : ""
-                  }
-                >
-                  🔥
-                </span>
-              </span>
-            </button>
-          </div>
-          <ul className="flex-1 space-y-3 pt-4">
-            {sections
-              .filter((section) => isAdvanced || !section.advanced)
-              .map((section) => {
-                const isActive = currentPath === section.path;
-                const showNew = isNew(
-                  section.path,
-                  section.lastUpdated,
-                  visits,
-                );
-                const Icon = section.icon;
+          <ul className="flex-1 space-y-1">
+            {sections.map((section) => {
+              const isActive = currentPath === section.path;
+              const showNew = isNew(section.path, section.lastUpdated, visits);
+              const Icon = section.icon;
 
-                return (
-                  <li key={section.path}>
-                    <NavLink
-                      to={`/${section.path}`}
-                      onClick={(e) => {
-                        setVisit(section.path);
-                        if (window.innerWidth < 768) {
-                          e.preventDefault();
-                          setExpandedSection(
-                            expandedSection === section.path
-                              ? null
-                              : section.path,
-                          );
-                          navigate(`/${section.path}`);
-                        }
-                      }}
-                      className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors duration-200 ${
+              return (
+                <li key={section.path}>
+                  <NavLink
+                    to={`/${section.path}`}
+                    onClick={(e) => {
+                      setVisit(section.path);
+                      if (window.innerWidth < 768) {
+                        e.preventDefault();
+                        setExpandedSection(
+                          expandedSection === section.path
+                            ? null
+                            : section.path,
+                        );
+                        navigate(`/${section.path}`);
+                      }
+                    }}
+                    className={`group flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${
+                      isActive
+                        ? `${section.activeColor} ring-1 ring-inset ring-white/15`
+                        : "text-gray-200 hover:bg-white/5 hover:text-white"
+                    }`}
+                  >
+                    <span
+                      className={`text-base shrink-0 transition-all duration-200 ${
                         isActive
-                          ? "bg-blue-600 text-white"
-                          : "hover:bg-gray-700 hover:text-white"
+                          ? `${section.iconColor} scale-110`
+                          : "group-hover:text-gray-300"
                       }`}
                     >
-                      <span className="text-lg">
-                        <Icon />
+                      <Icon />
+                    </span>
+                    <span className="font-medium text-sm flex-1">
+                      {section.title}
+                    </span>
+                    {showNew && (
+                      <span className="text-[10px] bg-red-500 text-white px-1.5 py-0.5 rounded-full font-bold">
+                        NEW
                       </span>
-                      <span
-                        className={`font-medium ${
-                          section.advanced
-                            ? "bg-linear-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent"
-                            : ""
-                        }`}
-                      >
-                        {section.title}
-                      </span>
-                      {showNew && (
-                        <span className="text-xs bg-red-500 text-white px-1.5 py-0.5 rounded-full">
-                          NEW
-                        </span>
-                      )}
-                    </NavLink>
-                    {expandedSection === section.path &&
-                      section.items.length > 0 && (
-                        <ul className="mt-2 ml-6 space-y-1">
-                          {section.items.map((item) => (
-                            <li key={item.path}>
-                              <button
-                                onClick={() =>
-                                  handleScrollTo(section.path, item.path)
-                                }
-                                className="w-full text-left block px-2 py-1 rounded-lg text-sm hover:bg-gray-600 hover:text-white transition-colors duration-200"
-                              >
-                                {item.title}
-                              </button>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                  </li>
-                );
-              })}
+                    )}
+                  </NavLink>
+                  {expandedSection === section.path &&
+                    section.items.length > 0 && (
+                      <ul className="mt-1 ml-4 pl-3 border-l border-gray-700/60 space-y-0.5 pb-1">
+                        {section.items.map((item) => (
+                          <li key={item.path}>
+                            <button
+                              onClick={() =>
+                                handleScrollTo(section.path, item.path)
+                              }
+                              className="w-full text-left px-2 py-1.5 rounded text-xs text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200"
+                            >
+                              {item.title}
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                </li>
+              );
+            })}
           </ul>
           <div className="mt-4 pt-3 pb-36 md:pb-16 border-t border-gray-700 flex flex-col gap-1">
             <NavLink

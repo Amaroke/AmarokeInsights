@@ -7,6 +7,7 @@ import Container from "../components/Container";
 import "@xyflow/react/dist/style.css";
 import InvestmentTree from "../components/InvestmentTree";
 import Term from "../components/Term";
+import Disclaimer from "../components/Disclaimer";
 
 const HowToInvest: React.FC = () => {
   return (
@@ -15,6 +16,14 @@ const HowToInvest: React.FC = () => {
       description="Une méthode pas à pas pour décider où placer son argent selon son horizon et son appétence au risque."
     >
       <Container gap="md">
+        <Disclaimer title="Approche personnelle basée sur des études">
+          Cette section s'appuie sur des études et des données pour proposer une
+          approche structurée de l'investissement. Les conclusions tirées et les
+          choix présentés restent des interprétations personnelles de ces
+          données, pas des règles universelles. Les performances passées ne
+          préjugent pas des performances futures. Rien ici ne constitue un
+          conseil financier personnalisé.
+        </Disclaimer>
         <section id="organigram" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Organigramme : comment j'investirais selon ma situation ?

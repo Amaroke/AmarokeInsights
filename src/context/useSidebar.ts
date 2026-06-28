@@ -7,8 +7,6 @@ export interface SidebarContextType {
   expandedSection: string | null;
   setExpandedSection: React.Dispatch<React.SetStateAction<string | null>>;
   resetSidebar: () => void;
-  isAdvanced: boolean;
-  toggleAdvanced: () => void;
 }
 
 export const SidebarContext = createContext<SidebarContextType | undefined>(

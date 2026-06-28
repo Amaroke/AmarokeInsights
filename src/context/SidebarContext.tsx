@@ -30,16 +30,6 @@ export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
     setExpandedSection(null);
   };
 
-  const [isAdvanced, setIsAdvanced] = useState<boolean>(() =>
-    readBoolean("sidebarAdvancedMode", false),
-  );
-
-  useEffect(() => {
-    storage.set("sidebarAdvancedMode", JSON.stringify(isAdvanced));
-  }, [isAdvanced]);
-
-  const toggleAdvanced = () => setIsAdvanced((prev) => !prev);
-
   return (
     <SidebarContext.Provider
       value={{
@@ -49,8 +39,6 @@ export const SidebarProvider: React.FC<{ children: React.ReactNode }> = ({
         expandedSection,
         setExpandedSection,
         resetSidebar,
-        isAdvanced,
-        toggleAdvanced,
       }}
     >
       {children}
