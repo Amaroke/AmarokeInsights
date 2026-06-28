@@ -13,7 +13,7 @@ const SITE_NAME = "AmarokeInsights";
 const SITE_URL = "https://amaroke.github.io/AmarokeInsights";
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
 const DEFAULT_DESCRIPTION =
-  "AmarokeInsights : apprendre la finance étape par étape - épargne, investissement, trading et cryptos, expliqués simplement.";
+  "AmarokeInsights : apprendre la finance étape par étape, épargne, investissement, trading et cryptos, expliqués simplement.";
 
 const PageLayout: React.FC<PageLayoutProps> = ({
   title,
