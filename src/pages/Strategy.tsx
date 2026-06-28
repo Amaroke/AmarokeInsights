@@ -44,7 +44,7 @@ const Strategy: React.FC = () => {
                 suivre mes choix.
               </p>
 
-              <p className="leading-relaxed mt-3 italic text-gray-400">
+              <p className="leading-relaxed mt-3 text-gray-400">
                 Rappelons que mon objectif initial est de partager ma vision,
                 mes réflexions et avant tout d'apprendre à travers ce projet. Si
                 je partage ici ma stratégie personnelle, c'est dans un esprit
@@ -171,23 +171,23 @@ const Strategy: React.FC = () => {
 
             <InfoBubble
               icon={<FaBitcoin />}
-              title="Cryptos - Apprentissage et Exploration"
+              title="Trading et cryptos"
               color="text-yellow-400"
             >
               <p className="leading-relaxed">
-                J'explore actuellement le <strong>trading</strong> et les{" "}
-                <strong>cryptomonnaies</strong> dans une optique
-                d'apprentissage.
+                Je me suis renseigné sur le trading et j'ai pu expérimenter
+                certaines choses, mais j'ai rapidement conclu que ça dépasse ma
+                limite de confort. C'est un domaine trop complexe, trop risqué
+                et trop chronophage pour être intégré sérieusement dans ma
+                stratégie actuelle.
               </p>
               <p className="leading-relaxed">
-                Je possède des crytomonnaies et j'en utilise, mais je ne
-                souhaite pas entrer dans les détails de cette partie pour le
-                moment.
-              </p>
-              <p className="leading-relaxed">
-                Je m'expérimente aussi au trading avec un capital limité, dans
-                le but de comprendre les mécanismes et stratégies sans prendre
-                de risques excessifs.
+                Je continue à m'y intéresser pour comprendre comment tout cela
+                fonctionne, mais je reste en retrait et en observateur. Même
+                conclusion pour les cryptomonnaies, j'apprécie l'aspect
+                technologique, je suis le sujet, j'en comprends les mécanismes
+                de base, mais je préfère ne pas y engager de capital
+                significatif pour le moment.
               </p>
             </InfoBubble>
           </div>
@@ -218,16 +218,17 @@ const Strategy: React.FC = () => {
               title="Pourquoi viser 1 million d'euros ?"
               color="text-purple-400"
             >
-              <p className="leading-relaxed whitespace-pre-line">
+              <p className="leading-relaxed">
                 L'objectif n'est pas le chiffre en lui-même, mais ce qu'il
                 permet. Avec 1 million d'euros investis, en appliquant une règle
-                simple comme les
-                <b> 4 % de retrait annuel</b>, ça représente environ{" "}
-                <b>40 000 € par an</b>. Un revenu sans dépendre d'un salaire,
-                qui couvre largement un mode de vie confortable. L'idée, c'est
-                donc d'acheter du <b>temps</b> et de la
-                <b> liberté</b>, pas des objets. Plus de détails dans la partie
-                où j'explique ce qu'est le <b>FIRE</b>.
+                simple comme les <b>4 % de retrait annuel</b>, ça représente
+                environ <b>40 000 € par an</b>.
+              </p>
+              <p className="leading-relaxed">
+                Un revenu sans dépendre d'un salaire, qui couvre largement un
+                mode de vie confortable. L'idée, c'est donc d'acheter du{" "}
+                <b>temps</b> et de la <b>liberté</b>, pas des objets. Plus de
+                détails dans la partie où j'explique ce qu'est le <b>FIRE</b>.
               </p>
             </InfoBubble>
 
@@ -236,17 +237,22 @@ const Strategy: React.FC = () => {
               title="Tu vas faire quoi si tu prends ta retraite à 45 ans ? Tu ne vas pas t'ennuyer ?"
               color="text-purple-400"
             >
-              <p className="leading-relaxed whitespace-pre-line">
+              <p className="leading-relaxed">
                 Il y a 20 ans, tu savais exactement ce que tu ferais aujourd'hui
                 ? <b>Probablement pas</b>. Donc je verrai bien le moment venu.
+              </p>
+              <p className="leading-relaxed">
                 Par contre, il y a une chose dont je suis sûr : la{" "}
                 <b>routine imposée</b>, comme quand on était enfant, école,
                 obligations, horaires fixes, ça ne m'a jamais plu. Et
                 aujourd'hui, le <b>travail obligatoire</b> me fait le même
-                effet. Si je me libère de cette contrainte, je doute fortement
-                de le regretter. Et au pire, rien ne m'empêche de continuer à
-                travailler, mais cette fois par
-                <b> choix</b>, pas par obligation.
+                effet.
+              </p>
+              <p className="leading-relaxed">
+                Si je me libère de cette contrainte, je doute fortement de le
+                regretter. Et au pire, rien ne m'empêche de continuer à
+                travailler, mais cette fois par <b>choix</b>, pas par
+                obligation.
               </p>
             </InfoBubble>
 
@@ -255,25 +261,30 @@ const Strategy: React.FC = () => {
               title="Comment tu fais pour mettre 2/3 de tes revenus de côté chaque mois ? Tu ne dépenses rien ?"
               color="text-purple-400"
             >
-              <p className="leading-relaxed whitespace-pre-line">
+              <p className="leading-relaxed">
                 C'est surtout une question de <b>choix de vie</b> et de{" "}
                 <b>priorités</b>. Certains postes de dépenses pèsent énormément
                 sur un budget. Par exemple, un enfant peut coûter des dizaines
                 voire des centaines de milliers d'euros, et une voiture
                 représente aussi plusieurs milliers d'euros par an entre
-                l'achat, l'entretien, l'assurance et le carburant. De mon côté,
-                mes loisirs coûtent très peu. Je joue aux jeux vidéo, je regarde
-                des séries, des films, des animés et des vidéos, et je fais du
-                sport, ce qui revient à<b> maximiser mon plaisir personnel</b>.
-                Rien de particulièrement coûteux. Mon passe-temps principal
-                revient à moins de <b>10 centimes de l'heure</b> de
-                divertissement (n'aller pas croire que j'ai tout calculé en ce
-                but c'est juste une constatation à but d'explication). J'utilise
-                des transports en commun (gratuit la majorité du temps). Au
-                final, mon mode de vie est simple et peu dépensier, ce qui me
+                l'achat, l'entretien, l'assurance et le carburant.
+              </p>
+              <p className="leading-relaxed">
+                De mon côté, mes loisirs coûtent très peu. Je joue aux jeux
+                vidéo, je regarde des séries, des films, des animés et des
+                vidéos, et je fais du sport, ce qui revient à
+                <b> maximiser mon plaisir personnel</b>. Rien de
+                particulièrement coûteux. Mon passe-temps principal revient à
+                moins de <b>10 centimes de l'heure</b> de divertissement
+                (n'aller pas croire que j'ai tout calculé en ce but c'est juste
+                une constatation à but d'explication). J'utilise des transports
+                en commun (gratuit la majorité du temps).
+              </p>
+              <p className="leading-relaxed">
+                Au final, mon mode de vie est simple et peu dépensier, ce qui me
                 permet d'épargner une grande partie de mes revenus. Et
                 attention, ça ne veut pas dire que certaines dépenses sont
-                “mauvaises”. Avoir des enfants ou dépenser plus pour son
+                "mauvaises". Avoir des enfants ou dépenser plus pour son
                 confort, c'est un choix de vie totalement valide. Simplement, ce
                 ne sont pas des choses qui m'attirent <b>personnellement</b> et{" "}
                 <b>pour le moment</b>.
@@ -282,38 +293,104 @@ const Strategy: React.FC = () => {
 
             <InfoBubble
               icon={<FaLightbulb />}
+              title="Tu investis en bourse mais tu payes un loyer, tu ne perds pas de l'argent ?"
+              color="text-purple-400"
+            >
+              <p className="leading-relaxed">
+                Je paye bien un loyer et il y a plusieurs raisons à cela.
+              </p>
+              <p className="leading-relaxed">
+                <b>Une conviction personnelle sur l'immobilier d'abord :</b> Je
+                pense que les prix vont baisser dans les prochaines années. Pas
+                par pessimisme, mais parce que la démographie le suggère, quand
+                la génération des boomers disparaîtra, des millions de biens
+                arriveront sur le marché. Les héritiers, soumis aux droits de
+                succession, seront souvent contraints de vendre rapidement. Plus
+                d'offre, moins de demande, les prix baissent. Acheter
+                aujourd'hui à des prix historiquement élevés me semble donc
+                risqué.
+              </p>
+              <p className="leading-relaxed">
+                <b>Ma situation :</b> Je travaille dans un secteur que je
+                considère actuellement instable et je ne sais pas où je serai
+                dans 3 ans (que ce soit dans le même secteur ou non, dans une
+                autre entreprise ou une autre mission). Un emprunt sur 20 ans,
+                ça engage. La location me donne une mobilité que je valorise
+                beaucoup aujourd'hui.
+              </p>
+              <p className="leading-relaxed">
+                <b>Le calcul financier :</b> Un achat immobilier nécessite un
+                apport et un prêt, je ne détaillerai pas ici, mais entre
+                l'apport immobilisé, les charges, les taxes, l'entretien et le
+                manque à gagner en investissant ailleurs et mon faible loyer
+                actuel le calcul est souvent défavorable à l'achat dans ma
+                situation.
+              </p>
+              <p className="leading-relaxed">
+                <b>Je n'ai aucune envie d'être bailleur :</b>{" "}
+                <i>"Si tu changes de ville, tu loues ton appartement !"</i>.
+                Gérer un bien, c'est gérer des locataires, des travaux imprévus,
+                des impayés, une agence qui prend sa commission, une fiscalité
+                sur les revenus fonciers. Tout ça pour un rendement net souvent
+                inférieur à ce que rapporte un portefeuille bien géré, et avec
+                infiniment plus de complications.
+              </p>
+              <p className="leading-relaxed">
+                Et honnêtement, je trouve le rapport propriétaire-locataire
+                structurellement déséquilibré des deux côtés. Je préfère miser
+                sur le progrès des entreprises mondiales plutôt que sur la
+                rareté du foncier.
+              </p>
+              <p className="leading-relaxed">
+                Louer n'est pas "perdre de l'argent". C'est payer pour un
+                service : un toit, de la flexibilité, zéro responsabilité de
+                propriétaire. Et pendant ce temps, mon capital travaille
+                ailleurs.
+              </p>
+            </InfoBubble>
+
+            <InfoBubble
+              icon={<FaLightbulb />}
               title="Investir c'est le mal ! Tu participes au capitalisme, la pauvreté, les crises, les guerres… N'as-tu pas honte ?"
               color="text-purple-400"
             >
-              <p className="leading-relaxed whitespace-pre-line">
+              <p className="leading-relaxed">
                 Je comprends la critique. Le système économique actuel a des
                 défauts, parfois majeurs, et investir ne le rend pas parfait.
                 Mais ne pas investir ne change rien au système, ça te laisse
                 juste en dehors. Pendant ce temps, l'inflation fait perdre de la
                 valeur à ton argent et ceux qui investissent continuent de faire
-                croître leur patrimoine. Investir, ce n'est pas soutenir
-                aveuglément tout ce qui existe. C'est utiliser les règles du jeu
-                actuel. Et surtout, ça te donne des <b>options</b>. Plus de
-                liberté pour choisir ton travail, ton rythme de vie, ou même
-                soutenir des causes qui te tiennent à cœur. Et si le système
-                change, je m'adapterai. L'idée n'est pas de défendre un modèle
-                coûte que coûte, mais de rester pragmatique et de faire au mieux
-                avec les règles du moment. Refuser d'investir par principe peut
-                sembler moral, mais dans les faits, ça te pénalise surtout toi,
-                sans réellement impacter le système. Par ailleurs, je suis assez
-                critique des systèmes politiques actuels. Il y a trop de
-                fragmentation, trop de décisions court-termistes, et pas assez
-                de vision globale à l'échelle de l'humanité. Je trouve aussi que
-                certaines “pseudo-sciences” ou discours non rigoureux prennent
-                parfois trop de place dans les débats publics, ce qui brouille
-                la compréhension des vrais enjeux. Idéalement, je préférerais
-                des systèmes de décision plus basés sur la compétence, la
-                méthode et les faits, avec une vision beaucoup plus unifiée et
-                ambitieuse pour l'espèce humaine. Mais encore une fois, c'est ma
-                vision <b>personnelle</b> et <b>actuelle</b>, et je respecte
-                totalement les opinions différentes. Mais dans tous les cas, je
-                fais avec le monde tel qu'il est aujourd'hui, pas tel que je
-                l'imagine dans l'absolu.
+                croître leur patrimoine.
+              </p>
+              <p className="leading-relaxed">
+                Investir, ce n'est pas soutenir aveuglément tout ce qui existe.
+                C'est utiliser les règles du jeu actuel. Et surtout, ça te donne
+                des <b>options</b>. Plus de liberté pour choisir ton travail,
+                ton rythme de vie, ou même soutenir des causes qui te tiennent à
+                cœur. Et si le système change, je m'adapterai. L'idée n'est pas
+                de défendre un modèle coûte que coûte, mais de rester
+                pragmatique et de faire au mieux avec les règles du moment.
+                Refuser d'investir par principe peut sembler moral, mais dans
+                les faits, ça te pénalise surtout toi, sans réellement impacter
+                le système.
+              </p>
+              <p className="leading-relaxed">
+                Par ailleurs, je suis assez critique des systèmes politiques
+                actuels. Il y a trop de fragmentation, trop de décisions
+                court-termistes, et pas assez de vision globale à l'échelle de
+                l'humanité. Je trouve aussi que certaines "pseudo-sciences" ou
+                discours non rigoureux prennent parfois trop de place dans les
+                débats publics, ce qui brouille la compréhension des vrais
+                enjeux. Idéalement, je préférerais des systèmes de décision plus
+                basés sur la compétence, la méthode et les faits, avec une
+                vision beaucoup plus unifiée et ambitieuse pour l'espèce
+                humaine.
+              </p>
+              <p className="leading-relaxed">
+                Mais encore une fois, c'est ma vision <b>personnelle</b> et{" "}
+                <b>actuelle</b>, et je respecte totalement les opinions
+                différentes. Mais dans tous les cas, je fais avec le monde tel
+                qu'il est aujourd'hui, pas tel que je l'imagine dans l'absolu.
               </p>
             </InfoBubble>
           </div>

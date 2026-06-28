@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaBalanceScale, FaShieldAlt, FaDatabase, FaLinkedin } from "react-icons/fa";
+import {
+  FaBalanceScale,
+  FaShieldAlt,
+  FaDatabase,
+  FaLinkedin,
+} from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
@@ -53,6 +58,17 @@ const Legal: React.FC = () => {
             constitue pas un conseil en investissement. L'éditeur ne saurait
             être tenu responsable des décisions financières prises sur la base
             des contenus publiés.
+          </p>
+          <p className="leading-relaxed text-sm text-gray-500">
+            <span className="text-white font-semibold">
+              Utilisation de l'IA
+            </span>
+            <br />
+            J'utilise l'IA principalement pour le code et des aspects technique
+            du site, et parfois pour reformuler ou structurer un paragraphe. Le
+            contenu lui-même vient de mes lectures et de ma propre compréhension
+            des sujets, je met un point d'honneur à vérifier et relire plusieurs
+            fois tout ce que je publie.
           </p>
         </InfoBubble>
 
