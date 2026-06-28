@@ -274,125 +274,153 @@ const Sidebar: React.FC = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="mt-auto pb-4 border-b border-gray-700">
-          <button
-            onClick={toggleAdvanced}
-            aria-pressed={isAdvanced}
-            aria-label="Activer ou désactiver le mode subjectif"
-            className="w-full flex items-center justify-between px-2 py-2"
-          >
-            <span
-              className={`text-sm font-medium transition ${
-                !isAdvanced ? "text-white" : "text-gray-400"
-              }`}
+        <div className="flex flex-col min-h-full">
+          <div className="pb-4 border-b border-gray-700">
+            <button
+              onClick={toggleAdvanced}
+              aria-pressed={isAdvanced}
+              aria-label="Activer ou désactiver le mode subjectif"
+              className="w-full flex items-center justify-between px-2 py-2"
             >
-              Normal
-            </span>
-            <div
-              className={`relative w-14 h-7 rounded-full transition ${
-                isAdvanced
-                  ? "bg-linear-to-r from-orange-300 to-orange-400"
-                  : "bg-gray-400"
-              }`}
-            >
+              <span
+                className={`text-sm font-medium transition ${
+                  !isAdvanced ? "text-white" : "text-gray-400"
+                }`}
+              >
+                Normal
+              </span>
               <div
-                className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-300 ${
-                  isAdvanced ? "translate-x-7" : "translate-x-0"
-                }`}
-              />
-            </div>
-            <span className="text-sm font-medium transition flex items-center gap-1">
-              <span
-                className={`${
+                className={`relative w-14 h-7 rounded-full transition ${
                   isAdvanced
-                    ? "bg-linear-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent"
-                    : "text-gray-400"
+                    ? "bg-linear-to-r from-orange-300 to-orange-400"
+                    : "bg-gray-400"
                 }`}
               >
-                Subjectif
+                <div
+                  className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-300 ${
+                    isAdvanced ? "translate-x-7" : "translate-x-0"
+                  }`}
+                />
+              </div>
+              <span className="text-sm font-medium transition flex items-center gap-1">
+                <span
+                  className={`${
+                    isAdvanced
+                      ? "bg-linear-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent"
+                      : "text-gray-400"
+                  }`}
+                >
+                  Subjectif
+                </span>
+                <span
+                  aria-hidden="true"
+                  className={
+                    !isAdvanced
+                      ? "bg-linear-to-r bg-clip-text text-transparent bg-gray-400"
+                      : ""
+                  }
+                >
+                  🔥
+                </span>
               </span>
-              <span
-                aria-hidden="true"
-                className={
-                  !isAdvanced
-                    ? "bg-linear-to-r bg-clip-text text-transparent bg-gray-400"
-                    : ""
-                }
-              >
-                🔥
-              </span>
-            </span>
-          </button>
-        </div>
-        <ul className="space-y-3 pt-4 md:mb-0 mb-32">
-          {sections
-            .filter((section) => isAdvanced || !section.advanced)
-            .map((section) => {
-              const isActive = currentPath === section.path;
-              const showNew = isNew(section.path, section.lastUpdated, visits);
-              const Icon = section.icon;
+            </button>
+          </div>
+          <ul className="flex-1 space-y-3 pt-4">
+            {sections
+              .filter((section) => isAdvanced || !section.advanced)
+              .map((section) => {
+                const isActive = currentPath === section.path;
+                const showNew = isNew(
+                  section.path,
+                  section.lastUpdated,
+                  visits,
+                );
+                const Icon = section.icon;
 
-              return (
-                <li key={section.path}>
-                  <NavLink
-                    to={`/${section.path}`}
-                    onClick={(e) => {
-                      setVisit(section.path);
-                      if (window.innerWidth < 768) {
-                        e.preventDefault();
-                        setExpandedSection(
-                          expandedSection === section.path
-                            ? null
-                            : section.path,
-                        );
-                        navigate(`/${section.path}`);
-                      }
-                    }}
-                    className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors duration-200 ${
-                      isActive
-                        ? "bg-blue-600 text-white"
-                        : "hover:bg-gray-700 hover:text-white"
-                    }`}
-                  >
-                    <span className="text-lg">
-                      <Icon />
-                    </span>
-                    <span
-                      className={`font-medium ${
-                        section.advanced
-                          ? "bg-linear-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent"
-                          : ""
+                return (
+                  <li key={section.path}>
+                    <NavLink
+                      to={`/${section.path}`}
+                      onClick={(e) => {
+                        setVisit(section.path);
+                        if (window.innerWidth < 768) {
+                          e.preventDefault();
+                          setExpandedSection(
+                            expandedSection === section.path
+                              ? null
+                              : section.path,
+                          );
+                          navigate(`/${section.path}`);
+                        }
+                      }}
+                      className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors duration-200 ${
+                        isActive
+                          ? "bg-blue-600 text-white"
+                          : "hover:bg-gray-700 hover:text-white"
                       }`}
                     >
-                      {section.title}
-                    </span>
-                    {showNew && (
-                      <span className="text-xs bg-red-500 text-white px-1.5 py-0.5 rounded-full">
-                        NEW
+                      <span className="text-lg">
+                        <Icon />
                       </span>
-                    )}
-                  </NavLink>
-                  {expandedSection === section.path &&
-                    section.items.length > 0 && (
-                      <ul className="mt-2 ml-6 space-y-1">
-                        {section.items.map((item) => (
-                          <li key={item.path}>
-                            <button
-                              onClick={() =>
-                                handleScrollTo(section.path, item.path)
-                              }
-                              className="w-full text-left block px-2 py-1 rounded-lg text-sm hover:bg-gray-600 hover:text-white transition-colors duration-200"
-                            >
-                              {item.title}
-                            </button>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                </li>
-              );
-            })}
-        </ul>
+                      <span
+                        className={`font-medium ${
+                          section.advanced
+                            ? "bg-linear-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent"
+                            : ""
+                        }`}
+                      >
+                        {section.title}
+                      </span>
+                      {showNew && (
+                        <span className="text-xs bg-red-500 text-white px-1.5 py-0.5 rounded-full">
+                          NEW
+                        </span>
+                      )}
+                    </NavLink>
+                    {expandedSection === section.path &&
+                      section.items.length > 0 && (
+                        <ul className="mt-2 ml-6 space-y-1">
+                          {section.items.map((item) => (
+                            <li key={item.path}>
+                              <button
+                                onClick={() =>
+                                  handleScrollTo(section.path, item.path)
+                                }
+                                className="w-full text-left block px-2 py-1 rounded-lg text-sm hover:bg-gray-600 hover:text-white transition-colors duration-200"
+                              >
+                                {item.title}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                  </li>
+                );
+              })}
+          </ul>
+          <div className="mt-4 pt-3 pb-36 md:pb-16 border-t border-gray-700 flex flex-col gap-1">
+            <NavLink
+              to="/legal"
+              className={({ isActive }) =>
+                `text-xs px-3 py-1.5 rounded transition-colors ${
+                  isActive ? "text-white" : "text-gray-500 hover:text-gray-300"
+                }`
+              }
+            >
+              Mentions légales & Confidentialité
+            </NavLink>
+            <NavLink
+              to="/licenses"
+              className={({ isActive }) =>
+                `text-xs px-3 py-1.5 rounded transition-colors ${
+                  isActive ? "text-white" : "text-gray-500 hover:text-gray-300"
+                }`
+              }
+            >
+              Licences
+            </NavLink>
+          </div>
+        </div>
       </nav>
     </>
   );

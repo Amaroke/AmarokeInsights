@@ -20,6 +20,8 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Strategy = lazy(() => import("./pages/Strategy"));
 const Accounts = lazy(() => import("./pages/Accounts"));
 const HowToInvest = lazy(() => import("./pages/HowToInvest"));
+const Legal = lazy(() => import("./pages/Legal"));
+const Licenses = lazy(() => import("./pages/Licenses"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -48,6 +50,8 @@ function App() {
               <Route path="/resources/*" element={<Resources />} />
               <Route path="/strategy/*" element={<Strategy />} />
               <Route path="/contact/*" element={<Contact />} />
+              <Route path="/legal" element={<Legal />} />
+              <Route path="/licenses" element={<Licenses />} />
               <Route
                 path="/compound-interest/*"
                 element={<CompoundInterest />}

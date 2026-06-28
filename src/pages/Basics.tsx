@@ -52,8 +52,7 @@ const Basics: React.FC = () => {
                 </ul>
                 <p>
                   Conclusion : si 100 € restent inactifs (compte courant, sans
-                  intérêts), on perd environ 34 % de pouvoir d'achat sur 10
-                  ans.
+                  intérêts), on perd environ 34 % de pouvoir d'achat sur 10 ans.
                 </p>
               </ExampleBox>
               <p className="leading-relaxed">
@@ -71,14 +70,14 @@ const Basics: React.FC = () => {
                 </ul>
               </ExampleBox>
               <p className="leading-relaxed">
-                <strong>La déflation</strong> est l'inverse de l'inflation :
+                <strong>La déflation</strong> est l'inverse de l'inflation, une
                 baisse générale et durable des prix, ce qui augmente le pouvoir
                 d'achat.
               </p>
               <ExampleBox>
                 <p>
-                  Un panier de 100 € aujourd'hui coûtera 97 € l'an prochain
-                  avec 3 % de déflation.
+                  Un panier de 100 € aujourd'hui coûtera 97 € l'an prochain avec
+                  3 % de déflation.
                 </p>
               </ExampleBox>
               <p className="leading-relaxed">
@@ -95,7 +94,7 @@ const Basics: React.FC = () => {
 
             <InfoBubble
               icon={<FaBookOpen />}
-              title="Taux d'intérêt & intérêt composé"
+              title="Taux d'intérêts"
               color="text-green-400"
             >
               <p className="leading-relaxed">
@@ -182,9 +181,14 @@ const Basics: React.FC = () => {
               </p>
               <ExampleBox>
                 <ul>
-                  <li>Placement ➜ 5 000 € en actions, rendement attendu ➜ 8 %/an</li>
+                  <li>
+                    Placement ➜ 5 000 € en actions, rendement attendu ➜ 8 %/an
+                  </li>
                   <li>Scénario favorable ➜ 5 400 € après 1 an</li>
-                  <li>Scénario défavorable ➜ 4 500 € après 1 an (perte de 10 % en cas de crise)</li>
+                  <li>
+                    Scénario défavorable ➜ 4 500 € après 1 an (perte de 10 % en
+                    cas de crise)
+                  </li>
                 </ul>
               </ExampleBox>
             </InfoBubble>
