@@ -1,4 +1,4 @@
-import { type CSSProperties, type ReactNode } from "react";
+import { useRef, type CSSProperties, type ReactNode } from "react";
 import {
   ReactFlow,
   Background,
@@ -10,6 +10,7 @@ import {
   type Node,
   type Edge,
   type EdgeProps,
+  type ReactFlowInstance,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 
@@ -430,15 +431,36 @@ const defaultEdgeOptions = {
   },
 };
 
+// Centre horizontal du nœud de départ (point d'entrée de l'organigramme).
+const START_CENTER_X = SX + W / 2;
+
 export default function InvestmentTree() {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  // Plutôt que `fitView` (qui dézoome pour tout afficher et rend le diagramme
+  // minuscule sur mobile), on démarre zoomé sur le haut de l'organigramme : la
+  // colonne de décision est lisible immédiatement, et l'utilisateur déroule
+  // vers le bas. Le zoom dépend de la largeur disponible (plus serré sur petit
+  // écran). Le bouton « ajuster » des contrôles permet la vue d'ensemble.
+  const handleInit = (
+    instance: ReactFlowInstance<(typeof nodes)[number], (typeof edges)[number]>,
+  ) => {
+    const w = wrapperRef.current?.clientWidth ?? 800;
+    const zoom = w < 640 ? 0.62 : w < 1024 ? 0.78 : 0.9;
+    instance.setViewport({ x: w / 2 - zoom * START_CENTER_X, y: 28, zoom });
+  };
+
   return (
-    <div className="mt-4 h-104 md:h-160 rounded-2xl border border-white/10 bg-[#0d0d14] overflow-hidden touch-none">
+    <div
+      ref={wrapperRef}
+      className="mt-4 h-120 md:h-170 rounded-2xl border border-white/10 bg-[#0d0d14] overflow-hidden touch-none"
+    >
       <ReactFlow
         nodes={nodes}
         edges={edges}
         edgeTypes={edgeTypes}
-        fitView
-        fitViewOptions={{ padding: 0.15 }}
+        onInit={handleInit}
+        defaultViewport={{ x: 40, y: 28, zoom: 0.7 }}
         defaultEdgeOptions={defaultEdgeOptions}
         minZoom={0.1}
         maxZoom={2.5}

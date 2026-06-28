@@ -96,12 +96,12 @@ const sections = [
     items: [
       { title: "Organigramme : comment j'investirais ?", path: "organigram" },
       { title: "Pourquoi le PEA ?", path: "pea-interesting" },
+      { title: "Limites des assurances vie", path: "av-limits" },
+      { title: "Assurance Vie vs CTO", path: "av-vs-cto" },
       {
         title: "PEA vs Plan 111bis Luxembourgeois",
         path: "pea-vs-plan-111bis",
       },
-      { title: "Assurance Vie vs CTO", path: "av-vs-cto" },
-      { title: "Limites des assurances vie", path: "av-limits" },
     ],
   },
   {
