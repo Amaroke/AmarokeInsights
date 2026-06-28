@@ -10,6 +10,7 @@ Tous les changements de ce projet sont documentés dans ce fichier.
 - Refonte visuelle de la page sur les types de comptes bancaires.
 - Réorganisation de la page sur les investissements.
 - Refonte de la Sidebar.
+- Refonte visuelle de la page sur les banques.
 - Changement de police pour une meilleure lisibilité.
 
 ## [1.2.1] - 23/06/2026

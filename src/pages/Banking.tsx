@@ -11,8 +11,10 @@ import {
   FaLayerGroup,
   FaLandmark,
   FaCoins,
+  FaLifeRing,
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
+import ExampleBox from "../components/ExampleBox";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
 import Term from "../components/Term";
@@ -34,7 +36,7 @@ const Banking: React.FC = () => {
               <InfoBubble
                 icon={<FaUniversity />}
                 title="Pourquoi les banques veulent votre argent"
-                color="text-purple-400"
+                color="text-blue-500"
               >
                 <p className="leading-relaxed mb-3">
                   Quand vous déposez de l'argent sur votre compte bancaire, il
@@ -73,7 +75,7 @@ const Banking: React.FC = () => {
               <InfoBubble
                 icon={<FaExchangeAlt />}
                 title="Le cœur du modèle bancaire : prêter plus cher qu'ils n'empruntent"
-                color="text-purple-400"
+                color="text-green-400"
               >
                 <p className="leading-relaxed mb-3">
                   Le principal métier d'une banque est simple :
@@ -91,91 +93,65 @@ const Banking: React.FC = () => {
                   entreprises avec des intérêts.
                 </p>
 
-                <p className="leading-relaxed italic mt-3">Exemple concret :</p>
-
-                <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
-                  <li>Vous laissez 10 000 € sur votre compte (0 %).</li>
-                  <li>
-                    La banque prête ces 10 000 € à un client pour un crédit auto
-                    à 6 %.
-                  </li>
-                  <li>
-                    Chaque année, elle perçoit environ{" "}
-                    <strong>600 € d'intérêts</strong>.
-                  </li>
-                </ul>
-
-                <p className="leading-relaxed mt-3">
-                  Une partie sert à payer ses coûts (salaires, agences,
-                  informatique), le reste constitue son bénéfice.
-                </p>
+                <ExampleBox>
+                  <ul className="space-y-1">
+                    <li>Vous laissez 10 000 € sur votre compte (0 %).</li>
+                    <li>
+                      La banque prête ces 10 000 € à un client pour un crédit
+                      auto à 6 %.
+                    </li>
+                    <li>
+                      Chaque année, elle perçoit environ{" "}
+                      <strong>600 € d'intérêts</strong>.
+                    </li>
+                  </ul>
+                  <p className="mt-2">
+                    Une partie sert à payer ses coûts (salaires, agences,
+                    informatique), le reste constitue son bénéfice.
+                  </p>
+                </ExampleBox>
               </InfoBubble>
 
               <InfoBubble
                 icon={<FaLayerGroup />}
                 title="Les réserves fractionnaires, comment 1 € permet de prêter plus"
-                color="text-purple-400"
+                color="text-violet-400"
               >
                 <p className="leading-relaxed mb-3">
                   Les banques ne prêtent pas uniquement l'argent que vous
                   déposez. Elles fonctionnent avec un système appelé
-                  <strong> réserves fractionnaires</strong>.
+                  <strong> réserves fractionnaires</strong> : elles ne gardent
+                  qu'une petite partie des dépôts en réserve, et peuvent prêter
+                  le reste.
                 </p>
 
-                <p className="leading-relaxed">
-                  Cela signifie qu'elles ne gardent qu'une petite partie des
-                  dépôts en réserve, et peuvent prêter le reste.
-                </p>
-
-                <p className="leading-relaxed italic mt-3">Exemple :</p>
-
-                <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
-                  <li>
-                    Vous déposez <strong>1 000 €</strong> sur votre compte dans
-                    une banque A.
-                  </li>
-                  <li>
-                    La banque A conserve <strong>100 €</strong> en réserve pour
-                    faire face aux retraits et respecter la réglementation.
-                  </li>
-                  <li>
-                    Elle peut prêter les <strong>900 € restants</strong> à un
-                    autre client (crédit auto, prêt personnel, crédit
-                    immobilier…).
-                  </li>
-                  <li>
-                    Ce client dépense ces <strong>900 €</strong> (par exemple
-                    pour acheter une voiture).
-                  </li>
-                  <li>
-                    Le vendeur dépose ensuite ces <strong>900 €</strong> sur son
-                    compte dans une banque B.
-                  </li>
-                  <li>
-                    La banque B conserve à son tour <strong>90 €</strong> en
-                    réserve et peut prêter environ <strong>810 €</strong>.
-                  </li>
-                  <li>
-                    Ces <strong>810 €</strong> sont à nouveau dépensés et
-                    redéposés dans une autre banque.
-                  </li>
-                </ul>
+                <ExampleBox>
+                  <ul className="space-y-1">
+                    <li>
+                      Vous déposez <strong>1 000 €</strong> dans la banque A.
+                    </li>
+                    <li>
+                      La banque A conserve <strong>100 €</strong> en réserve et
+                      prête les <strong>900 € restants</strong> à un autre
+                      client.
+                    </li>
+                    <li>
+                      Ce client dépense ses <strong>900 €</strong>, le vendeur
+                      les dépose dans la banque B.
+                    </li>
+                    <li>
+                      La banque B conserve <strong>90 €</strong> et peut prêter{" "}
+                      <strong>810 €</strong>. Et ainsi de suite.
+                    </li>
+                  </ul>
+                  <p className="mt-2">
+                    Le montant total de crédits accordés dépasse largement le
+                    dépôt initial de 1 000 €.{" "}
+                    <strong>Le crédit crée de la monnaie.</strong>
+                  </p>
+                </ExampleBox>
 
                 <p className="leading-relaxed mt-3">
-                  À chaque étape, une partie de l'argent est conservée en
-                  réserve et <strong>le reste est prêté à nouveau</strong>. Le
-                  montant total de crédits accordés devient bien supérieur au
-                  dépôt initial de 1 000 €.
-                </p>
-
-                <p className="leading-relaxed mt-3">
-                  Résultat : <strong>le crédit crée de la monnaie</strong>. Ce
-                  n'est pas de l'argent « imprimé », mais de l'argent scriptural
-                  créé par le système bancaire, sous le contrôle des autorités
-                  financières.
-                </p>
-
-                <p className="leading-relaxed mt-3 italic">
                   Ce mécanisme est strictement encadré : les banques doivent
                   respecter des règles de solvabilité, de liquidité et de fonds
                   propres pour éviter les excès et les crises financières.
@@ -185,7 +161,7 @@ const Banking: React.FC = () => {
               <InfoBubble
                 icon={<FaLandmark />}
                 title="Le rôle de la Banque centrale"
-                color="text-purple-400"
+                color="text-teal-400"
               >
                 <p className="leading-relaxed mb-3">
                   Les banques peuvent aussi emprunter de l'argent auprès de la{" "}
@@ -195,28 +171,25 @@ const Banking: React.FC = () => {
                 </p>
 
                 <p className="leading-relaxed">
-                  Quand les taux de la BCE sont bas :
+                  Quand les taux de la BCE sont bas : les banques empruntent à
+                  faible coût, les crédits sont moins chers pour les
+                  particuliers, et l'économie est stimulée. L'inverse se produit
+                  quand la BCE monte ses taux.
                 </p>
 
-                <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
-                  <li>Les banques empruntent à faible coût.</li>
-                  <li>Les crédits sont moins chers pour les particuliers.</li>
-                  <li>L'économie est stimulée.</li>
-                </ul>
-
-                <p className="leading-relaxed">
-                  Par exemple, si une banque emprunte à la BCE à 3 % et prête
-                  des crédits immobiliers à 4,5 %, elle conserve une marge de
-                  1,5 %. À l'inverse, quand la BCE augmente ses taux, les
-                  crédits deviennent plus chers et les rendements des produits
-                  d'épargne augmentent, car elles doivent attirer des dépôts.
-                </p>
+                <ExampleBox>
+                  Une banque emprunte à la <Term id={"BCE"} /> à 3 % et prête
+                  des crédits immobiliers à 4,5 % : elle conserve une marge de{" "}
+                  <strong>1,5 %</strong>. Si la BCE monte ses taux, les crédits
+                  deviennent plus chers et les rendements des livrets
+                  augmentent, car les banques doivent attirer des dépôts.
+                </ExampleBox>
               </InfoBubble>
 
               <InfoBubble
                 icon={<FaCoins />}
                 title="Les autres sources de revenus des banques"
-                color="text-purple-400"
+                color="text-amber-400"
               >
                 <p className="leading-relaxed mb-3">
                   Les crédits ne sont pas la seule source de revenus des
@@ -241,17 +214,18 @@ const Banking: React.FC = () => {
                   </li>
                 </ul>
 
-                <p className="leading-relaxed mt-3 italic">
-                  Exemple : une banque peut gagner quelques euros par client et
-                  par mois en frais fixes. Multipliez cela par plusieurs
-                  millions de clients.
-                </p>
+                <ExampleBox>
+                  Une banque peut gagner quelques euros par client et par mois
+                  en frais fixes. Multipliée par plusieurs millions de clients,
+                  cette somme représente une source de revenus considérable,
+                  indépendante des crédits.
+                </ExampleBox>
               </InfoBubble>
 
               <InfoBubble
                 icon={<FaShieldAlt />}
                 title="Pourquoi une banque ne disparaît pas du jour au lendemain"
-                color="text-purple-400"
+                color="text-emerald-400"
               >
                 <p className="leading-relaxed mb-3">
                   Les banques sont parmi les institutions les plus réglementées.
@@ -264,23 +238,12 @@ const Banking: React.FC = () => {
                   <strong> 100 000 € par personne et par banque</strong>.
                 </p>
 
-                <p className="leading-relaxed mt-3 italic">
-                  En cas de difficulté, une banque est généralement :
+                <p className="leading-relaxed mt-3">
+                  En cas de difficulté, les autorités interviennent :
+                  renflouement, rachat par une autre banque, ou mise sous
+                  contrôle de l'État. L'objectif est d'éviter qu'une faillite
+                  bancaire ne se propage à l'ensemble du système financier.
                 </p>
-
-                <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
-                  <li>
-                    La banque est surveillée et reçoit de l'argent pour rester
-                    solide
-                  </li>
-                  <li>
-                    Elle peut être rachetée ou fusionner avec une autre banque
-                  </li>
-                  <li>
-                    Elle peut être réorganisée sous le contrôle de l'État pour
-                    éviter les problèmes
-                  </li>
-                </ul>
               </InfoBubble>
             </div>
           </section>
@@ -293,7 +256,7 @@ const Banking: React.FC = () => {
               <InfoBubble
                 icon={<FaPercentage />}
                 title="Taux d'épargne"
-                color="text-purple-400"
+                color="text-sky-400"
               >
                 <p className="leading-relaxed mb-3">
                   Tous les produits d'épargne affichent un taux, mais il faut
@@ -305,123 +268,111 @@ const Banking: React.FC = () => {
                 </p>
 
                 <p className="leading-relaxed mt-3">
-                  - <strong>Livrets réglementés</strong> (Livret A, LDDS, LEP) ➜
-                  taux fixés par l'État et révisés 2 fois par an. Leur rendement
-                  est <strong>garanti et exonéré d'impôt</strong>. En revanche,
-                  ils sont souvent
-                  <strong> inférieurs à l'inflation</strong>, ce qui entraîne
-                  une perte de pouvoir d'achat à long terme. Exemple : un Livret
-                  A à 3 % alors que l'inflation est à 4 %.
+                  - <strong>Livrets réglementés</strong> (Livret A, LDDS, LEP) -
+                  taux fixés par l'État et révisés 2 fois par an. Rendement
+                  garanti et exonéré d'impôt. Souvent inférieurs à l'inflation,
+                  ce qui entraîne une perte de pouvoir d'achat à long terme.
                 </p>
 
                 <p className="leading-relaxed mt-3">
-                  - <strong>PEL / CEL</strong> ➜ taux déterminés à l'ouverture
+                  - <strong>PEL / CEL</strong> - taux déterminés à l'ouverture
                   et figés dans le temps. Un ancien PEL (avant 2016) peut
-                  rapporter jusqu'à <strong>2,5 % net garanti</strong>, ce qui
-                  est intéressant aujourd'hui. Mais les nouveaux PEL plafonnés à{" "}
-                  <strong>1 % brut</strong> ne sont plus compétitifs.
+                  rapporter jusqu'à <strong>2,5 % net garanti</strong>. Les
+                  nouveaux PEL plafonnés à <strong>1 % brut</strong> ne sont
+                  plus compétitifs.
                 </p>
 
                 <p className="leading-relaxed mt-3">
-                  - <strong>Livret bancaire & comptes à terme</strong> ➜ taux
+                  - <strong>Livret bancaire & comptes à terme</strong> - taux
                   libres fixés par la banque. Souvent sous forme de{" "}
                   <strong>promotions temporaires</strong> (ex. 3 % pendant 3
-                  mois, puis 0,5 % ensuite). Utile pour placer du cash court
-                  terme, mais rarement rentable à long terme.
+                  mois, puis 0,5 % ensuite).
                 </p>
 
                 <p className="leading-relaxed mt-3">
-                  - <strong>Comptes rémunérés type fintech</strong> ➜
+                  - <strong>Comptes rémunérés type fintech</strong> -
                   rémunération quotidienne ou mensuelle, avec des taux
-                  attractifs (souvent 2 à 4 %). Mais attention : ces produits
-                  sont <strong>100 % imposés</strong> au <Term id={"PFU"} />{" "}
-                  contrairement aux livrets réglementés.
+                  attractifs (souvent 2 à 4 %). Ces produits sont{" "}
+                  <strong>100 % imposés</strong> au <Term id={"PFU"} />{" "}
+                  contrairement aux livrets réglementés. Et ces taux{" "}
+                  <strong>ne sont pas garantis</strong> : une baisse de la{" "}
+                  <Term id={"BCE"} /> = une baisse immédiate du rendement.
                 </p>
 
-                <p className="leading-relaxed italic">
-                  Exemple : un compte à 2 % brut dans une fintech ➜ après impôt,
-                  le taux net tombe à seulement <strong>1,33 %</strong>, soit
-                  en-dessous du taux du Livret A (1,5 % net et garanti, au
-                  moment où j'écris ces lignes).
-                </p>
-
-                <p className="leading-relaxed mt-2">
-                  Ces taux <strong>ne sont pas garantis</strong> : ils dépendent
-                  des taux directeurs de la <Term id={"BCE"} /> et des frais de
-                  dépôt appliqués par la plateforme. Une baisse de la BCE = une
-                  baisse immédiate du rendement. Un produit séduisant peut
-                  rapporter moins qu'un livret garanti et défiscalisé.
-                </p>
+                <ExampleBox>
+                  Un compte fintech à 2 % brut après <Term id={"PFU"} /> à 30 %,
+                  le taux net tombe à <strong>1,4 %</strong>, soit souvent en
+                  dessous du Livret A (garanti et défiscalisé). Le taux affiché
+                  n'est pas le taux réel.
+                </ExampleBox>
               </InfoBubble>
 
               <InfoBubble
                 icon={<FaCreditCard />}
                 title="Cartes de débit & crédit"
-                color="text-purple-400"
+                color="text-indigo-400"
               >
                 <p className="leading-relaxed mb-3">
                   Les cartes bancaires sont obligatoires. Mais toutes ne se
                   valent pas : entre débit immédiat, différé, crédit
                   renouvelable ou cartes premium, les différences peuvent avoir
-                  un impact direct sur vos finances. Bien choisir sa carte
-                  permet d'
-                  <strong>éviter des frais inutiles</strong> et d'
-                  <strong>optimiser ses avantages</strong>.
+                  un impact direct sur vos finances.
                 </p>
 
                 <p className="leading-relaxed">
-                  - <strong>Carte de débit</strong> ➜ reliée au compte courant,
+                  - <strong>Carte de débit</strong> - reliée au compte courant,
                   elle débite vos achats soit immédiatement, soit en fin de mois
                   (<strong>débit différé</strong>).
                 </p>
 
-                <p className="leading-relaxed italic">
-                  Exemple : 200 € de courses le 5 ➜ débit immédiat = prélevé le
-                  jour même, débit différé = prélevé en une seule fois à la fin
-                  du mois.
-                </p>
-
                 <p className="leading-relaxed mt-3">
-                  - <strong>Carte de crédit</strong> ➜ très peu répandue en
-                  France au niveau des banques. Elle est surtout proposée par
-                  certaines enseignes (Carrefour, Fnac, etc.) et fonctionne avec
-                  un <strong>crédit renouvelable</strong>. Attention : les{" "}
+                  - <strong>Carte de crédit</strong> - très peu répandue en
+                  France au niveau des banques. Proposée surtout par certaines
+                  enseignes (Carrefour, Fnac, etc.) avec un{" "}
+                  <strong>crédit renouvelable</strong>. Les{" "}
                   <strong>taux d'intérêt sont élevés (15-20 %)</strong>. À
-                  éviter sauf si vous en comprenez et acceptez parfaitement les
-                  risques et le coût.
-                </p>
-
-                <p className="leading-relaxed italic">
-                  Exemple : un achat de 1 000 € remboursé sur 12 mois à 18 % =
-                  environ <strong>90 € d'intérêts</strong> en plus.
+                  éviter sauf si vous en comprenez parfaitement les risques.
                 </p>
 
                 <p className="leading-relaxed mt-3">
-                  - <strong>Cartes premium</strong> (Gold, Platinum, Infinite) ➜
-                  peuvent coûter plus chères ou nécessiter des conditions
-                  spécifiques mais incluent assurances voyage, assistance
-                  médicale, retraits gratuits à l'étranger… Intéressantes
+                  - <strong>Cartes premium</strong> (Gold, Platinum, Infinite) -
+                  coûtent plus cher mais incluent assurances voyage, assistance
+                  médicale, retraits gratuits à l'étranger. Intéressantes
                   uniquement si vous exploitez réellement ces avantages.
                 </p>
 
-                <p className="leading-relaxed italic">
-                  Exemple : une carte Gold à 130 €/an peut être rentabilisée si
-                  vous voyagez souvent, car une assurance annulation coûte 40-60
-                  € par trajet.
-                </p>
+                <ExampleBox>
+                  <ul className="space-y-1.5">
+                    <li>
+                      <strong>Débit différé</strong> : 200 € de courses le 5 -
+                      prélevés en une seule fois en fin de mois au lieu du jour
+                      même.
+                    </li>
+                    <li>
+                      <strong>Crédit renouvelable à 18 %</strong> : 1 000 €
+                      remboursés sur 12 mois = environ{" "}
+                      <strong>90 € d'intérêts</strong> en plus.
+                    </li>
+                    <li>
+                      <strong>Carte Gold à 130 €/an</strong> : rentable si vous
+                      voyagez souvent - une assurance annulation vaut 40-60 €
+                      par trajet.
+                    </li>
+                  </ul>
+                </ExampleBox>
 
-                <p className="leading-relaxed mt-4">
-                  <strong>Astuce :</strong> comparez toujours les frais. Les
-                  banques en ligne proposent souvent des cartes gratuites (débit
-                  immédiat ou différé), alors que les banques traditionnelles
-                  facturent 30 à 60 €/an pour une carte classique.
+                <p className="leading-relaxed mt-3">
+                  Les banques en ligne proposent souvent des cartes gratuites
+                  (débit immédiat ou différé), alors que les banques
+                  traditionnelles facturent 30 à 60 €/an pour une carte
+                  classique.
                 </p>
               </InfoBubble>
 
               <InfoBubble
                 icon={<FaExclamationTriangle />}
                 title="Frais bancaires"
-                color="text-purple-400"
+                color="text-orange-400"
               >
                 <p className="leading-relaxed">
                   Les frais bancaires peuvent rapidement grignoter vos gains,
@@ -440,11 +391,11 @@ const Banking: React.FC = () => {
                 <ul className="list-disc list-inside ml-4 mt-2 leading-relaxed">
                   <li>
                     <strong>Frais fixes du compte courant :</strong> certaines
-                    banques en ligne sont <em>gratuites</em> ou très peu chères.
+                    banques en ligne sont gratuites ou très peu chères.
                   </li>
                   <li>
                     <strong>Cartes bancaires :</strong> vérifiez le coût annuel
-                    assurez vous d'utiliser les avantages inclus.
+                    et assurez vous d'utiliser les avantages inclus.
                   </li>
                   <li>
                     <strong>Frais de virements :</strong> domestiques,{" "}
@@ -458,7 +409,7 @@ const Banking: React.FC = () => {
                   </li>
                   <li>
                     <strong>Frais cachés :</strong> découvert autorisé, retraits
-                    hors réseau, services additionnels… regardez le détail dans
+                    hors réseau, services additionnels - regardez le détail dans
                     la brochure tarifaire.
                   </li>
                   <li>
@@ -470,10 +421,9 @@ const Banking: React.FC = () => {
 
                 <p className="leading-relaxed mt-3">
                   Choisir une banque et un compte qui minimisent vos frais
-                  fixes, et un courtier ou une plateforme d'investissement
-                  compétitive si vous placez de l'argent. Optimiser les frais,
-                  c'est directement augmenter le rendement net de vos
-                  placements.
+                  fixes, et un courtier compétitif si vous placez de l'argent.
+                  Optimiser les frais, c'est directement augmenter le rendement
+                  net de vos placements.
                 </p>
               </InfoBubble>
             </div>
@@ -486,9 +436,9 @@ const Banking: React.FC = () => {
 
             <div className="space-y-4">
               <InfoBubble
-                icon={<FaShieldAlt />}
+                icon={<FaLifeRing />}
                 title="Garantie des dépôts"
-                color="text-red-400"
+                color="text-cyan-400"
               >
                 <p className="leading-relaxed">
                   En France, vos dépôts sont protégés jusqu'à{" "}
@@ -496,34 +446,29 @@ const Banking: React.FC = () => {
                   <Term id={"FGDR"} />. Cela couvre comptes courants, livrets,
                   et comptes d'épargne. Il ne s'applique pas aux pertes dues à
                   des fraudes, piratages ou erreurs de gestion de votre part.
-                  Par exemple, si vous êtes victime d'une arnaque et que votre
-                  compte est vidé, le <Term id={"FGDR"} /> ne vous remboursera
-                  pas.
                 </p>
 
-                <p className="leading-relaxed mt-2">
-                  Exemple : si vous avez 80 000 € sur votre compte courant et 30
-                  000 € sur un livret, seuls{" "}
-                  <strong>100 000 € seront remboursés</strong>.
-                </p>
-
-                <p className="leading-relaxed mt-2">
-                  Ce plafond de 100 000 € par établissement bancaire s'applique
-                  uniquement en cas de défaillance de la banque, c'est-à-dire si
-                  la banque fait faillite et ne peut plus restituer vos fonds.
-                  Une manère d'utiliser le <Term id={"FGDR"} /> est de répartir
-                  vos fonds sur plusieurs banques pour bénéficier de plusieurs
-                  plafonds de garantie. Exemple : 150 000 € répartis sur deux
-                  banques (80 000 € dans la banque A et 70 000 € dans la banque
-                  B) seraient entièrement couverts, car chaque banque ne dépasse
-                  pas le plafond de 100 000 €.
-                </p>
+                <ExampleBox>
+                  <ul className="space-y-1.5">
+                    <li>
+                      Vous avez 80 000 € sur votre compte courant et 30 000 €
+                      sur un livret dans la même banque, seuls{" "}
+                      <strong>100 000 € seront remboursés</strong> en cas de
+                      faillite.
+                    </li>
+                    <li>
+                      150 000 € répartis sur deux banques différentes (80 000 €
+                      + 70 000 €) seraient <strong>entièrement couverts</strong>
+                      , car chaque banque reste sous le plafond.
+                    </li>
+                  </ul>
+                </ExampleBox>
               </InfoBubble>
 
               <InfoBubble
                 icon={<FaLock />}
                 title="Sécurité des transactions"
-                color="text-red-400"
+                color="text-blue-400"
               >
                 <p className="leading-relaxed">
                   Les banques et fintech utilisent plusieurs dispositifs pour
@@ -602,10 +547,9 @@ const Banking: React.FC = () => {
                   </li>
                 </ul>
                 <p className="leading-relaxed mt-2">
-                  Pour vous en prémunir, activer 2FA, utiliser des mots de passe
-                  forts et uniques, vérifier les sources, et bloquer
-                  immédiatement tout accès suspect. Pour faire court, appliquer
-                  les recommandations générale de sécurité en ligne.
+                  Pour vous en prémunir : activer le 2FA, utiliser des mots de
+                  passe forts et uniques, vérifier les sources, et bloquer
+                  immédiatement tout accès suspect.
                 </p>
               </InfoBubble>
             </div>
