@@ -235,7 +235,10 @@ const Resources: React.FC = () => {
                 const term = terms[key as TermKey];
                 return (
                   <li key={key}>
-                    <strong>{term.title}</strong> : {term.definition}
+                    <strong>
+                      {term.title.charAt(0).toUpperCase() + term.title.slice(1)}
+                    </strong>{" "}
+                    : {term.definition}
                   </li>
                 );
               })}

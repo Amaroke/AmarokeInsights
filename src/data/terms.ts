@@ -164,6 +164,11 @@ export const terms = {
     definition:
       "Ensemble de contributions prélevées sur les revenus du patrimoine et du capital en France. Leur taux est de 18,6 % depuis 2026, comprenant la CSG, la CRDS et le prélèvement de solidarité. Ils s'appliquent sur les gains (intérêts, plus-values, dividendes) même quand l'impôt sur le revenu est exonéré.",
   },
+  TMI: {
+    title: "Taux Marginal d'Imposition",
+    definition:
+      "Taux d'imposition qui s'applique à la dernière tranche de vos revenus. En France, le barème de l'IR est progressif : chaque tranche de revenu est taxée à un taux différent (0 %, 11 %, 30 %, 41 %, 45 %). Votre TMI est le taux de la tranche la plus haute que vous atteignez. Il ne s'applique pas à l'ensemble de vos revenus, seulement à la partie qui dépasse le seuil de cette tranche.",
+  },
   IR: {
     title: "impôt sur le revenu",
     definition:
