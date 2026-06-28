@@ -19,7 +19,7 @@ const Container: FC<ContainerProps> = ({
   children,
 }) => (
   <div
-    className={`max-w-6xl mx-auto py-6 md:mb-0 mb-24 ${
+    className={`max-w-6xl mx-auto py-6 md:mb-0 mb-8 ${
       widePadding ? "px-4" : "px-2 md:px-4"
     } ${GAP[gap]}`}
   >

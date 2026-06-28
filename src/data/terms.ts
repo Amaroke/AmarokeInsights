@@ -159,6 +159,16 @@ export const terms = {
     definition:
       "Livret d'Épargne Populaire : livret d'épargne réglementé, sécurisé et défiscalisé, destiné aux personnes ayant des revenus modestes. Il offre un taux d'intérêt avantageux et un plafond de dépôt limité.",
   },
+  PS: {
+    title: "prélèvements sociaux",
+    definition:
+      "Ensemble de contributions prélevées sur les revenus du patrimoine et du capital en France. Leur taux est de 18,6 % depuis 2026, comprenant la CSG, la CRDS et le prélèvement de solidarité. Ils s'appliquent sur les gains (intérêts, plus-values, dividendes) même quand l'impôt sur le revenu est exonéré.",
+  },
+  IR: {
+    title: "impôt sur le revenu",
+    definition:
+      "Impôt prélevé par l'État sur les revenus des personnes physiques. Pour les revenus du travail (salaires), il suit un barème progressif par tranches. Pour les revenus du capital (dividendes, plus-values, intérêts), le taux forfaitaire est de 12,8 % dans le cadre du PFU, sauf option pour le barème progressif. Certains placements (Livret A, PEA après 5 ans...) permettent d'en être exonéré sur les gains.",
+  },
 } as const;
 
 export type TermKey = keyof typeof terms;
