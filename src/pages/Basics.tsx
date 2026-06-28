@@ -1,14 +1,15 @@
 import React from "react";
-import { FaBookOpen } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
 import Term from "../components/Term";
 import ExampleBox from "../components/ExampleBox";
 import {
+  FaHourglassHalf,
+  FaPercentage,
+  FaBalanceScale,
   FaChartLine,
   FaHandshake,
-  FaPercentage,
   FaMoneyBillWave,
   FaWater,
   FaGlobeAmericas,
@@ -30,9 +31,9 @@ const Basics: React.FC = () => {
           </h2>
           <div className="space-y-4">
             <InfoBubble
-              icon={<FaBookOpen />}
+              icon={<FaHourglassHalf />}
               title="Valeur de l'argent dans le temps, inflation et déflation"
-              color="text-blue-400"
+              color="text-yellow-400"
             >
               <p className="leading-relaxed">
                 L'argent possédé aujourd'hui n'a pas la même valeur dans le
@@ -93,7 +94,7 @@ const Basics: React.FC = () => {
             </InfoBubble>
 
             <InfoBubble
-              icon={<FaBookOpen />}
+              icon={<FaPercentage />}
               title="Taux d'intérêts"
               color="text-green-400"
             >
@@ -125,7 +126,7 @@ const Basics: React.FC = () => {
             </InfoBubble>
 
             <InfoBubble
-              icon={<FaBookOpen />}
+              icon={<FaBalanceScale />}
               title="Différence revenu vs patrimoine"
               color="text-purple-400"
             >
@@ -158,9 +159,9 @@ const Basics: React.FC = () => {
             </InfoBubble>
 
             <InfoBubble
-              icon={<FaBookOpen />}
+              icon={<FaChartLine />}
               title="Épargne vs investissement"
-              color="text-pink-400"
+              color="text-blue-400"
             >
               <p className="leading-relaxed">
                 <strong>L'épargne</strong> est sécurisée mais rapporte peu (

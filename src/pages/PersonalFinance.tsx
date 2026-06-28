@@ -5,14 +5,17 @@ import {
   FaShieldAlt,
   FaUniversity,
   FaBalanceScale,
-  FaLightbulb,
+  FaChartPie,
+  FaListOl,
   FaRocket,
   FaHandHoldingUsd,
+  FaChartBar,
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
 import Term from "../components/Term";
+import ExampleBox from "../components/ExampleBox";
 
 const PersonalFinance: React.FC = () => {
   return (
@@ -33,31 +36,27 @@ const PersonalFinance: React.FC = () => {
             >
               <p className="leading-relaxed">
                 Le budget est la base d'une bonne gestion financière. Il
-                consiste à<strong> suivre vos revenus et vos dépenses</strong>{" "}
+                consiste à <strong>suivre vos revenus et vos dépenses</strong>{" "}
                 afin de savoir où part votre argent et d'éviter les mauvaises
                 surprises.
               </p>
-
               <p className="leading-relaxed">
                 Le budget est grandement influencé par votre revenu, il
                 peut-être aussi simple ou détaillé que vous le souhaitez, mais
                 voici quelques étapes clés pour bien le gérer :
               </p>
-
               <ol className="list-decimal list-inside space-y-2 pl-4">
                 <li>
                   <strong>Faites le point</strong> : recensez vos ressources et
                   vos dépenses réelles sur l'année passée (salaires, revenus
                   annexes, charges fixes, dépenses variables).
                 </li>
-
                 <li>
                   <strong>Établissez des prévisions</strong> : projetez vos
                   revenus et dépenses pour le semestre ou l'année à venir.
                   Anticipez les hausses ponctuelles, abonnements et projets
                   (vacances, travaux, etc.).
                 </li>
-
                 <li>
                   <strong>Suivez régulièrement</strong> : comparez
                   périodiquement vos prévisions aux dépenses réelles et ajustez
@@ -65,7 +64,6 @@ const PersonalFinance: React.FC = () => {
                   vous disposez des ressources nécessaires.
                 </li>
               </ol>
-
               <p className="leading-relaxed">
                 Il existe de nombreux outils pour vous aider : tableur,
                 application mobile, cahier… Choisissez celui qui vous convient
@@ -75,9 +73,9 @@ const PersonalFinance: React.FC = () => {
             </InfoBubble>
 
             <InfoBubble
-              icon={<FaBalanceScale />}
-              title="Un exemple de gestion de budget, la méthode du 50 / 30 / 20"
-              color="text-green-400"
+              icon={<FaChartPie />}
+              title="La méthode 50 / 30 / 20"
+              color="text-orange-400"
             >
               <p className="leading-relaxed">
                 Une méthode simple et populaire consiste à répartir vos revenus
@@ -85,106 +83,95 @@ const PersonalFinance: React.FC = () => {
               </p>
               <ul className="list-disc list-inside space-y-2 pl-4">
                 <li>
-                  <strong>50% : Besoins essentiels</strong> : logement,
+                  <strong>50 % - Besoins essentiels</strong> : logement,
                   alimentation, énergie, transports, assurances, santé.
                 </li>
                 <li>
-                  <strong>30% : Plaisirs</strong> : loisirs, voyages, sorties,
+                  <strong>30 % - Plaisirs</strong> : loisirs, voyages, sorties,
                   abonnements, shopping non essentiel.
                 </li>
                 <li>
-                  <strong>20% : Épargne et remboursement de dettes</strong> :
+                  <strong>20 % - Épargne et remboursement de dettes</strong> :
                   livret d'épargne, investissements, remboursement anticipé de
                   crédit.
                 </li>
               </ul>
+              <ExampleBox>
+                <p>
+                  Revenu net de 2 000 €/mois ➜ 1 000 € pour les besoins, 600 €
+                  pour les plaisirs, 400 € pour l'épargne.
+                </p>
+              </ExampleBox>
               <p className="leading-relaxed">
-                Cette règle est un <strong>point de départ</strong> : adaptez-la
+                Cette règle est un <strong>point de départ</strong>, adaptez-la
                 à vos revenus, vos charges fixes et vos objectifs de vie.
               </p>
             </InfoBubble>
 
             <InfoBubble
-              icon={<FaLightbulb />}
-              title="Un autre exemple : Stratégie de priorités financières"
+              icon={<FaListOl />}
+              title="Stratégie de priorités financières"
               color="text-blue-400"
             >
               <p className="leading-relaxed">
                 Une autre approche consiste à définir un ordre de priorités pour
                 vos revenus disponibles après dépenses essentielles :
               </p>
-              <ol className="list-decimal list-inside space-y-2 pl-4">
-                <li className="mt-4">
+              <ol className="list-decimal list-inside space-y-4 pl-4">
+                <li>
                   <strong>Contributions entreprise</strong> : si vous avez accès
                   à un <Term id={"PEE"} />, cotisez au minimum pour profiter au
                   maximum de l'abondement employeur.
-                  <p className="mt-1">
-                    Exemple : si votre employeur double vos 100 € versés, vous
-                    obtenez immédiatement 200 €. C'est un rendement garanti
-                    difficile à égaler ailleurs.
-                  </p>
+                  <div className="mt-2">
+                    <ExampleBox>
+                      <p>
+                        Votre employeur double vos versements : 100 € versés ➜
+                        200 € obtenus immédiatement. C'est un rendement garanti
+                        difficile à égaler ailleurs.
+                      </p>
+                    </ExampleBox>
+                  </div>
                 </li>
-                <li className="mt-4">
-                  <strong>Épargne de précaution</strong> : constituez un coussin
-                  de 3 à 6 mois de dépenses courantes, immédiatement disponible.
-                  <p className="mt-1">
-                    Cette épargne doit rester disponible à tout moment, de
-                    préférence sur un <Term id={"LivretA"} /> ou un{" "}
-                    <Term id={"LDDS"} />. Elle couvre les imprévus : panne de
-                    voiture, frais médicaux, perte d'emploi, etc. Nous y
-                    revenons en détail plus bas.
-                  </p>
-                </li>
-                <li className="mt-4">
-                  <strong>Rembourser les dettes</strong> : ciblez en priorité
-                  les crédits à taux élevés (souvent supérieurs à l'inflation).
-                  <ul className="list-disc list-inside pl-4 space-y-1">
-                    <li>
-                      <strong>Prioritaires</strong> : crédits à la consommation,
-                      découvert bancaire, etc.
-                    </li>
-                    <li>
-                      <strong>Moins urgents</strong> : crédit immobilier (taux
-                      plus faible, parfois inférieur à l'inflation)
-                    </li>
+                <li>
+                  <strong>Rembourser les dettes à taux élevés</strong> : ciblez
+                  en priorité les crédits dont le taux dépasse l'inflation.
+                  <ul className="list-disc list-inside pl-4 space-y-1 mt-1">
+                    <li>Crédits à la consommation, découvert bancaire.</li>
                   </ul>
-                  <p className="mt-1">
-                    Rembourser ces dettes, c'est comme obtenir un rendement
-                    garanti équivalent au taux d'intérêt économisé.
-                  </p>
+                  <div className="mt-2">
+                    <ExampleBox>
+                      <p>
+                        Rembourser un crédit à 8 % = un rendement garanti de 8 %
+                        sur la somme remboursée. Difficile à battre en bourse
+                        avec certitude. Inutile de mettre de l'argent de côté
+                        pour investir ailleurs tant que ce crédit n'est pas
+                        remboursé.
+                      </p>
+                    </ExampleBox>
+                  </div>
                 </li>
-                <li className="mt-4">
-                  <strong>Épargne défiscalisée</strong> : profitez des
-                  dispositifs permettant de réduire votre imposition, comme le{" "}
-                  <Term id={"PER"} />.
-                  <p className="mt-1">
-                    Les sommes investies peuvent être déduites de vos revenus
-                    imposables, ce qui augmente votre pouvoir d'épargne net.
-                    Attention toutefois : l'argent est bloqué jusqu'à la
-                    retraite (hors cas exceptionnels) et ne peut donc pas
-                    convenir à tous les objectifs.
-                  </p>
+                <li>
+                  <strong>Épargne de précaution</strong> : constituez un coussin
+                  de 3 à 6 mois de dépenses courantes, immédiatement disponible
+                  sur un <Term id={"LEP"} /> si vous êtes éligible, sinon un{" "}
+                  <Term id={"LivretA"} /> ou un <Term id={"LDDS"} />. Elle
+                  couvre les imprévus : panne de voiture, frais médicaux, perte
+                  d'emploi, etc.
                 </li>
 
-                <li className="mt-4">
+                <li>
+                  <strong>Épargne défiscalisée</strong> : profitez des
+                  dispositifs comme le <Term id={"PER"} /> pour réduire votre
+                  imposition. Les sommes investies sont déductibles de vos
+                  revenus imposables. Attention, l'argent est bloqué jusqu'à la
+                  retraite (hors cas exceptionnels). Renseignez-vous sur les
+                  conditions et comparez avec d'autres options d'investissement
+                  selon votre situation. Il faut que ce soit cohérent avec vos
+                  objectifs et votre horizon de placement.
+                </li>
+                <li>
                   <strong>Épargne long terme</strong> : destinez vos excédents à
                   vos grands projets de vie.
-                  <ul className="list-disc list-inside pl-4 space-y-1">
-                    <li>
-                      <strong>Retraite</strong> : via une{" "}
-                      <Term id={"AssuranceVie"} /> ou un <Term id={"PEA"} /> par
-                      exemple.
-                    </li>
-                    <li>
-                      <strong>Achat immobilier</strong> : constitution d'un
-                      apport pour un futur logement.
-                    </li>
-                    <li>
-                      <strong>Investissements</strong> : actions,{" "}
-                      <Term id={"ETF"} />, immobilier locatif pour générer des
-                      revenus complémentaires.
-                    </li>
-                  </ul>
                 </li>
               </ol>
               <p className="leading-relaxed">
@@ -212,24 +199,24 @@ const PersonalFinance: React.FC = () => {
               <ul className="list-disc list-inside space-y-1 pl-2">
                 <li>
                   <strong>Épargne de précaution</strong> : pour les imprévus du
-                  quotidien. nous y revenons plus bas.
+                  quotidien.
                 </li>
                 <li>
                   <strong>Épargne projet</strong> : pour financer un objectif
-                  spécifique comme des vacances, l'achat d'une voiture ou d'un
-                  bien immobilier.
+                  spécifique (vacances, voiture, immobilier…).
                 </li>
                 <li>
                   <strong>Épargne long terme</strong> : pour préparer des
-                  objectifs financiers lointains comme la retraite ou l'achat
-                  d'une résidence secondaire.
+                  objectifs lointains comme la retraite.
                 </li>
               </ul>
-              <p className="leading-relaxed">
-                Commencez petit mais de façon régulière :{" "}
-                <strong>mieux vaut 50€ par mois que rien du tout</strong>.
-                L'important est la constance et la discipline.
-              </p>
+              <ExampleBox>
+                <p>
+                  Commencer avec 50 €/mois, c'est 600 €/an et 3 000 € en 5 ans -
+                  sans compter les intérêts.{" "}
+                  <strong>La constance prime sur le montant.</strong>
+                </p>
+              </ExampleBox>
             </InfoBubble>
 
             <InfoBubble
@@ -247,25 +234,24 @@ const PersonalFinance: React.FC = () => {
                 La recommandation courante est d'avoir{" "}
                 <strong>3 à 6 mois de dépenses courantes</strong> mis de côté,
                 idéalement sur un livret accessible et sécurisé (
-                <Term id={"LEP"} />,
-                <Term id={"LivretA"} />,
-                <Term id={"LDDS"} />, ...).
+                <Term id={"LEP"} />, <Term id={"LivretA"} />,{" "}
+                <Term id={"LDDS"} />
+                …).
               </p>
-              <p className="leading-relaxed">
-                Exemple : si vos dépenses mensuelles sont de 1 500€, visez un
-                fonds de secours compris entre 4 500€ et 9 000€.
-              </p>
-              <p className="leading-relaxed">
-                Astuce : commencez par un petit montant régulier et augmentez-le
-                progressivement. Même 20€ par semaine peuvent constituer un
-                solide fonds de secours sur un an.
-              </p>
+              <ExampleBox>
+                <ul>
+                  <li>Dépenses mensuelles : 1 500 €</li>
+                  <li>Objectif minimum (3 mois) ➜ 4 500 €</li>
+                  <li>À 150 €/mois ➜ objectif atteint en 2,5 ans</li>
+                  <li>À 300 €/mois ➜ objectif atteint en 15 mois</li>
+                </ul>
+              </ExampleBox>
             </InfoBubble>
 
             <InfoBubble
               icon={<FaRocket />}
               title="Qu'est-ce que le mouvement FIRE ?"
-              color="text-yellow-400"
+              color="text-orange-400"
             >
               <p className="leading-relaxed">
                 Le mouvement FIRE (Financial Independence, Retire Early)
@@ -276,86 +262,82 @@ const PersonalFinance: React.FC = () => {
               <p className="leading-relaxed font-semibold">
                 Principaux types de FIRE :
               </p>
-              <ul className="list-disc list-inside space-y-1 pl-2">
+              <ul className="list-disc list-inside space-y-2 pl-2">
                 <li>
                   <strong>LeanFIRE</strong> : vivre de manière minimaliste pour
                   atteindre l'indépendance financière avec moins de revenus.
-                  <br />
-                  Exemple : épargner 60-70% de ses revenus et vivre avec un
-                  budget réduit.
                 </li>
                 <li>
                   <strong>FatFIRE</strong> : viser l'indépendance financière
                   tout en conservant un style de vie confortable.
-                  <br />
-                  Exemple : épargner et investir pour générer un revenu passif
-                  élevé permettant de maintenir un niveau de vie similaire à
-                  celui d'avant la retraite anticipée.
                 </li>
                 <li>
                   <strong>BaristaFIRE</strong> : atteindre partiellement
                   l'indépendance financière et continuer à travailler légèrement
                   ou à temps partiel pour compléter les revenus.
-                  <br />
-                  Exemple : quitter son emploi principal et travailler quelques
-                  heures en freelance pour financer certains loisirs.
                 </li>
               </ul>
-              <p className="leading-relaxed font-semibold">Exemple concret :</p>
-              <p className="leading-relaxed pl-2">
-                Une personne investissant <strong>2 000 €/mois</strong> pendant{" "}
-                <strong>15 à 20 ans</strong> avec un rendement annuel de 4 à 7 %
-                pourrait obtenir :
-              </p>
-              <ul className="list-disc list-inside space-y-1 pl-4">
-                <li>15 ans, 4 % : environ 500 000 €</li>
-                <li>15 ans, 7 % : environ 588 000 €</li>
-                <li>20 ans, 4 % : environ 660 000 €</li>
-                <li>20 ans, 7 % : environ 960 000 €</li>
-              </ul>
-              <p className="leading-relaxed pl-2">
-                En retirant 4 % par an de ce capital, cela permettrait de
-                générer un revenu passif annuel compris entre 20 000 et 38 000
-                €, sans toucher au capital initial. Ces chiffres sont donnés à
-                titre indicatif et dépendent de nombreux facteurs (rendement,
-                inflation, fiscalité, etc.).
-              </p>
+              <ExampleBox>
+                <p>
+                  Investir <strong>2 000 €/mois</strong> pendant 15 à 20 ans
+                  avec un rendement annuel de 4 à 7 % :
+                </p>
+                <ul>
+                  <li>15 ans à 4 % ➜ ~500 000 €</li>
+                  <li>15 ans à 7 % ➜ ~588 000 €</li>
+                  <li>20 ans à 4 % ➜ ~660 000 €</li>
+                  <li>20 ans à 7 % ➜ ~960 000 €</li>
+                </ul>
+                <p>
+                  En retirant 4 %/an de ce capital ➜ revenu passif de 20 000 à
+                  38 000 €/an sans toucher au capital. Ces chiffres dépendent du
+                  rendement réel, de l'inflation et de la fiscalité.
+                </p>
+              </ExampleBox>
             </InfoBubble>
 
             <InfoBubble
-              icon={<FaWallet />}
+              icon={<FaChartBar />}
               title="Capacité d'épargne"
-              color="text-green-500"
+              color="text-teal-400"
             >
               <p className="leading-relaxed">
-                Pour quelqu'un qui gagne un salaire d'environ 2000 € net/mois et
-                paie un loyer, une <strong>capacité d'épargne correcte</strong>{" "}
-                commence autour de <strong>10 % de son revenu net</strong>, soit
-                environ 200 € par mois.
+                Il n'existe pas de taux d'épargne universel : tout dépend de
+                votre revenu, de vos charges fixes et de votre situation
+                personnelle. Quelques repères courants :
               </p>
-
+              <ul className="list-disc list-inside space-y-1 pl-2">
+                <li>
+                  <strong>10 %</strong> : un bon point de départ pour commencer
+                  à épargner sans trop contraindre son quotidien.
+                </li>
+                <li>
+                  <strong>20 %</strong> : rythme confortable pour construire un
+                  patrimoine progressivement.
+                </li>
+                <li>
+                  <strong>30 % et plus</strong> : épargne agressive, permet
+                  d'accélérer significativement vers des objectifs FIRE ou un
+                  achat immobilier.
+                </li>
+              </ul>
+              <ExampleBox>
+                <ul>
+                  <li>
+                    <strong>2 000 €/mois avec loyer</strong> ➜ 10 % = 200 €
+                    épargnés, 20 % = 400 €
+                  </li>
+                  <li>
+                    <strong>3 000 €/mois sans loyer</strong> ➜ 30 à 40 %
+                    atteignable tout en vivant confortablement
+                  </li>
+                </ul>
+              </ExampleBox>
               <p className="leading-relaxed">
-                Une <strong>épargne plus agressive</strong> commence vers 20 %
-                du net (~400 € par mois) et permet d'accélérer la constitution
-                de patrimoine ou d'atteindre des objectifs FIRE plus rapidement.
-              </p>
-
-              <p className="leading-relaxed">
-                Si vous vivez chez vos parents ou gagnez plus que le salaire
-                médian, vous pouvez épargner davantage sans réduire votre niveau
-                de vie. Exemple : quelqu'un qui gagne le double (~3 500 € net)
-                peut raisonnablement épargner{" "}
-                <strong>30 à 40 % de son revenu net</strong> tout en conservant
-                un bon train de vie.
-              </p>
-
-              <p className="leading-relaxed">
-                À l'inverse, si vos revenus sont plus faibles ou que vous avez
-                des contraintes (enfants, santé, charges non couvertes),
-                atteindre 10 % peut être difficile. Néanmoins, c'est un objectif
-                intéressant pour se constituer un{" "}
-                <strong>fonds de précaution</strong> et sécuriser sa situation
-                financière sur le long terme.
+                Si épargner 10 % est difficile aujourd'hui en raison de charges
+                élevées ou d'un revenu faible, commencez par le montant que vous
+                pouvez tenir dans la durée, même 50 € par mois. La régularité
+                compte plus que le montant.
               </p>
             </InfoBubble>
           </div>
@@ -372,47 +354,42 @@ const PersonalFinance: React.FC = () => {
               color="text-red-400"
             >
               <p className="leading-relaxed">
-                Les dettes et emprunts ne sont pas toujours négatifs : un{" "}
+                Les dettes et emprunts ne sont pas toujours négatifs, un{" "}
                 <strong>crédit immobilier</strong> bien géré peut être un bon
-                investissement, permettant de constituer un patrimoine. En
-                revanche, les <strong>crédits à la consommation</strong>{" "}
-                (voiture, électroménager, découvert bancaire…) coûtent souvent
-                très cher et doivent être évités si possible.
+                investissement. En revanche, les{" "}
+                <strong>crédits à la consommation</strong> (voiture,
+                électroménager, découvert bancaire…) coûtent souvent très cher
+                et doivent être évités si possible.
               </p>
-
               <p className="leading-relaxed">
-                La clé est de <strong>maîtriser son taux d'endettement</strong>{" "}
-                : vos mensualités ne devraient pas dépasser environ{" "}
+                L'important c'est de{" "}
+                <strong>maîtriser son taux d'endettement</strong>, vos
+                mensualités ne devraient pas dépasser environ{" "}
                 <strong>30 à 35 % de vos revenus</strong>.
               </p>
-
+              <ExampleBox>
+                <ul>
+                  <li>
+                    <strong>Seul, 2 500 €/mois</strong> ➜ mensualités max 750 à
+                    875 € (crédit immo + prêt auto cumulés)
+                  </li>
+                  <li>
+                    <strong>Couple, 4 500 €/mois combinés</strong> ➜ mensualités
+                    max 1 350 à 1 575 €
+                  </li>
+                </ul>
+              </ExampleBox>
               <p className="leading-relaxed">
-                Exemple concret : si vous gagnez 2 500 €/mois, vos mensualités
-                totales ne devraient pas dépasser 750 à 875 €. Cela inclut le
-                crédit immobilier, le prêt auto ou tout autre emprunt.
-              </p>
-
-              <p className="leading-relaxed">
-                Pour un couple, le calcul change : on prend en compte l'ensemble
-                des revenus et des dettes. Par exemple, si l'un gagne 2 500 € et
-                l'autre 2 000 €, le taux d'endettement maximal de 30 à 35 %
-                s'applique sur 4 500 € de revenus combinés, soit 1 350 à 1 575 €
-                de mensualités totales.
-              </p>
-
-              <p className="leading-relaxed">
-                Avant d'emprunter, posez-vous deux questions simples :{" "}
-                <em>en ai-je vraiment besoin ?</em> et{" "}
-                <em>
-                  ai-je les moyens de rembourser sans fragiliser mon budget ?
-                </em>
+                Avant d'emprunter, posez-vous deux questions simples : En ai-je
+                vraiment besoin ?Ai-je les moyens de rembourser sans fragiliser
+                mon budget ?
               </p>
             </InfoBubble>
 
             <InfoBubble
               icon={<FaHandHoldingUsd />}
               title="Optimiser et gérer ses emprunts"
-              color="text-red-600"
+              color="text-red-400"
             >
               <p className="leading-relaxed">
                 Pour gérer vos dettes de manière intelligente, voici quelques
@@ -426,8 +403,8 @@ const PersonalFinance: React.FC = () => {
                 </li>
                 <li>
                   <strong>Prioriser le remboursement</strong> : commencez par
-                  les crédits à taux élevé (ex. cartes de crédit, prêts
-                  personnels) avant de rembourser le crédit immobilier.
+                  les crédits à taux élevé (cartes de crédit, prêts personnels)
+                  avant le crédit immobilier.
                 </li>
                 <li>
                   <strong>Profiter des taux bas</strong> : si les taux d'intérêt
@@ -435,31 +412,26 @@ const PersonalFinance: React.FC = () => {
                   faible coût tout en investissant votre épargne ailleurs.
                 </li>
               </ul>
-
-              <p className="leading-relaxed font-semibold">
-                Exemples concrets :
-              </p>
-              <ul className="list-disc list-inside space-y-1 pl-2">
-                <li>
-                  <strong>Cas classique :</strong> vous avez un crédit auto à 8
-                  % et un crédit immobilier à 2 %. Il est plus rentable de
-                  rembourser rapidement le crédit auto tout en continuant à
-                  payer normalement le crédit immobilier.
-                </li>
-                <li>
-                  <strong>Cas avec inflation :</strong> si l'inflation est de 5
-                  % et que votre crédit immobilier est à 2 %, la valeur réelle
-                  de vos mensualités diminue chaque année. Dans ce cas, il peut
-                  être intéressant de garder ce crédit plutôt que de le
-                  rembourser trop vite, car vous remboursez "moins chère" avec
-                  le temps.
-                </li>
-              </ul>
+              <ExampleBox>
+                <ul>
+                  <li>
+                    <strong>Cas classique</strong> : crédit auto à 8 % + crédit
+                    immo à 2 % ➜ remboursez d'abord le crédit auto.
+                  </li>
+                  <li>
+                    <strong>Cas avec inflation à 5 %</strong> : crédit immo à 2
+                    % ➜ la valeur réelle de vos mensualités diminue chaque
+                    année. Garder le crédit et investir l'épargne peut être plus
+                    rentable que de rembourser par anticipation.
+                  </li>
+                </ul>
+              </ExampleBox>
             </InfoBubble>
+
             <InfoBubble
               icon={<FaBalanceScale />}
               title="Emprunt levier"
-              color="text-red-500"
+              color="text-amber-400"
             >
               <p className="leading-relaxed">
                 L'<strong>emprunt levier</strong> consiste à utiliser un crédit
@@ -468,23 +440,17 @@ const PersonalFinance: React.FC = () => {
                 accélérer la constitution de patrimoine, mais comporte un risque
                 supplémentaire.
               </p>
-
-              <p className="leading-relaxed font-semibold">Exemple :</p>
-              <ul className="list-disc list-inside space-y-1 pl-2">
-                <li>
-                  <strong>Investissement immobilier :</strong> emprunter pour
-                  acheter un bien locatif dont le loyer couvre tout ou partie
-                  des mensualités et des charges. Exemple : un crédit immobilier
-                  à 2 %/an pour un bien qui génère 5 % de rendement locatif.
-                </li>
-              </ul>
-
+              <ExampleBox>
+                <p>
+                  Crédit immobilier à 2 %/an pour un bien locatif générant 5 %
+                  de rendement ➜ écart positif de 3 % qui rembourse une partie
+                  du crédit et constitue du patrimoine.
+                </p>
+              </ExampleBox>
               <p className="leading-relaxed">
-                ⚠️ Attention, l'emprunt levier augmente le risque. Si le
-                rendement attendu n'est pas atteint, vous devez tout de même
-                rembourser le crédit. Il est conseillé de maîtriser parfaitement
-                son budget et de ne jamais emprunter au-delà de ses capacités
-                financières.
+                ⚠️ L'emprunt levier augmente le risque, si le rendement attendu
+                n'est pas atteint, vous devez tout de même rembourser le crédit.
+                Ne jamais emprunter au-delà de ses capacités financières.
               </p>
             </InfoBubble>
           </div>
