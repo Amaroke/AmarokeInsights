@@ -2,6 +2,10 @@
 
 Tous les changements de ce projet sont documentés dans ce fichier.
 
+## [1.2.2] - 28/06/2026
+
+- Refonte visuelle des exemples et de la page des fondamentaux.
+
 ## [1.2.1] - 23/06/2026
 
 - Corrections et ajustements techniques divers (sans nouveau contenu).

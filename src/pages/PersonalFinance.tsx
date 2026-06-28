@@ -247,10 +247,13 @@ const PersonalFinance: React.FC = () => {
                 La recommandation courante est d'avoir{" "}
                 <strong>3 à 6 mois de dépenses courantes</strong> mis de côté,
                 idéalement sur un livret accessible et sécurisé (
+                <Term id={"LEP"} />,
                 <Term id={"LivretA"} />,
-                <Term id={"LDDS"} />, ...). Exemple : si vos dépenses mensuelles
-                sont de 1 500€, visez un fonds de secours compris entre 4 500€
-                et 9 000€.
+                <Term id={"LDDS"} />, ...).
+              </p>
+              <p className="leading-relaxed">
+                Exemple : si vos dépenses mensuelles sont de 1 500€, visez un
+                fonds de secours compris entre 4 500€ et 9 000€.
               </p>
               <p className="leading-relaxed">
                 Astuce : commencez par un petit montant régulier et augmentez-le

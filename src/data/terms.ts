@@ -154,6 +154,11 @@ export const terms = {
     definition:
       "Technologie de registre distribué qui permet de stocker et de sécuriser des données de manière transparente et immuable. La blockchain est la base des cryptomonnaies et de nombreuses applications décentralisées.",
   },
+  LEP: {
+    title: "LEP",
+    definition:
+      "Livret d'Épargne Populaire : livret d'épargne réglementé, sécurisé et défiscalisé, destiné aux personnes ayant des revenus modestes. Il offre un taux d'intérêt avantageux et un plafond de dépôt limité.",
+  },
 } as const;
 
 export type TermKey = keyof typeof terms;

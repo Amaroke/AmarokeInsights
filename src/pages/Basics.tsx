@@ -3,6 +3,8 @@ import { FaBookOpen } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
+import Term from "../components/Term";
+import ExampleBox from "../components/ExampleBox";
 import {
   FaChartLine,
   FaHandshake,
@@ -12,6 +14,7 @@ import {
   FaGlobeAmericas,
   FaTools,
   FaLayerGroup,
+  FaExclamationTriangle,
 } from "react-icons/fa";
 
 const Basics: React.FC = () => {
@@ -41,38 +44,43 @@ const Basics: React.FC = () => {
                 <strong>réduit le pouvoir d'achat</strong>. Ce que l'on peut
                 acheter avec 100 € aujourd'hui coûtera plus cher demain.
               </p>
+              <ExampleBox>
+                <ul>
+                  <li>Aujourd'hui, panier de courses ➜ 100 €</li>
+                  <li>Dans 1 an avec 3 % d'inflation ➜ 103 €</li>
+                  <li>Dans 10 ans avec 3 % d'inflation ➜ ~134 €</li>
+                </ul>
+                <p>
+                  Conclusion : si 100 € restent inactifs (compte courant, sans
+                  intérêts), on perd environ 34 % de pouvoir d'achat sur 10
+                  ans.
+                </p>
+              </ExampleBox>
               <p className="leading-relaxed">
-                Exemple concret :<br />
-                - Aujourd'hui, panier de courses ➜ 100 €<br />
-                - Dans 1 an avec 3 % d'inflation ➜ 103 €<br />
-                - Dans 10 ans avec 3 % d'inflation ➜ ~134 €<br />
-                Conclusion : si 100 € restent inactifs (non dépensés sur un
-                compte courant, sans générer d'intérêts), on perd environ 34 %
-                de pouvoir d'achat sur 10 ans.
-              </p>
-              <p className="leading-relaxed">
-                <strong>L'argent peut "travailler"</strong> grâce aux intérêts :
+                <strong>L'argent peut "travailler"</strong> grâce aux intérêts,
                 lorsqu'il est investi ou placé, il génère des revenus qui
                 compensent l'inflation et augmentent le pouvoir d'achat.
               </p>
-              <p className="leading-relaxed">
-                Exemple concret :<br />
-                - Placement ➜ 100 € à 5 % par an
-                <br />
-                - Après 1 an ➜ 105 €<br />
-                - Après 10 ans ➜ 163 €<br />
-                - Rendement net après 3 % d'inflation ➜ 2 % par an
-                <br />- Pouvoir d'achat réel après 10 ans ➜ ~122 €
-              </p>
+              <ExampleBox>
+                <ul>
+                  <li>Placement ➜ 100 € à 5 % par an</li>
+                  <li>Après 1 an ➜ 105 €</li>
+                  <li>Après 10 ans ➜ 163 €</li>
+                  <li>Rendement net après 3 % d'inflation ➜ 2 % par an</li>
+                  <li>Pouvoir d'achat réel après 10 ans ➜ ~122 €</li>
+                </ul>
+              </ExampleBox>
               <p className="leading-relaxed">
                 <strong>La déflation</strong> est l'inverse de l'inflation :
                 baisse générale et durable des prix, ce qui augmente le pouvoir
                 d'achat.
               </p>
-              <p className="leading-relaxed">
-                Exemple concret :<br />- Un panier de 100 € aujourd'hui coûtera
-                97 € l'an prochain avec 3 % de déflation.
-              </p>
+              <ExampleBox>
+                <p>
+                  Un panier de 100 € aujourd'hui coûtera 97 € l'an prochain
+                  avec 3 % de déflation.
+                </p>
+              </ExampleBox>
               <p className="leading-relaxed">
                 <strong>
                   Pourquoi l'inflation est plus fréquente que la déflation ?
@@ -96,23 +104,25 @@ const Basics: React.FC = () => {
                 5 % par an, les intérêts ne produisent pas d'intérêts
                 supplémentaires.
               </p>
-              <p className="leading-relaxed">
-                Exemple concret :<br />
-                - Placement ➜ 1 000 € prêtés à 5 % par an
-                <br />
-                - Après 1 an ➜ 1 050 €<br />- Après 10 ans ➜ 1 500 €
-              </p>
+              <ExampleBox>
+                <ul>
+                  <li>Placement ➜ 1 000 € prêtés à 5 % par an</li>
+                  <li>Après 1 an ➜ 1 050 €</li>
+                  <li>Après 10 ans ➜ 1 500 €</li>
+                </ul>
+              </ExampleBox>
               <p className="leading-relaxed">
                 <strong>Intérêt composé</strong> : les intérêts génèrent
                 eux-mêmes des intérêts, créant un effet boule de neige.
               </p>
-              <p className="leading-relaxed">
-                Exemple concret :<br />
-                - Placement ➜ 1 000 € à 5 % par an
-                <br />
-                - Après 1 an ➜ 1 050 €<br />
-                - Après 2 ans ➜ 1 102,50 €<br />- Après 10 ans ➜ 1 628 €
-              </p>
+              <ExampleBox>
+                <ul>
+                  <li>Placement ➜ 1 000 € à 5 % par an</li>
+                  <li>Après 1 an ➜ 1 050 €</li>
+                  <li>Après 2 ans ➜ 1 102,50 €</li>
+                  <li>Après 10 ans ➜ 1 628 €</li>
+                </ul>
+              </ExampleBox>
             </InfoBubble>
 
             <InfoBubble
@@ -125,22 +135,27 @@ const Basics: React.FC = () => {
                 régulier (salaire, loyers, dividendes). Une personne peut
                 percevoir un salaire élevé mais ne pas accumuler de richesse.
               </p>
-              <p className="leading-relaxed">
-                Exemple concret :<br />
-                - Salaire ➜ 3 000 €/mois
-                <br />- Après 1 an ➜ 36 000 € perçus, mais patrimoine inchangé
-                si tout est dépensé.
-              </p>
+              <ExampleBox>
+                <ul>
+                  <li>Salaire ➜ 3 000 €/mois</li>
+                  <li>
+                    Après 1 an ➜ 36 000 € perçus, mais patrimoine inchangé si
+                    tout est dépensé.
+                  </li>
+                </ul>
+              </ExampleBox>
               <p className="leading-relaxed">
                 <strong>Le patrimoine</strong> correspond au stock (ce que l'on
                 possède moins ce que l'on doit). Même avec un revenu modeste, un
                 patrimoine solide peut assurer une sécurité financière.
               </p>
-              <p className="leading-relaxed">
-                Exemple concret :<br />
-                - Maison ➜ valeur 150 000 €<br />
-                - Crédit restant ➜ 50 000 €<br />- Patrimoine net ➜ 100 000 €
-              </p>
+              <ExampleBox>
+                <ul>
+                  <li>Maison ➜ valeur 150 000 €</li>
+                  <li>Crédit restant ➜ 50 000 €</li>
+                  <li>Patrimoine net ➜ 100 000 €</li>
+                </ul>
+              </ExampleBox>
             </InfoBubble>
 
             <InfoBubble
@@ -149,30 +164,29 @@ const Basics: React.FC = () => {
               color="text-pink-400"
             >
               <p className="leading-relaxed">
-                <strong>L'épargne</strong> est sécurisée mais rapporte peu
-                (livret, compte épargne). Elle protège le capital et génère un
-                petit revenu.
+                <strong>L'épargne</strong> est sécurisée mais rapporte peu (
+                <Term id="LEP" />, <Term id="LivretA" />, <Term id="LDDS" />,
+                compte épargne). Elle protège le capital et génère un petit
+                revenu.
               </p>
-              <p className="leading-relaxed">
-                Exemple concret :<br />
-                - Placement ➜ 5 000 € sur livret à 2 %<br />- Après 1 an ➜ 5 100
-                €
-              </p>
+              <ExampleBox>
+                <ul>
+                  <li>Placement ➜ 5 000 € sur un livret à 2 %</li>
+                  <li>Après 1 an ➜ 5 100 €</li>
+                </ul>
+              </ExampleBox>
               <p className="leading-relaxed">
                 <strong>L'investissement</strong> peut rapporter plus mais
                 comporte un risque. La valeur du capital peut fluctuer selon les
                 marchés (actions, immobilier…).
               </p>
-              <p className="leading-relaxed">
-                Exemple concret :<br />
-                - Placement ➜ 5 000 € en actions
-                <br />
-                - Rendement attendu ➜ 8 %/an
-                <br />
-                - Après 1 an :<br />
-                • Scénario favorable ➜ 5 400 €<br />• Scénario défavorable ➜ 4
-                500 € (perte de 10 % en cas de crise)
-              </p>
+              <ExampleBox>
+                <ul>
+                  <li>Placement ➜ 5 000 € en actions, rendement attendu ➜ 8 %/an</li>
+                  <li>Scénario favorable ➜ 5 400 € après 1 an</li>
+                  <li>Scénario défavorable ➜ 4 500 € après 1 an (perte de 10 % en cas de crise)</li>
+                </ul>
+              </ExampleBox>
             </InfoBubble>
           </div>
         </section>
@@ -266,7 +280,22 @@ const Basics: React.FC = () => {
               <p className="leading-relaxed">
                 Erreurs, fraudes, défaillances techniques ou cyberattaques
                 peuvent bloquer une activité. On le limite avec des procédures
-                fiables, systèmes sécurisés et bonne organisation.
+                fiables, des systèmes sécurisés et une bonne organisation.
+              </p>
+            </InfoBubble>
+
+            <InfoBubble
+              icon={<FaExclamationTriangle />}
+              title="Risque comportemental"
+              color="text-red-400"
+            >
+              <p className="leading-relaxed">
+                Le risque le plus sous-estimé, nos propres biais cognitifs. FOMO
+                (peur de rater une hausse), panique à la baisse, excès de
+                confiance, attachement à un prix d'achat... Ces comportements
+                poussent souvent à acheter au plus haut et vendre au plus bas.
+                On le réduit en se formant, en planifiant et en restant
+                discipliné.
               </p>
             </InfoBubble>
 
