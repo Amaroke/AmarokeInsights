@@ -23,6 +23,9 @@ const sections = [
     icon: FaLightbulb,
     iconColor: "text-yellow-400",
     activeColor: "bg-yellow-500/10 text-yellow-50",
+    hoverColor: "hover:bg-yellow-500/10 hover:text-yellow-50",
+    hoverIconColor: "group-hover:text-yellow-400",
+    hoverItemColor: "hover:bg-yellow-500/5 hover:text-yellow-200",
     lastUpdated: "2025-08-25",
     items: [
       { title: "Concepts fondamentaux", path: "concepts-fundamentals" },
@@ -35,6 +38,9 @@ const sections = [
     icon: GiWallet,
     iconColor: "text-green-400",
     activeColor: "bg-green-500/10 text-green-50",
+    hoverColor: "hover:bg-green-500/10 hover:text-green-50",
+    hoverIconColor: "group-hover:text-green-400",
+    hoverItemColor: "hover:bg-green-500/5 hover:text-green-200",
     lastUpdated: "2025-08-30",
     items: [
       { title: "Budget", path: "budget" },
@@ -48,6 +54,9 @@ const sections = [
     icon: FaPiggyBank,
     iconColor: "text-blue-400",
     activeColor: "bg-blue-500/10 text-blue-50",
+    hoverColor: "hover:bg-blue-500/10 hover:text-blue-50",
+    hoverIconColor: "group-hover:text-blue-400",
+    hoverItemColor: "hover:bg-blue-500/5 hover:text-blue-200",
     lastUpdated: "2026-03-16",
     items: [
       { title: "Les banques", path: "how-banks-work" },
@@ -61,6 +70,9 @@ const sections = [
     icon: FaMoneyCheckAlt,
     iconColor: "text-indigo-400",
     activeColor: "bg-indigo-500/10 text-indigo-50",
+    hoverColor: "hover:bg-indigo-500/10 hover:text-indigo-50",
+    hoverIconColor: "group-hover:text-indigo-400",
+    hoverItemColor: "hover:bg-indigo-500/5 hover:text-indigo-200",
     lastUpdated: "2026-03-16",
     items: [
       { title: "Comptes courants", path: "current-accounts" },
@@ -74,6 +86,9 @@ const sections = [
     icon: FaChartLine,
     iconColor: "text-emerald-400",
     activeColor: "bg-emerald-500/10 text-emerald-50",
+    hoverColor: "hover:bg-emerald-500/10 hover:text-emerald-50",
+    hoverIconColor: "group-hover:text-emerald-400",
+    hoverItemColor: "hover:bg-emerald-500/5 hover:text-emerald-200",
     lastUpdated: "2025-12-23",
     items: [
       { title: "Qu'est-ce qu'investir ?", path: "what-is-invest" },
@@ -92,6 +107,9 @@ const sections = [
     icon: FaMoneyBillWave,
     iconColor: "text-teal-400",
     activeColor: "bg-teal-500/10 text-teal-50",
+    hoverColor: "hover:bg-teal-500/10 hover:text-teal-50",
+    hoverIconColor: "group-hover:text-teal-400",
+    hoverItemColor: "hover:bg-teal-500/5 hover:text-teal-200",
     lastUpdated: "2026-04-14",
     items: [
       { title: "Organigramme : comment j'investirais ?", path: "organigram" },
@@ -110,6 +128,9 @@ const sections = [
     icon: FaChartBar,
     iconColor: "text-orange-400",
     activeColor: "bg-orange-500/10 text-orange-50",
+    hoverColor: "hover:bg-orange-500/10 hover:text-orange-50",
+    hoverIconColor: "group-hover:text-orange-400",
+    hoverItemColor: "hover:bg-orange-500/5 hover:text-orange-200",
     lastUpdated: "2026-04-14",
     items: [
       { title: "Qu'est-ce que le trading ?", path: "trading-intro" },
@@ -124,6 +145,9 @@ const sections = [
     icon: FaBitcoin,
     iconColor: "text-amber-400",
     activeColor: "bg-amber-500/10 text-amber-50",
+    hoverColor: "hover:bg-amber-500/10 hover:text-amber-50",
+    hoverIconColor: "group-hover:text-amber-400",
+    hoverItemColor: "hover:bg-amber-500/5 hover:text-amber-200",
     lastUpdated: "2026-03-18",
     items: [
       { title: "Qu'est-ce qu'une crypto ?", path: "what-are-cryptos" },
@@ -146,6 +170,9 @@ const sections = [
     icon: GiPathDistance,
     iconColor: "text-violet-400",
     activeColor: "bg-violet-500/10 text-violet-50",
+    hoverColor: "hover:bg-violet-500/10 hover:text-violet-50",
+    hoverIconColor: "group-hover:text-violet-400",
+    hoverItemColor: "hover:bg-violet-500/5 hover:text-violet-200",
     lastUpdated: "",
     items: [
       { title: "Stratégie personnelle", path: "strategie-personnelle" },
@@ -158,6 +185,9 @@ const sections = [
     icon: FaBook,
     iconColor: "text-slate-400",
     activeColor: "bg-slate-500/10 text-slate-50",
+    hoverColor: "hover:bg-slate-500/10 hover:text-slate-50",
+    hoverIconColor: "group-hover:text-slate-400",
+    hoverItemColor: "hover:bg-slate-500/5 hover:text-slate-200",
     lastUpdated: "",
     items: [
       { title: "Outils", path: "tools" },
@@ -171,6 +201,9 @@ const sections = [
     icon: FaEnvelope,
     iconColor: "text-pink-400",
     activeColor: "bg-pink-500/10 text-pink-50",
+    hoverColor: "hover:bg-pink-500/10 hover:text-pink-50",
+    hoverIconColor: "group-hover:text-pink-400",
+    hoverItemColor: "hover:bg-pink-500/5 hover:text-pink-200",
     lastUpdated: "",
     items: [],
   },
@@ -276,17 +309,17 @@ const Sidebar: React.FC = () => {
                         navigate(`/${section.path}`);
                       }
                     }}
-                    className={`group flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${
+                    className={`group flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-300 ${
                       isActive
-                        ? `${section.activeColor} ring-1 ring-inset ring-white/15 active:opacity-90`
-                        : "text-gray-200 hover:bg-white/5 hover:text-white active:bg-white/10"
+                        ? `${section.activeColor} ring-1 ring-inset ring-white/15`
+                        : `text-gray-200 ${section.hoverColor}`
                     }`}
                   >
                     <span
-                      className={`text-base shrink-0 transition-all duration-200 ${
+                      className={`text-base shrink-0 transition-all duration-300 ${
                         isActive
                           ? `${section.iconColor} scale-110`
-                          : "group-hover:text-gray-300"
+                          : `text-gray-400 ${section.hoverIconColor} group-hover:scale-110`
                       }`}
                     >
                       <Icon />
@@ -309,7 +342,7 @@ const Sidebar: React.FC = () => {
                               onClick={() =>
                                 handleScrollTo(section.path, item.path)
                               }
-                              className="w-full text-left px-2 py-1.5 rounded text-xs text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200"
+                              className={`w-full text-left px-2 py-1.5 rounded text-xs text-gray-400 ${section.hoverItemColor} transition-colors duration-300`}
                             >
                               {item.title}
                             </button>
