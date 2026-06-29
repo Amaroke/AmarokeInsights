@@ -756,45 +756,49 @@ const HowToInvest: React.FC = () => {
               </ul>
 
               <div className="mt-3 border border-gray-700 rounded-xl overflow-x-auto shadow-sm">
-                <table className="min-w-full border border-gray-700 text-sm">
+                <table className="min-w-max border border-gray-700 text-xs sm:text-sm [&_td]:px-2 [&_td]:py-1.5 sm:[&_td]:px-3 sm:[&_td]:py-2">
                   <thead>
                     <tr className="bg-gray-800 text-gray-200">
                       <th
-                        className="px-3 py-2 text-left border-b border-r border-gray-600"
+                        className="px-2 py-2 sm:px-3 text-left border-b border-r border-gray-600"
                         rowSpan={2}
                       >
                         Horizon
                       </th>
                       <th
-                        className="px-3 py-2 text-right border-b border-r border-gray-600"
+                        className="px-2 py-2 sm:px-3 text-right border-b border-r border-gray-600"
                         rowSpan={2}
                       >
                         PEA CW8
                       </th>
                       <th
-                        className="px-3 py-2 text-center border-b border-r border-gray-600"
+                        className="px-2 py-2 sm:px-3 text-center border-b border-r border-gray-600"
                         colSpan={2}
                       >
-                        111bis CAW (Foyer Horizon)
+                        <span className="sm:hidden">CAW Foyer</span>
+                        <span className="hidden sm:inline">111bis CAW (Foyer Horizon)</span>
                       </th>
                       <th
-                        className="px-3 py-2 text-center border-b border-gray-600"
+                        className="px-2 py-2 sm:px-3 text-center border-b border-gray-600"
                         colSpan={2}
                       >
-                        111bis Baloise (CW8)
+                        <span className="sm:hidden">Baloise</span>
+                        <span className="hidden sm:inline">111bis Baloise (CW8)</span>
                       </th>
                     </tr>
-                    <tr className="bg-gray-800 text-gray-400 text-xs">
-                      <th className="px-3 py-1 text-right border-b border-gray-600">
-                        avec impôt en PEA
+                    <tr className="bg-gray-800 text-gray-400 text-[10px] sm:text-xs">
+                      <th className="px-2 py-1 sm:px-3 text-right border-b border-gray-600 whitespace-nowrap">
+                        <span className="sm:hidden">+ PEA</span>
+                        <span className="hidden sm:inline">avec impôt en PEA</span>
                       </th>
-                      <th className="px-3 py-1 text-right border-b border-r border-gray-600">
+                      <th className="px-2 py-1 sm:px-3 text-right border-b border-r border-gray-600">
                         seul
                       </th>
-                      <th className="px-3 py-1 text-right border-b border-gray-600">
-                        avec impôt en PEA
+                      <th className="px-2 py-1 sm:px-3 text-right border-b border-gray-600 whitespace-nowrap">
+                        <span className="sm:hidden">+ PEA</span>
+                        <span className="hidden sm:inline">avec impôt en PEA</span>
                       </th>
-                      <th className="px-3 py-1 text-right border-b border-gray-600">
+                      <th className="px-2 py-1 sm:px-3 text-right border-b border-gray-600">
                         seul
                       </th>
                     </tr>
