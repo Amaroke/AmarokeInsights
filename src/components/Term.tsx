@@ -97,7 +97,9 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
           onMouseLeave={() => setOpen(false)}
         >
           <div className="bg-[#12121b] text-gray-200 text-sm p-3 rounded-lg shadow-lg border border-white/20 max-w-65">
-            <strong className="block mb-1">{title}</strong>
+            <strong className="block mb-1">
+              {title.charAt(0).toUpperCase() + title.slice(1)}
+            </strong>
             <p>{definition}</p>
           </div>
         </div>

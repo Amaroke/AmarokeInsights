@@ -2,6 +2,10 @@
 
 Tous les changements de ce projet sont documentés dans ce fichier.
 
+## [1.2.3] - 29/06/2026
+
+- Ajout d'une partie sur l'étude du 111bis dans la page sur les investissements.
+
 ## [1.2.2] - 28/06/2026
 
 - Refonte visuelle des exemples et de la page des fondamentaux.

@@ -579,6 +579,401 @@ const HowToInvest: React.FC = () => {
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Comparatif PEA vs Plan 111bis Luxembourgeois (pour les frontaliers)
           </h2>
+
+          <InfoBubble
+            icon={<FaChartLine />}
+            title="L'article 111bis est-il intéressant pour les frontaliers ?"
+            color="text-green-400"
+          >
+            <p className="leading-relaxed">
+              L'article 111bis de la loi luxembourgeoise permet aux salariés
+              travaillant au Luxembourg, résidents ou <b>frontaliers</b>, de
+              déduire jusqu'à <b>4 500 €/an</b> de leur revenu imposable au
+              Luxembourg (depuis janvier 2026, contre 3 200 € auparavant) en
+              souscrivant un contrat de prévoyance-vieillesse individuelle. Pour
+              un salaire annuel de <b>50 000 €</b>, le taux marginal
+              luxembourgeois est de <b>~36 %</b>, ce qui représente un{" "}
+              <b>remboursement fiscal de 1 620 €/an</b> pour le versement du
+              plafond. Les calculs qui suivent se basent sur ce plafond de 4 500
+              € et un remboursement fiscal de 1 620 €, il ne faut donc pas
+              oublier que la rentaibilité des plans 111bis augmentera ou
+              diminuera selon le salaire et le taux marginal luxembourgeois.
+            </p>
+            <p className="leading-relaxed mt-2">
+              De plus il ne faut pas oublier que le capital est{" "}
+              <b>bloqué jusqu'à la retraite</b> (minimum 60 ans, maximum 75
+              ans), et le capital récupéré est <b>imposé en France</b> comme une
+              pension étrangère (barême <Term id="IR" /> + <Term id="PS" />
+              ), contrairement au <Term id="PEA" /> qui ne supporte que les{" "}
+              <Term id="PS" /> après 5 ans. Nous comparons donc la rentabilité
+              de ces enveloppes ci-dessous.
+            </p>
+
+            <div className="mt-4 border border-gray-700 rounded-xl overflow-hidden shadow-sm">
+              <table className="min-w-full border border-gray-700 text-sm">
+                <thead>
+                  <tr className="bg-gray-800 text-gray-200">
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      Critère
+                    </th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      PEA CW8
+                    </th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      111bis CAW (Foyer Horizon)
+                    </th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      111bis Baloise (ETF World)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-300">
+                  <tr className="border-b border-gray-700">
+                    <td className="px-3 py-2 font-semibold">Frais d'entrée</td>
+                    <td className="px-3 py-2 text-green-400">0 %</td>
+                    <td className="px-3 py-2">2 % (Foyer)</td>
+                    <td className="px-3 py-2">2 % (négocié - de base 4,5 %)</td>
+                  </tr>
+                  <tr className="border-b border-gray-700">
+                    <td className="px-3 py-2 font-semibold">
+                      Frais annuels contrat
+                    </td>
+                    <td className="px-3 py-2 text-green-400">0 %</td>
+                    <td className="px-3 py-2">1,2 % (Foyer)</td>
+                    <td className="px-3 py-2">1,2 %</td>
+                  </tr>
+                  <tr className="border-b border-gray-700">
+                    <td className="px-3 py-2 font-semibold">Frais du fonds</td>
+                    <td className="px-3 py-2 text-green-400">0,17 % (CW8)</td>
+                    <td className="px-3 py-2 text-red-400">
+                      1,11 % (Dynamic C SICAV)
+                    </td>
+                    <td className="px-3 py-2">0,17 % (CW8)</td>
+                  </tr>
+                  <tr className="border-b border-gray-700">
+                    <td className="px-3 py-2 font-semibold">
+                      Total frais annuels
+                    </td>
+                    <td className="px-3 py-2 text-green-400">~0,2 %</td>
+                    <td className="px-3 py-2 text-red-400">~2,3 %</td>
+                    <td className="px-3 py-2">~1,4 %</td>
+                  </tr>
+                  <tr className="border-b border-gray-700">
+                    <td className="px-3 py-2 font-semibold">
+                      Rendement net estimé
+                    </td>
+                    <td className="px-3 py-2 text-green-400">
+                      ~11,5 % (moy. 10 ans CW8)
+                    </td>
+                    <td className="px-3 py-2 text-red-400">~7,1 %</td>
+                    <td className="px-3 py-2">~10,3 %</td>
+                  </tr>
+                  <tr className="border-b border-gray-700">
+                    <td className="px-3 py-2 font-semibold">Disponibilité</td>
+                    <td className="px-3 py-2 text-green-400">
+                      Après 5 ans (sans clôture)
+                    </td>
+                    <td className="px-3 py-2 text-red-400">
+                      Bloqué jusqu'à 60-75 ans
+                    </td>
+                    <td className="px-3 py-2 text-red-400">
+                      Bloqué jusqu'à 60-75 ans
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-700">
+                    <td className="px-3 py-2 font-semibold">
+                      Fiscalité sortie (gains)
+                    </td>
+                    <td className="px-3 py-2 text-green-400">
+                      18,6 % (PS uniquement)
+                    </td>
+                    <td className="px-3 py-2 text-red-400">
+                      ~25 % estimés (IR + PS en France)
+                    </td>
+                    <td className="px-3 py-2 text-red-400">
+                      ~25 % estimés (IR + PS en France)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-3 py-2 font-semibold">
+                      Déduction fiscale à l'entrée
+                    </td>
+                    <td className="px-3 py-2">Non</td>
+                    <td className="px-3 py-2 text-green-400">
+                      1 620 €/an récupérés
+                    </td>
+                    <td className="px-3 py-2 text-green-400">
+                      1 620 €/an récupérés
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="leading-relaxed mt-3">
+              Le Dynamic C de CapitalatWork est un fonds{" "}
+              <b>mixte actions/obligations</b>. Sur 10 ans, il affiche{" "}
+              <b>+8,3 % annualisé net de frais</b>, auquel il faut retrancher la
+              surcouche Foyer de 1,2 %/an, soit environ <b>7,1 % net global</b>.
+              Il est le plan de foyer (parmis équilibré, dynamique, croissance)
+              le plus performant sur 10 ans. Pour le PEA nous prenons le CW8, un
+              ETF World capitalisant, qui a affiché{" "}
+              <b>+11,7 % annualisé brut</b> sur 10 ans, auquel il faut
+              retrancher le TER de 0,17 %, soit environ <b>11,5 % net global</b>
+              .
+            </p>
+
+            <ExampleBox>
+              <ul className="text-sm text-gray-300 space-y-1 list-none">
+                <li>
+                  <span className="text-gray-400">Versement :</span>{" "}
+                  <b>4 500 €/an</b> (plafond 111bis depuis 2026)
+                </li>
+                <li>
+                  <span className="text-gray-400">Remboursement fiscal :</span>{" "}
+                  <b>1 620 €/an</b> (TMI luxembourgeois ~36 %, salaire de 50 000
+                  € annuel)
+                </li>
+                <li>
+                  <span className="text-gray-400">
+                    Colonne "avec impôt en PEA" :
+                  </span>{" "}
+                  le remboursement est réinvesti chaque année dans un PEA CW8,
+                  coût net <b>2 880 €/an</b>
+                </li>
+                <li>
+                  <span className="text-gray-400">Colonne "seul" :</span> le
+                  remboursement est gardé en cash, coût net <b>2 880 €/an</b>
+                </li>
+                <li>
+                  <span className="text-gray-400">Rendement CW8 :</span> 11,7 %
+                  brut (moy. 10 ans), 0,17 % TER = <b>11,5 % net</b>
+                </li>
+                <li>
+                  <span className="text-gray-400">Fiscalité sortie :</span> 18,6
+                  % de PS pour le PEA, ~25 % pour les 111bis
+                </li>
+              </ul>
+
+              <div className="mt-3 border border-gray-700 rounded-xl overflow-x-auto shadow-sm">
+                <table className="min-w-full border border-gray-700 text-sm">
+                  <thead>
+                    <tr className="bg-gray-800 text-gray-200">
+                      <th
+                        className="px-3 py-2 text-left border-b border-r border-gray-600"
+                        rowSpan={2}
+                      >
+                        Horizon
+                      </th>
+                      <th
+                        className="px-3 py-2 text-right border-b border-r border-gray-600"
+                        rowSpan={2}
+                      >
+                        PEA CW8
+                      </th>
+                      <th
+                        className="px-3 py-2 text-center border-b border-r border-gray-600"
+                        colSpan={2}
+                      >
+                        111bis CAW (Foyer Horizon)
+                      </th>
+                      <th
+                        className="px-3 py-2 text-center border-b border-gray-600"
+                        colSpan={2}
+                      >
+                        111bis Baloise (CW8)
+                      </th>
+                    </tr>
+                    <tr className="bg-gray-800 text-gray-400 text-xs">
+                      <th className="px-3 py-1 text-right border-b border-gray-600">
+                        avec impôt en PEA
+                      </th>
+                      <th className="px-3 py-1 text-right border-b border-r border-gray-600">
+                        seul
+                      </th>
+                      <th className="px-3 py-1 text-right border-b border-gray-600">
+                        avec impôt en PEA
+                      </th>
+                      <th className="px-3 py-1 text-right border-b border-gray-600">
+                        seul
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-300">
+                    <tr className="border-b border-gray-700">
+                      <td className="px-3 py-2 font-semibold border-r border-gray-700">
+                        10 ans
+                      </td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        71 200 €
+                      </td>
+                      <td className="px-3 py-2 text-right">82 500 €</td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        56 900 €
+                      </td>
+                      <td className="px-3 py-2 text-right text-green-400">
+                        90 100 €
+                      </td>
+                      <td className="px-3 py-2 text-right">64 500 €</td>
+                    </tr>
+                    <tr className="border-b border-gray-700">
+                      <td className="px-3 py-2 font-semibold border-r border-gray-700">
+                        20 ans
+                      </td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        266 400 €
+                      </td>
+                      <td className="px-3 py-2 text-right">255 000 €</td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        159 100 €
+                      </td>
+                      <td className="px-3 py-2 text-right text-green-400">
+                        314 000 €
+                      </td>
+                      <td className="px-3 py-2 text-right">218 100 €</td>
+                    </tr>
+                    <tr className="bg-gray-800/40 font-semibold text-gray-100">
+                      <td className="px-3 py-2 border-r border-gray-700">
+                        40 ans
+                      </td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        2 493 100 €
+                      </td>
+                      <td className="px-3 py-2 text-right">1 619 300 €</td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        721 600 €
+                      </td>
+                      <td className="px-3 py-2 text-right text-green-400">
+                        2 530 300 €
+                      </td>
+                      <td className="px-3 py-2 text-right">1 632 700 €</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <ul className="mt-3 text-sm space-y-2 list-none">
+                <li>
+                  <b>Réinvestir l'impôt en PEA est toujours optimal</b>, la
+                  colonne "avec impôt en PEA" surpasse systématiquement la
+                  colonne "seul" pour les deux 111bis. Donc si l'on part dur le
+                  principe que l'on consome l'argent récupéré de l'impôt, le PEA
+                  reste toujours plus performant que le 111bis en terme
+                  d'investissement long terme.
+                </li>
+                <li>
+                  <b>Baloise CW8 + PEA gagne à tous les horizons</b>, y compris
+                  à 40 ans (2 530 300 € vs 2 493 100 € pour le PEA seul).
+                  L'explication, en effet, grâce au levier fiscal, on investit
+                  réellement 5 670 €/an (4 500 € en Baloise + 1 620 € de
+                  remboursement en PEA).
+                </li>
+                <li>
+                  <b>Le PEA seul reste devant à effort égal</b>, comparé à 2 880
+                  €/an dans un PEA (même sortie de caisse). Mais il conserve
+                  l'avantage de la liquidité, contrairement aux 111bis bloqués
+                  jusqu'à 60-75 ans.
+                </li>
+                <li>
+                  <b>Le CAW Dynamic C est le moins performant</b> des deux
+                  111bis à tous les horizons, frais Foyer 1,2 %/an empilés sur
+                  un fonds mixte à 7,1 % net, contre 10,3 % net pour le Baloise
+                  sur CW8 pur. Les autres plans Foyer (équilibré, croissance)
+                  sont encore moins performants.
+                </li>
+              </ul>
+            </ExampleBox>
+
+            <div className="mt-4">
+              <p className="text-sm font-semibold text-gray-300 mb-2">
+                Hypothèses simplificatrices qui pourrait changer les résultats
+              </p>
+              <ul className="text-sm text-gray-400 space-y-2 list-none">
+                <li>
+                  <b className="text-gray-200">Rendement CW8 exceptionnel :</b>{" "}
+                  Les 11,7 % annualisés sur 10 ans reflètent une décennie
+                  particulièrement favorable. La moyenne historique longue durée
+                  du MSCI World en EUR est plutôt autour de <b>7-8 %/an</b>. À
+                  un rendement plus faible, l'avantage fiscal du 111bis pèse
+                  plus lourd.
+                </li>
+                <li>
+                  <b className="text-gray-200">Plafond PEA à 150 000 :</b> À 4
+                  500 €/an, le plafond est atteint au bout de 33 ans. Les 7
+                  années restantes dans la simulation à 40 ans ne peuvent plus
+                  recevoir de nouveaux versements. Les 111bis n'ont pas ce
+                  plafond en versements cumulés.
+                </li>
+                <li>
+                  <b className="text-gray-200">
+                    Fiscalité de sortie du 111bis estimée à 25 % :
+                  </b>{" "}
+                  Ce taux combiné (IR retraite + PS) peut varier fortement, si
+                  vos revenus à la retraite sont élevés, le taux marginal peut
+                  dépasser 30 %, pénalisant davantage le 111bis. A l'inverse,
+                  des revenus modestes à la retraite abaisseraient ce taux.
+                </li>
+                <li>
+                  <b className="text-gray-200">TMI fixe à 36 % :</b> Une
+                  évolution de salaire, un changement de classe fiscale ou une
+                  réforme du barème luxembourgeois modifient directement le
+                  montant remboursé et donc tout l'avantage du 111bis.
+                </li>
+                <li>
+                  <b className="text-gray-200">
+                    Blocage du 111bis jusqu'à 60-75 ans :
+                  </b>{" "}
+                  Contrairement au PEA (accessible sans clôture après 5 ans), le
+                  capital du 111bis est totalement immobilisé. En cas de besoin
+                  de liquidité ou d'arrêt de l'activité au Luxembourg, cette
+                  contrainte est majeure.
+                </li>
+                <li>
+                  <b className="text-gray-200">
+                    Frais Baloise négociés à 2 % :
+                  </b>{" "}
+                  Le tarif officiel est de 4,5 %. Sans négociation. Il faut
+                  systématiquement négocier ces frais d'entrée avant de
+                  souscrire.
+                </li>
+                <li>
+                  <b className="text-gray-200">
+                    Emploi continu au Luxembourg jusqu'à la retraite :
+                  </b>{" "}
+                  Le 111bis n'est alimentable que tant que vous payez des impôts
+                  au Luxembourg. Un départ de la frontière ou une perte d'emploi
+                  interrompt la déductibilité.
+                </li>
+              </ul>
+            </div>
+
+            <p className="leading-relaxed mt-4">
+              Ces chiffres sont des ordres de grandeur basés sur des hypothèses
+              moyennes. La simulation idéale est celle que vous ferez avec{" "}
+              <b>vos propres paramètres</b>, votre salaire exact, votre TMI
+              réel, votre horizon de retraite, votre taux marginal prévu à la
+              sortie. Ce qui est certain, en revanche, c'est qu'{" "}
+              <b>
+                investir, quelle que soit l'enveloppe choisie, est toujours
+                préférable à ne rien faire
+              </b>
+              . L'inaction a un coût lui aussi, celui de l'inflation et des
+              opportunités manquées.
+            </p>
+          </InfoBubble>
+
+          <div className="mt-4 border-l-2 border-green-600 pl-4 py-1">
+            <p className="text-xs font-semibold text-green-400 mb-1">
+              Outil de simulation à venir
+            </p>
+            <p className="text-xs text-gray-400">
+              Un simulateur interactif permettant de comparer PEA, assurance
+              vie, CTO, PER et plan 111bis selon votre situation personnelle
+              (salaire, TMI, horizon, frais négociés) sera disponible dans la
+              section Outils du site. Sa mise en place demande du temps pour
+              être correcte et sans erreur de calcul, mais il est prévu.
+            </p>
+          </div>
         </section>
       </Container>
     </PageLayout>

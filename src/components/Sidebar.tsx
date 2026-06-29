@@ -278,8 +278,8 @@ const Sidebar: React.FC = () => {
                     }}
                     className={`group flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${
                       isActive
-                        ? `${section.activeColor} ring-1 ring-inset ring-white/15`
-                        : "text-gray-200 hover:bg-white/5 hover:text-white"
+                        ? `${section.activeColor} ring-1 ring-inset ring-white/15 active:opacity-90`
+                        : "text-gray-200 hover:bg-white/5 hover:text-white active:bg-white/10"
                     }`}
                   >
                     <span
