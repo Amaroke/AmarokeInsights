@@ -6,6 +6,9 @@ Tous les changements de ce projet sont documentés dans ce fichier.
 
 - Mise à jour de la sidebar pour suivre la progression dans les pages.
 - Ajout des pages pour les deux futurs outils location vs achat et comparateur d'enveloppes.
+- Ajout de la fonctionnalité de recherche dans le site.
+- Séparation des sections Outils et Ressources dans la sidebar.
+- Ajout d'une page en cours de conception pour le futur outil de profil de risque.
 
 ## [1.2.3] - 29/06/2026
 

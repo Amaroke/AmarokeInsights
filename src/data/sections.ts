@@ -8,6 +8,7 @@ import {
   FaChartBar,
   FaEnvelope,
   FaMoneyBillWave,
+  FaTools,
 } from "react-icons/fa";
 import { GiPathDistance, GiWallet } from "react-icons/gi";
 import type { IconType } from "react-icons";
@@ -186,15 +187,15 @@ export const sections: Section[] = [
     ],
   },
   {
-    title: "Outils & Ressources",
-    path: "resources",
-    icon: FaBook,
-    iconColor: "text-slate-400",
-    activeColor: "bg-slate-500/10 text-slate-50",
-    hoverColor: "hover:bg-slate-500/10 hover:text-slate-50",
-    hoverIconColor: "group-hover:text-slate-400",
-    hoverItemColor: "hover:bg-slate-500/5 hover:text-slate-200",
-    lastUpdated: "",
+    title: "Outils",
+    path: "tools",
+    icon: FaTools,
+    iconColor: "text-cyan-400",
+    activeColor: "bg-cyan-500/10 text-cyan-50",
+    hoverColor: "hover:bg-cyan-500/10 hover:text-cyan-50",
+    hoverIconColor: "group-hover:text-cyan-400",
+    hoverItemColor: "hover:bg-cyan-500/5 hover:text-cyan-200",
+    lastUpdated: "2026-06-30",
     items: [
       { title: "Simulateur de prêt", path: "loan", href: "/loan" },
       {
@@ -212,6 +213,24 @@ export const sections: Section[] = [
         path: "tax-wrapper-comparator",
         href: "/tax-wrapper-comparator",
       },
+      {
+        title: "Profil de risque",
+        path: "risk-profile",
+        href: "/risk-profile",
+      },
+    ],
+  },
+  {
+    title: "Ressources",
+    path: "resources",
+    icon: FaBook,
+    iconColor: "text-slate-400",
+    activeColor: "bg-slate-500/10 text-slate-50",
+    hoverColor: "hover:bg-slate-500/10 hover:text-slate-50",
+    hoverIconColor: "group-hover:text-slate-400",
+    hoverItemColor: "hover:bg-slate-500/5 hover:text-slate-200",
+    lastUpdated: "",
+    items: [
       { title: "Documentation", path: "documentation" },
       { title: "Glossaire", path: "glossary" },
     ],

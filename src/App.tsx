@@ -23,6 +23,8 @@ const RentVsBuy = lazy(() => import("./pages/RentVsBuy"));
 const TaxWrapperComparator = lazy(
   () => import("./pages/TaxWrapperComparator"),
 );
+const Tools = lazy(() => import("./pages/Tools"));
+const RiskProfile = lazy(() => import("./pages/RiskProfile"));
 const Legal = lazy(() => import("./pages/Legal"));
 const Licenses = lazy(() => import("./pages/Licenses"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -49,6 +51,7 @@ function App() {
               <Route path="/investments2/*" element={<HowToInvest />} />
               <Route path="/trading/*" element={<Trading />} />
               <Route path="/taxes/*" element={<Taxes />} />
+              <Route path="/tools/*" element={<Tools />} />
               <Route path="/resources/*" element={<Resources />} />
               <Route path="/strategy/*" element={<Strategy />} />
               <Route path="/contact/*" element={<Contact />} />
@@ -64,6 +67,7 @@ function App() {
                 path="/tax-wrapper-comparator/*"
                 element={<TaxWrapperComparator />}
               />
+              <Route path="/risk-profile/*" element={<RiskProfile />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
