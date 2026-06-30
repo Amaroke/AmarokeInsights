@@ -186,6 +186,24 @@ const Resources: React.FC = () => {
                   </div>
                   <span className="text-sm text-gray-400">→</span>
                 </a>
+                <a
+                  href="https://www.justetf.com/fr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors duration-200 rounded-xl px-4 py-3"
+                >
+                  <div className="flex items-center gap-3">
+                    <FaExternalLinkAlt className="text-yellow-400" />
+                    <div>
+                      <p className="font-medium text-yellow-300">justETF</p>
+                      <p className="text-sm text-gray-400">
+                        Moteur de recherche et comparateur d'ETF, fiches
+                        détaillées et outils d'analyse de portefeuille.
+                      </p>
+                    </div>
+                  </div>
+                  <span className="text-sm text-gray-400">→</span>
+                </a>
               </div>
             </InfoBubble>
             <InfoBubble
