@@ -11,7 +11,7 @@ import {
   FaEnvelope,
   FaMoneyBillWave,
 } from "react-icons/fa";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useSidebar } from "../context/useSidebar";
 import { setVisit, isNew, getVisits } from "../utils/visitTracker";
 import { GiPathDistance, GiWallet } from "react-icons/gi";
@@ -190,7 +190,22 @@ const sections = [
     hoverItemColor: "hover:bg-slate-500/5 hover:text-slate-200",
     lastUpdated: "",
     items: [
-      { title: "Outils", path: "tools" },
+      { title: "Simulateur de prêt", path: "loan", href: "/loan" },
+      {
+        title: "Intérêts composés",
+        path: "compound-interest",
+        href: "/compound-interest",
+      },
+      {
+        title: "Louer ou Acheter ?",
+        path: "rent-vs-buy",
+        href: "/rent-vs-buy",
+      },
+      {
+        title: "Comparateur d'enveloppes",
+        path: "tax-wrapper-comparator",
+        href: "/tax-wrapper-comparator",
+      },
       { title: "Documentation", path: "documentation" },
       { title: "Glossaire", path: "glossary" },
     ],
@@ -219,16 +234,87 @@ const Sidebar: React.FC = () => {
 
   const visits = useMemo(() => getVisits(), []);
 
+  const routeToSection = useMemo(() => {
+    const map: Record<string, string> = {};
+    sections.forEach((section) => {
+      section.items.forEach((item) => {
+        if ("href" in item) {
+          const segment = (item as { href: string }).href
+            .replace(/^\//, "")
+            .split("/")[0];
+          map[segment] = section.path;
+        }
+      });
+    });
+    return map;
+  }, []);
+
   const scrollObserverRef = useRef<MutationObserver | null>(null);
+
+  const [activeItemId, setActiveItemId] = useState<string | null>(null);
+  const spyObserverRef = useRef<IntersectionObserver | null>(null);
+  const spySetupObserverRef = useRef<MutationObserver | null>(null);
 
   useEffect(() => {
     if (currentPath) {
-      setExpandedSection(currentPath);
+      setExpandedSection(routeToSection[currentPath] ?? currentPath);
     }
-  }, [currentPath, setExpandedSection]);
+  }, [currentPath, setExpandedSection, routeToSection]);
 
   useEffect(() => {
-    return () => scrollObserverRef.current?.disconnect();
+    spyObserverRef.current?.disconnect();
+    spySetupObserverRef.current?.disconnect();
+    setActiveItemId(null);
+
+    const section = sections.find((s) => s.path === currentPath);
+    const scrollItems =
+      section?.items.filter((item) => !("href" in item)) ?? [];
+    if (scrollItems.length === 0) return;
+
+    const setup = () => {
+      const elements = scrollItems
+        .map((item) => document.getElementById(item.path))
+        .filter((el): el is HTMLElement => Boolean(el));
+
+      if (elements.length === 0) return false;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort(
+              (a, b) => a.boundingClientRect.top - b.boundingClientRect.top,
+            );
+          if (visible.length > 0) {
+            setActiveItemId(visible[0].target.id);
+          }
+        },
+        { rootMargin: "-96px 0px -70% 0px", threshold: 0 },
+      );
+
+      elements.forEach((el) => observer.observe(el));
+      spyObserverRef.current = observer;
+      return true;
+    };
+
+    if (setup()) return;
+
+    const mutationObserver = new MutationObserver(() => {
+      if (setup()) mutationObserver.disconnect();
+    });
+    spySetupObserverRef.current = mutationObserver;
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+    const timeout = window.setTimeout(() => mutationObserver.disconnect(), 5000);
+
+    return () => window.clearTimeout(timeout);
+  }, [currentPath, location.pathname]);
+
+  useEffect(() => {
+    return () => {
+      scrollObserverRef.current?.disconnect();
+      spyObserverRef.current?.disconnect();
+      spySetupObserverRef.current?.disconnect();
+    };
   }, []);
 
   useEffect(() => {
@@ -289,7 +375,9 @@ const Sidebar: React.FC = () => {
         <div className="flex flex-col min-h-full">
           <ul className="flex-1 space-y-1">
             {sections.map((section) => {
-              const isActive = currentPath === section.path;
+              const isActive =
+                (routeToSection[currentPath] ?? currentPath) ===
+                section.path;
               const showNew = isNew(section.path, section.lastUpdated, visits);
               const Icon = section.icon;
 
@@ -338,14 +426,38 @@ const Sidebar: React.FC = () => {
                       <ul className="mt-1 ml-4 pl-3 border-l border-gray-700/60 space-y-0.5 pb-1">
                         {section.items.map((item) => (
                           <li key={item.path}>
-                            <button
-                              onClick={() =>
-                                handleScrollTo(section.path, item.path)
-                              }
-                              className={`w-full text-left px-2 py-1.5 rounded text-xs text-gray-400 ${section.hoverItemColor} transition-colors duration-300`}
-                            >
-                              {item.title}
-                            </button>
+                            {"href" in item ? (
+                              <NavLink
+                                to={
+                                  (item as { path: string; title: string; href: string }).href
+                                }
+                                onClick={() => {
+                                  if (window.innerWidth < 768) setIsOpen(false);
+                                }}
+                                className={({ isActive }) =>
+                                  `block w-full text-left px-2 py-1.5 rounded text-xs transition-colors duration-300 ${
+                                    isActive
+                                      ? "text-white bg-white/5"
+                                      : `text-gray-400 ${section.hoverItemColor}`
+                                  }`
+                                }
+                              >
+                                {item.title}
+                              </NavLink>
+                            ) : (
+                              <button
+                                onClick={() =>
+                                  handleScrollTo(section.path, item.path)
+                                }
+                                className={`w-full text-left px-2 py-1.5 rounded text-xs transition-colors duration-300 ${
+                                  activeItemId === item.path
+                                    ? "text-white bg-white/5"
+                                    : `text-gray-400 ${section.hoverItemColor}`
+                                }`}
+                              >
+                                {item.title}
+                              </button>
+                            )}
                           </li>
                         ))}
                       </ul>

@@ -2,6 +2,11 @@
 
 Tous les changements de ce projet sont documentés dans ce fichier.
 
+## [1.2.4] - 30/06/2026
+
+- Mise à jour de la sidebar pour suivre la progression dans les pages.
+- Ajout des pages pour les deux futurs outils location vs achat et comparateur d'enveloppes.
+
 ## [1.2.3] - 29/06/2026
 
 - Ajout d'une partie sur l'étude du 111bis dans la page sur les investissements.

@@ -19,6 +19,10 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Strategy = lazy(() => import("./pages/Strategy"));
 const Accounts = lazy(() => import("./pages/Accounts"));
 const HowToInvest = lazy(() => import("./pages/HowToInvest"));
+const RentVsBuy = lazy(() => import("./pages/RentVsBuy"));
+const TaxWrapperComparator = lazy(
+  () => import("./pages/TaxWrapperComparator"),
+);
 const Legal = lazy(() => import("./pages/Legal"));
 const Licenses = lazy(() => import("./pages/Licenses"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -55,6 +59,11 @@ function App() {
                 element={<CompoundInterest />}
               />
               <Route path="/loan/*" element={<LoanCalculator />} />
+              <Route path="/rent-vs-buy/*" element={<RentVsBuy />} />
+              <Route
+                path="/tax-wrapper-comparator/*"
+                element={<TaxWrapperComparator />}
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
