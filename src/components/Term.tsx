@@ -75,7 +75,7 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
         ref={ref}
         aria-expanded={open}
         aria-describedby={open ? tooltipId : undefined}
-        className="underline underline-offset-2 decoration-dotted cursor-pointer font-semibold text-inherit bg-transparent p-0"
+        className="cursor-pointer font-semibold text-inherit bg-transparent p-0"
         onClick={(e) => {
           e.stopPropagation();
           setOpen(!open);
@@ -83,7 +83,10 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
       >
-        {title} <sup className="text-xs text-gray-400">?</sup>
+        <span className="underline underline-offset-2 decoration-dotted">
+          {title}
+        </span>{" "}
+        <sup className="text-xs text-gray-400">?</sup>
       </button>
 
       {open && ready && (

@@ -302,7 +302,7 @@ const PersonalFinance: React.FC = () => {
               color="text-teal-400"
             >
               <p className="leading-relaxed">
-                Il n'existe pas de taux d'épargne universel : tout dépend de
+                Il n'existe pas de taux d'épargne universel, tout dépend de
                 votre revenu, de vos charges fixes et de votre situation
                 personnelle. Quelques repères courants :
               </p>

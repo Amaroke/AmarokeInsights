@@ -6,6 +6,7 @@ import {
   FaExclamationTriangle,
   FaListOl,
   FaBars,
+  FaSearch,
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
@@ -75,6 +76,15 @@ const Home: React.FC = () => {
             située en haut à gauche de la page. Ce menu (accessible à tout
             moment) vous permet d'accéder rapidement à toutes les sections du
             site.
+          </p>
+          <p className="leading-relaxed">
+            Vous pouvez aussi utiliser la recherche (icône{" "}
+            <FaSearch className="inline align-middle" />, ou raccourci{" "}
+            <kbd className="text-xs font-semibold text-gray-100 bg-gray-950/60 border border-gray-500 rounded px-1.5 py-0.5">
+              Ctrl K
+            </kbd>{" "}
+            sur navigateur) en haut de la page pour trouver rapidement une page
+            ou une notion précise.
           </p>
         </InfoBubble>
 

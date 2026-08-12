@@ -1,4 +1,5 @@
 import { sections } from "./sections";
+import { infoBubbleIndex } from "./infoBubbleIndex";
 
 export interface SearchEntry {
   title: string;
@@ -6,11 +7,14 @@ export interface SearchEntry {
   to: string;
 }
 
-export const searchIndex: SearchEntry[] = sections.flatMap((section) => [
-  { title: section.title, to: `/${section.path}` },
-  ...section.items.map((item) => ({
-    title: item.title,
-    subtitle: section.title,
-    to: item.href ?? `/${section.path}`,
-  })),
-]);
+export const searchIndex: SearchEntry[] = [
+  ...sections.flatMap((section) => [
+    { title: section.title, to: `/${section.path}` },
+    ...section.items.map((item) => ({
+      title: item.title,
+      subtitle: section.title,
+      to: item.href ?? `/${section.path}`,
+    })),
+  ]),
+  ...infoBubbleIndex,
+];

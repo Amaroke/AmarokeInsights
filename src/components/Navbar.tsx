@@ -66,10 +66,13 @@ const Navbar: React.FC = () => {
           type="button"
           onClick={() => setSearchOpen(true)}
           aria-label="Rechercher"
-          className="flex items-center gap-2 p-2 rounded-md bg-gray-800 hover:bg-gray-700 transition-colors text-gray-300"
+          className="flex items-center gap-2 pl-3 pr-2 py-2 rounded-md bg-gray-800 hover:bg-gray-700 transition-colors text-gray-200"
         >
-          <FaSearch />
-          <kbd className="hidden md:inline text-[10px] text-gray-500 border border-gray-600 rounded px-1">
+          <FaSearch className="text-gray-300" />
+          <span className="hidden lg:inline text-sm text-gray-300">
+            Rechercher
+          </span>
+          <kbd className="hidden md:inline-flex items-center text-xs font-semibold text-gray-100 bg-gray-950/60 border border-gray-500 rounded px-1.5 py-0.5">
             Ctrl K
           </kbd>
         </button>

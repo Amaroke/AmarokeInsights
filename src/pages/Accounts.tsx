@@ -377,7 +377,7 @@ const Accounts: React.FC = () => {
               <p className="leading-relaxed">
                 Enveloppe dédiée à la retraite. L'argent est bloqué jusqu'à la
                 retraite - c'est le principe. En échange, l'État vous propose un
-                choix : payer moins d'impôts maintenant, ou payer moins à la
+                choix, payer moins d'impôts maintenant, ou payer moins à la
                 sortie. Vous ne choisissez pas si vous payez, mais quand.
               </p>
               <ExampleBox>
@@ -464,7 +464,7 @@ const Accounts: React.FC = () => {
               color="text-sky-400"
             >
               <p className="leading-relaxed">
-                Le compte d'investissement sans contrainte : aucun plafond,
+                Le compte d'investissement sans contrainte, aucun plafond,
                 aucune restriction géographique, accès à tous les actifs
                 (actions, obligations, ETF, cryptos…).
               </p>
