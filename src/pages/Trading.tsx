@@ -14,6 +14,7 @@ import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
 import Term from "../components/Term";
 import Disclaimer from "../components/Disclaimer";
+import CandlestickChart from "../components/CandlestickChart";
 
 const Trading: React.FC = () => {
   return (
@@ -623,105 +624,50 @@ const Trading: React.FC = () => {
             >
               <p className="leading-relaxed mb-3">
                 Les chandeliers japonais représentent l'évolution du prix sur
-                une période donnée. Chaque bougie contient 4 informations :
-                ouverture, clôture, plus haut et plus bas.
+                une période donnée (une minute, une heure, un jour…). Chaque
+                bougie résume <b>4 informations</b> : ouverture, clôture, plus
+                haut et plus bas atteints pendant cette période.
               </p>
-              <br />
-              <div className="flex items-end gap-1 my-4 h-16">
-                <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-5 bg-gray-400" />
-                  <div className="w-3 h-9 bg-green-400 rounded-sm" />
-                  <div className="w-0.5 h-3 bg-gray-400" />
-                </div>
-
-                <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-3 bg-gray-400" />
-                  <div className="w-3 h-11 bg-red-400 rounded-sm" />
-                  <div className="w-0.5 h-6 bg-gray-400" />
-                </div>
-
-                <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-6 bg-gray-400" />
-                  <div className="w-3 h-12 bg-green-400 rounded-sm" />
-                  <div className="w-0.5 h-2 bg-gray-400" />
-                </div>
-
-                <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-2 bg-gray-400" />
-                  <div className="w-3 h-6 bg-red-400 rounded-sm" />
-                  <div className="w-0.5 h-8 bg-gray-400" />
-                </div>
-              </div>
-              <br />
 
               <p className="leading-relaxed mb-3">
-                Les traits fins au-dessus et en dessous s'appellent les{" "}
-                <b>mèches</b> (ou “queues”). Ils représentent les extrêmes
-                atteints pendant la période : le plus haut et le plus bas du
-                prix.
+                Le rectangle central s'appelle le <b>corps</b>, il représente
+                l'écart entre l'ouverture et la clôture. Une bougie{" "}
+                <b className="text-green-400">verte</b> indique une hausse sur
+                la période (clôture au-dessus de l'ouverture), une bougie{" "}
+                <b className="text-red-400">rouge</b> indique une baisse. Les
+                traits fins au-dessus et en dessous du corps sont les{" "}
+                <b>mèches</b> (ou "queues"), elles montrent jusqu'où le prix est
+                allé avant de revenir vers son niveau de clôture.
+              </p>
+
+              <CandlestickChart />
+
+              <p className="leading-relaxed mb-3 mt-4 font-semibold">
+                Trois cas concrets, repérés sur le graphique ci-dessus :
               </p>
 
               <ul className="list-disc list-inside space-y-2 mb-3">
                 <li>
-                  <b>Mèche haute :</b> le prix est monté plus haut avant de
-                  redescendre.
+                  <b>1. Bougie verte avec longue mèche basse :</b> le prix a
+                  fortement chuté puis les acheteurs ont repris le contrôle
+                  avant la clôture.
                 </li>
                 <li>
-                  <b>Mèche basse :</b> le prix est descendu plus bas avant de
-                  remonter.
-                </li>
-              </ul>
-
-              <p className="leading-relaxed mb-3 font-semibold">
-                Exemples concrets :
-              </p>
-
-              <ul className="list-disc list-inside space-y-2 mb-3">
-                <li>
-                  Bougie verte avec longue mèche basse : les acheteurs ont
-                  repris le contrôle après une forte baisse → signal potentiel
-                  de rebond.
+                  <b>2. Bougie rouge avec longue mèche haute :</b> le prix a
+                  tenté de monter fortement mais les vendeurs ont dominé jusqu'à
+                  la clôture.
                 </li>
                 <li>
-                  Bougie rouge avec longue mèche haute : les vendeurs ont dominé
-                  après une tentative de hausse → pression vendeuse forte.
-                </li>
-                <li>
-                  Petite bougie sans mèche : marché indécis, peu de mouvement.
+                  <b>3. Petite bougie, mèches courtes :</b> ouverture et clôture
+                  proches, peu de mouvement sur la période.
                 </li>
               </ul>
 
               <p className="leading-relaxed">
-                Une bougie verte indique une hausse entre ouverture et clôture.
-                Une bougie rouge indique une baisse. L'analyse des mèches permet
-                de comprendre les réactions du marché et les zones de rejet.
-              </p>
-            </InfoBubble>
-          </div>
-        </section>
-        <section id="quest-ce-que-le-trading" className="scroll-mt-22 mb-12">
-          <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-            Pour approfondir
-          </h2>
-
-          <div className="space-y-4">
-            <InfoBubble
-              icon={<FaChartLine />}
-              title="Stratégies et gestion du risque"
-              color="text-yellow-400"
-            >
-              <p className="leading-relaxed mb-3">
-                Cette page présente les <b>bases du trading</b> pour vous
-                familiariser avec les concepts principaux. Elle n'inclut pas
-                encore certains éléments essentiels pour se mettre au trading :
-                gestion du risque, psychologie du trading, indicateurs et
-                outils, exemples pratiques détaillés, etc... Ces sujets seront
-                abordés dans la partie <b>subjective</b> du site. Rappelons que
-                le trading comporte un risque de perte en capital. Vous ne devez
-                investir que l'argent que vous pouvez vous permettre de perdre.
-                Il est fortement recommandé de se former (et pas uniquement via
-                ce site), de pratiquer sur un compte démo et de commencer petit
-                avant d'envisager quoi que ce soit dans le domaine du trading.
+                Un seul chandelier ne donne qu'un instantané. En pratique, les
+                traders les lisent <b>en série</b> pour repérer des tendances ou
+                des figures récurrentes, plutôt qu'en se basant sur une seule
+                bougie isolée.
               </p>
             </InfoBubble>
           </div>
