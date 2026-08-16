@@ -193,7 +193,7 @@ const Resources: React.FC = () => {
           </div>
         </section>
 
-        <section id="glossary" className="scroll-mt-22 mb-16">
+        <section id="glossaire" className="scroll-mt-22 mb-16">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Glossaire
           </h2>

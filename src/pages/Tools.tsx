@@ -24,7 +24,7 @@ const Tools: React.FC = () => {
                 l'intérêt composé.
               </p>
               <NavLink
-                to="/compound-interest"
+                to="/interets-composes"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 hover:bg-green-500/30 text-green-300 rounded-xl transition-colors duration-200 font-medium"
               >
                 <FaCalculator className="text-green-400" />
@@ -42,7 +42,7 @@ const Tools: React.FC = () => {
                 en prenant en compte le taux et l'assurance.
               </p>
               <NavLink
-                to="/loan"
+                to="/simulateur-pret"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 rounded-xl transition-colors duration-200 font-medium"
               >
                 <FaCalculator className="text-purple-400" />
@@ -60,7 +60,7 @@ const Tools: React.FC = () => {
                 principale.
               </p>
               <NavLink
-                to="/rent-vs-buy"
+                to="/louer-ou-acheter"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 rounded-xl transition-colors duration-200 font-medium"
               >
                 <FaHome className="text-blue-400" />
@@ -78,7 +78,7 @@ const Tools: React.FC = () => {
                 situation.
               </p>
               <NavLink
-                to="/tax-wrapper-comparator"
+                to="/comparateur-enveloppes"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 rounded-xl transition-colors duration-200 font-medium"
               >
                 <FaBalanceScale className="text-teal-400" />
@@ -96,7 +96,7 @@ const Tools: React.FC = () => {
                 d'allocation entre les différentes classes d'actifs.
               </p>
               <NavLink
-                to="/risk-profile"
+                to="/profil-de-risque"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 rounded-xl transition-colors duration-200 font-medium"
               >
                 <FaShieldAlt className="text-cyan-400" />

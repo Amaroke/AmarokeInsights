@@ -25,7 +25,7 @@ const Basics: React.FC = () => {
       description="Concepts fondamentaux et risques : les bases pour comprendre la finance avant d'investir."
     >
       <Container>
-        <section id="concepts-fundamentals" className="scroll-mt-22 mb-12">
+        <section id="concepts-fondamentaux" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Concepts fondamentaux
           </h2>
@@ -196,7 +196,7 @@ const Basics: React.FC = () => {
           </div>
         </section>
 
-        <section id="risks" className="scroll-mt-22">
+        <section id="risques" className="scroll-mt-22">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Risques
           </h2>

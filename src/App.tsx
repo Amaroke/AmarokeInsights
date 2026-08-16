@@ -18,7 +18,10 @@ const LoanCalculator = lazy(() => import("./pages/LoanCalculator"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Strategy = lazy(() => import("./pages/Strategy"));
 const Accounts = lazy(() => import("./pages/Accounts"));
-const HowToInvest = lazy(() => import("./pages/HowToInvest"));
+const ComparativeStudies = lazy(() => import("./pages/ComparativeStudies"));
+const InvestmentDecisionTree = lazy(
+  () => import("./pages/InvestmentDecisionTree"),
+);
 const RentVsBuy = lazy(() => import("./pages/RentVsBuy"));
 const TaxWrapperComparator = lazy(
   () => import("./pages/TaxWrapperComparator"),
@@ -42,32 +45,43 @@ function App() {
           >
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/basics/*" element={<Basics />} />
-              <Route path="/personal-finance/*" element={<PersonalFinance />} />
-              <Route path="/banking/*" element={<Banking />} />
-              <Route path="/accounts/*" element={<Accounts />} />
-              <Route path="/investments/*" element={<Investments />} />
-              <Route path="/cryptos/*" element={<Cryptos />} />
-              <Route path="/investments2/*" element={<HowToInvest />} />
-              <Route path="/trading/*" element={<Trading />} />
-              <Route path="/taxes/*" element={<Taxes />} />
-              <Route path="/tools/*" element={<Tools />} />
-              <Route path="/resources/*" element={<Resources />} />
-              <Route path="/strategy/*" element={<Strategy />} />
-              <Route path="/contact/*" element={<Contact />} />
-              <Route path="/legal" element={<Legal />} />
-              <Route path="/licenses" element={<Licenses />} />
+              <Route path="/fondamentaux/*" element={<Basics />} />
               <Route
-                path="/compound-interest/*"
+                path="/finance-personnelle/*"
+                element={<PersonalFinance />}
+              />
+              <Route path="/systeme-bancaire/*" element={<Banking />} />
+              <Route path="/types-de-comptes/*" element={<Accounts />} />
+              <Route path="/investissements/*" element={<Investments />} />
+              <Route path="/cryptomonnaies/*" element={<Cryptos />} />
+              <Route
+                path="/comparatifs-et-etudes/*"
+                element={<ComparativeStudies />}
+              />
+              <Route path="/trading/*" element={<Trading />} />
+              <Route path="/impots/*" element={<Taxes />} />
+              <Route path="/outils/*" element={<Tools />} />
+              <Route path="/ressources/*" element={<Resources />} />
+              <Route path="/strategie/*" element={<Strategy />} />
+              <Route path="/contact/*" element={<Contact />} />
+              <Route path="/mentions-legales" element={<Legal />} />
+              <Route path="/licences" element={<Licenses />} />
+              <Route
+                path="/interets-composes/*"
                 element={<CompoundInterest />}
               />
-              <Route path="/loan/*" element={<LoanCalculator />} />
-              <Route path="/rent-vs-buy/*" element={<RentVsBuy />} />
+              <Route path="/simulateur-pret/*" element={<LoanCalculator />} />
+              <Route path="/louer-ou-acheter/*" element={<RentVsBuy />} />
               <Route
-                path="/tax-wrapper-comparator/*"
+                path="/comparateur-enveloppes/*"
                 element={<TaxWrapperComparator />}
               />
-              <Route path="/risk-profile/*" element={<RiskProfile />} />
+              <Route path="/profil-de-risque/*" element={<RiskProfile />} />
+              <Route
+                path="/organigramme-investissement/*"
+                element={<InvestmentDecisionTree />}
+              />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

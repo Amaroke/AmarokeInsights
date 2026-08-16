@@ -343,7 +343,7 @@ const PersonalFinance: React.FC = () => {
           </div>
         </section>
 
-        <section id="debt" className="scroll-mt-22 mb-12">
+        <section id="dettes" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Dettes & emprunts
           </h2>

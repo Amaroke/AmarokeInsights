@@ -4,47 +4,25 @@ import InfoBubble from "../components/InfoBubble";
 import ExampleBox from "../components/ExampleBox";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
-
-import "@xyflow/react/dist/style.css";
-import InvestmentTree from "../components/InvestmentTree";
 import Term from "../components/Term";
 import Disclaimer from "../components/Disclaimer";
 
-const HowToInvest: React.FC = () => {
+const ComparativeStudies: React.FC = () => {
   return (
     <PageLayout
-      title="Comment investir ?"
-      description="Une méthode pas à pas pour décider où placer son argent selon son horizon et son appétence au risque."
+      title="Comparatifs et Études"
+      description="Comparatifs chiffrés entre enveloppes fiscales : PEA, assurance vie, CTO, et cas particuliers."
     >
       <Container gap="md">
-        <Disclaimer title="Approche personnelle basée sur des études">
-          Cette section s'appuie sur des études et des données pour proposer une
-          approche structurée de l'investissement. Les conclusions tirées et les
-          choix présentés restent des interprétations personnelles de ces
-          données, pas des règles universelles. Les performances passées ne
-          préjugent pas des performances futures. Rien ici ne constitue un
-          conseil financier personnalisé.
+        <Disclaimer title="Analyses et simulations, pas des conseils personnalisés">
+          Cette section rassemble des comparatifs chiffrés et des simulations
+          entre différentes enveloppes fiscales, à partir de données publiques
+          et d'hypothèses détaillées dans chaque exemple (rendement, fiscalité,
+          durée). Ces hypothèses peuvent ne pas correspondre à votre situation,
+          et les performances passées ne préjugent pas des performances
+          futures. Rien ici ne constitue un conseil financier personnalisé.
         </Disclaimer>
-        <section id="organigram" className="scroll-mt-22 mb-12">
-          <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-            Organigramme : comment j'investirais selon ma situation ?
-          </h2>
-
-          <InfoBubble
-            icon={<FaChartLine />}
-            title="Organigramme d'investissement"
-            color="text-green-400"
-          >
-            Cet organigramme représente la manière dont j'organiserais mes
-            décisions d'investissement avec mes connaissances actuelles. Il ne
-            s'agit pas d'une règle absolue, mais d'une approche personnelle
-            basée sur ce que j'ai appris sur la gestion du risque et la
-            structuration d'un capital.
-            <InvestmentTree />
-          </InfoBubble>
-        </section>
-
-        <section id="pea-interesting" className="scroll-mt-22 mb-12">
+        <section id="pourquoi-pea" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Pourquoi le PEA est-il si intéressant ?
           </h2>
@@ -99,7 +77,7 @@ const HowToInvest: React.FC = () => {
           </InfoBubble>
         </section>
 
-        <section id="av-limits" className="scroll-mt-22 mb-12">
+        <section id="limites-assurance-vie" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Les limites des assurances vie
           </h2>
@@ -270,7 +248,7 @@ const HowToInvest: React.FC = () => {
           </InfoBubble>
         </section>
 
-        <section id="av-vs-cto" className="scroll-mt-22 mb-12">
+        <section id="assurance-vie-vs-cto" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Comparatif Assurance Vie vs CTO
           </h2>
@@ -438,7 +416,7 @@ const HowToInvest: React.FC = () => {
           </InfoBubble>
         </section>
 
-        <section id="pea-vs-plan-111bis" className="scroll-mt-22 mb-12">
+        <section id="pea-vs-111bis" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Comparatif PEA vs Plan 111bis Luxembourgeois (pour les frontaliers)
           </h2>
@@ -814,4 +792,4 @@ const HowToInvest: React.FC = () => {
   );
 };
 
-export default HowToInvest;
+export default ComparativeStudies;

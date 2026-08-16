@@ -30,7 +30,7 @@ const Cryptos: React.FC = () => {
           informative et ne constitue pas un conseil d'investissement. Investir
           en crypto comporte un risque de perte totale du capital.
         </Disclaimer>
-        <section id="what-are-cryptos" className="scroll-mt-22 mb-12">
+        <section id="quest-ce-quune-crypto" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Qu'est-ce qu'une crypto-monnaie ?
           </h2>
@@ -94,7 +94,7 @@ const Cryptos: React.FC = () => {
           </div>
         </section>
 
-        <section id="different-cryptos" className="scroll-mt-22 mb-12">
+        <section id="differentes-cryptos" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Les différents types de cryptomonnaies et leur vision d'origine
           </h2>
@@ -250,7 +250,7 @@ const Cryptos: React.FC = () => {
           </div>
         </section>
 
-        <section id="buy-store-secure" className="scroll-mt-22 mb-12">
+        <section id="acheter-stocker-securiser" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Stocker et sécuriser ses cryptomonnaies
           </h2>

@@ -27,7 +27,7 @@ const Banking: React.FC = () => {
         description="Comment fonctionnent les banques, les taux et frais, et comment se protéger de la fraude."
       >
         <Container>
-          <section id="how-banks-work" className="scroll-mt-22 mb-12">
+          <section id="fonctionnement-banques" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Comment fonctionnent les banques ?
             </h2>
@@ -248,7 +248,7 @@ const Banking: React.FC = () => {
             </div>
           </section>
 
-          <section id="rates-fees" className="scroll-mt-22 mb-12">
+          <section id="taux-frais" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Taux et frais
             </h2>
@@ -429,7 +429,7 @@ const Banking: React.FC = () => {
             </div>
           </section>
 
-          <section id="security-fraud" className="scroll-mt-22">
+          <section id="securite-fraude" className="scroll-mt-22">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Sécurité et fraude
             </h2>

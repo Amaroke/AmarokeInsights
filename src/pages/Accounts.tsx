@@ -30,7 +30,7 @@ const Accounts: React.FC = () => {
       description="Comptes courants, d'épargne et d'investissement : lequel choisir et pourquoi."
     >
       <Container>
-        <section id="current-accounts" className="scroll-mt-22 mb-12">
+        <section id="comptes-courants" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Comptes courants
           </h2>
@@ -81,7 +81,7 @@ const Accounts: React.FC = () => {
           </div>
         </section>
 
-        <section id="saving-account" className="scroll-mt-22 mb-12">
+        <section id="comptes-epargne" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Livrets d'épargne
           </h2>
@@ -286,7 +286,7 @@ const Accounts: React.FC = () => {
           </div>
         </section>
 
-        <section id="investment-account" className="scroll-mt-22 mb-12">
+        <section id="comptes-investissement" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Enveloppes d'investissement
           </h2>

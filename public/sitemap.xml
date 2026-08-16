@@ -2,44 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://amaroke.github.io/AmarokeInsights/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/basics</loc>
+    <loc>https://amaroke.github.io/AmarokeInsights/fondamentaux</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/personal-finance</loc>
+    <loc>https://amaroke.github.io/AmarokeInsights/finance-personnelle</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/banking</loc>
+    <loc>https://amaroke.github.io/AmarokeInsights/systeme-bancaire</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/accounts</loc>
+    <loc>https://amaroke.github.io/AmarokeInsights/types-de-comptes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/investments</loc>
+    <loc>https://amaroke.github.io/AmarokeInsights/investissements</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/cryptos</loc>
+    <loc>https://amaroke.github.io/AmarokeInsights/cryptomonnaies</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/investments2</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://amaroke.github.io/AmarokeInsights/trading</loc>
@@ -47,22 +42,32 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/strategy</loc>
+    <loc>https://amaroke.github.io/AmarokeInsights/comparatifs-et-etudes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/resources</loc>
+    <loc>https://amaroke.github.io/AmarokeInsights/strategie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://amaroke.github.io/AmarokeInsights/ressources</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/compound-interest</loc>
+    <loc>https://amaroke.github.io/AmarokeInsights/interets-composes</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://amaroke.github.io/AmarokeInsights/loan</loc>
+    <loc>https://amaroke.github.io/AmarokeInsights/simulateur-pret</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://amaroke.github.io/AmarokeInsights/organigramme-investissement</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

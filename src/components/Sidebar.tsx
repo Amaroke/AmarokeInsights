@@ -256,7 +256,7 @@ const Sidebar: React.FC = () => {
           </ul>
           <div className="mt-4 pt-3 pb-36 md:pb-16 border-t border-gray-700 flex flex-col gap-1">
             <NavLink
-              to="/legal"
+              to="/mentions-legales"
               className={({ isActive }) =>
                 `text-xs px-3 py-1.5 rounded transition-colors ${
                   isActive ? "text-white" : "text-gray-500 hover:text-gray-300"
@@ -266,7 +266,7 @@ const Sidebar: React.FC = () => {
               Mentions légales & Confidentialité
             </NavLink>
             <NavLink
-              to="/licenses"
+              to="/licences"
               className={({ isActive }) =>
                 `text-xs px-3 py-1.5 rounded transition-colors ${
                   isActive ? "text-white" : "text-gray-500 hover:text-gray-300"

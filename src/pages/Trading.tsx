@@ -29,7 +29,7 @@ const Trading: React.FC = () => {
           tradez jamais avec de l'argent que vous ne pouvez pas vous permettre
           de perdre.
         </Disclaimer>
-        <section id="trading-intro" className="scroll-mt-22 mb-12">
+        <section id="quest-ce-que-le-trading" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Qu'est-ce que le trading ?
           </h2>
@@ -259,7 +259,7 @@ const Trading: React.FC = () => {
           </div>
         </section>
 
-        <section id="markets-platforms" className="scroll-mt-22 mb-12">
+        <section id="marches-plateformes" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Marchés & plateformes
           </h2>
@@ -376,7 +376,7 @@ const Trading: React.FC = () => {
           </div>
         </section>
 
-        <section id="trading-types" className="scroll-mt-22 mb-12">
+        <section id="types-de-trading" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Les types de trading
           </h2>
@@ -503,7 +503,7 @@ const Trading: React.FC = () => {
           </div>
         </section>
 
-        <section id="long-short" className="scroll-mt-22 mb-12">
+        <section id="positions-longues-courtes" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Positions Long / Short & Chandeliers
           </h2>
@@ -699,7 +699,7 @@ const Trading: React.FC = () => {
             </InfoBubble>
           </div>
         </section>
-        <section id="trading-intro" className="scroll-mt-22 mb-12">
+        <section id="quest-ce-que-le-trading" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Pour approfondir
           </h2>

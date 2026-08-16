@@ -31,7 +31,7 @@ const Investments: React.FC = () => {
         description="Actions, ETF, obligations, fonds, immobilier et placements alternatifs : comprendre comment investir."
       >
         <Container>
-          <section id="what-is-invest" className="scroll-mt-22 mb-12">
+          <section id="quest-ce-quinvestir" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Qu'est-ce qu'investir ?
             </h2>
@@ -187,7 +187,7 @@ const Investments: React.FC = () => {
             </div>
           </section>
 
-          <section id="stocks" className="scroll-mt-22 mb-12">
+          <section id="actions-etf-obligations" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Actions, ETF, OPCVM, Obligations
             </h2>
@@ -719,7 +719,7 @@ const Investments: React.FC = () => {
             </div>
           </section>
 
-          <section id="complex-products" className="scroll-mt-22 mb-12">
+          <section id="produits-complexes" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Produits complexes et dérivés
             </h2>
@@ -790,7 +790,7 @@ const Investments: React.FC = () => {
             </div>
           </section>
 
-          <section id="real-estate" className="scroll-mt-22 mb-12">
+          <section id="immobilier" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Immobilier
             </h2>
