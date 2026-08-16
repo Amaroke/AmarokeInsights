@@ -112,9 +112,9 @@ export const sections: Section[] = [
         title: "Actions, ETF, Obligations et fonds d'investissement",
         path: "actions-etf-obligations",
       },
-      { title: "Produits complexes et dérivés", path: "produits-complexes" },
       { title: "Immobilier", path: "immobilier" },
       { title: "Placements alternatifs", path: "alternatives" },
+      { title: "Produits complexes et dérivés", path: "produits-complexes" },
     ],
   },
   {

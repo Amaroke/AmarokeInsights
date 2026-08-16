@@ -719,77 +719,6 @@ const Investments: React.FC = () => {
             </div>
           </section>
 
-          <section id="produits-complexes" className="scroll-mt-22 mb-12">
-            <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-              Produits complexes et dérivés
-            </h2>
-
-            <div className="space-y-4">
-              <InfoBubble
-                icon={<FaCubes />}
-                title="Produits dérivés et structurés"
-                color="text-orange-400"
-              >
-                <p>
-                  Ces produits sont principalement utilisés pour le trading ou
-                  la couverture de positions, et non pour un investissement long
-                  terme. Ils permettent de parier sur la hausse ou la baisse
-                  d'un actif, d'amplifier gains et pertes, ou de créer des
-                  solutions sur mesure combinant plusieurs instruments
-                  financiers.
-                </p>
-
-                <ul className="list-disc list-inside ml-4 mt-2 space-y-2">
-                  <li>
-                    <strong>Turbos :</strong> contrats à effet de levier suivant
-                    un actif, amplifiant gains et pertes.
-                  </li>
-                  <li>
-                    <strong>Warrants :</strong> options à long terme permettant
-                    de spéculer sans posséder l'actif, avec effet de levier.
-                  </li>
-                  <li>
-                    <strong>CFD :</strong> contrats sur différence pour spéculer
-                    sur un actif sans le posséder.
-                  </li>
-                  <li>
-                    <strong>Options et futures :</strong> contrats standardisés
-                    pour acheter ou vendre un actif à une date et un prix
-                    déterminés, utilisés pour spéculation ou couverture.
-                  </li>
-                  <li>
-                    <strong>Forex :</strong> marché des devises accessible via
-                    CFD ou dérivés, permettant de spéculer sur les taux de
-                    change avec effet de levier.
-                  </li>
-                  <li>
-                    <strong>Produits structurés :</strong> combinent plusieurs
-                    instruments pour créer un produit sur mesure, avec capital
-                    garanti ou partiellement garanti et rendements
-                    conditionnels.
-                  </li>
-                  <li>
-                    <strong>Certificats :</strong> produits structurés cotés en
-                    bourse répliquant des indices, des paniers d'actions, des
-                    matières premières ou des stratégies complexes.
-                  </li>
-                  <li>
-                    <strong>ETN (Exchange Traded Notes) :</strong> titres de
-                    créance émis par une banque suivant un indice, sans que
-                    l'investisseur possède directement les composants
-                    sous-jacents.
-                  </li>
-                </ul>
-
-                <p className="mt-2">
-                  Je n'en détaille pas plus ici, car leur usage est complexe,
-                  dépend de la plateforme et ne sont pas adaptés à un
-                  investissement long terme.
-                </p>
-              </InfoBubble>
-            </div>
-          </section>
-
           <section id="immobilier" className="scroll-mt-22 mb-12">
             <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
               Immobilier
@@ -933,6 +862,9 @@ const Investments: React.FC = () => {
               Placements alternatifs
             </h2>
 
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+              Actifs de diversification
+            </h3>
             <div className="space-y-4">
               <InfoBubble
                 icon={<FaGem />}
@@ -1135,7 +1067,12 @@ const Investments: React.FC = () => {
                   </ul>
                 </p>
               </InfoBubble>
+            </div>
 
+            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3 mt-8">
+              Placements atypiques
+            </h3>
+            <div className="space-y-4">
               <InfoBubble
                 icon={<FaPaintBrush />}
                 title="Placements atypiques (art, vin, montres...)"
@@ -1195,6 +1132,77 @@ const Investments: React.FC = () => {
                   Ce type d'investissement doit rester partiellement guidé par
                   la passion, il ne faut pas y investir uniquement pour le
                   rendement, mais aussi pour l'intérêt personnel qu'il suscite.
+                </p>
+              </InfoBubble>
+            </div>
+          </section>
+
+          <section id="produits-complexes" className="scroll-mt-22 mb-12">
+            <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
+              Produits complexes et dérivés
+            </h2>
+
+            <div className="space-y-4">
+              <InfoBubble
+                icon={<FaCubes />}
+                title="Produits dérivés et structurés"
+                color="text-orange-400"
+              >
+                <p>
+                  Ces produits sont principalement utilisés pour le trading ou
+                  la couverture de positions, et non pour un investissement long
+                  terme. Ils permettent de parier sur la hausse ou la baisse
+                  d'un actif, d'amplifier gains et pertes, ou de créer des
+                  solutions sur mesure combinant plusieurs instruments
+                  financiers.
+                </p>
+
+                <ul className="list-disc list-inside ml-4 mt-2 space-y-2">
+                  <li>
+                    <strong>Turbos :</strong> contrats à effet de levier suivant
+                    un actif, amplifiant gains et pertes.
+                  </li>
+                  <li>
+                    <strong>Warrants :</strong> options à long terme permettant
+                    de spéculer sans posséder l'actif, avec effet de levier.
+                  </li>
+                  <li>
+                    <strong>CFD :</strong> contrats sur différence pour spéculer
+                    sur un actif sans le posséder.
+                  </li>
+                  <li>
+                    <strong>Options et futures :</strong> contrats standardisés
+                    pour acheter ou vendre un actif à une date et un prix
+                    déterminés, utilisés pour spéculation ou couverture.
+                  </li>
+                  <li>
+                    <strong>Forex :</strong> marché des devises accessible via
+                    CFD ou dérivés, permettant de spéculer sur les taux de
+                    change avec effet de levier.
+                  </li>
+                  <li>
+                    <strong>Produits structurés :</strong> combinent plusieurs
+                    instruments pour créer un produit sur mesure, avec capital
+                    garanti ou partiellement garanti et rendements
+                    conditionnels.
+                  </li>
+                  <li>
+                    <strong>Certificats :</strong> produits structurés cotés en
+                    bourse répliquant des indices, des paniers d'actions, des
+                    matières premières ou des stratégies complexes.
+                  </li>
+                  <li>
+                    <strong>ETN (Exchange Traded Notes) :</strong> titres de
+                    créance émis par une banque suivant un indice, sans que
+                    l'investisseur possède directement les composants
+                    sous-jacents.
+                  </li>
+                </ul>
+
+                <p className="mt-2">
+                  Je n'en détaille pas plus ici, car leur usage est complexe,
+                  dépend de la plateforme et ne sont pas adaptés à un
+                  investissement long terme.
                 </p>
               </InfoBubble>
             </div>
