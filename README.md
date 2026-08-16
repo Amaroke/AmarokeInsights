@@ -19,7 +19,7 @@ Si vous souhaitez discuter, proposer une amélioration ou me signaler une erreur
 
 ## Changelog
 
-L'historique des versions est documenté dans le fichier [CHANGELOG.md](./CHANGELOG.md).
+L'historique des modifications est documenté, par date, dans le fichier [CHANGELOG.md](./CHANGELOG.md).
 
 ---
 

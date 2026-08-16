@@ -8,6 +8,7 @@ import {
   FaChartBar,
   FaEnvelope,
   FaBalanceScale,
+  FaFileInvoiceDollar,
   FaTools,
 } from "react-icons/fa";
 import { GiPathDistance, GiWallet } from "react-icons/gi";
@@ -154,6 +155,32 @@ export const sections: Section[] = [
     ],
   },
   {
+    title: "Optimisation fiscale",
+    path: "impots",
+    icon: FaFileInvoiceDollar,
+    iconColor: "text-rose-400",
+    activeColor: "bg-rose-500/10 text-rose-50",
+    hoverColor: "hover:bg-rose-500/10 hover:text-rose-50",
+    hoverIconColor: "group-hover:text-rose-400",
+    hoverItemColor: "hover:bg-rose-500/5 hover:text-rose-200",
+    lastUpdated: "2026-08-16",
+    items: [
+      { title: "Pourquoi le PEA ?", path: "pourquoi-pea" },
+      {
+        title: "La purge des plus-values (CTO)",
+        path: "purge-plus-values-cto",
+      },
+      {
+        title: "Donations : l'abattement de 100 000 €",
+        path: "donations-100k",
+      },
+      {
+        title: "Preuves d'achat de cryptomonnaies",
+        path: "preuve-achat-cryptos",
+      },
+    ],
+  },
+  {
     title: "Comparatifs et Études",
     path: "comparatifs-et-etudes",
     icon: FaBalanceScale,
@@ -164,7 +191,6 @@ export const sections: Section[] = [
     hoverItemColor: "hover:bg-teal-500/5 hover:text-teal-200",
     lastUpdated: "2026-04-14",
     items: [
-      { title: "Pourquoi le PEA ?", path: "pourquoi-pea" },
       { title: "Limites des assurances vie", path: "limites-assurance-vie" },
       { title: "Assurance Vie vs CTO", path: "assurance-vie-vs-cto" },
       {

@@ -22,61 +22,6 @@ const ComparativeStudies: React.FC = () => {
           et les performances passées ne préjugent pas des performances
           futures. Rien ici ne constitue un conseil financier personnalisé.
         </Disclaimer>
-        <section id="pourquoi-pea" className="scroll-mt-22 mb-12">
-          <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-            Pourquoi le PEA est-il si intéressant ?
-          </h2>
-
-          <InfoBubble
-            icon={<FaChartLine />}
-            title="Une enveloppe fiscale très puissante"
-            color="text-green-400"
-          >
-            <p className="leading-relaxed">
-              Le <Term id={"PEA"} /> est l'une des enveloppes les plus
-              avantageuses pour investir en bourse en France. Son intérêt
-              principal tient à sa <b>fiscalité allégée</b> : après{" "}
-              <b>5 ans de détention</b> du plan, les gains (plus-values et
-              dividendes) sont{" "}
-              <b>
-                exonérés d'
-                <Term id={"IR"} />
-              </b>
-              . Seuls les <Term id={"PS"} /> restent dus au moment du retrait.
-            </p>
-
-            <p className="leading-relaxed mt-2">
-              Autre avantage majeur, <b>tant que l'argent reste dans le PEA</b>,
-              vous ne payez <b>aucun impôt</b>, même si vous{" "}
-              <b>achetez et revendez vos titres plusieurs fois</b>. L'imposition
-              n'intervient qu'au moment où vous <b>retirez de l'argent</b> du
-              plan. Vous pouvez donc <b>arbitrer librement</b> (vendre un{" "}
-              <Term id={"ETF"} /> pour en acheter un autre, sécuriser des
-              plus-values, rééquilibrer votre portefeuille) sans aucune
-              fiscalité, ce qui laisse l'intégralité de vos gains continuer à
-              travailler grâce aux intérêts composés.
-            </p>
-
-            <p className="leading-relaxed mt-2">
-              À titre de comparaison, un <Term id={"CTO"} /> est soumis au{" "}
-              <Term id={"PFU"} /> sur l'ensemble des gains. Sur un horizon long,
-              l'écart de fiscalité se traduit par une différence de capital
-              final très significative grâce à l'effet des intérêts composés.
-            </p>
-
-            <ExampleBox>
-              Sur <b>10 000 €</b> investis sur un <Term id={"ETF"} /> capitalisant à{" "}
-              <b>+7 %/an pendant 20 ans</b>, le résultat net est{" "}
-              <b className="text-green-400">33 359 €</b> avec un PEA de plus de
-              5 ans, contre <b>29 686 €</b> en CTO ou PEA retiré trop tôt - soit{" "}
-              <b>+3 673 €</b> de gain supplémentaire uniquement grâce à
-              l'exonération d'impôt sur le revenu (12,8 % de la plus-value
-              économisés). Un retrait <b>avant 5 ans</b> est taxé comme un CTO
-              au <Term id={"PFU"} />, l'avantage disparaît et le plan est clôturé.
-            </ExampleBox>
-          </InfoBubble>
-        </section>
-
         <section id="limites-assurance-vie" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
             Les limites des assurances vie

@@ -1,5 +1,11 @@
 import React from "react";
-import { FaCalculator, FaHome, FaBalanceScale, FaShieldAlt } from "react-icons/fa";
+import {
+  FaCalculator,
+  FaHome,
+  FaBalanceScale,
+  FaShieldAlt,
+  FaProjectDiagram,
+} from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
@@ -14,6 +20,25 @@ const Tools: React.FC = () => {
       <Container gap="lg">
         <section id="tools" className="scroll-mt-22">
           <div className="space-y-4">
+            <InfoBubble
+              icon={<FaProjectDiagram />}
+              title="Organigramme d'investissement"
+              color="text-indigo-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Un organigramme interactif pour visualiser où placer son
+                argent selon sa situation (budget, dettes, épargne de
+                sécurité) et son horizon de placement.
+              </p>
+              <NavLink
+                to="/organigramme-investissement"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-300 rounded-xl transition-colors duration-200 font-medium"
+              >
+                <FaProjectDiagram className="text-indigo-400" />
+                <span>Ouvrir l'organigramme</span>
+              </NavLink>
+            </InfoBubble>
+
             <InfoBubble
               icon={<FaCalculator />}
               title="Calcul d'intérêts composés"
