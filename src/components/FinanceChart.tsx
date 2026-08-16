@@ -20,7 +20,7 @@ interface FinanceChartProps {
   data: object[];
   xKey: string;
   bars: ChartSeries[];
-  line: ChartSeries;
+  lines: ChartSeries[];
   yAxisOrientation?: "left" | "right";
   height?: number;
   startYear?: number;
@@ -38,12 +38,27 @@ const FinanceChart: FC<FinanceChartProps> = ({
   data,
   xKey,
   bars,
-  line,
+  lines,
   yAxisOrientation = "left",
   height = 420,
   startYear,
 }) => {
   const base = Number.isFinite(startYear) ? (startYear as number) : 0;
+  const seriesOrder = [...bars, ...lines].map((series) => series.key);
+
+  const renderLegend = () => (
+    <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 mt-2 text-sm text-gray-300">
+      {[...bars, ...lines].map((series) => (
+        <li key={series.key} className="flex items-center gap-1.5">
+          <span
+            className="inline-block w-2.5 h-2.5 rounded-sm shrink-0"
+            style={{ backgroundColor: series.color }}
+          />
+          {series.key}
+        </li>
+      ))}
+    </ul>
+  );
 
   return (
     <ResponsiveContainer width="100%" height={height}>
@@ -71,8 +86,9 @@ const FinanceChart: FC<FinanceChartProps> = ({
           }}
           formatter={formatEuro}
           labelFormatter={(label) => `Année ${base + Number(label)}`}
+          itemSorter={(item) => seriesOrder.indexOf(String(item.dataKey))}
         />
-        <Legend />
+        <Legend content={renderLegend} />
         {bars.map((bar) => (
           <Bar
             key={bar.key}
@@ -82,13 +98,16 @@ const FinanceChart: FC<FinanceChartProps> = ({
             radius={[4, 4, 0, 0]}
           />
         ))}
-        <Line
-          type="monotone"
-          dataKey={line.key}
-          stroke={line.color}
-          strokeWidth={2}
-          dot={false}
-        />
+        {lines.map((line) => (
+          <Line
+            key={line.key}
+            type="monotone"
+            dataKey={line.key}
+            stroke={line.color}
+            strokeWidth={2}
+            dot={false}
+          />
+        ))}
       </ComposedChart>
     </ResponsiveContainer>
   );

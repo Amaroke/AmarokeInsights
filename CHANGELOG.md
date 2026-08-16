@@ -2,12 +2,16 @@
 
 Tous les changements de ce projet sont documentés dans ce fichier, par date.
 
+## 17/08/2026
+
+- Calculateur d'intérêts composés, ajout d'un taux d'imposition et d'un taux d'inflation réglables, avec affichage du capital brut, net d'impôts et net en pouvoir d'achat en plus de la courbe existante.
+
 ## 16/08/2026
 
 - Toutes les URLs du site sont passées de l'anglais au français (ex. `/banking` → `/systeme-bancaire`, `/loan` → `/simulateur-pret`) pour plus de cohérence et un meilleur référencement.
 - Nouvelle page « Comparatifs et Études » (PEA, assurance vie, CTO, 111bis luxembourgeois), qui remplace l'ancienne page « Comment investir ? », retirée du menu en attendant d'être retravaillée.
 - Nouvel outil « Organigramme d'investissement », détaché dans sa propre page au sein de la section Outils, avec sa propre carte sur la page Outils.
-- Page « Optimisation fiscale » réintégrée au menu (repositionnée devant « Comparatifs et Études »), avec trois nouvelles parties : la purge des plus-values au décès (CTO), l'abattement de 100 000 € sur les donations, et l'importance de conserver ses preuves d'achat de cryptomonnaies.
+- Page « Optimisation fiscale » réintégrée au menu (repositionnée devant « Comparatifs et Études »), avec quatre parties : pourquoi le PEA, la purge des plus-values au décès (CTO), l'abattement de 100 000 € sur les donations, et l'importance de conserver ses preuves d'achat de cryptomonnaies.
 - Réorganisation de la page Investissements.
 - Remplacement de l'illustration statique des chandeliers japonais par un vrai graphique interactif.
 

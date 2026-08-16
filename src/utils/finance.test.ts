@@ -58,6 +58,42 @@ describe("computeCompoundInterest", () => {
     });
     expect(data[1]["Capital total"]).toBe(0);
   });
+
+  it("without tax/inflation params, net values equal the gross capital", () => {
+    const data = computeCompoundInterest({
+      initial: 1000,
+      monthly: 50,
+      rate: 7,
+      years: 5,
+    });
+    const last = data[data.length - 1];
+    expect(last["Capital net"]).toBe(last["Capital total"]);
+    expect(last["Ajusté à l'inflation"]).toBe(last["Capital net"]);
+  });
+
+  it("tax only applies to the gains, not to the contributed capital", () => {
+    const data = computeCompoundInterest({
+      initial: 1000,
+      monthly: 0,
+      rate: 10,
+      years: 1,
+      taxRate: 20,
+    });
+    expect(data[1]["Capital total"]).toBe(1100);
+    expect(data[1]["Capital net"]).toBe(1080);
+  });
+
+  it("inflation discounts the net capital to today's purchasing power", () => {
+    const data = computeCompoundInterest({
+      initial: 1000,
+      monthly: 0,
+      rate: 0,
+      years: 1,
+      inflationRate: 10,
+    });
+    expect(data[1]["Capital net"]).toBe(1000);
+    expect(data[1]["Ajusté à l'inflation"]).toBe(909);
+  });
 });
 
 describe("computeLoan", () => {

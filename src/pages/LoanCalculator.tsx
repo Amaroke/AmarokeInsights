@@ -97,7 +97,7 @@ const LoanCalculator: React.FC = () => {
               { key: "Capital restant", color: "#9333ea" },
               { key: "Intérêts restants", color: "#f472b6" },
             ]}
-            line={{ key: "Total restant", color: "#facc15" }}
+            lines={[{ key: "Total restant", color: "#facc15" }]}
           />
         </div>
       </Container>

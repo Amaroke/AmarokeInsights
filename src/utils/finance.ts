@@ -1,4 +1,4 @@
-const safe = (v: number) => (Number.isFinite(v) ? v : 0);
+const safe = (v: number | undefined) => (Number.isFinite(v) ? (v as number) : 0);
 
 const clampYears = (v: number) =>
   Math.min(Math.max(Math.trunc(safe(v)), 0), 120);
@@ -8,6 +8,8 @@ export interface CompoundInterestParams {
   monthly: number;
   rate: number;
   years: number;
+  taxRate?: number;
+  inflationRate?: number;
 }
 
 export interface CompoundInterestPoint {
@@ -15,6 +17,8 @@ export interface CompoundInterestPoint {
   "Apport cumulé": number;
   "Intérêts générés": number;
   "Capital total": number;
+  "Capital net": number;
+  "Ajusté à l'inflation": number;
 }
 
 export function computeCompoundInterest(
@@ -24,6 +28,8 @@ export function computeCompoundInterest(
   const monthly = safe(params.monthly);
   const rate = safe(params.rate);
   const years = clampYears(params.years);
+  const taxRate = safe(params.taxRate);
+  const inflationRate = safe(params.inflationRate);
 
   const points: CompoundInterestPoint[] = [];
   let capital = initial;
@@ -34,12 +40,16 @@ export function computeCompoundInterest(
     }
     const apport = initial + monthly * 12 * year;
     const interets = capital - apport;
+    const net = apport + interets * (1 - taxRate / 100);
+    const netRealValue = net / Math.pow(1 + inflationRate / 100, year);
 
     points.push({
       Année: year,
       "Apport cumulé": Math.round(apport),
       "Intérêts générés": Math.round(interets),
       "Capital total": Math.round(capital),
+      "Capital net": Math.round(safe(net)),
+      "Ajusté à l'inflation": Math.round(safe(netRealValue)),
     });
   }
 
