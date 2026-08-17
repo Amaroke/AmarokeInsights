@@ -52,7 +52,7 @@ export const terms = {
   PFU: {
     title: "PFU",
     definition:
-      "Prélèvement Forfaitaire Unique : Taxe forfaitaire de 31,4 % sur les revenus du capital (dividendes, intérêts, plus-values) en France, comprenant 12,8 % d'impôt sur le revenu et 18,6 % de prélèvements sociaux.",
+      "Prélèvement Forfaitaire Unique : Taxe forfaitaire de 31,4 % sur les revenus du capital (dividendes, intérêts, plus-values) en France, comprenant 12,8 % d'impôt sur le revenu et 18,6 % de prélèvements sociaux. L'assurance-vie et l'immobilier restent exclus de la hausse de CSG de 2026 et ne supportent que 30 % (12,8 % + 17,2 %).",
   },
   SEPA: {
     title: "SEPA",
@@ -162,7 +162,7 @@ export const terms = {
   PS: {
     title: "prélèvements sociaux",
     definition:
-      "Ensemble de contributions prélevées sur les revenus du patrimoine et du capital en France. Leur taux est de 18,6 % depuis 2026, comprenant la CSG, la CRDS et le prélèvement de solidarité. Ils s'appliquent sur les gains (intérêts, plus-values, dividendes) même quand l'impôt sur le revenu est exonéré.",
+      "Ensemble de contributions prélevées sur les revenus du patrimoine et du capital en France. Leur taux est de 18,6 % depuis 2026 (CSG, CRDS, prélèvement de solidarité), sauf pour l'assurance-vie et l'immobilier (revenus fonciers, plus-values immobilières) qui restent exclus de la hausse de CSG et conservent un taux de 17,2 %. Ils s'appliquent sur les gains (intérêts, plus-values, dividendes) même quand l'impôt sur le revenu est exonéré.",
   },
   TMI: {
     title: "Taux Marginal d'Imposition",

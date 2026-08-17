@@ -318,13 +318,15 @@ const ComparativeStudies: React.FC = () => {
                       <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">CTO</span>- 36 732 €</td>
                     </tr>
                     <tr className="block sm:table-row p-3 sm:p-0">
-                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Prélèvements sociaux (18,6 %)</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">Assurance Vie</span>- 46 940 €</td>
+                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                        Prélèvements sociaux (17,2 % AV · 18,6 % CTO)
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">Assurance Vie</span>- 43 407 €</td>
                       <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">CTO</span>- 53 376 €</td>
                     </tr>
                     <tr className="block sm:table-row bg-gray-800/40 p-3 sm:p-0">
                       <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-gray-100 mb-1 sm:mb-0">Capital net récupéré</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold"><span className="sm:hidden text-gray-400 font-normal mr-2">Assurance Vie</span>286 843 €</td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold"><span className="sm:hidden text-gray-400 font-normal mr-2">Assurance Vie</span>290 376 €</td>
                       <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold text-green-400"><span className="sm:hidden text-gray-400 font-normal mr-2">CTO</span>296 860 €</td>
                     </tr>
                   </tbody>
@@ -333,9 +335,11 @@ const ComparativeStudies: React.FC = () => {
             </ExampleBox>
 
             <p className="leading-relaxed mt-3">
-              Le CTO laisse <b>≈ 10 000 € de plus</b> au bout de 20 ans, alors
-              même que l'assurance vie est <b>moins taxée</b> (65 522 € de
-              prélèvements contre 90 108 €). L'explication tient aux{" "}
+              Le CTO laisse <b>≈ 6 500 € de plus</b> au bout de 20 ans, alors
+              même que l'assurance vie est <b>moins taxée</b> (61 989 € de
+              prélèvements contre 90 108 €, l'AV restant exclue de la hausse
+              de CSG de 2026 et conservant des prélèvements sociaux à
+              17,2 % contre 18,6 % pour le CTO). L'explication tient aux{" "}
               <b>frais de gestion</b>, 0,5 %/an prélevés chaque année amputent
               le capital de plus de <b>34 000 €</b> avant impôt, soit davantage
               que l'économie d'impôt offerte par l'enveloppe. Au-delà d'environ{" "}

@@ -300,8 +300,8 @@ const Banking: React.FC = () => {
                 </p>
 
                 <ExampleBox>
-                  Un compte fintech à 2 % brut après <Term id={"PFU"} /> à 30 %,
-                  le taux net tombe à <strong>1,4 %</strong>, soit souvent en
+                  Un compte fintech à 2 % brut après <Term id={"PFU"} />, le
+                  taux net tombe à <strong>1,37 %</strong>, soit souvent en
                   dessous du Livret A (garanti et défiscalisé). Le taux affiché
                   n'est pas le taux réel.
                 </ExampleBox>
