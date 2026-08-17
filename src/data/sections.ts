@@ -147,9 +147,17 @@ export const sections: Section[] = [
     hoverColor: "hover:bg-amber-500/10 hover:text-amber-50",
     hoverIconColor: "group-hover:text-amber-400",
     hoverItemColor: "hover:bg-amber-500/5 hover:text-amber-200",
-    lastUpdated: "2026-03-18",
+    lastUpdated: "2026-08-17",
     items: [
       { title: "Qu'est-ce qu'une crypto ?", path: "quest-ce-quune-crypto" },
+      {
+        title: "Halving, tokenomics et smart contracts",
+        path: "halving-tokenomics-smart-contracts",
+      },
+      {
+        title: "Faucet, learn-to-earn, play-to-earn, airdrop, staking",
+        path: "gagner-des-cryptos",
+      },
       { title: "Les différentes cryptos", path: "differentes-cryptos" },
       { title: "Acheter, stocker et sécuriser", path: "acheter-stocker-securiser" },
     ],

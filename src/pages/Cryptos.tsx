@@ -10,12 +10,22 @@ import {
   FaUniversity,
   FaShieldAlt,
   FaKey,
+  FaCut,
+  FaChartPie,
+  FaFileContract,
+  FaFaucet,
+  FaGraduationCap,
+  FaGamepad,
+  FaParachuteBox,
+  FaLayerGroup,
+  FaMicrochip,
 } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
 import Term from "../components/Term";
 import Disclaimer from "../components/Disclaimer";
+import ExampleBox from "../components/ExampleBox";
 
 const Cryptos: React.FC = () => {
   return (
@@ -28,7 +38,13 @@ const Cryptos: React.FC = () => {
           Les cryptomonnaies sont des actifs extrêmement volatils. Leur valeur
           peut chuter de 50 % ou plus en quelques semaines. Cette section est
           informative et ne constitue pas un conseil d'investissement. Investir
-          en crypto comporte un risque de perte totale du capital.
+          en crypto comporte un risque de perte totale du capital. Tous les
+          projets, tokens, plateformes ou services cités sur cette page le sont{" "}
+          <strong>à titre d'exemple indicatif uniquement</strong>, je ne fais la
+          promotion d'aucun actif, service ou cryptomonnaie en particulier.
+          Chacun d'eux reste à très haut risque et nécessite{" "}
+          <strong>beaucoup de recherches personnelles</strong> avant de s'y
+          intéresser.
         </Disclaimer>
         <section id="quest-ce-quune-crypto" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
@@ -72,8 +88,7 @@ const Cryptos: React.FC = () => {
                 Les cryptos offrent ainsi plusieurs avantages : transactions
                 rapides, internationalisation des paiements, protection contre
                 certaines censures, et possibilité de nouveaux modèles
-                économiques (applications <Term id="decentralized" />, contrats
-                intelligents…).
+                économiques.
               </p>
 
               <p className="leading-relaxed mb-3">
@@ -91,6 +106,300 @@ const Cryptos: React.FC = () => {
                 pour se lancer en toute connaissance.
               </p>
             </InfoBubble>
+
+            <InfoBubble
+              icon={<FaMicrochip />}
+              title="Le minage, comment les transactions sont validées"
+              color="text-orange-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Le <strong>minage</strong> est le mécanisme par lequel des
+                ordinateurs (les "mineurs") vérifient et regroupent les
+                transactions en blocs, avant de les ajouter à la{" "}
+                <Term id="blockchain" />. C'est ce qui sécurise le réseau et
+                empêche qu'une même somme soit dépensée deux fois.
+              </p>
+
+              <p className="leading-relaxed mb-3">
+                Sur Bitcoin, ce mécanisme s'appelle la{" "}
+                <strong>preuve de travail</strong> (proof-of-work). Les mineurs
+                font tourner du matériel spécialisé (des puces{" "}
+                <strong>ASIC</strong>) pour résoudre en premier un calcul
+                cryptographique très coûteux en énergie mais facile à vérifier.
+                Le premier à trouver la solution ajoute le bloc et reçoit en
+                récompense des nouveaux bitcoins ainsi que les frais de
+                transaction du bloc.
+              </p>
+
+              <p className="leading-relaxed mb-3">
+                Comme la puissance de calcul totale du réseau varie dans le
+                temps, la <strong>difficulté</strong> du calcul s'ajuste
+                automatiquement pour qu'un nouveau bloc soit trouvé environ
+                toutes les 10 minutes. Miner seul dans son coin est aujourd'hui
+                illusoire face aux acteurs industriels, la plupart des mineurs
+                individuels rejoignent des <strong>pools de minage</strong>, qui
+                mutualisent la puissance de calcul et redistribuent les
+                récompenses au prorata de la contribution de chacun.
+              </p>
+
+              <p className="leading-relaxed mb-3">
+                Ce système consomme énormément d'électricité à l'échelle
+                mondiale, ce qui a poussé de nombreuses blockchains (dont
+                Ethereum depuis 2022) à abandonner le minage au profit de la{" "}
+                <strong>preuve d'enjeu</strong> (proof-of-stake), où ce sont des
+                cryptos bloquées via le <Term id="staking" /> qui sécurisent le
+                réseau, sans matériel de calcul dédié.
+              </p>
+
+              <p className="leading-relaxed">
+                Il existe aussi des plateformes de "minage" accessibles sans
+                matériel, sous forme de contrats de{" "}
+                <strong>cloud mining</strong> ou de NFT représentant une part de
+                puissance de calcul. Ces offres restent à examiner avec la plus
+                grande prudence. La rentabilité dépend du cours du Bitcoin et
+                des frais d'électricité facturés par la plateforme, il existe un
+                risque de contrepartie si l'opérateur n'est pas fiable, et de
+                nombreuses arnaques du même type existent dans le secteur.
+              </p>
+            </InfoBubble>
+          </div>
+        </section>
+
+        <section
+          id="halving-tokenomics-smart-contracts"
+          className="scroll-mt-22 mb-12"
+        >
+          <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
+            Halving, tokenomics et smart contracts, comprendre l'économie d'une
+            crypto
+          </h2>
+
+          <div className="space-y-4">
+            <InfoBubble
+              icon={<FaCut />}
+              title="Le halving, une rareté programmée"
+              color="text-red-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Le <strong>halving</strong> est un événement inscrit dans le
+                code de certaines blockchains, qui divise par deux la récompense
+                versée aux mineurs pour chaque nouveau bloc validé. Sur Bitcoin,
+                cela survient tous les <strong>210 000 blocs</strong>, soit
+                environ tous les <strong>4 ans</strong>, et ce jusqu'à
+                l'épuisement des 21 millions de BTC (vers 2140).
+              </p>
+
+              <p className="leading-relaxed mb-3">
+                En divisant le rythme de création de nouvelles unités, le
+                halving réduit mécaniquement l'inflation de l'offre. C'est un
+                évènement surveillé par le marché car il modifie l'équilibre
+                offre/demande, sans pour autant garantir une hausse du prix.
+              </p>
+
+              <ExampleBox>
+                <ul className="space-y-1">
+                  <li>2009, 50 BTC par bloc (lancement)</li>
+                  <li>2012, 25 BTC par bloc</li>
+                  <li>2016, 12,5 BTC par bloc</li>
+                  <li>2020, 6,25 BTC par bloc</li>
+                  <li>2024, 3,125 BTC par bloc (halving le plus récent)</li>
+                  <li>~2028, 1,5625 BTC par bloc (prochain halving estimé)</li>
+                </ul>
+              </ExampleBox>
+            </InfoBubble>
+
+            <InfoBubble
+              icon={<FaChartPie />}
+              title="La tokenomics, l'économie d'un token"
+              color="text-emerald-400"
+            >
+              <p className="leading-relaxed mb-3">
+                La <strong>tokenomics</strong> désigne l'ensemble des règles
+                économiques qui régissent un token, son offre (totale, max, en
+                circulation), sa répartition (équipe, investisseurs, communauté,
+                trésorerie), son calendrier de déblocage (vesting), et son
+                utilité réelle (paiement, gouvernance, accès à un service).
+              </p>
+
+              <p className="leading-relaxed mb-3">
+                Un token peut être <strong>inflationniste</strong> (de nouveaux
+                tokens sont créés en continu, ce qui dilue les détenteurs) ou{" "}
+                <strong>déflationniste</strong> (une partie de l'offre est
+                régulièrement détruite, ou "brûlée", ce qui la réduit dans le
+                temps). Avant d'investir dans un projet, lire sa tokenomics
+                permet de repérer les signaux d'alerte, une part trop importante
+                réservée à l'équipe, un vesting trop court qui autorise des
+                ventes massives rapides, ou une utilité du token très floue.
+              </p>
+
+              <ExampleBox>
+                <p className="mb-2">
+                  <strong>Exemple</strong> : GoMining est une plateforme de
+                  minage de Bitcoin sous forme de NFT, avec son propre token{" "}
+                  <strong>GOMINING</strong>.
+                </p>
+                <ul className="space-y-1">
+                  <li>
+                    Offre initiale d'environ <strong>437 millions</strong> de
+                    tokens.
+                  </li>
+                  <li>
+                    Mécanisme <strong>déflationniste</strong>, chaque semaine
+                    les tokens perçus au titre des frais de maintenance des NFT
+                    "Digital Miners" sont brûlés, avec moins de nouveaux tokens
+                    réémis que de tokens détruits, l'objectif affiché étant de
+                    faire tendre l'offre vers ~100 millions à terme.
+                  </li>
+                  <li>
+                    Utilité, paiement des frais internes de la plateforme
+                    (électricité, achat et amélioration des NFT) et{" "}
+                    <Term id="staking" />.
+                  </li>
+                </ul>
+              </ExampleBox>
+            </InfoBubble>
+
+            <InfoBubble
+              icon={<FaFileContract />}
+              title="Les smart contracts"
+              color="text-blue-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Un <strong>smart contract</strong> est un programme
+                auto-exécutable déployé sur une blockchain. Il applique
+                automatiquement des règles prédéfinies (par exemple, "si X paie
+                Y, alors transférer le NFT Z") sans intermédiaire humain ni
+                serveur central.
+              </p>
+
+              <p className="leading-relaxed mb-3">
+                C'est la brique technique qui rend possibles la{" "}
+                <Term id="DeFi" />, les <Term id="NFT" /> et les{" "}
+                <Term id="DAO" />. Une fois déployé, son code est en général
+                immuable, il est impossible de le corriger discrètement en cas
+                de faille. C'est pourquoi les projets sérieux font auditer leurs
+                smart contracts par des sociétés spécialisées avant leur mise en
+                production, un piratage de smart contract mal sécurisé pouvant
+                entraîner une perte totale et irréversible des fonds qui y sont
+                engagés.
+              </p>
+            </InfoBubble>
+          </div>
+        </section>
+
+        <section id="gagner-des-cryptos" className="scroll-mt-22 mb-12">
+          <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
+            Faucet, learn-to-earn, play-to-earn, airdrop et staking, gagner des
+            cryptos autrement
+          </h2>
+
+          <div className="space-y-4">
+            <InfoBubble
+              icon={<FaFaucet />}
+              title="Les faucets"
+              color="text-cyan-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Un <strong>faucet</strong> est un site ou une application qui
+                distribue de très petites quantités de cryptos gratuitement,
+                généralement financé par de la publicité. C'est historiquement
+                l'un des tout premiers moyens de découvrir Bitcoin.
+              </p>
+              <p className="leading-relaxed">
+                En pratique, les montants sont dérisoires et le temps passé est
+                rarement rentable. Certains "faucets" ne servent qu'à collecter
+                des données personnelles ou générer des clics publicitaires, à
+                réserver à la découverte plutôt qu'à un objectif de revenu.
+              </p>
+            </InfoBubble>
+
+            <InfoBubble
+              icon={<FaGraduationCap />}
+              title="Le learn-to-earn"
+              color="text-yellow-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Le <strong>learn-to-earn</strong> consiste, pour des plateformes
+                comme les exchanges, à proposer de courtes vidéos ou des quiz
+                sur un projet crypto en échange d'une petite quantité de son
+                token.
+              </p>
+              <p className="leading-relaxed">
+                C'est un bon moyen de se former gratuitement tout en touchant
+                quelques euros, mais gardez en tête que c'est avant tout un
+                outil marketing pour le projet concerné, la petite récompense ne
+                doit jamais influencer votre jugement sur la qualité du projet.
+              </p>
+            </InfoBubble>
+
+            <InfoBubble
+              icon={<FaGamepad />}
+              title="Le play-to-earn (P2E)"
+              color="text-pink-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Le <strong>play-to-earn (P2E)</strong> désigne des jeux vidéo
+                utilisant la blockchain, où jouer permet de gagner des tokens ou
+                des NFT ayant une valeur d'échange réelle.
+              </p>
+              <p className="leading-relaxed">
+                Attention au piège, l'économie de ces jeux dépend souvent de
+                l'arrivée constante de nouveaux joueurs pour financer les gains
+                des précédents, une dynamique proche d'un système pyramidal
+                quand elle est mal conçue. De nombreux tokens P2E se sont
+                effondrés une fois l'afflux de nouveaux joueurs ralenti.
+              </p>
+            </InfoBubble>
+
+            <InfoBubble
+              icon={<FaParachuteBox />}
+              title="Les airdrops"
+              color="text-purple-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Un <strong>airdrop</strong> est une distribution gratuite de
+                tokens à des portefeuilles remplissant certains critères (avoir
+                utilisé un protocole, détenu un autre token, participé à un
+                testnet...). Les projets s'en servent pour récompenser leurs
+                premiers utilisateurs et décentraliser leur token dès son
+                lancement.
+              </p>
+              <p className="leading-relaxed">
+                Attention aux faux airdrops, ne connectez jamais votre wallet à
+                un site inconnu et ne signez jamais une transaction dont vous ne
+                comprenez pas le contenu pour "réclamer" un airdrop, c'est l'une
+                des arnaques les plus répandues du secteur.
+              </p>
+            </InfoBubble>
+
+            <InfoBubble
+              icon={<FaLayerGroup />}
+              title="Le staking"
+              color="text-green-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Le <Term id="staking" /> consiste à verrouiller ses cryptos pour
+                participer à la sécurisation d'une blockchain (preuve d'enjeu)
+                ou d'un protocole, en échange d'une récompense. C'est
+                aujourd'hui l'un des moyens les plus courants de faire
+                fructifier des cryptos que l'on compte conserver.
+              </p>
+              <p className="leading-relaxed mb-3">
+                Le rendement dépend souvent de la durée de blocage choisie (plus
+                l'engagement est long, plus la récompense est élevée), avec en
+                contrepartie un risque de blocage des fonds en cas de besoin de
+                liquidités.
+              </p>
+              <ExampleBox>
+                <strong>Exemple :</strong> Le staking de GOMINING permet de
+                choisir une durée de blocage allant d'une semaine à 4 ans, avec
+                un rendement annuel moyen de l'ordre de 22 % pour les
+                engagements les plus longs. Environ 27 % de l'offre du token
+                serait ainsi bloquée par les utilisateurs. Ces chiffres évoluent
+                avec le temps et le marché, vérifiez toujours les conditions à
+                jour directement auprès du projet avant d'y engager des fonds.
+              </ExampleBox>
+            </InfoBubble>
           </div>
         </section>
 
@@ -106,14 +415,14 @@ const Cryptos: React.FC = () => {
               color="text-yellow-400"
             >
               <p className="leading-relaxed mb-2">
-                Conçues pour servir d'argent numérique : transférer de la valeur
+                Conçues pour servir d'argent numérique, transférer de la valeur
                 sans banque et, dans certains cas, protéger contre l'inflation.
               </p>
 
               <p className="leading-relaxed mb-2">
                 <strong>Bitcoin (BTC)</strong> : première crypto, offre limitée
                 à 21 millions d'unités. Souvent utilisée comme réserve de valeur
-                (« or numérique ») et pour des paiements internationaux.
+                ("or numérique") et pour des paiements internationaux.
               </p>
 
               <p className="leading-relaxed">
@@ -166,9 +475,17 @@ const Cryptos: React.FC = () => {
                 certains services.
               </p>
 
-              <p className="leading-relaxed">
+              <p className="leading-relaxed mb-2">
                 <strong>BNB</strong> : utilisé sur Binance pour payer les frais,
                 participer à des projets et alimenter la BNB Chain.
+              </p>
+
+              <p className="leading-relaxed">
+                <strong>GoMining (GOMINING)</strong> : token d'une plateforme de
+                minage de Bitcoin sous forme de NFT, utilisé pour payer, avec
+                une réduction, les frais internes (électricité,
+                achat/amélioration des NFT). Il est également utilisé pour le
+                staking et la gouvernance de la plateforme.
               </p>
             </InfoBubble>
 
@@ -361,30 +678,6 @@ const Cryptos: React.FC = () => {
               <p className="leading-relaxed">
                 En crypto, il n'existe généralement aucun recours en cas de vol
                 : la sécurité dépend entièrement de l'utilisateur.
-              </p>
-            </InfoBubble>
-          </div>
-        </section>
-
-        <section id="learn-more" className="scroll-mt-22 mb-12">
-          <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
-            Pour approfondir
-          </h2>
-          <div className="space-y-4">
-            <InfoBubble
-              icon={<FaChartLine />}
-              title="Détails et conseils pour se lancer"
-              color="text-yellow-400"
-            >
-              <p className="leading-relaxed mb-3">
-                Cette page présente les bases des cryptomonnaies. Pour se lancer
-                sereinement, il est recommandé de se former, d'expérimenter sur
-                des comptes démo et de suivre l'actualité des marchés.
-              </p>
-              <p className="leading-relaxed">
-                Ne considérez jamais les cryptos comme un moyen rapide de
-                s'enrichir. Discipline, patience et gestion du risque sont
-                essentiels.
               </p>
             </InfoBubble>
           </div>
