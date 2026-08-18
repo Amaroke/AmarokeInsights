@@ -18,6 +18,7 @@ const routeByFile = {
   "Trading.tsx": "/trading",
   "Taxes.tsx": "/impots",
   "Resources.tsx": "/ressources",
+  "Affiliation.tsx": "/affiliation",
   "Cryptos.tsx": "/cryptomonnaies",
   "CompoundInterest.tsx": "/interets-composes",
   "LoanCalculator.tsx": "/simulateur-pret",

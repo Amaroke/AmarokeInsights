@@ -4,6 +4,7 @@ Tous les changements de ce projet sont documentés dans ce fichier, par date.
 
 ## 18/08/2026
 
+- Nouvelle page "Affiliation".
 - Page Ressources, ajout d'une catégorie "Créateurs de contenu".
 - Page Cryptos, exemple de tokenomics et de stacking revu.
 

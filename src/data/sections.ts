@@ -10,6 +10,7 @@ import {
   FaBalanceScale,
   FaFileInvoiceDollar,
   FaTools,
+  FaHandshake,
 } from "react-icons/fa";
 import { GiPathDistance, GiWallet } from "react-icons/gi";
 import type { IconType } from "react-icons";
@@ -159,7 +160,10 @@ export const sections: Section[] = [
         path: "gagner-des-cryptos",
       },
       { title: "Les différentes cryptos", path: "differentes-cryptos" },
-      { title: "Acheter, stocker et sécuriser", path: "acheter-stocker-securiser" },
+      {
+        title: "Acheter, stocker et sécuriser",
+        path: "acheter-stocker-securiser",
+      },
     ],
   },
   {
@@ -279,6 +283,18 @@ export const sections: Section[] = [
       { title: "Documentation", path: "documentation" },
       { title: "Glossaire", path: "glossaire" },
     ],
+  },
+  {
+    title: "Affiliation",
+    path: "affiliation",
+    icon: FaHandshake,
+    iconColor: "text-fuchsia-400",
+    activeColor: "bg-fuchsia-500/10 text-fuchsia-50",
+    hoverColor: "hover:bg-fuchsia-500/10 hover:text-fuchsia-50",
+    hoverIconColor: "group-hover:text-fuchsia-400",
+    hoverItemColor: "hover:bg-fuchsia-500/5 hover:text-fuchsia-200",
+    lastUpdated: "2026-08-18",
+    items: [],
   },
   {
     title: "Me Contacter",

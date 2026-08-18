@@ -12,6 +12,7 @@ const Investments = lazy(() => import("./pages/Investments"));
 const Trading = lazy(() => import("./pages/Trading"));
 const Taxes = lazy(() => import("./pages/Taxes"));
 const Resources = lazy(() => import("./pages/Resources"));
+const Affiliation = lazy(() => import("./pages/Affiliation"));
 const Cryptos = lazy(() => import("./pages/Cryptos"));
 const CompoundInterest = lazy(() => import("./pages/CompoundInterest"));
 const LoanCalculator = lazy(() => import("./pages/LoanCalculator"));
@@ -62,6 +63,7 @@ function App() {
               <Route path="/impots/*" element={<Taxes />} />
               <Route path="/outils/*" element={<Tools />} />
               <Route path="/ressources/*" element={<Resources />} />
+              <Route path="/affiliation/*" element={<Affiliation />} />
               <Route path="/strategie/*" element={<Strategy />} />
               <Route path="/contact/*" element={<Contact />} />
               <Route path="/mentions-legales" element={<Legal />} />

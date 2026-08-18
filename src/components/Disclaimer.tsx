@@ -1,12 +1,15 @@
 import React from "react";
 import { FaFlask } from "react-icons/fa";
 
-const Disclaimer: React.FC<{ title: string; children: React.ReactNode }> = ({
-  title,
-  children,
-}) => {
+const Disclaimer: React.FC<{
+  title: string;
+  children: React.ReactNode;
+  className?: string;
+}> = ({ title, children, className }) => {
   return (
-    <div className="border border-amber-600/50 rounded-xl px-5 py-4 mb-8">
+    <div
+      className={`border border-amber-600/50 rounded-xl px-5 py-4 ${className ?? "mb-8"}`}
+    >
       <div className="flex items-center gap-2 text-amber-400 text-xs font-semibold uppercase tracking-widest mb-2">
         <FaFlask className="shrink-0 text-sm" />
         {title}
