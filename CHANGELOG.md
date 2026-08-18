@@ -2,6 +2,11 @@
 
 Tous les changements de ce projet sont documentés dans ce fichier, par date.
 
+## 18/08/2026
+
+- Page Ressources, ajout d'une catégorie "Créateurs de contenu".
+- Page Cryptos, exemple de tokenomics et de stacking revu.
+
 ## 17/08/2026
 
 - Calculateur d'intérêts composés, ajout d'un taux d'imposition et d'un taux d'inflation réglables, avec affichage du capital brut, net d'impôts et net en pouvoir d'achat en plus de la courbe existante.

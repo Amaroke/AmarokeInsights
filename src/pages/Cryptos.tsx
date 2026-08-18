@@ -85,17 +85,17 @@ const Cryptos: React.FC = () => {
               </p>
 
               <p className="leading-relaxed mb-3">
-                Les cryptos offrent ainsi plusieurs avantages : transactions
+                Les cryptos offrent ainsi plusieurs avantages, transactions
                 rapides, internationalisation des paiements, protection contre
                 certaines censures, et possibilité de nouveaux modèles
                 économiques.
               </p>
 
               <p className="leading-relaxed mb-3">
-                Cependant, des dérives existent : forte volatilité, arnaques,
-                perte de clés privées, utilisation pour des activités illégales,
-                et parfois consommation énergétique élevée selon les mécanismes
-                de validation.
+                Cependant, des dérives existent incluant une forte volatilité,
+                des arnaques, la perte de clés privées, l'utilisation pour des
+                activités illégales, et parfois une consommation énergétique
+                élevée selon les mécanismes de validation.
               </p>
 
               <p className="leading-relaxed">
@@ -156,10 +156,10 @@ const Cryptos: React.FC = () => {
                 matériel, sous forme de contrats de{" "}
                 <strong>cloud mining</strong> ou de NFT représentant une part de
                 puissance de calcul. Ces offres restent à examiner avec la plus
-                grande prudence. La rentabilité dépend du cours du Bitcoin et
-                des frais d'électricité facturés par la plateforme, il existe un
-                risque de contrepartie si l'opérateur n'est pas fiable, et de
-                nombreuses arnaques du même type existent dans le secteur.
+                grande prudence. La rentabilité dépend du cours du Bitcoin, il
+                existe un risque de contrepartie si l'opérateur n'est pas
+                fiable, et de nombreuses arnaques du même type existent dans le
+                secteur.
               </p>
             </InfoBubble>
           </div>
@@ -234,28 +234,30 @@ const Cryptos: React.FC = () => {
 
               <ExampleBox>
                 <p className="mb-2">
-                  <strong>Exemple</strong> : GoMining est une plateforme de
-                  minage de Bitcoin sous forme de NFT, avec son propre token{" "}
-                  <strong>GOMINING</strong>.
+                  GoMining est une plateforme de minage de Bitcoin sous forme de
+                  NFT, avec son propre token <strong>GOMINING</strong>, dont
+                  l'offre initiale était d'environ 437 millions d'unités.
                 </p>
-                <ul className="space-y-1">
-                  <li>
-                    Offre initiale d'environ <strong>437 millions</strong> de
-                    tokens.
-                  </li>
-                  <li>
-                    Mécanisme <strong>déflationniste</strong>, chaque semaine
-                    les tokens perçus au titre des frais de maintenance des NFT
-                    "Digital Miners" sont brûlés, avec moins de nouveaux tokens
-                    réémis que de tokens détruits, l'objectif affiché étant de
-                    faire tendre l'offre vers ~100 millions à terme.
-                  </li>
-                  <li>
-                    Utilité, paiement des frais internes de la plateforme
-                    (électricité, achat et amélioration des NFT) et{" "}
-                    <Term id="staking" />.
-                  </li>
-                </ul>
+                <p className="mb-2">
+                  Son fonctionnement repose sur un mécanisme{" "}
+                  <strong>déflationniste</strong> de "burn and mint", chaque
+                  semaine, les frais de maintenance payés en token par les
+                  détenteurs de NFT "Digital Miners" sont brûlés, puis une
+                  partie seulement est réémise, ce qui fait diminuer l'offre
+                  totale au fil du temps.
+                </p>
+                <p>
+                  La gouvernance passe par <strong>veGOMINING</strong>, un
+                  système de vote, en verrouillant ses tokens pour une durée de
+                  une semaine à quatre ans, un détenteur obtient un pouvoir de
+                  vote proportionnel à la quantité et à la durée du
+                  verrouillage. Chaque semaine, ces votants décident
+                  collectivement de l'intensité du burn, voter OUI accélère la
+                  réduction de l'offre tandis que voter NON favorise une
+                  redistribution plus généreuse vers la communauté, et 20% des
+                  tokens réémis à chaque cycle leur sont reversés au prorata de
+                  leur pouvoir de vote.
+                </p>
               </ExampleBox>
             </InfoBubble>
 
@@ -391,13 +393,25 @@ const Cryptos: React.FC = () => {
                 liquidités.
               </p>
               <ExampleBox>
-                <strong>Exemple :</strong> Le staking de GOMINING permet de
-                choisir une durée de blocage allant d'une semaine à 4 ans, avec
-                un rendement annuel moyen de l'ordre de 22 % pour les
-                engagements les plus longs. Environ 27 % de l'offre du token
-                serait ainsi bloquée par les utilisateurs. Ces chiffres évoluent
-                avec le temps et le marché, vérifiez toujours les conditions à
-                jour directement auprès du projet avant d'y engager des fonds.
+                <p className="mb-2">
+                  Ethereum fonctionne en preuve d'enjeu depuis 2022. Pour faire
+                  tourner soi-même un validateur qui sécurise le réseau, il faut
+                  immobiliser 32 ETH, en échange de quoi le réseau verse une
+                  récompense de l'ordre de 2,5 à 3 % par an, à laquelle
+                  s'ajoutent des frais de transaction et des revenus
+                  supplémentaires qui portent le rendement total autour de 3 à 4
+                  % par an.
+                </p>
+                <p>
+                  Ceux qui n'ont pas 32 ETH sous la main peuvent passer par du{" "}
+                  <strong>staking liquide</strong> (des plateformes qui
+                  mutualisent les fonds de nombreux utilisateurs et
+                  redistribuent la récompense au prorata, en échange d'un token
+                  représentatif) ou par le staking proposé directement par un
+                  exchange. Ces chiffres évoluent avec le temps et le marché,
+                  vérifiez toujours les conditions à jour avant d'y engager des
+                  fonds.
+                </p>
               </ExampleBox>
             </InfoBubble>
           </div>
@@ -471,7 +485,7 @@ const Cryptos: React.FC = () => {
             >
               <p className="leading-relaxed mb-2">
                 Créés par des plateformes d'échange pour offrir des avantages
-                internes : réduction de frais, <Term id="staking" /> ou accès à
+                internes, réduction de frais, <Term id="staking" /> ou accès à
                 certains services.
               </p>
 
@@ -574,6 +588,63 @@ const Cryptos: React.FC = () => {
 
           <div className="space-y-4">
             <InfoBubble
+              icon={<FaExchangeAlt />}
+              title="Utiliser ses cryptos au quotidien"
+              color="text-teal-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Dans les faits, très peu de commerçants acceptent les cryptos
+                comme moyen de paiement courant. La plupart des détenteurs les
+                utilisent surtout pour investir, épargner ou spéculer, plutôt
+                que pour payer leurs achats du quotidien, la faute à la
+                volatilité des cours et à la lenteur ou au coût de certaines
+                transactions on-chain.
+              </p>
+
+              <p className="leading-relaxed">
+                Quelques cartes bancaires adossées à des plateformes d'échange
+                permettent de dépenser ses cryptos chez n'importe quel
+                commerçant, en convertissant automatiquement le montant en
+                monnaie classique au moment du paiement.
+              </p>
+
+              <ExampleBox>
+                <p className="mb-2">
+                  En 2021, le Salvador est devenu le premier pays au monde à
+                  adopter le Bitcoin comme monnaie légale au même titre que le
+                  dollar, avec l'obligation pour les commerçants de l'accepter.
+                </p>
+                <p>
+                  Face aux exigences du FMI pour lui accorder un prêt, le pays a
+                  fait marche arrière en 2025. L'État salvadorien continue
+                  malgré tout d'accumuler du Bitcoin dans ses réserves. Ce cas
+                  reste une exception, aucun autre pays n'a suivi cette voie à
+                  aussi grande échelle.
+                </p>
+              </ExampleBox>
+
+              <p className="leading-relaxed mt-3">
+                À l'inverse du cas salvadorien imposé par l'État, l'usage des
+                cryptos se développe aussi de façon spontanée, à l'initiative de
+                la population, dans les pays frappés par une inflation extrême.
+                Quand la monnaie locale perd sa valeur trop vite, les cryptos
+                deviennent un moyen d'épargner ou de faire des achats sans voir
+                son pouvoir d'achat fondre.
+              </p>
+
+              <ExampleBox>
+                Au Venezuela, où l'inflation a dépassé 200 % par an en 2025, une
+                part croissante de la population utilise Bitcoin et des
+                stablecoins comme le dollar numérique pour protéger son épargne,
+                faute d'accès facile au dollar physique. Des dynamiques
+                comparables existent en Argentine, en Turquie, au Liban et au
+                Zimbabwe, où les habitants se tournent vers la crypto pour
+                contourner l'effondrement de leur monnaie nationale plutôt que
+                par choix idéologique.
+              </ExampleBox>
+            </InfoBubble>
+
+            <InfoBubble
               icon={<FaGlobeAmericas />}
               title="Hot wallets (portefeuilles en ligne)"
               color="text-purple-400"
@@ -583,8 +654,6 @@ const Cryptos: React.FC = () => {
                 d'acheter, vendre et utiliser ses cryptos facilement, mais sont
                 plus exposés aux piratages.
               </p>
-
-              <p className="leading-relaxed mb-2">Exemples :</p>
 
               <ul className="list-disc list-inside leading-relaxed mb-2">
                 <li>
