@@ -1,5 +1,5 @@
 import React from "react";
-import { FaExternalLinkAlt, FaBookOpen } from "react-icons/fa";
+import { FaExternalLinkAlt, FaBookOpen, FaYoutube } from "react-icons/fa";
 import InfoBubble from "../components/InfoBubble";
 import PageLayout from "../components/PageLayout";
 import Container from "../components/Container";
@@ -61,26 +61,6 @@ const Resources: React.FC = () => {
                   <span className="text-sm text-gray-400">→</span>
                 </a>
                 <a
-                  href="https://www.youtube.com/@Finary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors duration-200 rounded-xl px-4 py-3"
-                >
-                  <div className="flex items-center gap-3">
-                    <FaExternalLinkAlt className="text-yellow-400" />
-                    <div>
-                      <p className="font-medium text-yellow-300">
-                        Chaîne YouTube Finary
-                      </p>
-                      <p className="text-sm text-gray-400">
-                        Chaîne YouTube francophone axée sur les finances
-                        personnelles et l'investissement.
-                      </p>
-                    </div>
-                  </div>
-                  <span className="text-sm text-gray-400">→</span>
-                </a>
-                <a
                   href="https://www.service-public.gouv.fr/particuliers/vosdroits/N19803"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -113,6 +93,108 @@ const Resources: React.FC = () => {
                       <p className="text-sm text-gray-400">
                         Moteur de recherche et comparateur d'ETF, fiches
                         détaillées et outils d'analyse de portefeuille.
+                      </p>
+                    </div>
+                  </div>
+                  <span className="text-sm text-gray-400">→</span>
+                </a>
+                <a
+                  href="https://simulateurs.sinvestir.fr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors duration-200 rounded-xl px-4 py-3"
+                >
+                  <div className="flex items-center gap-3">
+                    <FaExternalLinkAlt className="text-yellow-400" />
+                    <div>
+                      <p className="font-medium text-yellow-300">S'investir</p>
+                      <p className="text-sm text-gray-400">
+                        Simulateurs de S'investir pour estimer ses placements et
+                        projeter son patrimoine.
+                      </p>
+                    </div>
+                  </div>
+                  <span className="text-sm text-gray-400">→</span>
+                </a>
+              </div>
+            </InfoBubble>
+            <InfoBubble
+              icon={<FaYoutube />}
+              title="Créateurs de contenu"
+              color="text-blue-400"
+            >
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://www.youtube.com/@MatthieuLouvet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between bg-blue-500/10 hover:bg-blue-500/20 transition-colors duration-200 rounded-xl px-4 py-3"
+                >
+                  <div className="flex items-center gap-3">
+                    <FaYoutube className="text-blue-400" />
+                    <div>
+                      <p className="font-medium text-blue-300">
+                        Mathieu Louvet
+                      </p>
+                      <p className="text-sm text-gray-400">
+                        Chaîne YouTube de S'investir sur l'investissement en
+                        bourse et la gestion de patrimoine.
+                      </p>
+                    </div>
+                  </div>
+                  <span className="text-sm text-gray-400">→</span>
+                </a>
+                <a
+                  href="https://www.youtube.com/@investissementboursepourtous"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between bg-blue-500/10 hover:bg-blue-500/20 transition-colors duration-200 rounded-xl px-4 py-3"
+                >
+                  <div className="flex items-center gap-3">
+                    <FaYoutube className="text-blue-400" />
+                    <div>
+                      <p className="font-medium text-blue-300">
+                        L'investissement en bourse pour tous
+                      </p>
+                      <p className="text-sm text-gray-400">
+                        Chaîne YouTube pédagogique sur l'investissement en
+                        bourse assez axé sur la diversification et les ETF.
+                      </p>
+                    </div>
+                  </div>
+                  <span className="text-sm text-gray-400">→</span>
+                </a>
+                <a
+                  href="https://www.youtube.com/@xavierdelmasinvest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between bg-blue-500/10 hover:bg-blue-500/20 transition-colors duration-200 rounded-xl px-4 py-3"
+                >
+                  <div className="flex items-center gap-3">
+                    <FaYoutube className="text-blue-400" />
+                    <div>
+                      <p className="font-medium text-blue-300">Xavier Delmas</p>
+                      <p className="text-sm text-gray-400">
+                        Ex-trader partageant son expertise sur l'investissement
+                        en actions et en ETF.
+                      </p>
+                    </div>
+                  </div>
+                  <span className="text-sm text-gray-400">→</span>
+                </a>
+                <a
+                  href="https://www.youtube.com/@Finary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between bg-blue-500/10 hover:bg-blue-500/20 transition-colors duration-200 rounded-xl px-4 py-3"
+                >
+                  <div className="flex items-center gap-3">
+                    <FaYoutube className="text-blue-400" />
+                    <div>
+                      <p className="font-medium text-blue-300">Finary</p>
+                      <p className="text-sm text-gray-400">
+                        Chaîne YouTube francophone axée sur les finances
+                        personnelles et l'investissement.
                       </p>
                     </div>
                   </div>
