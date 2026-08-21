@@ -8,6 +8,7 @@ interface AffiliateCardProps {
   why: string;
   warning?: string;
   href: string;
+  plainHref: string;
   buttonClass: string;
 }
 
@@ -18,6 +19,7 @@ const AffiliateCard: React.FC<AffiliateCardProps> = ({
   why,
   warning,
   href,
+  plainHref,
   buttonClass,
 }) => {
   return (
@@ -25,7 +27,11 @@ const AffiliateCard: React.FC<AffiliateCardProps> = ({
       <div className="p-6 flex-1 space-y-4">
         <div className="flex items-center gap-3">
           <div className="w-16 h-16 shrink-0 flex items-center justify-center rounded-xl bg-white p-2">
-            <img src={logo} alt={`Logo ${name}`} className="max-w-full max-h-full object-contain" />
+            <img
+              src={logo}
+              alt={`Logo ${name}`}
+              className="max-w-full max-h-full object-contain"
+            />
           </div>
           <h3 className="text-lg font-semibold text-white">{name}</h3>
         </div>
@@ -40,7 +46,7 @@ const AffiliateCard: React.FC<AffiliateCardProps> = ({
         {warning && <p className="text-sm text-red-400">{warning}</p>}
       </div>
 
-      <div className="p-6 pt-0">
+      <div className="p-6 pt-0 space-y-2">
         <a
           href={href}
           target="_blank"
@@ -49,6 +55,14 @@ const AffiliateCard: React.FC<AffiliateCardProps> = ({
         >
           Lien affilié
           <FaArrowRight className="transition-transform duration-200 group-hover/btn:translate-x-1" />
+        </a>
+        <a
+          href={plainHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-center text-xs text-gray-500 hover:text-gray-400 underline underline-offset-2 transition-colors"
+        >
+          Lien sans affiliation
         </a>
       </div>
     </div>

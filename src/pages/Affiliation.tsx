@@ -31,11 +31,17 @@ const Affiliation: React.FC = () => {
               la promotion, ce ne sont pas des partenariats sponsorisés, juste
               des recommandations honnêtes avec un lien d'affiliation attaché.
             </p>
-            <p>
+            <p className="mb-3">
               Si ça ne vous intéresse pas, quittez cette page. Et si un service
               vous intéresse, n'ouvrez pas de compte juste pour ça, ne le faites
               que si vous en avez vraiment l'usage et après de multiples
               recherches pour vous assurer que c'est le bon choix pour vous.
+            </p>
+            <p>
+              Sous chaque bouton, vous trouverez aussi un lien classique sans
+              affiliation. Je laisse cette option disponible pour ceux qui
+              préfèrent ne pas passer par mon lien mais qui seraient tout de
+              même intéressés par le service.
             </p>
           </Disclaimer>
         </section>
@@ -52,6 +58,7 @@ const Affiliation: React.FC = () => {
               why="Ma banque principale au quotidien, pour la gratuité de la carte et la simplicité de l'application."
               warning="Conditions de dépenses nécessaires pour conserver la gratuité de la carte."
               href="https://bour.so/p/Arh8fYmCu4I"
+              plainHref="https://www.boursobank.com/"
               buttonClass="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-400 hover:to-cyan-300"
             />
             <AffiliateCard
@@ -60,6 +67,7 @@ const Affiliation: React.FC = () => {
               description="Courtier en ligne pour investir dans les marchés financiers."
               why="Mon courtier principal pour mon PEA, grâce à son large catalogue et ses frais compétitifs sur les gros ordres."
               href="https://refer.saxo/2gZw3"
+              plainHref="https://www.home.saxo/fr-fr"
               buttonClass="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-400 hover:to-cyan-300"
             />
             <AffiliateCard
@@ -68,6 +76,7 @@ const Affiliation: React.FC = () => {
               description="Solution de paiement en ligne pour vos achats, transferts et remboursements."
               why="Pratique pour les paiements en ligne sécurisés et simplifiés ainsi que pour les transferts rapides entre particuliers."
               href="https://py.pl/5tQYe6yi32Q"
+              plainHref="https://www.paypal.com/fr/home"
               buttonClass="bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-400 hover:to-cyan-300"
             />
           </div>
@@ -95,6 +104,7 @@ const Affiliation: React.FC = () => {
               description="Portefeuille matériel (hardware wallet) pour stocker ses cryptomonnaies hors ligne."
               why="Indispensable pour sécuriser moi-même mes cryptomonnaies, sans dépendre d'une plateforme d'échange."
               href="https://shop.ledger.com/fr/pages/referral-program?referral_code=Q3EMW3V1KRVCJ"
+              plainHref="https://shop.ledger.com/fr"
               buttonClass="bg-gradient-to-r from-amber-500 to-orange-400 hover:from-amber-400 hover:to-orange-300"
             />
             <AffiliateCard
@@ -104,6 +114,7 @@ const Affiliation: React.FC = () => {
               why="Une des plateformes les plus sérieuses et réglementées du marché, que j'utilise pour mes achats de cryptos."
               warning="Ne laissez pas vos cryptos sur une plateforme d'échange sur le long terme."
               href="https://proinvite.kraken.com/9f1e/k7u9q8az"
+              plainHref="https://www.kraken.com/"
               buttonClass="bg-gradient-to-r from-amber-500 to-orange-400 hover:from-amber-400 hover:to-orange-300"
             />
             <AffiliateCard
@@ -113,6 +124,7 @@ const Affiliation: React.FC = () => {
               why="Cashback en cryptomonnaies sur tous les achats, et possibilité de dépenser ses cryptos directement."
               warning="Chaque paiement avec des cryptos déclenche une vente de cryptos, donc potentiellement un événement fiscal à déclarer."
               href="https://krak.app/@Amaroke"
+              plainHref="https://krak.app/"
               buttonClass="bg-gradient-to-r from-amber-500 to-orange-400 hover:from-amber-400 hover:to-orange-300"
             />
             <AffiliateCard
@@ -122,6 +134,7 @@ const Affiliation: React.FC = () => {
               why="Je trouve le concept et l'entreprise intéressants, j'y investis donc une petite somme à haut risque, une sorte de pari sur l'avenir du Bitcoin et du minage."
               warning="Plateforme à très haut risque de perte en capital. Je ne recommande pas d'y investir si vous n'êtes pas prêt à subir une perte totale."
               href="https://gomining.com/?ref=6WSYYCB"
+              plainHref="https://gomining.com/"
               buttonClass="bg-gradient-to-r from-amber-500 to-orange-400 hover:from-amber-400 hover:to-orange-300"
             />
           </div>
