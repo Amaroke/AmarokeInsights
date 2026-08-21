@@ -4,8 +4,7 @@ Tous les changements de ce projet sont documentés dans ce fichier, par date.
 
 ## 21/08/2026
 
-- Réorganisation de l'arborescence du code (composants regroupés par usage, tests séparés, pages outils regroupées dans un dossier dédié), sans changement visible pour les visiteurs.
-- Page Affiliation, changement de la police du bouton "Lien affilié" pour une police système plus lisible.
+- Réorganisation de l'arborescence du code.
 
 ## 18/08/2026
 
