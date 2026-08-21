@@ -1,8 +1,8 @@
 import React from "react";
 import { FaHammer } from "react-icons/fa";
-import InfoBubble from "../components/InfoBubble";
-import PageLayout from "../components/PageLayout";
-import Container from "../components/Container";
+import InfoBubble from "../../components/ui/InfoBubble";
+import PageLayout from "../../components/layout/PageLayout";
+import Container from "../../components/ui/Container";
 
 const TaxWrapperComparator: React.FC = () => {
   return (

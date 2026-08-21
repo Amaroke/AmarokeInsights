@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaCompass } from "react-icons/fa";
-import PageLayout from "../components/PageLayout";
+import PageLayout from "../components/layout/PageLayout";
 
 const NotFound: React.FC = () => {
   return (

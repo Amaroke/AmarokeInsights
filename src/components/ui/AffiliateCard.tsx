@@ -45,7 +45,7 @@ const AffiliateCard: React.FC<AffiliateCardProps> = ({
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`group/btn flex items-center justify-center gap-2 w-full py-3 px-4 rounded-full font-semibold text-white shadow-lg transition-all duration-200 hover:scale-[1.03] hover:shadow-xl ${buttonClass}`}
+          className={`group/btn flex items-center justify-center gap-2 w-full py-3 px-4 rounded-full font-semibold text-white shadow-lg transition-all duration-200 hover:scale-[1.03] hover:shadow-xl font-[system-ui,-apple-system,'Segoe_UI',sans-serif] ${buttonClass}`}
         >
           Lien affilié
           <FaArrowRight className="transition-transform duration-200 group-hover/btn:translate-x-1" />

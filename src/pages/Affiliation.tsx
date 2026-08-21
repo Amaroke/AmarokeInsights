@@ -1,8 +1,8 @@
 import React from "react";
-import AffiliateCard from "../components/AffiliateCard";
-import Disclaimer from "../components/Disclaimer";
-import PageLayout from "../components/PageLayout";
-import Container from "../components/Container";
+import AffiliateCard from "../components/ui/AffiliateCard";
+import Disclaimer from "../components/ui/Disclaimer";
+import PageLayout from "../components/layout/PageLayout";
+import Container from "../components/ui/Container";
 import boursobankLogo from "../assets/logos/boursobank.png";
 import saxoLogo from "../assets/logos/saxo.svg";
 import paypalLogo from "../assets/logos/paypal.svg";
@@ -94,7 +94,7 @@ const Affiliation: React.FC = () => {
               name="Ledger"
               description="Portefeuille matériel (hardware wallet) pour stocker ses cryptomonnaies hors ligne."
               why="Indispensable pour sécuriser moi-même mes cryptomonnaies, sans dépendre d'une plateforme d'échange."
-              href="#"
+              href="https://shop.ledger.com/fr/pages/referral-program?referral_code=Q3EMW3V1KRVCJ"
               buttonClass="bg-gradient-to-r from-amber-500 to-orange-400 hover:from-amber-400 hover:to-orange-300"
             />
             <AffiliateCard
@@ -103,7 +103,7 @@ const Affiliation: React.FC = () => {
               description="Plateforme permettant d'acheter, vendre et échanger des cryptomonnaies."
               why="Une des plateformes les plus sérieuses et réglementées du marché, que j'utilise pour mes achats de cryptos."
               warning="Ne laissez pas vos cryptos sur une plateforme d'échange sur le long terme."
-              href="#"
+              href="https://proinvite.kraken.com/9f1e/k7u9q8az"
               buttonClass="bg-gradient-to-r from-amber-500 to-orange-400 hover:from-amber-400 hover:to-orange-300"
             />
             <AffiliateCard

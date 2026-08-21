@@ -1,11 +1,11 @@
 import React from "react";
 import { FaChartLine, FaExclamationTriangle } from "react-icons/fa";
-import InfoBubble from "../components/InfoBubble";
-import ExampleBox from "../components/ExampleBox";
-import PageLayout from "../components/PageLayout";
-import Container from "../components/Container";
-import Term from "../components/Term";
-import Disclaimer from "../components/Disclaimer";
+import InfoBubble from "../components/ui/InfoBubble";
+import ExampleBox from "../components/ui/ExampleBox";
+import PageLayout from "../components/layout/PageLayout";
+import Container from "../components/ui/Container";
+import Term from "../components/ui/Term";
+import Disclaimer from "../components/ui/Disclaimer";
 
 const ComparativeStudies: React.FC = () => {
   return (
@@ -19,8 +19,8 @@ const ComparativeStudies: React.FC = () => {
           entre différentes enveloppes fiscales, à partir de données publiques
           et d'hypothèses détaillées dans chaque exemple (rendement, fiscalité,
           durée). Ces hypothèses peuvent ne pas correspondre à votre situation,
-          et les performances passées ne préjugent pas des performances
-          futures. Rien ici ne constitue un conseil financier personnalisé.
+          et les performances passées ne préjugent pas des performances futures.
+          Rien ici ne constitue un conseil financier personnalisé.
         </Disclaimer>
         <section id="limites-assurance-vie" className="scroll-mt-22 mb-12">
           <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
@@ -52,15 +52,28 @@ const ComparativeStudies: React.FC = () => {
               <table className="w-full text-xs sm:text-sm">
                 <thead className="hidden sm:table-header-group bg-gray-800 text-gray-200">
                   <tr>
-                    <th className="px-3 py-2 text-left border-b border-gray-600">Type de frais</th>
-                    <th className="px-3 py-2 text-left border-b border-gray-600">Fourchette courante</th>
-                    <th className="px-3 py-2 text-left border-b border-gray-600">Ce qu'il faut savoir</th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      Type de frais
+                    </th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      Fourchette courante
+                    </th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      Ce qu'il faut savoir
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300 divide-y divide-gray-700">
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Frais d'entrée / sur versement</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 py-0.5 sm:py-2"><span className="sm:hidden text-gray-400 mr-2 shrink-0">Fourchette</span>0 à 5 %</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Frais d'entrée / sur versement
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 py-0.5 sm:py-2">
+                      <span className="sm:hidden text-gray-400 mr-2 shrink-0">
+                        Fourchette
+                      </span>
+                      0 à 5 %
+                    </td>
                     <td className="block sm:table-cell sm:px-3 sm:py-2 mt-1.5 sm:mt-0 text-gray-400 sm:text-gray-300 text-xs sm:text-sm">
                       Prélevés à <b>chaque dépôt</b> : verser 10 000 € n'en
                       investit que 9 500 €. Totalement injustifiés, les bons
@@ -68,8 +81,15 @@ const ComparativeStudies: React.FC = () => {
                     </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Frais de gestion (maintien)</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2 shrink-0">Fourchette</span>0,5 à 1 % / an</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Frais de gestion (maintien)
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2 shrink-0">
+                        Fourchette
+                      </span>
+                      0,5 à 1 % / an
+                    </td>
                     <td className="block sm:table-cell sm:px-3 sm:py-2 mt-1.5 sm:mt-0 text-gray-400 sm:text-gray-300 text-xs sm:text-sm">
                       Prélevés <b>chaque année sur la totalité de l'encours</b>,
                       que le contrat monte ou baisse. C'est le frais le plus
@@ -77,8 +97,15 @@ const ComparativeStudies: React.FC = () => {
                     </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Frais des supports</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2 shrink-0">Fourchette</span>0,5 à 2,5 % / an</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Frais des supports
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2 shrink-0">
+                        Fourchette
+                      </span>
+                      0,5 à 2,5 % / an
+                    </td>
                     <td className="block sm:table-cell sm:px-3 sm:py-2 mt-1.5 sm:mt-0 text-gray-400 sm:text-gray-300 text-xs sm:text-sm">
                       Frais courants des fonds (OPCVM), <b>en plus</b> de ceux
                       de l'enveloppe et souvent invisibles. Un{" "}
@@ -86,24 +113,45 @@ const ComparativeStudies: React.FC = () => {
                     </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Frais d'arbitrage</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2 shrink-0">Fourchette</span>0 à 1 % / opération</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Frais d'arbitrage
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2 shrink-0">
+                        Fourchette
+                      </span>
+                      0 à 1 % / opération
+                    </td>
                     <td className="block sm:table-cell sm:px-3 sm:py-2 mt-1.5 sm:mt-0 text-gray-400 sm:text-gray-300 text-xs sm:text-sm">
                       Facturés à chaque changement de support. Pénalisent ceux
                       qui veulent réallouer leur portefeuille.
                     </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Gestion pilotée / mandat</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2 shrink-0">Fourchette</span>+ 0,2 à 0,5 % / an</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Gestion pilotée / mandat
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2 shrink-0">
+                        Fourchette
+                      </span>
+                      + 0,2 à 0,5 % / an
+                    </td>
                     <td className="block sm:table-cell sm:px-3 sm:py-2 mt-1.5 sm:mt-0 text-gray-400 sm:text-gray-300 text-xs sm:text-sm">
                       Pour déléguer la gestion : s'empile encore sur tout le
                       reste, sans garantie de surperformance.
                     </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Frais de sortie</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2 shrink-0">Fourchette</span>0 % (le plus souvent)</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Frais de sortie
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2 shrink-0">
+                        Fourchette
+                      </span>
+                      0 % (le plus souvent)
+                    </td>
                     <td className="block sm:table-cell sm:px-3 sm:py-2 mt-1.5 sm:mt-0 text-gray-400 sm:text-gray-300 text-xs sm:text-sm">
                       Rares en sortie, mais un rachat partiel avant 8 ans fait
                       perdre l'avantage fiscal et peut prendre plusieurs jours.
@@ -138,31 +186,85 @@ const ComparativeStudies: React.FC = () => {
                 <table className="w-full text-xs sm:text-sm">
                   <thead className="hidden sm:table-header-group bg-gray-800 text-gray-200">
                     <tr>
-                      <th className="px-3 py-2 text-left border-b border-gray-600">Sur 20 ans</th>
-                      <th className="px-3 py-2 text-right border-b border-gray-600">Vous (épargnant)</th>
-                      <th className="px-3 py-2 text-right border-b border-gray-600">La banque</th>
+                      <th className="px-3 py-2 text-left border-b border-gray-600">
+                        Sur 20 ans
+                      </th>
+                      <th className="px-3 py-2 text-right border-b border-gray-600">
+                        Vous (épargnant)
+                      </th>
+                      <th className="px-3 py-2 text-right border-b border-gray-600">
+                        La banque
+                      </th>
                     </tr>
                   </thead>
                   <tbody className="text-gray-300 divide-y divide-gray-700">
                     <tr className="block sm:table-row p-3 sm:p-0">
-                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Risque supporté</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">Vous</span>Tout (aléa de marché)</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">La banque</span>Aucun</td>
+                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                        Risque supporté
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          Vous
+                        </span>
+                        Tout (aléa de marché)
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          La banque
+                        </span>
+                        Aucun
+                      </td>
                     </tr>
                     <tr className="block sm:table-row p-3 sm:p-0">
-                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Rôle dans l'opération</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">Vous</span>Apporte les 50 000 €</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">La banque</span>Prélève 2 %/an sur l'encours</td>
+                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                        Rôle dans l'opération
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          Vous
+                        </span>
+                        Apporte les 50 000 €
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          La banque
+                        </span>
+                        Prélève 2 %/an sur l'encours
+                      </td>
                     </tr>
                     <tr className="block sm:table-row p-3 sm:p-0">
-                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Argent encaissé sur 20 ans</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 text-green-400"><span className="sm:hidden text-gray-400 mr-2">Vous</span>+ 79 172 € de gain net</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 text-red-400"><span className="sm:hidden text-gray-400 mr-2">La banque</span>≈ 34 900 € de frais</td>
+                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                        Argent encaissé sur 20 ans
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 text-green-400">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          Vous
+                        </span>
+                        + 79 172 € de gain net
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 text-red-400">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          La banque
+                        </span>
+                        ≈ 34 900 € de frais
+                      </td>
                     </tr>
                     <tr className="block sm:table-row bg-gray-800/40 p-3 sm:p-0">
-                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-gray-100 mb-1 sm:mb-0">Répartition de l'argent encaissé</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold text-green-400"><span className="sm:hidden text-gray-400 font-normal mr-2">Vous</span>≈ 69 % pour vous</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold text-red-400"><span className="sm:hidden text-gray-400 font-normal mr-2">La banque</span>≈ 31 % pour la banque</td>
+                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-gray-100 mb-1 sm:mb-0">
+                        Répartition de l'argent encaissé
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold text-green-400">
+                        <span className="sm:hidden text-gray-400 font-normal mr-2">
+                          Vous
+                        </span>
+                        ≈ 69 % pour vous
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold text-red-400">
+                        <span className="sm:hidden text-gray-400 font-normal mr-2">
+                          La banque
+                        </span>
+                        ≈ 31 % pour la banque
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -218,59 +320,89 @@ const ComparativeStudies: React.FC = () => {
               <table className="w-full text-xs sm:text-sm">
                 <thead className="hidden sm:table-header-group bg-gray-800 text-gray-200">
                   <tr>
-                    <th className="px-3 py-2 text-left border-b border-gray-600">Critère</th>
-                    <th className="px-3 py-2 text-left border-b border-gray-600">Assurance Vie</th>
-                    <th className="px-3 py-2 text-left border-b border-gray-600">CTO</th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      Critère
+                    </th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      Assurance Vie
+                    </th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      CTO
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300 divide-y divide-gray-700">
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Fiscalité des gains</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Fiscalité des gains
+                    </td>
                     <td className="block sm:table-cell sm:px-3 py-0.5 sm:py-2">
-                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">Assurance Vie</span>
+                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">
+                        Assurance Vie
+                      </span>
                       Avantageuse après 8 ans (abattement annuel de 4 600 € / 9
                       200 € pour un couple).
                     </td>
                     <td className="block sm:table-cell sm:px-3 mt-1 sm:mt-0 py-0.5 sm:py-2">
-                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">CTO</span>
+                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">
+                        CTO
+                      </span>
                       <Term id={"PFU"} /> sur l'ensemble des gains, dès le
                       premier euro.
                     </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Frais</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Frais
+                    </td>
                     <td className="block sm:table-cell sm:px-3 py-0.5 sm:py-2">
-                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">Assurance Vie</span>
+                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">
+                        Assurance Vie
+                      </span>
                       Frais de gestion annuels (0,5 à 1 %) + frais des supports.
                     </td>
                     <td className="block sm:table-cell sm:px-3 mt-1 sm:mt-0 py-0.5 sm:py-2">
-                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">CTO</span>
+                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">
+                        CTO
+                      </span>
                       Faibles : courtage à l'achat/vente, pas de frais
                       d'enveloppe.
                     </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Univers d'investissement</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Univers d'investissement
+                    </td>
                     <td className="block sm:table-cell sm:px-3 py-0.5 sm:py-2">
-                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">Assurance Vie</span>
+                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">
+                        Assurance Vie
+                      </span>
                       Fonds euros, unités de compte, ETF sélectionnés par
                       l'assureur.
                     </td>
                     <td className="block sm:table-cell sm:px-3 mt-1 sm:mt-0 py-0.5 sm:py-2">
-                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">CTO</span>
+                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">
+                        CTO
+                      </span>
                       Tout : actions, ETF, obligations, mondial sans
                       restriction.
                     </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Succession</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Succession
+                    </td>
                     <td className="block sm:table-cell sm:px-3 py-0.5 sm:py-2">
-                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">Assurance Vie</span>
+                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">
+                        Assurance Vie
+                      </span>
                       Abattement très avantageux de 152 500 € par bénéficiaire
                       (versements avant 70 ans).
                     </td>
                     <td className="block sm:table-cell sm:px-3 mt-1 sm:mt-0 py-0.5 sm:py-2">
-                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">CTO</span>
+                      <span className="sm:hidden text-gray-400 text-xs block mb-0.5">
+                        CTO
+                      </span>
                       Intégré à la succession classique, aucun régime de faveur.
                     </td>
                   </tr>
@@ -289,45 +421,120 @@ const ComparativeStudies: React.FC = () => {
                 <table className="w-full text-xs sm:text-sm">
                   <thead className="hidden sm:table-header-group bg-gray-800 text-gray-200">
                     <tr>
-                      <th className="px-3 py-2 text-left border-b border-gray-600">Étape</th>
-                      <th className="px-3 py-2 text-right border-b border-gray-600">Assurance Vie</th>
-                      <th className="px-3 py-2 text-right border-b border-gray-600">CTO</th>
+                      <th className="px-3 py-2 text-left border-b border-gray-600">
+                        Étape
+                      </th>
+                      <th className="px-3 py-2 text-right border-b border-gray-600">
+                        Assurance Vie
+                      </th>
+                      <th className="px-3 py-2 text-right border-b border-gray-600">
+                        CTO
+                      </th>
                     </tr>
                   </thead>
                   <tbody className="text-gray-300 divide-y divide-gray-700">
                     <tr className="block sm:table-row p-3 sm:p-0">
-                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Versement initial</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">Assurance Vie</span>100 000 €</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">CTO</span>100 000 €</td>
-                    </tr>
-                    <tr className="block sm:table-row p-3 sm:p-0">
-                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Valeur brute après 20 ans</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">Assurance Vie</span>352 365 €</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">CTO</span>386 968 €</td>
-                    </tr>
-                    <tr className="block sm:table-row p-3 sm:p-0">
-                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Plus-value</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">Assurance Vie</span>252 365 €</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">CTO</span>286 968 €</td>
+                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                        Versement initial
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          Assurance Vie
+                        </span>
+                        100 000 €
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          CTO
+                        </span>
+                        100 000 €
+                      </td>
                     </tr>
                     <tr className="block sm:table-row p-3 sm:p-0">
                       <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
-                        Impôt sur le revenu (7,5 % AV après abattement · 12,8 % CTO)
+                        Valeur brute après 20 ans
                       </td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">Assurance Vie</span>- 18 582 €</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">CTO</span>- 36 732 €</td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          Assurance Vie
+                        </span>
+                        352 365 €
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          CTO
+                        </span>
+                        386 968 €
+                      </td>
+                    </tr>
+                    <tr className="block sm:table-row p-3 sm:p-0">
+                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                        Plus-value
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          Assurance Vie
+                        </span>
+                        252 365 €
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          CTO
+                        </span>
+                        286 968 €
+                      </td>
+                    </tr>
+                    <tr className="block sm:table-row p-3 sm:p-0">
+                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                        Impôt sur le revenu (7,5 % AV après abattement · 12,8 %
+                        CTO)
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          Assurance Vie
+                        </span>
+                        - 18 582 €
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          CTO
+                        </span>
+                        - 36 732 €
+                      </td>
                     </tr>
                     <tr className="block sm:table-row p-3 sm:p-0">
                       <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
                         Prélèvements sociaux (17,2 % AV · 18,6 % CTO)
                       </td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">Assurance Vie</span>- 43 407 €</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5"><span className="sm:hidden text-gray-400 mr-2">CTO</span>- 53 376 €</td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          Assurance Vie
+                        </span>
+                        - 43 407 €
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5">
+                        <span className="sm:hidden text-gray-400 mr-2">
+                          CTO
+                        </span>
+                        - 53 376 €
+                      </td>
                     </tr>
                     <tr className="block sm:table-row bg-gray-800/40 p-3 sm:p-0">
-                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-gray-100 mb-1 sm:mb-0">Capital net récupéré</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold"><span className="sm:hidden text-gray-400 font-normal mr-2">Assurance Vie</span>290 376 €</td>
-                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold text-green-400"><span className="sm:hidden text-gray-400 font-normal mr-2">CTO</span>296 860 €</td>
+                      <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-gray-100 mb-1 sm:mb-0">
+                        Capital net récupéré
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold">
+                        <span className="sm:hidden text-gray-400 font-normal mr-2">
+                          Assurance Vie
+                        </span>
+                        290 376 €
+                      </td>
+                      <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 sm:text-right py-0.5 font-semibold text-green-400">
+                        <span className="sm:hidden text-gray-400 font-normal mr-2">
+                          CTO
+                        </span>
+                        296 860 €
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -337,9 +544,9 @@ const ComparativeStudies: React.FC = () => {
             <p className="leading-relaxed mt-3">
               Le CTO laisse <b>≈ 6 500 € de plus</b> au bout de 20 ans, alors
               même que l'assurance vie est <b>moins taxée</b> (61 989 € de
-              prélèvements contre 90 108 €, l'AV restant exclue de la hausse
-              de CSG de 2026 et conservant des prélèvements sociaux à
-              17,2 % contre 18,6 % pour le CTO). L'explication tient aux{" "}
+              prélèvements contre 90 108 €, l'AV restant exclue de la hausse de
+              CSG de 2026 et conservant des prélèvements sociaux à 17,2 % contre
+              18,6 % pour le CTO). L'explication tient aux{" "}
               <b>frais de gestion</b>, 0,5 %/an prélevés chaque année amputent
               le capital de plus de <b>34 000 €</b> avant impôt, soit davantage
               que l'économie d'impôt offerte par l'enveloppe. Au-delà d'environ{" "}
@@ -403,60 +610,204 @@ const ComparativeStudies: React.FC = () => {
               <table className="w-full text-xs sm:text-sm">
                 <thead className="hidden sm:table-header-group bg-gray-800 text-gray-200">
                   <tr>
-                    <th className="px-3 py-2 text-left border-b border-gray-600">Critère</th>
-                    <th className="px-3 py-2 text-left border-b border-gray-600">PEA CW8</th>
-                    <th className="px-3 py-2 text-left border-b border-gray-600">111bis CAW (Foyer Horizon)</th>
-                    <th className="px-3 py-2 text-left border-b border-gray-600">111bis Baloise (ETF World)</th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      Critère
+                    </th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      PEA CW8
+                    </th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      111bis CAW (Foyer Horizon)
+                    </th>
+                    <th className="px-3 py-2 text-left border-b border-gray-600">
+                      111bis Baloise (ETF World)
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300 divide-y divide-gray-700">
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Frais d'entrée</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400"><span className="sm:hidden text-gray-400 mr-2">PEA CW8</span>0 %</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2">CAW Foyer</span>2 % (Foyer)</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2">Baloise</span>2 % (négocié - de base 4,5 %)</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Frais d'entrée
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        PEA CW8
+                      </span>
+                      0 %
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        CAW Foyer
+                      </span>
+                      2 % (Foyer)
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        Baloise
+                      </span>
+                      2 % (négocié - de base 4,5 %)
+                    </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Frais annuels contrat</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400"><span className="sm:hidden text-gray-400 mr-2">PEA CW8</span>0 %</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2">CAW Foyer</span>1,2 % (Foyer)</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2">Baloise</span>1,2 %</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Frais annuels contrat
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        PEA CW8
+                      </span>
+                      0 %
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        CAW Foyer
+                      </span>
+                      1,2 % (Foyer)
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        Baloise
+                      </span>
+                      1,2 %
+                    </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Frais du fonds</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400"><span className="sm:hidden text-gray-400 mr-2">PEA CW8</span>0,17 % (CW8)</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400"><span className="sm:hidden text-gray-400 mr-2">CAW Foyer</span>1,11 % (Dynamic C SICAV)</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2">Baloise</span>0,17 % (CW8)</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Frais du fonds
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        PEA CW8
+                      </span>
+                      0,17 % (CW8)
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        CAW Foyer
+                      </span>
+                      1,11 % (Dynamic C SICAV)
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        Baloise
+                      </span>
+                      0,17 % (CW8)
+                    </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Total frais annuels</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400"><span className="sm:hidden text-gray-400 mr-2">PEA CW8</span>~0,2 %</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400"><span className="sm:hidden text-gray-400 mr-2">CAW Foyer</span>~2,3 %</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2">Baloise</span>~1,4 %</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Total frais annuels
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        PEA CW8
+                      </span>
+                      ~0,2 %
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        CAW Foyer
+                      </span>
+                      ~2,3 %
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        Baloise
+                      </span>
+                      ~1,4 %
+                    </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Rendement net estimé</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400"><span className="sm:hidden text-gray-400 mr-2">PEA CW8</span>~11,5 % (moy. 10 ans CW8)</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400"><span className="sm:hidden text-gray-400 mr-2">CAW Foyer</span>~7,1 %</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2">Baloise</span>~10,3 %</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Rendement net estimé
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        PEA CW8
+                      </span>
+                      ~11,5 % (moy. 10 ans CW8)
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        CAW Foyer
+                      </span>
+                      ~7,1 %
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        Baloise
+                      </span>
+                      ~10,3 %
+                    </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Disponibilité</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400"><span className="sm:hidden text-gray-400 mr-2">PEA CW8</span>Après 5 ans (sans clôture)</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400"><span className="sm:hidden text-gray-400 mr-2">CAW Foyer</span>Bloqué jusqu'à 60-75 ans</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400"><span className="sm:hidden text-gray-400 mr-2">Baloise</span>Bloqué jusqu'à 60-75 ans</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Disponibilité
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        PEA CW8
+                      </span>
+                      Après 5 ans (sans clôture)
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        CAW Foyer
+                      </span>
+                      Bloqué jusqu'à 60-75 ans
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        Baloise
+                      </span>
+                      Bloqué jusqu'à 60-75 ans
+                    </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Fiscalité sortie (gains)</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400"><span className="sm:hidden text-gray-400 mr-2">PEA CW8</span>18,6 % (PS uniquement)</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400"><span className="sm:hidden text-gray-400 mr-2">CAW Foyer</span>~25 % estimés (IR + PS en France)</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400"><span className="sm:hidden text-gray-400 mr-2">Baloise</span>~25 % estimés (IR + PS en France)</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Fiscalité sortie (gains)
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        PEA CW8
+                      </span>
+                      18,6 % (PS uniquement)
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        CAW Foyer
+                      </span>
+                      ~25 % estimés (IR + PS en France)
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-red-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        Baloise
+                      </span>
+                      ~25 % estimés (IR + PS en France)
+                    </td>
                   </tr>
                   <tr className="block sm:table-row p-3 sm:p-0">
-                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">Déduction fiscale à l'entrée</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5"><span className="sm:hidden text-gray-400 mr-2">PEA CW8</span>Non</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400"><span className="sm:hidden text-gray-400 mr-2">CAW Foyer</span>1 620 €/an récupérés</td>
-                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400"><span className="sm:hidden text-gray-400 mr-2">Baloise</span>1 620 €/an récupérés</td>
+                    <td className="block sm:table-cell sm:px-3 sm:py-2 font-semibold text-white sm:text-gray-300 mb-1 sm:mb-0">
+                      Déduction fiscale à l'entrée
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        PEA CW8
+                      </span>
+                      Non
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        CAW Foyer
+                      </span>
+                      1 620 €/an récupérés
+                    </td>
+                    <td className="flex justify-between sm:table-cell sm:px-3 sm:py-2 py-0.5 text-green-400">
+                      <span className="sm:hidden text-gray-400 mr-2">
+                        Baloise
+                      </span>
+                      1 620 €/an récupérés
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -540,12 +891,16 @@ const ComparativeStudies: React.FC = () => {
                     key={row.horizon}
                     className={`border border-gray-700 rounded-lg p-3 text-xs ${row.bold ? "bg-gray-800/40 font-semibold text-gray-100" : "text-gray-300"}`}
                   >
-                    <div className="font-bold text-sm text-white mb-2">{row.horizon}</div>
+                    <div className="font-bold text-sm text-white mb-2">
+                      {row.horizon}
+                    </div>
                     <div className="flex justify-between py-0.5">
                       <span className="text-gray-400">PEA CW8</span>
                       <span>{row.pea}</span>
                     </div>
-                    <div className="mt-1 mb-0.5 text-gray-500 text-[10px] uppercase tracking-wide">CAW Foyer</div>
+                    <div className="mt-1 mb-0.5 text-gray-500 text-[10px] uppercase tracking-wide">
+                      CAW Foyer
+                    </div>
                     <div className="flex justify-between py-0.5 pl-2">
                       <span className="text-gray-400">+ PEA</span>
                       <span>{row.cawPea}</span>
@@ -554,10 +909,18 @@ const ComparativeStudies: React.FC = () => {
                       <span className="text-gray-400">seul</span>
                       <span>{row.cawSeul}</span>
                     </div>
-                    <div className="mt-1 mb-0.5 text-gray-500 text-[10px] uppercase tracking-wide">Baloise CW8</div>
+                    <div className="mt-1 mb-0.5 text-gray-500 text-[10px] uppercase tracking-wide">
+                      Baloise CW8
+                    </div>
                     <div className="flex justify-between py-0.5 pl-2">
                       <span className="text-gray-400">+ PEA</span>
-                      <span className={row.baloisePea.highlight ? "text-green-400" : ""}>{row.baloisePea.val}</span>
+                      <span
+                        className={
+                          row.baloisePea.highlight ? "text-green-400" : ""
+                        }
+                      >
+                        {row.baloisePea.val}
+                      </span>
                     </div>
                     <div className="flex justify-between py-0.5 pl-2">
                       <span className="text-gray-400">seul</span>
@@ -572,41 +935,93 @@ const ComparativeStudies: React.FC = () => {
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="bg-gray-800 text-gray-200">
-                      <th className="px-3 py-2 text-left border-b border-r border-gray-600" rowSpan={2}>Horizon</th>
-                      <th className="px-3 py-2 text-right border-b border-r border-gray-600" rowSpan={2}>PEA CW8</th>
-                      <th className="px-3 py-2 text-center border-b border-r border-gray-600" colSpan={2}>111bis CAW (Foyer Horizon)</th>
-                      <th className="px-3 py-2 text-center border-b border-gray-600" colSpan={2}>111bis Baloise (CW8)</th>
+                      <th
+                        className="px-3 py-2 text-left border-b border-r border-gray-600"
+                        rowSpan={2}
+                      >
+                        Horizon
+                      </th>
+                      <th
+                        className="px-3 py-2 text-right border-b border-r border-gray-600"
+                        rowSpan={2}
+                      >
+                        PEA CW8
+                      </th>
+                      <th
+                        className="px-3 py-2 text-center border-b border-r border-gray-600"
+                        colSpan={2}
+                      >
+                        111bis CAW (Foyer Horizon)
+                      </th>
+                      <th
+                        className="px-3 py-2 text-center border-b border-gray-600"
+                        colSpan={2}
+                      >
+                        111bis Baloise (CW8)
+                      </th>
                     </tr>
                     <tr className="bg-gray-800 text-gray-400 text-xs">
-                      <th className="px-3 py-1 text-right border-b border-gray-600">avec impôt en PEA</th>
-                      <th className="px-3 py-1 text-right border-b border-r border-gray-600">seul</th>
-                      <th className="px-3 py-1 text-right border-b border-gray-600">avec impôt en PEA</th>
-                      <th className="px-3 py-1 text-right border-b border-gray-600">seul</th>
+                      <th className="px-3 py-1 text-right border-b border-gray-600">
+                        avec impôt en PEA
+                      </th>
+                      <th className="px-3 py-1 text-right border-b border-r border-gray-600">
+                        seul
+                      </th>
+                      <th className="px-3 py-1 text-right border-b border-gray-600">
+                        avec impôt en PEA
+                      </th>
+                      <th className="px-3 py-1 text-right border-b border-gray-600">
+                        seul
+                      </th>
                     </tr>
                   </thead>
                   <tbody className="text-gray-300">
                     <tr className="border-b border-gray-700">
-                      <td className="px-3 py-2 font-semibold border-r border-gray-700">10 ans</td>
-                      <td className="px-3 py-2 text-right border-r border-gray-700">71 200 €</td>
+                      <td className="px-3 py-2 font-semibold border-r border-gray-700">
+                        10 ans
+                      </td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        71 200 €
+                      </td>
                       <td className="px-3 py-2 text-right">82 500 €</td>
-                      <td className="px-3 py-2 text-right border-r border-gray-700">56 900 €</td>
-                      <td className="px-3 py-2 text-right text-green-400">90 100 €</td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        56 900 €
+                      </td>
+                      <td className="px-3 py-2 text-right text-green-400">
+                        90 100 €
+                      </td>
                       <td className="px-3 py-2 text-right">64 500 €</td>
                     </tr>
                     <tr className="border-b border-gray-700">
-                      <td className="px-3 py-2 font-semibold border-r border-gray-700">20 ans</td>
-                      <td className="px-3 py-2 text-right border-r border-gray-700">266 400 €</td>
+                      <td className="px-3 py-2 font-semibold border-r border-gray-700">
+                        20 ans
+                      </td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        266 400 €
+                      </td>
                       <td className="px-3 py-2 text-right">255 000 €</td>
-                      <td className="px-3 py-2 text-right border-r border-gray-700">159 100 €</td>
-                      <td className="px-3 py-2 text-right text-green-400">314 000 €</td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        159 100 €
+                      </td>
+                      <td className="px-3 py-2 text-right text-green-400">
+                        314 000 €
+                      </td>
                       <td className="px-3 py-2 text-right">218 100 €</td>
                     </tr>
                     <tr className="bg-gray-800/40 font-semibold text-gray-100">
-                      <td className="px-3 py-2 border-r border-gray-700">40 ans</td>
-                      <td className="px-3 py-2 text-right border-r border-gray-700">2 493 100 €</td>
+                      <td className="px-3 py-2 border-r border-gray-700">
+                        40 ans
+                      </td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        2 493 100 €
+                      </td>
                       <td className="px-3 py-2 text-right">1 619 300 €</td>
-                      <td className="px-3 py-2 text-right border-r border-gray-700">721 600 €</td>
-                      <td className="px-3 py-2 text-right text-green-400">2 530 300 €</td>
+                      <td className="px-3 py-2 text-right border-r border-gray-700">
+                        721 600 €
+                      </td>
+                      <td className="px-3 py-2 text-right text-green-400">
+                        2 530 300 €
+                      </td>
                       <td className="px-3 py-2 text-right">1 632 700 €</td>
                     </tr>
                   </tbody>

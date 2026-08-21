@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from "react";
 import { FaHome, FaCalculator } from "react-icons/fa";
-import PageLayout from "../components/PageLayout";
-import Container from "../components/Container";
-import FinanceChart from "../components/FinanceChart";
-import NumberField from "../components/NumberField";
-import { computeLoan } from "../utils/finance";
+import PageLayout from "../../components/layout/PageLayout";
+import Container from "../../components/ui/Container";
+import FinanceChart from "../../components/charts/FinanceChart";
+import NumberField from "../../components/ui/NumberField";
+import { computeLoan } from "../../utils/finance";
 
 const EUR = {
   style: "currency",

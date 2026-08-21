@@ -20,12 +20,12 @@ import {
   FaLayerGroup,
   FaMicrochip,
 } from "react-icons/fa";
-import InfoBubble from "../components/InfoBubble";
-import PageLayout from "../components/PageLayout";
-import Container from "../components/Container";
-import Term from "../components/Term";
-import Disclaimer from "../components/Disclaimer";
-import ExampleBox from "../components/ExampleBox";
+import InfoBubble from "../components/ui/InfoBubble";
+import PageLayout from "../components/layout/PageLayout";
+import Container from "../components/ui/Container";
+import Term from "../components/ui/Term";
+import Disclaimer from "../components/ui/Disclaimer";
+import ExampleBox from "../components/ui/ExampleBox";
 
 const Cryptos: React.FC = () => {
   return (

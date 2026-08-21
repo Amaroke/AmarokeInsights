@@ -1,15 +1,15 @@
 import React from "react";
-import PageLayout from "../components/PageLayout";
-import Container from "../components/Container";
-import InfoBubble from "../components/InfoBubble";
+import PageLayout from "../components/layout/PageLayout";
+import Container from "../components/ui/Container";
+import InfoBubble from "../components/ui/InfoBubble";
 import {
   FaPiggyBank,
   FaChartPie,
   FaBitcoin,
   FaLightbulb,
 } from "react-icons/fa";
-import Term from "../components/Term";
-import Disclaimer from "../components/Disclaimer";
+import Term from "../components/ui/Term";
+import Disclaimer from "../components/ui/Disclaimer";
 
 const Strategy: React.FC = () => {
   return (

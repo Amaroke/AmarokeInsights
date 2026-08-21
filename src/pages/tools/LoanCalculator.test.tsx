@@ -1,7 +1,7 @@
 import { describe, it, expect, afterEach } from "vitest";
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { SidebarProvider } from "../context/SidebarContext";
+import { SidebarProvider } from "../../context/SidebarContext";
 import LoanCalculator from "./LoanCalculator";
 
 afterEach(cleanup);

@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { SidebarProvider } from "./context/SidebarContext";
 import { lazy, Suspense } from "react";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/layout/Sidebar";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -14,21 +14,21 @@ const Taxes = lazy(() => import("./pages/Taxes"));
 const Resources = lazy(() => import("./pages/Resources"));
 const Affiliation = lazy(() => import("./pages/Affiliation"));
 const Cryptos = lazy(() => import("./pages/Cryptos"));
-const CompoundInterest = lazy(() => import("./pages/CompoundInterest"));
-const LoanCalculator = lazy(() => import("./pages/LoanCalculator"));
+const CompoundInterest = lazy(() => import("./pages/tools/CompoundInterest"));
+const LoanCalculator = lazy(() => import("./pages/tools/LoanCalculator"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Strategy = lazy(() => import("./pages/Strategy"));
 const Accounts = lazy(() => import("./pages/Accounts"));
 const ComparativeStudies = lazy(() => import("./pages/ComparativeStudies"));
 const InvestmentDecisionTree = lazy(
-  () => import("./pages/InvestmentDecisionTree"),
+  () => import("./pages/tools/InvestmentDecisionTree"),
 );
-const RentVsBuy = lazy(() => import("./pages/RentVsBuy"));
+const RentVsBuy = lazy(() => import("./pages/tools/RentVsBuy"));
 const TaxWrapperComparator = lazy(
-  () => import("./pages/TaxWrapperComparator"),
+  () => import("./pages/tools/TaxWrapperComparator"),
 );
-const Tools = lazy(() => import("./pages/Tools"));
-const RiskProfile = lazy(() => import("./pages/RiskProfile"));
+const Tools = lazy(() => import("./pages/tools/Tools"));
+const RiskProfile = lazy(() => import("./pages/tools/RiskProfile"));
 const Legal = lazy(() => import("./pages/Legal"));
 const Licenses = lazy(() => import("./pages/Licenses"));
 const NotFound = lazy(() => import("./pages/NotFound"));

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { terms, type TermKey } from "../data/terms";
+import { terms, type TermKey } from "../../data/terms";
 
 const Term: React.FC<{ id: TermKey }> = ({ id }) => {
   const { title, definition } = terms[id];

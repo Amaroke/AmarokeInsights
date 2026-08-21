@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaBars, FaSearch } from "react-icons/fa";
 import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
-import { useSidebar } from "../context/useSidebar";
+import { useSidebar } from "../../context/useSidebar";
 import SearchModal from "./SearchModal";
 
 const Navbar: React.FC = () => {

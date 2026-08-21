@@ -7,8 +7,8 @@ import {
   type RenderResult,
 } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { SidebarProvider } from "../context/SidebarContext";
-import PageLayout from "./PageLayout";
+import { SidebarProvider } from "../../context/SidebarContext";
+import PageLayout from "../layout/PageLayout";
 
 afterEach(cleanup);
 

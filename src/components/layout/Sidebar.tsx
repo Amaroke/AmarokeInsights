@@ -1,9 +1,9 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useSidebar } from "../context/useSidebar";
-import { setVisit, isNew, getVisits } from "../utils/visitTracker";
-import { sections } from "../data/sections";
+import { useSidebar } from "../../context/useSidebar";
+import { setVisit, isNew, getVisits } from "../../utils/visitTracker";
+import { sections } from "../../data/sections";
 
 const Sidebar: React.FC = () => {
   const location = useLocation();

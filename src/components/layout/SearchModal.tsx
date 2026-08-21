@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import { searchIndex } from "../data/searchIndex";
+import { searchIndex } from "../../data/searchIndex";
 
 interface SearchModalProps {
   isOpen: boolean;

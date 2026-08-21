@@ -1,9 +1,9 @@
 import React from "react";
 import { FaHammer } from "react-icons/fa";
-import InfoBubble from "../components/InfoBubble";
-import PageLayout from "../components/PageLayout";
-import Container from "../components/Container";
-import Disclaimer from "../components/Disclaimer";
+import InfoBubble from "../../components/ui/InfoBubble";
+import PageLayout from "../../components/layout/PageLayout";
+import Container from "../../components/ui/Container";
+import Disclaimer from "../../components/ui/Disclaimer";
 
 const RiskProfile: React.FC = () => {
   return (
@@ -16,10 +16,9 @@ const RiskProfile: React.FC = () => {
         <Disclaimer title="Estimation indicative, pas un conseil personnalisé">
           Le résultat de ce questionnaire est fourni à titre informatif et
           éducatif uniquement. Il ne constitue en aucun cas un conseil en
-          investissement personnalisé et ne tient pas compte de l'intégralité
-          de votre situation patrimoniale, fiscale ou personnelle. Avant toute
-          décision d'investissement, rapprochez-vous d'un professionnel
-          agréé.
+          investissement personnalisé et ne tient pas compte de l'intégralité de
+          votre situation patrimoniale, fiscale ou personnelle. Avant toute
+          décision d'investissement, rapprochez-vous d'un professionnel agréé.
         </Disclaimer>
         <h2 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">
           En cours de conception
@@ -31,9 +30,9 @@ const RiskProfile: React.FC = () => {
         >
           <p className="leading-relaxed">
             Cet outil est actuellement <strong>en construction</strong>. Il
-            permettra, à travers un questionnaire, d'estimer votre tolérance
-            au risque et votre horizon de placement, afin de vous orienter
-            vers une répartition d'actifs adaptée à votre situation.
+            permettra, à travers un questionnaire, d'estimer votre tolérance au
+            risque et votre horizon de placement, afin de vous orienter vers une
+            répartition d'actifs adaptée à votre situation.
           </p>
         </InfoBubble>
       </Container>

@@ -1,12 +1,12 @@
 import React from "react";
 import { FaChartLine } from "react-icons/fa";
-import InfoBubble from "../components/InfoBubble";
-import PageLayout from "../components/PageLayout";
-import Container from "../components/Container";
-import Disclaimer from "../components/Disclaimer";
+import InfoBubble from "../../components/ui/InfoBubble";
+import PageLayout from "../../components/layout/PageLayout";
+import Container from "../../components/ui/Container";
+import Disclaimer from "../../components/ui/Disclaimer";
 
 import "@xyflow/react/dist/style.css";
-import InvestmentTree from "../components/InvestmentTree";
+import InvestmentTree from "../../components/charts/InvestmentTree";
 
 const InvestmentDecisionTree: React.FC = () => {
   return (

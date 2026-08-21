@@ -1,9 +1,9 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { FaDiscord, FaEnvelope } from "react-icons/fa";
-import InfoBubble from "../components/InfoBubble";
-import PageLayout from "../components/PageLayout";
-import Container from "../components/Container";
+import InfoBubble from "../components/ui/InfoBubble";
+import PageLayout from "../components/layout/PageLayout";
+import Container from "../components/ui/Container";
 
 const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm("xkgpbqvk");

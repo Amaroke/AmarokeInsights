@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { useSidebar } from "../context/useSidebar";
+import { useSidebar } from "../../context/useSidebar";
 
 interface PageLayoutProps {
   title: string;

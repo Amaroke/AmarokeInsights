@@ -6,9 +6,9 @@ import {
   FaShieldAlt,
   FaProjectDiagram,
 } from "react-icons/fa";
-import InfoBubble from "../components/InfoBubble";
-import PageLayout from "../components/PageLayout";
-import Container from "../components/Container";
+import InfoBubble from "../../components/ui/InfoBubble";
+import PageLayout from "../../components/layout/PageLayout";
+import Container from "../../components/ui/Container";
 import { NavLink } from "react-router-dom";
 
 const Tools: React.FC = () => {
