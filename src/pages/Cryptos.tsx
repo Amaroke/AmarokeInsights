@@ -85,10 +85,10 @@ const Cryptos: React.FC = () => {
               </p>
 
               <p className="leading-relaxed mb-3">
-                Les cryptos offrent ainsi plusieurs avantages, transactions
-                rapides, internationalisation des paiements, protection contre
-                certaines censures, et possibilité de nouveaux modèles
-                économiques.
+                Les cryptos offrent ainsi plusieurs avantages, des transactions
+                rapides, l'internationalisation des paiements, la protection
+                contre certaines censures et la possibilité de nouveaux modèles
+                économiques et autres applications financières.
               </p>
 
               <p className="leading-relaxed mb-3">
@@ -407,8 +407,8 @@ const Cryptos: React.FC = () => {
                   <strong>staking liquide</strong> (des plateformes qui
                   mutualisent les fonds de nombreux utilisateurs et
                   redistribuent la récompense au prorata, en échange d'un token
-                  représentatif) ou par le staking proposé directement par un
-                  exchange. Ces chiffres évoluent avec le temps et le marché,
+                  représentatif) ou par le staking proposé directement par une
+                  plateforme. Ces chiffres évoluent avec le temps et le marché,
                   vérifiez toujours les conditions à jour avant d'y engager des
                   fonds.
                 </p>
