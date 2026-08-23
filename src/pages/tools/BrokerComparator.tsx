@@ -373,7 +373,7 @@ const feeAt = (tiers: Tier[], amount: number): number => {
   const sorted = [...tiers].sort((a, b) => a.min - b.min);
   let current = sorted[0];
   for (const tier of sorted) {
-    if (tier.min <= amount) current = tier;
+    if (tier.min < amount) current = tier;
   }
   return current.feeType === "percent"
     ? amount * (current.fee / 100)
