@@ -607,12 +607,12 @@ const BrokerComparator: React.FC = () => {
       <Container gap="md" widePadding>
         <Disclaimer title="Tarifs 2026 à vérifier avant décision">
           Les paliers de frais affichés par défaut reprennent les grilles
-          tarifaires publiées par les courtiers (offre standard, frais d'ordre
-          PEA sur Euronext) au moment de la rédaction. Elles évoluent
-          régulièrement et des offres promotionnelles peuvent temporairement les
-          remplacer : vérifiez toujours la grille tarifaire à jour sur le site
-          du courtier avant toute décision. Tous les paliers restent librement
-          modifiables.
+          tarifaires publiées par les courtiers au moment de la rédaction. Elles
+          évoluent régulièrement et des offres promotionnelles peuvent
+          temporairement les remplacer, vérifiez toujours la grille tarifaire à
+          jour sur le site du courtier avant toute décision. Vous pouvez éditer
+          manuellement les différents paramètres avec les informations les plus
+          récentes pour obtenir un comparatif actualisé.
         </Disclaimer>
 
         <div className="bg-[#1a1a25] rounded-2xl p-5 shadow-lg border border-white/5 flex flex-nowrap items-center gap-x-6 overflow-x-auto">
