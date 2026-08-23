@@ -968,6 +968,7 @@ const BrokerComparator: React.FC = () => {
                       width={50}
                     />
                     <Tooltip
+                      wrapperStyle={{ zIndex: 50 }}
                       contentStyle={{
                         backgroundColor: "#1f1f2e",
                         border: "1px solid #333",
