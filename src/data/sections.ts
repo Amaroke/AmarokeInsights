@@ -235,7 +235,7 @@ export const sections: Section[] = [
     hoverColor: "hover:bg-cyan-500/10 hover:text-cyan-50",
     hoverIconColor: "group-hover:text-cyan-400",
     hoverItemColor: "hover:bg-cyan-500/5 hover:text-cyan-200",
-    lastUpdated: "2026-06-30",
+    lastUpdated: "2026-08-22",
     items: [
       {
         title: "Organigramme d'investissement",
@@ -261,6 +261,11 @@ export const sections: Section[] = [
         title: "Comparateur d'enveloppes",
         path: "comparateur-enveloppes",
         href: "/comparateur-enveloppes",
+      },
+      {
+        title: "Comparateur de courtiers",
+        path: "comparateur-courtiers",
+        href: "/comparateur-courtiers",
       },
       {
         title: "Profil de risque",

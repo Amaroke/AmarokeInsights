@@ -2,6 +2,10 @@
 
 Tous les changements de ce projet sont documentés dans ce fichier, par date.
 
+## 23/08/2026
+
+- Ajout du comparateur de courtiers.
+
 ## 21/08/2026
 
 - Réorganisation de l'arborescence du code.

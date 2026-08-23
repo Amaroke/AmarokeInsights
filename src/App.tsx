@@ -27,6 +27,7 @@ const RentVsBuy = lazy(() => import("./pages/tools/RentVsBuy"));
 const TaxWrapperComparator = lazy(
   () => import("./pages/tools/TaxWrapperComparator"),
 );
+const BrokerComparator = lazy(() => import("./pages/tools/BrokerComparator"));
 const Tools = lazy(() => import("./pages/tools/Tools"));
 const RiskProfile = lazy(() => import("./pages/tools/RiskProfile"));
 const Legal = lazy(() => import("./pages/Legal"));
@@ -77,6 +78,10 @@ function App() {
               <Route
                 path="/comparateur-enveloppes/*"
                 element={<TaxWrapperComparator />}
+              />
+              <Route
+                path="/comparateur-courtiers/*"
+                element={<BrokerComparator />}
               />
               <Route path="/profil-de-risque/*" element={<RiskProfile />} />
               <Route

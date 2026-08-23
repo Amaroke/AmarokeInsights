@@ -5,6 +5,7 @@ import {
   FaBalanceScale,
   FaShieldAlt,
   FaProjectDiagram,
+  FaCoins,
 } from "react-icons/fa";
 import InfoBubble from "../../components/ui/InfoBubble";
 import PageLayout from "../../components/layout/PageLayout";
@@ -26,9 +27,9 @@ const Tools: React.FC = () => {
               color="text-indigo-400"
             >
               <p className="leading-relaxed mb-3">
-                Un organigramme interactif pour visualiser où placer son
-                argent selon sa situation (budget, dettes, épargne de
-                sécurité) et son horizon de placement.
+                Un organigramme interactif pour visualiser où placer son argent
+                selon sa situation (budget, dettes, épargne de sécurité) et son
+                horizon de placement.
               </p>
               <NavLink
                 to="/organigramme-investissement"
@@ -107,6 +108,23 @@ const Tools: React.FC = () => {
                 className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 rounded-xl transition-colors duration-200 font-medium"
               >
                 <FaBalanceScale className="text-teal-400" />
+                <span>Ouvrir le comparateur</span>
+              </NavLink>
+            </InfoBubble>
+            <InfoBubble
+              icon={<FaCoins />}
+              title="Comparateur de courtiers"
+              color="text-fuchsia-400"
+            >
+              <p className="leading-relaxed mb-3">
+                Compare les frais de plusieurs courtiers selon l'enveloppe, le
+                critère de frais et le montant investi.
+              </p>
+              <NavLink
+                to="/comparateur-courtiers"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-fuchsia-500/20 hover:bg-fuchsia-500/30 text-fuchsia-300 rounded-xl transition-colors duration-200 font-medium"
+              >
+                <FaCoins className="text-fuchsia-400" />
                 <span>Ouvrir le comparateur</span>
               </NavLink>
             </InfoBubble>
