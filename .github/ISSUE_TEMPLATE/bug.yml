@@ -1,0 +1,37 @@
+name: Bug
+description: Quelque chose ne fonctionne pas sur le site
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page concernée
+      description: URL ou nom de la page
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Ce qui se passe
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ce qui devrait se passer
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      placeholder: |
+        1. Aller sur ...
+        2. Cliquer sur ...
+  - type: input
+    id: environment
+    attributes:
+      label: Navigateur et appareil
+      placeholder: Firefox 140, Android

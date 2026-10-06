@@ -8,11 +8,11 @@ The only allowed path is the `/pr` command, run by the user. It makes the user c
 
 Never work around this ban (wrapper script, alias, another shell, `git -c`, GitHub API, editing `.claude/settings.json` or the skill).
 
-Never mix a **technical change** and a **content change** in the same commit (see `CONTEXT.md`).
+Never mix a **technical change** and a **content change** in the same pull request (see `CONTEXT.md`). PRs are squash-merged, so one PR becomes one commit on `main`. The CI enforces this from the PR title and the paths listed in `scripts/change-kind.mjs`.
 
 ## Project
 
-React 19 + Vite + Tailwind 4 site, written in French, deployed on GitHub Pages. Editorial content lives directly in `src/pages/*.tsx` and `src/data/`. After adding or removing an info bubble, run `npm run generate:search-index`. Checks before a technical commit: `npm run lint`, `npx tsc -b`, `npm test`, `npm run build`.
+React 19 + Vite + Tailwind 4 site, written in French, deployed on GitHub Pages. Editorial content lives directly in `src/pages/*.tsx` and `src/data/`. After adding or removing an info bubble, run `npm run generate:search-index`. Before handing work to `/pr`, run `npm run check`: it runs every check the CI runs (lint, format, markdownlint, typecheck, tests, build, search index, production audit).
 
 The user speaks French. Map their French terms to code using the `_French_` lines in `CONTEXT.md`.
 
@@ -20,7 +20,7 @@ The user speaks French. Map their French terms to code using the `_French_` line
 
 ### Issue tracker
 
-Issues are tracked as local markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
+Issues are tracked in GitHub Issues on `Amaroke/AmarokeInsights`, through the `gh` CLI. See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 
