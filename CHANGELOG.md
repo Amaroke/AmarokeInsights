@@ -8,30 +8,35 @@ Tous les changements de ce projet sont documentés dans ce fichier, par date.
 
 ## 21/08/2026
 
-- Réorganisation de l'arborescence du code.
+- (technique) Réorganisation de l'arborescence du code.
+- Page Affiliation, ajout d'un lien classique sans affiliation sous chaque bouton.
+- Page Affiliation, police du bouton "Lien affilié" remplacée par une police système plus lisible.
+- Page Cryptos, reformulations pour plus de clarté.
 
 ## 18/08/2026
 
 - Nouvelle page "Affiliation".
 - Page Ressources, ajout d'une catégorie "Créateurs de contenu".
-- Page Cryptos, exemple de tokenomics et de stacking revu.
+- Page Cryptos, exemple de tokenomics et de staking revu.
 
 ## 17/08/2026
 
 - Calculateur d'intérêts composés, ajout d'un taux d'imposition et d'un taux d'inflation réglables, avec affichage du capital brut, net d'impôts et net en pouvoir d'achat en plus de la courbe existante.
+- Page Cryptos, ajout de parties sur le minage, le halving, la tokenomics et les smart contracts, ainsi que sur les façons de gagner des cryptomonnaies (faucets, learn-to-earn, play-to-earn, airdrops).
+- Correction des prélèvements sociaux de l'assurance vie, qui restent à 17,2 % (exclue de la hausse de CSG de 2026) contre 18,6 % pour le CTO, et mise à jour des exemples chiffrés concernés (comparatif assurance vie et CTO, rendement net d'un compte fintech).
 
 ## 16/08/2026
 
 - Toutes les URLs du site sont passées de l'anglais au français (ex. `/banking` → `/systeme-bancaire`, `/loan` → `/simulateur-pret`) pour plus de cohérence et un meilleur référencement.
-- Nouvelle page « Comparatifs et Études » (PEA, assurance vie, CTO, 111bis luxembourgeois), qui remplace l'ancienne page « Comment investir ? », retirée du menu en attendant d'être retravaillée.
-- Nouvel outil « Organigramme d'investissement », détaché dans sa propre page au sein de la section Outils, avec sa propre carte sur la page Outils.
-- Page « Optimisation fiscale » réintégrée au menu (repositionnée devant « Comparatifs et Études »), avec quatre parties : pourquoi le PEA, la purge des plus-values au décès (CTO), l'abattement de 100 000 € sur les donations, et l'importance de conserver ses preuves d'achat de cryptomonnaies.
+- Nouvelle page "Comparatifs et Études" (PEA, assurance vie, CTO, 111bis luxembourgeois), qui remplace l'ancienne page "Comment investir ?", retirée du menu en attendant d'être retravaillée.
+- Nouvel outil "Organigramme d'investissement", détaché dans sa propre page au sein de la section Outils, avec sa propre carte sur la page Outils.
+- Page "Optimisation fiscale" réintégrée au menu (repositionnée devant "Comparatifs et Études"), avec quatre parties : pourquoi le PEA, la purge des plus-values au décès (CTO), l'abattement de 100 000 € sur les donations, et l'importance de conserver ses preuves d'achat de cryptomonnaies.
 - Réorganisation de la page Investissements.
 - Remplacement de l'illustration statique des chandeliers japonais par un vrai graphique interactif.
 
 ## 12/08/2026
 
-- Remplacement du plugin Vite SWC, nettoyage des dépendances.
+- (technique) Remplacement du plugin Vite SWC, nettoyage des dépendances.
 - La recherche interne inclut désormais aussi le contenu des bulles d'information, pas seulement les titres de page.
 - Petits ajustements de texte sur plusieurs pages.
 
@@ -56,25 +61,31 @@ Tous les changements de ce projet sont documentés dans ce fichier, par date.
 - Réorganisation de la page sur les investissements.
 - Refonte de la Sidebar.
 - Refonte visuelle de la page sur les banques.
-- Changement de police pour une meilleure lisibilité.
+- Changement de police (Plus Jakarta Sans à la place de Raleway) pour une meilleure lisibilité.
+- Suppression du mode "avancé" et ajout d'avertissements sur les pages Cryptos, Comment investir, Stratégie et Trading.
+- Nouvelles pages Mentions légales et Licences, avec une précision sur l'usage de l'IA.
 
 ## 23/06/2026
 
-- Corrections et ajustements techniques divers (sans nouveau contenu).
+- Ajout d'un champ année de départ dans les calculateurs d'intérêts composés et de prêt.
+- Le contenu "avancé" est renommé "subjectif".
+- Ajout de la définition du CTO.
+- Harmonisation des apostrophes, tirets et séparateurs de titres dans les textes.
+- (technique) Corrections et ajustements techniques divers.
 
 ## 22/06/2026
 
-- Multiples corrections et améliorations techniques et de SEO.
+- (technique) Multiples corrections et améliorations techniques et de SEO.
 
 ## 28/05/2026
 
 - Changement de police (Raleway) et ajout d'une image de partage (og-image) pour les réseaux sociaux.
-- Divers correctifs techniques (build, configuration).
+- (technique) Divers correctifs techniques (build, configuration).
 
 ## 14/04/2026
 
-- Mise en place de l'auto-déploiement.
-- Section avancée « Comment Investir », avec un organigramme.
+- (technique) Mise en place de l'auto-déploiement.
+- Section avancée "Comment Investir", avec un organigramme.
 - Explication sur les chandeliers japonais dans la partie sur le trading.
 - Partie FAQ dans la partie sur ma stratégie personnelle.
 
@@ -95,7 +106,7 @@ Tous les changements de ce projet sont documentés dans ce fichier, par date.
 
 ## 16/03/2026
 
-- Refonte du menu et ajout d'un second mode « avancé » avec des contenus plus poussés.
+- Refonte du menu et ajout d'un second mode "avancé" avec des contenus plus poussés.
 - Ajout des bases des pages Trading et cryptomonnaies.
 - Diverses corrections et ajouts suite aux retours.
 
@@ -117,7 +128,7 @@ Tous les changements de ce projet sont documentés dans ce fichier, par date.
 ## 08/11/2025
 
 - Ajout d'une bulle d'information Discord sur la page Contact.
-- Correctifs sur le script de déploiement.
+- (technique) Correctifs sur le script de déploiement.
 
 ## 29/10/2025
 
@@ -139,7 +150,7 @@ Tous les changements de ce projet sont documentés dans ce fichier, par date.
 ## 25/10/2025
 
 - Ajout de la page sur les investissements (introduction, actions et ETFs).
-- Affichage de « NEW » dans la barre latérale pour les sections récemment mises à jour.
+- Affichage de "NEW" dans la barre latérale pour les sections récemment mises à jour.
 
 ## 31/08/2025
 
@@ -156,5 +167,6 @@ Tous les changements de ce projet sont documentés dans ce fichier, par date.
 
 ## 24/08/2025
 
-- Mise en place du site et du déploiement.
+- Mise en place du site.
+- (technique) Mise en place du déploiement.
 - Ajout de la page d'accueil.
