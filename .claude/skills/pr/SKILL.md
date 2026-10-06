@@ -1,4 +1,4 @@
----
+﻿---
 name: pr
 description: Commit, push, open or update a PR, close related issues and clean up local branches, after the user explicitly confirms the rules. The only allowed way to commit, push or open a PR in this repo.
 disable-model-invocation: true
@@ -7,7 +7,7 @@ argument-hint: "[PR title]"
 
 # PR
 
-With `/fix-pr`, the only allowed path for `git commit`, `git push`, `git branch -D`, `gh pr create`, `gh pr edit` and `gh pr merge`. Outside these two commands, these actions are forbidden (see `CLAUDE.md`).
+With `/fix-pr` and `/clean-branches`, the only allowed path for `git commit`, `git push`, `git branch -D`, `gh pr create`, `gh pr edit` and `gh pr merge`. Outside these three commands, these actions are forbidden (see `CLAUDE.md`).
 
 Talk to the user in French. Commit messages, PR titles and PR descriptions stay in English.
 
@@ -62,9 +62,9 @@ Show the user:
 Ask with `AskUserQuestion`, all at once, in French:
 
 1. **Rules** (multiSelect, all must be checked):
-   - "J'ai relu tous les changements de contenu listés" (only if there are any)
-   - "Une PR ne mélange pas technique et contenu"
-   - "Merger une PR sur main déploie le site en production"
+   - "J'ai relu tous les changements de contenu listÃ©s" (only if there are any)
+   - "Une PR ne mÃ©lange pas technique et contenu"
+   - "Merger une PR sur main dÃ©ploie le site en production"
 2. **Issues to close** (multiSelect): the candidates, fully resolved ones pre-selected. Skip if there are none.
 3. **Unmerged branches** (only if any): delete anyway or keep.
 4. **Split** (only if technical and content changes are mixed): two PRs (recommended) or cancel.
