@@ -1,71 +1,86 @@
 # AmarokeInsights
 
-Site personnel et pédagogique qui vulgarise la finance personnelle pour un public francophone débutant, organisé en sections thématiques et complété par des outils de simulation.
+A personal, educational website that explains personal finance to French-speaking beginners, organised into thematic sections and complemented by simulation tools.
 
-## Contenu éditorial
+## Editorial content
 
 **Section**:
-Grand thème du site (Fondamentaux, Système Bancaire, Investissements...) qui regroupe une ou plusieurs rubriques et porte une date de mise à jour.
-_Avoid_: Catégorie, chapitre, menu
+A top-level theme of the site (Fondamentaux, Système Bancaire, Investissements...) that groups section items and carries a last-updated date.
+_French_: Section
+_Avoid_: Category, chapter, menu
 
-**Rubrique**:
-Sous-partie nommée d'une section, accessible directement depuis la navigation latérale.
-_Avoid_: Item, sous-section, ancre
+**Section item**:
+A named sub-part of a section, reachable directly from the sidebar.
+_French_: Rubrique
+_Avoid_: Subsection, anchor, entry
 
 **Page**:
-Écran du site affichant le contenu d'une section, d'un outil ou d'une page institutionnelle.
-_Avoid_: Article, vue
+A screen of the site showing the content of a section, a tool, or an institutional page.
+_French_: Page
+_Avoid_: Article, view
 
-**Bulle d'info**:
-Bloc de contenu titré qui explique une notion précise au sein d'une rubrique, et qui est trouvable par la recherche.
-_Avoid_: Carte, encart, box
+**Info bubble**:
+A titled block of content explaining one specific notion within a section item, findable through site search.
+_French_: Bulle d'info
+_Avoid_: Card, box, callout
 
-**Exemple**:
-Illustration chiffrée et concrète d'une notion, présentée sous l'intitulé "En pratique".
-_Avoid_: Cas pratique, démo
+**Example**:
+A concrete, numbered illustration of a notion, shown under the "En pratique" heading.
+_French_: Exemple
+_Avoid_: Case study, demo
 
-**Terme**:
-Mot du glossaire dont la définition s'affiche au survol partout où il apparaît dans le texte.
-_Avoid_: Mot-clé, tooltip, définition
+**Term**:
+A glossary word whose definition appears on hover wherever it is used in the text.
+_French_: Terme
+_Avoid_: Keyword, tooltip, definition
 
-**Avertissement**:
-Encadré qui signale qu'un contenu est subjectif, expérimental ou n'est pas un conseil financier.
-_Avoid_: Disclaimer, alerte
+**Disclaimer**:
+A callout warning that some content is subjective, experimental, or not financial advice.
+_French_: Avertissement
+_Avoid_: Warning, alert
 
-**Contenu subjectif**:
-Contenu qui reflète l'opinion ou la stratégie personnelle de l'auteur plutôt qu'un fait, toujours accompagné d'un avertissement.
-_Avoid_: Mode avancé, contenu avancé
+**Subjective content**:
+Content reflecting the author's personal opinion or strategy rather than fact, always accompanied by a disclaimer.
+_French_: Contenu subjectif
+_Avoid_: Advanced mode, advanced content
 
-## Outils et ressources
+## Tools and resources
 
-**Outil**:
-Simulateur interactif (intérêts composés, prêt, louer ou acheter...) qui calcule un résultat à partir de paramètres saisis par le visiteur.
-_Avoid_: Calculateur, widget, app
+**Tool**:
+An interactive simulator (compound interest, loan, rent vs buy...) that computes a result from parameters entered by the visitor.
+_French_: Outil
+_Avoid_: Calculator, widget, app
 
-**Ressource**:
-Lien externe recommandé (livre, site, créateur de contenu) sans rémunération.
-_Avoid_: Référence, source
+**Resource**:
+A recommended external link (book, website, content creator) with no compensation.
+_French_: Ressource
+_Avoid_: Reference, source
 
-**Lien d'affiliation**:
-Lien vers un service utilisé par l'auteur qui peut lui rapporter une commission.
-_Avoid_: Partenariat, sponsor, lien sponsorisé
+**Affiliate link**:
+A link to a service the author uses that may earn the author a commission.
+_French_: Lien d'affiliation
+_Avoid_: Partnership, sponsor, sponsored link
 
-## Visiteur
+## Visitor
 
-**Visiteur**:
-Personne qui lit le site, sans compte ni authentification.
-_Avoid_: Utilisateur, client, lecteur
+**Visitor**:
+A person reading the site, with no account or authentication.
+_French_: Visiteur
+_Avoid_: User, customer, reader
 
-**Nouveauté**:
-Signal affiché sur une section mise à jour récemment que le visiteur n'a pas consultée depuis.
-_Avoid_: Badge new, notification
+**New badge**:
+A signal shown on a recently updated section that the visitor has not opened since the update.
+_French_: Nouveauté
+_Avoid_: Notification
 
-## Nature d'une modification
+## Kinds of change
 
-**Changement de contenu**:
-Toute modification de ce que le visiteur lit ou voit (texte, chiffre, taux, exemple, terme, titre, lien, image, date de mise à jour, changelog, métadonnées SEO).
-_Avoid_: Changement de texte, wording
+**Content change**:
+Any change to what the visitor reads or sees (text, figure, rate, example, term, title, link, image, last-updated date, changelog, SEO metadata).
+_French_: Changement de contenu
+_Avoid_: Text change, wording
 
-**Changement technique**:
-Modification qui ne change pas ce que le visiteur lit (refactor, outillage, dépendances, tests, configuration, style, logique de calcul d'un outil sans changement de libellé).
-_Avoid_: Changement de code, fix
+**Technical change**:
+A change that does not alter what the visitor reads (refactor, tooling, dependencies, tests, configuration, styling, tool calculation logic without label changes).
+_French_: Changement technique
+_Avoid_: Code change, fix

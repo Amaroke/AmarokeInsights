@@ -1,19 +1,21 @@
 ---
 name: pr
-description: Commit, push, ouverture ou mise à jour de PR, clôture des issues liées et nettoyage des branches locales, après confirmation explicite des règles par l'utilisateur. Seul moyen autorisé de committer, pousser ou ouvrir une PR dans ce dépôt.
+description: Commit, push, open or update a PR, close related issues and clean up local branches, after the user explicitly confirms the rules. The only allowed way to commit, push or open a PR in this repo.
 disable-model-invocation: true
-argument-hint: "[message ou titre de PR]"
+argument-hint: "[commit message or PR title]"
 ---
 
 # PR
 
-Seul chemin autorisé pour `git commit`, `git push`, `gh pr create` et `gh pr merge`. Hors de cette commande, ces actions sont interdites (voir `CLAUDE.md`).
+The only allowed path for `git commit`, `git push`, `git branch -D`, `gh pr create`, `gh pr edit` and `gh pr merge`. Outside this command, these actions are forbidden (see `CLAUDE.md`).
 
-Arguments reçus : `$ARGUMENTS`
+Talk to the user in French. Commit messages and PR descriptions stay in English.
 
-## 1. État des lieux
+Arguments: `$ARGUMENTS`
 
-Lance en parallèle :
+## 1. Survey
+
+Run in parallel:
 
 ```bash
 git fetch origin --prune
@@ -26,45 +28,45 @@ gh pr list --head "$(git branch --show-current)" --state open --json number,url,
 gh issue list --state open --limit 50 --json number,title,labels
 ```
 
-Lis aussi les issues locales ouvertes : chaque fichier `.scratch/*/issues/*.md` et `.scratch/*/spec.md` dont la ligne `Status:` n'est pas `closed` ni `wontfix`.
+Also read open local issues: every `.scratch/*/issues/*.md` and `.scratch/*/spec.md` whose `Status:` line is neither `closed` nor `wontfix`.
 
-Classe chaque fichier modifié selon `CONTEXT.md` :
+Classify each changed file using `CONTEXT.md`:
 
-- **Changement de contenu** : ce que le visiteur lit ou voit. Fichiers typiques `src/pages/**/*.tsx` (hors tests), `src/data/**`, `src/assets/**`, `src/components/charts/InvestmentTree.tsx`, `public/**`, `index.html`, `README.md`, `CHANGELOG.md`. Dans ces fichiers, un diff limité aux imports ou au formatage reste technique.
-- **Changement technique** : tout le reste.
+- **Content change**: what the visitor reads or sees. Typical files: `src/pages/**/*.tsx` (except tests), `src/data/**`, `src/assets/**`, `src/components/charts/InvestmentTree.tsx`, `public/**`, `index.html`, `README.md`, `CHANGELOG.md`. A diff in these files limited to imports or formatting is still technical.
+- **Technical change**: everything else.
 
-Rien à commiter et aucun commit absent de `origin/main` : dis-le, passe directement à l'étape 7 (nettoyage) et arrête-toi après.
+If there is nothing to commit and every commit is already pushed to an up-to-date PR (or there are no commits missing from `origin/main`): say so, skip to step 7 (cleanup) and stop after it.
 
-## 2. Issues liées
+## 2. Related issues
 
-Rapproche le diff et les commits de la branche des issues ouvertes (locales et GitHub) : fichiers touchés, comportement décrit, critères d'acceptation. Pour chaque issue candidate, note si elle est entièrement résolue ou seulement en partie.
+Match the diff and the branch commits against open issues (local and GitHub): files touched, described behaviour, acceptance criteria. For each candidate, note whether it is fully or partially resolved.
 
-## 3. Récapitulatif
+## 3. Summary
 
-Affiche à l'utilisateur :
+Show the user:
 
-- la branche courante, et la PR déjà ouverte s'il y en a une
-- la liste des fichiers techniques
-- la liste des fichiers de contenu, avec pour chacun un résumé d'une ligne de ce qui change pour le visiteur
-- les commits locaux non poussés
-- les issues candidates à la clôture, avec résolue ou partielle
-- les branches locales qui seront supprimées à la fin (toutes sauf `main` et la branche de la PR), en signalant celles qui ne sont pas mergées dans `origin/main` ou qui ont des commits non poussés
+- the current branch, and the open PR if there is one
+- the technical files
+- the content files, each with a one-line summary of what changes for the visitor
+- unpushed local commits
+- issues that are candidates for closing, marked fully or partially resolved
+- local branches that will be deleted at the end (all except `main` and the PR branch), flagging those not merged into `origin/main` or with unpushed commits
 
-## 4. Confirmation des règles
+## 4. Rules confirmation
 
-Pose les questions avec `AskUserQuestion`, en une seule fois :
+Ask with `AskUserQuestion`, all at once, in French:
 
-1. **Règles** (multiSelect, toutes doivent être cochées) :
-   - "J'ai relu tous les changements de contenu listés" (seulement s'il y en a)
+1. **Rules** (multiSelect, all must be checked):
+   - "J'ai relu tous les changements de contenu listés" (only if there are any)
    - "Un commit ne mélange pas technique et contenu"
    - "Merger la PR sur main déploie le site en production"
-2. **Issues à clôturer** (multiSelect) : les candidates, les entièrement résolues pré-cochées.
-3. **Branches non mergées** (seulement s'il y en a) : les supprimer quand même ou les garder.
-4. **Découpage** (seulement si technique et contenu sont mélangés) : deux commits séparés (recommandé) ou annuler.
+2. **Issues to close** (multiSelect): the candidates, fully resolved ones pre-selected. Skip if there are none.
+3. **Unmerged branches** (only if any): delete anyway or keep.
+4. **Split** (only if technical and content changes are mixed): two separate commits (recommended) or cancel.
 
-Si une règle n'est pas cochée ou si l'utilisateur annule : n'exécute rien et arrête-toi.
+If a rule is left unchecked or the user cancels: run nothing and stop.
 
-## 5. Vérifications
+## 5. Checks
 
 ```bash
 npm run lint
@@ -72,25 +74,25 @@ npx tsc -b
 npm test
 ```
 
-Un échec : montre la sortie et arrête-toi sans committer.
+On failure: show the output and stop without committing.
 
-## 6. Exécution
+## 6. Execution
 
-1. Branche : si tu es sur `main`, crée une branche nommée d'après le changement (`feat/...`, `fix/...`, `chore/...`, `content/...`) et bascule dessus.
-2. Issues locales retenues : passe leur ligne à `Status: closed` et ajoute sous `## Comments` une ligne qui indique la branche de la PR. Ces fichiers font partie du commit technique.
-3. Indexe les fichiers par nom, jamais `git add -A` ni `git add .`.
-4. Commit technique d'abord, puis commit de contenu si découpage. Message au format conventionnel (`feat:`, `fix:`, `chore:`, `refactor:`, `content:` pour le contenu), en anglais comme l'historique, ou celui fourni dans `$ARGUMENTS`. Termine chaque message par la ligne d'attribution `Co-Authored-By` demandée par l'environnement.
-5. `git push -u origin <branche>`.
-6. PR : si une PR est déjà ouverte pour la branche, mets à jour sa description avec `gh pr edit`, sinon `gh pr create --base main`. Description courte qui liste technique et contenu séparément, puis une ligne `Closes #N` par issue GitHub retenue, et la liste des issues locales clôturées.
+1. Branch: if on `main`, create a branch named after the change (`feat/...`, `fix/...`, `chore/...`, `content/...`) and switch to it.
+2. Selected local issues: set their line to `Status: closed` and add a line under `## Comments` naming the PR branch. These files belong to the technical commit.
+3. Stage files by name, never `git add -A` or `git add .`.
+4. Technical commit first, then the content commit if split. Conventional message (`feat:`, `fix:`, `chore:`, `refactor:`, `content:` for content), in English like the history, or the one given in `$ARGUMENTS`. End each message with the `Co-Authored-By` attribution line required by the environment.
+5. `git push -u origin <branch>`.
+6. PR: if a PR is already open for the branch, update its description with `gh pr edit`, otherwise `gh pr create --base main`. Short description listing technical and content changes separately, then one `Closes #N` line per selected GitHub issue, and the list of closed local issues.
 
-Ces commandes déclenchent une demande de permission. C'est voulu.
+These commands trigger a permission prompt. That is intended.
 
-## 7. Nettoyage local
+## 7. Local cleanup
 
-1. Mets `main` à jour sans changer de branche : `git fetch origin main:main` (ou `git pull --ff-only` si tu es sur `main`).
-2. Supprime toutes les branches locales sauf `main` et la branche de la PR : `git branch -d` pour celles mergées dans `main`, `git branch -D` seulement pour celles que l'utilisateur a accepté de supprimer à l'étape 4.
+1. Update `main` without switching branch: `git fetch origin main:main` (or `git pull --ff-only` when on `main`).
+2. Delete every local branch except `main` and the PR branch: `git branch -d` for those merged into `main`, `git branch -D` only for those the user agreed to delete in step 4.
 3. `git remote prune origin`.
 
-## 8. Compte rendu
+## 8. Report
 
-Donne les hash des commits, le lien de la PR, les issues clôturées, et les branches supprimées ou conservées.
+Give the commit hashes, the PR link, the closed issues, and the deleted or kept branches.

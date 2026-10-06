@@ -1,18 +1,20 @@
 # AmarokeInsights
 
-## Commit, push et PR
+## Commit, push and PR
 
-Interdiction totale de `git commit`, `git push`, `git branch -D`, `gh pr create`, `gh pr edit` et `gh pr merge`, quel que soit le type de changement. Ça vaut aussi à la fin de `/implement`, `/tdd` et `/code-review` : quand un skill dit de committer, tu t'arrêtes à la place et tu indiques que le travail est prêt pour `/pr`.
+You are forbidden from running `git commit`, `git push`, `git branch -D`, `gh pr create`, `gh pr edit` and `gh pr merge`, whatever the kind of change. This also applies at the end of `/implement`, `/tdd` and `/code-review`: when a skill says to commit, stop instead and say the work is ready for `/pr`.
 
-Le seul chemin autorisé est la commande `/pr`, lancée par l'utilisateur. Elle lui fait confirmer les règles avant d'agir. Ne l'invoque jamais toi-même.
+The only allowed path is the `/pr` command, run by the user. It makes the user confirm the rules before acting. Never invoke it yourself.
 
-Ne contourne jamais l'interdiction (script intermédiaire, alias, autre shell, `git -c`, API GitHub, modification de `.claude/settings.json` ou du skill).
+Never work around this ban (wrapper script, alias, another shell, `git -c`, GitHub API, editing `.claude/settings.json` or the skill).
 
-Ne mélange jamais **changement technique** et **changement de contenu** dans un même commit (voir `CONTEXT.md`).
+Never mix a **technical change** and a **content change** in the same commit (see `CONTEXT.md`).
 
-## Projet
+## Project
 
-Site React 19 + Vite + Tailwind 4, en français, déployé sur GitHub Pages. Le contenu éditorial vit directement dans `src/pages/*.tsx` et `src/data/`. Après ajout ou suppression d'une bulle d'info, lancer `npm run generate:search-index`. Vérifications avant commit technique : `npm run lint`, `npm test`, `npm run build`.
+React 19 + Vite + Tailwind 4 site, written in French, deployed on GitHub Pages. Editorial content lives directly in `src/pages/*.tsx` and `src/data/`. After adding or removing an info bubble, run `npm run generate:search-index`. Checks before a technical commit: `npm run lint`, `npx tsc -b`, `npm test`, `npm run build`.
+
+The user speaks French. Map their French terms to code using the `_French_` lines in `CONTEXT.md`.
 
 ## Agent skills
 
