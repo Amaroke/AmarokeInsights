@@ -1,6 +1,7 @@
-// Scans src/pages/*.tsx for <InfoBubble title="..."> usages and regenerates
+// Scans src/pages/**/*.tsx for <InfoBubble title="..."> usages and regenerates
 // src/data/infoBubbleIndex.ts so the search modal can find them.
 // Run with: npm run generate:search-index (re-run after adding/removing InfoBubbles).
+// Pass --check to fail instead of writing when the index is out of date.
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -29,6 +30,7 @@ const routeByFile = {
   "InvestmentDecisionTree.tsx": "/organigramme-investissement",
   "RentVsBuy.tsx": "/louer-ou-acheter",
   "TaxWrapperComparator.tsx": "/comparateur-enveloppes",
+  "BrokerComparator.tsx": "/comparateur-courtiers",
   "Tools.tsx": "/outils",
   "RiskProfile.tsx": "/profil-de-risque",
   "Legal.tsx": "/mentions-legales",
@@ -58,11 +60,19 @@ function extractInfoBubbleTitles(content) {
   return titles;
 }
 
+const pageFiles = readdirSync(pagesDir, { recursive: true })
+  .map((relativePath) => ({
+    relativePath,
+    file: path.basename(relativePath),
+    key: path.basename(relativePath).toLowerCase(),
+  }))
+  .sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
+
 const entries = [];
-for (const file of readdirSync(pagesDir)) {
+for (const { relativePath, file } of pageFiles) {
   const route = routeByFile[file];
   if (!route) continue;
-  const content = readFileSync(path.join(pagesDir, file), "utf8");
+  const content = readFileSync(path.join(pagesDir, relativePath), "utf8");
   const pageTitle = extractPageTitle(content);
   for (const title of extractInfoBubbleTitles(content)) {
     entries.push({ title, subtitle: pageTitle, to: route });
@@ -84,6 +94,18 @@ export const infoBubbleIndex: SearchEntry[] = [
 ${body}
 ];
 `;
+
+if (process.argv.includes("--check")) {
+  const current = readFileSync(outFile, "utf8").replaceAll("\r\n", "\n");
+  if (current !== output) {
+    console.error(
+      `${path.relative(process.cwd(), outFile)} is out of date. Run npm run generate:search-index.`,
+    );
+    process.exit(1);
+  }
+  console.log(`${entries.length} entries, index up to date.`);
+  process.exit(0);
+}
 
 writeFileSync(outFile, output, "utf8");
 console.log(

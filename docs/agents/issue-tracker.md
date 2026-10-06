@@ -1,30 +1,51 @@
-# Issue tracker: Local Markdown
+# Issue tracker: GitHub Issues
 
-Issues and specs for this repo live as markdown files in `.scratch/`.
+Issues and specs for this repo live in GitHub Issues on `Amaroke/AmarokeInsights`. Use the `gh` CLI for every operation.
 
 ## Conventions
 
-- One feature per directory: `.scratch/<feature-slug>/`
-- The spec is `.scratch/<feature-slug>/spec.md`
-- Implementation issues are one file per ticket at `.scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01`, never a single combined tickets file
-- Triage state is recorded as a `Status:` line near the top of each issue file (see `triage-labels.md` for the role strings)
-- Comments and conversation history append to the bottom of the file under a `## Comments` heading
+- A spec is one issue labelled `enhancement`, its body holding the spec
+- Implementation tickets are one issue each, attached to the spec as **sub-issues**, never a single combined tickets issue
+- Blocking edges use GitHub's native **blocked by** relationship between issues
+- Triage state is a label (see `triage-labels.md` for the strings), exactly one triage label per open issue
+- Conversation history goes in issue comments
+- Issue titles and bodies are in English, like commits and PR descriptions
 
 ## When a skill says "publish to the issue tracker"
 
-Create a new file under `.scratch/<feature-slug>/` (creating the directory if needed).
+```bash
+gh issue create --title "<title>" --body-file <file> --label <label>
+```
+
+Attach a ticket to its spec:
+
+```bash
+gh api repos/Amaroke/AmarokeInsights/issues/<spec>/sub_issues -X POST -F sub_issue_id=<ticket id>
+```
+
+`<ticket id>` is the numeric `id` from `gh api repos/Amaroke/AmarokeInsights/issues/<number> --jq .id`, not the issue number.
+
+Record a blocking edge (ticket `<blocked>` is blocked by `<blocker>`):
+
+```bash
+gh api repos/Amaroke/AmarokeInsights/issues/<blocked>/dependencies/blocked_by -X POST -F issue_id=<blocker id>
+```
 
 ## When a skill says "fetch the relevant ticket"
 
-Read the file at the referenced path. The user will normally pass the path or the issue number directly.
+```bash
+gh issue view <number> --comments
+```
+
+The user will normally pass the issue number or URL directly.
 
 ## Wayfinding operations
 
-Used by `/wayfinder`. The **map** is a file with one **child** file per ticket.
+Used by `/wayfinder`. The **map** is an issue with one **child** sub-issue per ticket.
 
-- **Map**: `.scratch/<effort>/map.md` (the Notes / Decisions-so-far / Fog body).
-- **Child ticket**: `.scratch/<effort>/issues/NN-<slug>.md`, numbered from `01`, with the question in the body. A `Type:` line records the ticket type (`research`/`prototype`/`grilling`/`task`); a `Status:` line records `claimed`/`resolved`.
-- **Blocking**: a `Blocked by: NN, NN` line near the top. A ticket is unblocked when every file it lists is `resolved`.
-- **Frontier**: scan `.scratch/<effort>/issues/` for files that are open, unblocked, and unclaimed; first by number wins.
-- **Claim**: set `Status: claimed` and save before any work.
-- **Resolve**: append the answer under an `## Answer` heading, set `Status: resolved`, then append a context pointer (gist + link) to the map's Decisions-so-far in `map.md`.
+- **Map**: an issue titled `Map: <effort>`, its body holding the Notes / Decisions-so-far / Fog sections.
+- **Child ticket**: a sub-issue of the map, with the question in the body and a `type:research`, `type:prototype`, `type:grilling` or `type:task` label (create the label if missing).
+- **Blocking**: native **blocked by** relationships. A ticket is unblocked when every blocker is closed.
+- **Frontier**: list the map's open sub-issues that are unblocked and unassigned, lowest number first.
+- **Claim**: assign yourself (`gh issue edit <n> --add-assignee @me`) before any work.
+- **Resolve**: post the answer as a comment starting with `## Answer`, close the issue, then append a context pointer (gist + link) to the map's Decisions-so-far.

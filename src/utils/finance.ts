@@ -1,4 +1,5 @@
-const safe = (v: number | undefined) => (Number.isFinite(v) ? (v as number) : 0);
+const safe = (v: number | undefined) =>
+  Number.isFinite(v) ? (v as number) : 0;
 
 const clampYears = (v: number) =>
   Math.min(Math.max(Math.trunc(safe(v)), 0), 120);
