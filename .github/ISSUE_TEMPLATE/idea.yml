@@ -1,0 +1,29 @@
+name: Idée
+description: Une nouvelle section, un outil ou une amélioration
+labels:
+  - enhancement
+  - needs-triage
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: L'idée
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Pourquoi
+      description: Le problème que ça résout pour le visiteur
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Nature du changement
+      options:
+        - Contenu
+        - Technique
+        - Les deux
+    validations:
+      required: true
