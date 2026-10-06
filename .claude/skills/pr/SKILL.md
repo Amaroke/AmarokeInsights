@@ -7,7 +7,7 @@ argument-hint: "[PR title]"
 
 # PR
 
-The only allowed path for `git commit`, `git push`, `git branch -D`, `gh pr create`, `gh pr edit` and `gh pr merge`. Outside this command, these actions are forbidden (see `CLAUDE.md`).
+With `/fix-pr`, the only allowed path for `git commit`, `git push`, `git branch -D`, `gh pr create`, `gh pr edit` and `gh pr merge`. Outside these two commands, these actions are forbidden (see `CLAUDE.md`).
 
 Talk to the user in French. Commit messages, PR titles and PR descriptions stay in English.
 
