@@ -4,7 +4,7 @@
 
 You are forbidden from running `git commit`, `git push`, `git branch -D`, `gh pr create`, `gh pr edit` and `gh pr merge`, whatever the kind of change. This also applies at the end of `/implement`, `/tdd` and `/code-review`: when a skill says to commit, stop instead and say the work is ready for `/pr`.
 
-The only allowed path is the `/pr` command, run by the user. It makes the user confirm the rules before acting. Never invoke it yourself.
+The only allowed paths are the `/pr` and `/fix-pr` commands, run by the user. They make the user confirm the rules before acting. Never invoke them yourself.
 
 Never work around this ban (wrapper script, alias, another shell, `git -c`, GitHub API, editing `.claude/settings.json` or the skill).
 
