@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git branch -D:*)",
+      "Bash(gh pr create:*)",
+      "Bash(gh pr edit:*)",
+      "Bash(gh pr merge:*)",
+      "PowerShell(git commit:*)",
+      "PowerShell(git push:*)",
+      "PowerShell(git branch -D:*)",
+      "PowerShell(gh pr create:*)",
+      "PowerShell(gh pr edit:*)",
+      "PowerShell(gh pr merge:*)"
+    ]
+  }
+}
