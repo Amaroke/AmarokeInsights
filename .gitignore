@@ -21,4 +21,4 @@ dist-ssr
 TODO.md
 .claude/*
 !.claude/settings.json
-!.claude/hooks/
+!.claude/skills/

@@ -2,13 +2,13 @@
 
 ## Commit, push et PR
 
-Tu peux committer, pousser ou ouvrir une PR seulement pour un **changement technique** (voir `CONTEXT.md`).
+Interdiction totale de `git commit`, `git push`, `git branch -D`, `gh pr create`, `gh pr edit` et `gh pr merge`, quel que soit le type de changement. Ça vaut aussi à la fin de `/implement`, `/tdd` et `/code-review` : quand un skill dit de committer, tu t'arrêtes à la place et tu indiques que le travail est prêt pour `/pr`.
 
-Dès qu'un diff contient un **changement de contenu** (texte, chiffre, taux, exemple, terme, titre, lien, image, date `lastUpdated`, `CHANGELOG.md`, `README.md`, métadonnées SEO), tu ne commits pas, ne pousses pas et n'ouvres pas de PR. Ça vaut aussi à la fin de `/implement` et de `/code-review`. Tu t'arrêtes, tu listes les changements de contenu et tu laisses l'utilisateur relire et committer.
+Le seul chemin autorisé est la commande `/pr`, lancée par l'utilisateur. Elle lui fait confirmer les règles avant d'agir. Ne l'invoque jamais toi-même.
 
-Ne mélange jamais technique et contenu dans un même commit. Si une tâche touche les deux, committe d'abord la partie technique seule, puis laisse la partie contenu non commitée.
+Ne contourne jamais l'interdiction (script intermédiaire, alias, autre shell, `git -c`, API GitHub, modification de `.claude/settings.json` ou du skill).
 
-Un hook (`.claude/hooks/content-guard.mjs`) bloque ces commandes quand il détecte du contenu. Ne tente jamais de le contourner (script intermédiaire, autre shell, `git -c`, désactivation des hooks, modification du hook ou des settings). S'il bloque, arrête-toi et préviens l'utilisateur.
+Ne mélange jamais **changement technique** et **changement de contenu** dans un même commit (voir `CONTEXT.md`).
 
 ## Projet
 
