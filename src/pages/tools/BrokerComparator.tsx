@@ -25,24 +25,21 @@ import Container from "../../components/ui/Container";
 import NumberField from "../../components/ui/NumberField";
 import Disclaimer from "../../components/ui/Disclaimer";
 import InfoBubble from "../../components/ui/InfoBubble";
+import {
+  addTier as addScheduleTier,
+  chartPoints,
+  removeTier as removeScheduleTier,
+  sortTiers,
+  toggleTierFeeType as toggleScheduleFeeType,
+  updateTierField as updateScheduleTierField,
+  type FeeBroker,
+  type Tier,
+} from "../../utils/feeSchedule";
 
-type FeeType = "fixed" | "percent";
-
-interface Tier {
-  id: string;
-  min: number;
-  max: number | null;
-  fee: number;
-  feeType: FeeType;
-}
-
-interface Broker {
-  id: string;
+interface Broker extends FeeBroker {
   name: string;
   color: string;
   visible: boolean;
-  amundiPartner: boolean;
-  tiersByCriterion: Record<string, Tier[]>;
 }
 
 const ENVELOPES = ["PEA", "CTO", "Assurance Vie", "PER"] as const;
@@ -368,18 +365,6 @@ const DEFAULT_BROKERS: Broker[] = [
 const getTiers = (broker: Broker, criterion: string): Tier[] =>
   broker.tiersByCriterion[criterion] ?? defaultTier();
 
-const feeAt = (tiers: Tier[], amount: number): number => {
-  if (tiers.length === 0) return 0;
-  const sorted = [...tiers].sort((a, b) => a.min - b.min);
-  let current = sorted[0];
-  for (const tier of sorted) {
-    if (tier.min < amount) current = tier;
-  }
-  return current.feeType === "percent"
-    ? amount * (current.fee / 100)
-    : current.fee;
-};
-
 const formatAmount = (v: number) => `${v.toLocaleString("fr-FR")} €`;
 
 const TabButton: FC<{
@@ -513,72 +498,24 @@ const BrokerComparator: React.FC = () => {
     value: number | null,
   ) =>
     updateTiers(brokerId, (tiers) =>
-      tiers.map((t) => (t.id === tierId ? { ...t, [field]: value } : t)),
+      updateScheduleTierField(tiers, tierId, field, value),
     );
 
   const toggleTierFeeType = (brokerId: string, tierId: string) =>
-    updateTiers(brokerId, (tiers) =>
-      tiers.map((t) =>
-        t.id === tierId
-          ? { ...t, feeType: t.feeType === "percent" ? "fixed" : "percent" }
-          : t,
-      ),
-    );
+    updateTiers(brokerId, (tiers) => toggleScheduleFeeType(tiers, tierId));
 
   const addTier = (brokerId: string) =>
-    updateTiers(brokerId, (tiers) => {
-      const sorted = [...tiers].sort((a, b) => a.min - b.min);
-      const last = sorted[sorted.length - 1];
-      const newMin = last ? last.min + 1000 : 0;
-      return [
-        ...tiers,
-        {
-          id: makeId("tier"),
-          min: newMin,
-          max: newMin + 5000,
-          fee: last?.fee ?? 0,
-          feeType: last?.feeType ?? "fixed",
-        },
-      ];
-    });
+    updateTiers(brokerId, (tiers) => addScheduleTier(tiers, makeId("tier")));
 
   const removeTier = (brokerId: string, tierId: string) =>
-    updateTiers(brokerId, (tiers) => {
-      if (tiers.length <= 1) return tiers;
-      const remaining = tiers.filter((t) => t.id !== tierId);
-      const lowest = remaining.reduce((a, b) => (a.min <= b.min ? a : b));
-      return remaining.map((t) => (t.id === lowest.id ? { ...t, min: 0 } : t));
-    });
+    updateTiers(brokerId, (tiers) => removeScheduleTier(tiers, tierId));
 
   const visibleBrokers = brokers.filter((b) => b.visible);
 
-  const chartData = useMemo(() => {
-    if (axisMax <= axisMin) return [];
-    const epsilon = (axisMax - axisMin) * 1e-4;
-    const breakpoints = new Set<number>([axisMin, axisMax]);
-    axisPoints.forEach((p) => {
-      if (p > axisMin && p < axisMax) breakpoints.add(p);
-    });
-    visibleBrokers.forEach((b) => {
-      getTiers(b, criterion).forEach((t) => {
-        if (t.min > axisMin && t.min < axisMax) {
-          breakpoints.add(Math.max(axisMin, t.min - epsilon));
-          breakpoints.add(t.min);
-        }
-      });
-    });
-    const sorted = Array.from(breakpoints).sort((a, b) => a - b);
-    return sorted.map((amount) => {
-      const row: Record<string, number> = { amount };
-      visibleBrokers.forEach((b) => {
-        row[b.id] =
-          achatAmundi && b.amundiPartner
-            ? 0
-            : feeAt(getTiers(b, criterion), amount);
-      });
-      return row;
-    });
-  }, [visibleBrokers, criterion, axisMin, axisMax, axisPoints, achatAmundi]);
+  const chartData = useMemo(
+    () => chartPoints(visibleBrokers, criterion, axisPoints, achatAmundi),
+    [visibleBrokers, criterion, axisPoints, achatAmundi],
+  );
 
   const axisTicks = useMemo(
     () => [0, ...axisPoints].sort((a, b) => a - b),
@@ -716,9 +653,7 @@ const BrokerComparator: React.FC = () => {
               <div className="flex flex-col gap-2">
                 {brokers.map((broker, index) => {
                   const isExpanded = !!expanded[broker.id];
-                  const sortedTiers = [...getTiers(broker, criterion)].sort(
-                    (a, b) => a.min - b.min,
-                  );
+                  const sortedTiers = sortTiers(getTiers(broker, criterion));
                   return (
                     <div
                       key={broker.id}
