@@ -29,6 +29,11 @@ A concrete, numbered illustration of a notion, shown under the "En pratique" hea
 _French_: Exemple
 _Avoid_: Case study, demo
 
+**Study**:
+A section item that compares tax wrappers or products on concrete, figured examples.
+_French_: Étude
+_Avoid_: Analysis, benchmark, comparison
+
 **Term**:
 A glossary word whose definition appears on hover wherever it is used in the text.
 _French_: Terme
