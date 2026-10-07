@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { terms, type TermKey } from "../../data/terms";
 
 const Term: React.FC<{ id: TermKey }> = ({ id }) => {
@@ -89,24 +90,27 @@ const Term: React.FC<{ id: TermKey }> = ({ id }) => {
         <sup className="text-xs text-gray-400">?</sup>
       </button>
 
-      {open && ready && (
-        <div
-          id={tooltipId}
-          role="tooltip"
-          className="fixed z-50"
-          style={{ top: pos.top, left: pos.left }}
-          onClick={(e) => e.stopPropagation()}
-          onMouseEnter={() => setOpen(true)}
-          onMouseLeave={() => setOpen(false)}
-        >
-          <div className="bg-[#12121b] text-gray-200 text-sm p-3 rounded-lg shadow-lg border border-white/20 max-w-65">
-            <strong className="block mb-1">
-              {title.charAt(0).toUpperCase() + title.slice(1)}
-            </strong>
-            <p>{definition}</p>
-          </div>
-        </div>
-      )}
+      {open &&
+        ready &&
+        createPortal(
+          <div
+            id={tooltipId}
+            role="tooltip"
+            className="fixed z-400"
+            style={{ top: pos.top, left: pos.left }}
+            onClick={(e) => e.stopPropagation()}
+            onMouseEnter={() => setOpen(true)}
+            onMouseLeave={() => setOpen(false)}
+          >
+            <div className="bg-[#12121b] text-gray-200 text-sm p-3 rounded-lg shadow-lg border border-white/20 max-w-65">
+              <strong className="block mb-1">
+                {title.charAt(0).toUpperCase() + title.slice(1)}
+              </strong>
+              <p>{definition}</p>
+            </div>
+          </div>,
+          document.body,
+        )}
     </>
   );
 };
