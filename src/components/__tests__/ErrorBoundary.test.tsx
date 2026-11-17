@@ -20,6 +20,8 @@ describe("ErrorBoundary", () => {
 
   it("renders the fallback when a child throws an error", () => {
     const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+    const swallow = (event: ErrorEvent) => event.preventDefault();
+    window.addEventListener("error", swallow);
     render(
       <ErrorBoundary>
         <Boom />
@@ -27,6 +29,7 @@ describe("ErrorBoundary", () => {
     );
     expect(screen.getByText(/une erreur est survenue/i)).toBeTruthy();
     expect(screen.getByRole("button", { name: /Recharger/i })).toBeTruthy();
+    window.removeEventListener("error", swallow);
     spy.mockRestore();
   });
 });
